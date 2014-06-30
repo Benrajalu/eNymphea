@@ -31,6 +31,78 @@
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
 
+        <header>
+            <nav id="topBar">
+                <section class="cf">
+                    <button id="mobileOn">Ouvrir le menu</button>
+                    <ul class="cf">
+                        <li><%= magic_link_to 'Enregistrez-vous', '/user.html', :id => "user", :class => "trigger" %>
+                            <ul id="log">
+                                <li>
+                                    <h3>Me connecter</h3>
+                                    <form id="logIn" name="logIn" action='/logged.html'>
+                                        <label for="mail">Email</label>
+                                        <input name="mail" id="mail" placeholder="Votre adresse email" type="text" />
+                                        <label for="pass">Mot de passe</label>
+                                        <input name="pass" id="pass" placeholder="Votre mot de passe" type="password" />
+                                        <p><a href="#passRetrival" class="pop">Mot de passe oublié ?</a></p>
+                                        <input type="submit" value="Connexion" class="button submit small" />
+                                    </form>
+                                </li>
+                                <li>
+                                    <h3>Créer un compte</h3>
+                                    <form id="signUp" name="signUp" action=''>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus odio minus, numquam libero deserunt dicta.</p>
+                                        <label for="email">Mot de passe</label>
+                                        <input name="email" id="email" placeholder="Votre adresse email" type="text" />
+                                        <input type="submit" value="Créer un compte" class="button submit small" />
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><%= magic_link_to '<span>0</span> Mon panier', '/order.html', :id => 'basket' %></li>
+                        <li><a href="#" id="currentLanguage" class="trigger">FR</a>
+                            <ul id="languages">
+                                <li><a href="#" class="active">FR</a></li>
+                                <li><a href="#">ES</a></li>
+                                <li><a href="#">FR</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </nav>
+
+            <nav id='mainNav'>
+                <% link_to '/index.html', :class => 'mainLogo' do %>
+                  <%= image_tag 'logo.png' %>
+                <% end %>
+
+                <ul>
+                    <li><%= magic_link_to "L'espace bien-être", '/espace.html' %></li>
+                    <li><a href="#rituals" class="flyout">Nos rituels</a></li>
+                    <li><%= magic_link_to 'Réserver', '/book.html' %></li>
+                    <li><%= magic_link_to 'offir', '/offer.html' %></li>
+                    <li><%= magic_link_to 'Actualités', '/news.html' %></li>
+                    <li><%= magic_link_to 'Informations pratiques', '/infos.html' %></li>
+                </ul>
+
+                <aside id="rituals">
+                    <h3>Découvrez nos rituels de beauté</h3>
+                    <ul>
+                        <li><a href="#">Soins du visage</a></li>
+                        <li><a href="#">Minceur et fermeté</a></li>
+                        <li><a href="#">Massages du corps</a></li>
+                        <li><a href="#">Soin d'exception espace privé Paris</a></li>
+                        <li><a href="#">Rituels du bain & soins corps</a></li>
+                        <li><a href="#">Abonnements</a></li>
+                        <li><a href="#">Rituels de soin</a></li>
+                    </ul>
+                </aside>
+
+
+            </nav>
+        </header>
+
         
         <%= yield %>
 

@@ -1,0 +1,233 @@
+#topBar{
+	height:40px;
+	background-color:$white;
+	border-bottom:1px solid #acacac;
+	section{
+		width:100%;
+		max-width:964px;
+		margin:0 auto;
+		padding:0 5px;
+		#mobileOn{
+			display:none;
+		}
+		> ul{
+			text-align:right;
+			float:right;
+			line-height:44px;
+			vertical-align: middle;
+			> li{
+				float:left;
+				text-align:center;
+				border-right:1px solid #acacac;
+				position:relative;
+				top:-1px;
+				&:first-child{
+					border-left:1px solid #acacac;
+				}
+				a{
+					display:block;
+					height:40px;
+					padding:0 20px;
+					@include futura(11px, $black);
+					text-decoration: none;
+					text-transform: uppercase;
+					@include transition(all 300ms);
+					position:relative;
+					&#user{
+						padding:0 20px 0 40px;
+						overflow: visible;
+						&:before{
+							content:"";
+							display:block;
+							width:12px;
+							height:15px;
+							background: url("../img/user.png") center center no-repeat;
+							position:absolute;
+							top:50%;
+							left:20px;
+							margin-top:-7.5px;
+						}
+						&:after{
+							opacity:0;
+							@include transition(all 300ms);
+							display:block;
+							content:"";
+							width:15px;
+							height:8px;
+							background:url('../img/dropdownArrow.png') center center no-repeat;
+							position:absolute;
+							bottom:-19px;
+							left:50%;
+							margin-left:-7.5px;
+						}
+						&.expended{
+							&:after{
+								opacity:1;
+								bottom:-9px;
+							}
+						}
+					}
+					&#basket{
+						padding:0 20px 0 40px;
+						&:before{
+							content:"";
+							display:block;
+							width:12px;
+							height:16px;
+							background: url("../img/cart.png") center center no-repeat;
+							position:absolute;
+							top:50%;
+							left:20px;
+							margin-top:-8px;
+						}
+						span{
+							font-size:14px;
+							margin-right:5px;
+						}
+					}
+					&#currentLanguage{
+						@include futuraBold(11px, $black);
+						padding:0 40px 0 20px;
+						&:after{
+							content:"";
+							display:block;
+							width:20px;
+							height:5px;
+							background: url("../img/smallDownArrow.png") center center no-repeat;
+							position:absolute;
+							top:50%;
+							right:15px;
+							margin-top:-1.5px;
+						}
+						&:before{
+							opacity:0;
+							@include transition(all 300ms);
+							display:block;
+							content:"";
+							width:15px;
+							height:8px;
+							background:url('../img/dropdownArrow.png') center center no-repeat;
+							position:absolute;
+							bottom:-19px;
+							left:50%;
+							margin-left:-7.5px;
+						}
+						&.expended{
+							&:before{
+								opacity:1;
+								bottom:-9px;
+							}
+						}
+					}
+					&:hover, &.active, &:focus{
+						background-color:$pale;
+					}
+				}
+				> ul{
+					display:none;
+					max-height:0px;
+					overflow: hidden;
+					position:absolute;
+					top:49px;
+					border:1px solid #acacac;
+					min-width:100%;
+					background:#fff;
+
+					&#log{
+						width:150%;
+						left:-25%;
+						padding-bottom:5px;
+						h3{
+							background:$gold;
+							@include futuraBold(10px, $white);
+							text-transform: uppercase;
+							padding:0 5px;
+							line-height:30px;
+							margin:0px 0px 10px 0px;
+							text-align:center;
+						}
+						li{
+							text-align:left;
+							line-height:1;
+							a{
+								display:inline;
+								@include futura(12px, $violet);
+								padding:0px;
+								text-transform: none;
+								top:-5px;
+								position:relative;
+								&:hover{
+									background:transparent;
+									color:$black;
+									text-decoration: underline;
+								}
+							}
+							p{
+								@include futura(13px, $gold);
+								line-height:1.3em;
+								margin-bottom:15px;
+							}
+						}
+						form{
+							padding:10px;
+							label, input{
+								display:block;
+								margin-bottom:5px;
+							}
+							label{
+								@include futura(13px, $black);
+							}
+							input[type="text"], input[type="password"]{
+								height:40px;
+								-webkit-appearance: none;
+								background:$pale;
+								border:0px;
+								@include box-shadow(0px 0px 0px transparent);
+								@include border-radius(5px);
+								@include futura(13px, $black);
+								width:100%;
+								padding:0px 10px;
+								margin-bottom:10px;
+								&:active, &:focus{
+									outline:1px solid $gold;
+								}
+							}
+							input[type="submit"]{
+								-webkit-appearance: none;
+								border:0px;
+								background:$violet;
+								@include futura(12px, $white);
+								text-transform: uppercase;
+								@include border-radius(3px);
+								display:block;
+								height:30px;
+								padding:0px 10px;
+								margin:10px auto 0px auto;
+								width:90%;
+								cursor:pointer;
+								border:1px solid $violet;
+								@include transition(all 300ms);
+								&:hover{
+									background:$pale;
+									color:$violet;
+								}
+								&:active{
+									position:relative;
+									top:1px;
+								}
+								&:active, &:focus{
+									outline:0px;
+								}
+							}
+							&#signUp{
+								input[type="submit"]{
+									margin-top: 20px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

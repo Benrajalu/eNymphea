@@ -1,11 +1,17 @@
-@mixin roboto($size, $color){
-	font-family:'roboto', Arial, Helvetica, sans-serif;
+@mixin futura($size, $color){
+	font-family:'futura', sans-serif;
 	font-size:$size;
 	color:$color;
 }
 
-@mixin robotoReg($size, $color){
-	font-family:'robotoReg', Arial, Helvetica, sans-serif;
+@mixin futuraBold($size, $color){
+	font-family:'futuraBold', sans-serif;
+	font-size:$size;
+	color:$color;
+}
+
+@mixin helvetica($size, $color){
+	font-family:'helvetica', sans-serif;
 	font-size:$size;
 	color:$color;
 }

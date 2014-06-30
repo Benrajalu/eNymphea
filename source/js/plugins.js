@@ -11,6 +11,45 @@ if (!(window.console && console.log)) {
     }());
 }
 
+
+// Menus
+	// Top bar
+
+		var topBar = $("#topBar"), 
+			triggers = topBar.find(".trigger");
+
+		triggers.click(function(event){
+			event.preventDefault();
+			var target = $(this).siblings("ul");
+
+			if($(this).attr("id")=="user"){
+				var mx = "490px";
+			}
+			else{
+				var mx = "200px";
+			}
+			
+			var op = new TimelineLite();
+		    op.pause();
+		    op.to(target, 0.5, {display:"block", maxHeight: mx, ease:Sine.easeInOut});
+
+		    var cl = new TimelineLite();
+		    cl.pause();
+		    cl.to(target, 0.5, {maxHeight:"0px", ease:Sine.easeInOut});
+		    cl.to(target, 0, {display:"none", ease:Sine.easeInOut}, "=-0.1");
+
+
+		    if($(this).hasClass("expended")){
+		    	cl.play();
+		    	$(this).removeClass("expended");
+		    }
+		    else{
+		    	op.play();
+		    	$(this).addClass("expended");
+		    }
+
+		})
+
 // Parsley 
 	var validateFront = function () {
 	  if (true === $('#contactForm').parsley().isValid()) {
