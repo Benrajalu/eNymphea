@@ -1,4 +1,4 @@
-portfoliov3
+E-Nymphea
 ===========
 
-playing with the middleman
+Built with Middleman, using SCSS, HTML5 and jQuery
