@@ -23,13 +23,83 @@
         <meta property="og:url" content="http://e-nymphea.net/" />
         <meta property="og:description" content="E-Nymphea" /> 
 
-        <link href="../css/global-2f7c0dcf.css" rel="stylesheet" type="text/css" />
+        <link href="../css/global-22468081.css" rel="stylesheet" type="text/css" />
         <script src="../js/vendor/modernizr-2.6.1.min-68fdcc99.js" type="text/javascript"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
+
+        <header>
+            <nav id="topBar">
+                <section class="cf">
+                    <button id="mobileOn">Ouvrir le menu</button>
+                    <ul class="cf">
+                        <li><a id="user" class="trigger" href="/user.html">Enregistrez-vous</a>
+                            <ul id="log">
+                                <li>
+                                    <h3>Me connecter</h3>
+                                    <form id="logIn" name="logIn" action='/logged.html'>
+                                        <label for="mail">Email</label>
+                                        <input name="mail" id="mail" placeholder="Votre adresse email" type="text" />
+                                        <label for="pass">Mot de passe</label>
+                                        <input name="pass" id="pass" placeholder="Votre mot de passe" type="password" />
+                                        <p><a href="#passRetrival" class="pop">Mot de passe oublié ?</a></p>
+                                        <input type="submit" value="Connexion" class="button submit small" />
+                                    </form>
+                                </li>
+                                <li>
+                                    <h3>Créer un compte</h3>
+                                    <form id="signUp" name="signUp" action=''>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus odio minus, numquam libero deserunt dicta.</p>
+                                        <label for="email">Mot de passe</label>
+                                        <input name="email" id="email" placeholder="Votre adresse email" type="text" />
+                                        <input type="submit" value="Créer un compte" class="button submit small" />
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a id="basket" href="/order.html"><span>0</span> Mon panier</a></li>
+                        <li><a href="#" id="currentLanguage" class="trigger">FR</a>
+                            <ul id="languages">
+                                <li><a href="#" class="active">FR</a></li>
+                                <li><a href="#">ES</a></li>
+                                <li><a href="#">FR</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </nav>
+
+            <nav id='mainNav'>
+<a class="mainLogo" href="/">                  <img src="../img/logo.png" />
+</a>
+                <ul>
+                    <li><a href="/espace.html">L'espace bien-être</a></li>
+                    <li><a href="#rituals" class="flyout">Nos rituels</a></li>
+                    <li><a href="/book.html">Réserver</a></li>
+                    <li><a href="/offer.html">offir</a></li>
+                    <li><a href="/news.html">Actualités</a></li>
+                    <li><a href="/infos.html">Informations pratiques</a></li>
+                </ul>
+
+                <aside id="rituals">
+                    <h3>Découvrez nos rituels de beauté</h3>
+                    <ul>
+                        <li><a href="#">Soins du visage</a></li>
+                        <li><a href="#">Minceur et fermeté</a></li>
+                        <li><a href="#">Massages du corps</a></li>
+                        <li><a href="#">Soin d'exception espace privé Paris</a></li>
+                        <li><a href="#">Rituels du bain & soins corps</a></li>
+                        <li><a href="#">Abonnements</a></li>
+                        <li><a href="#">Rituels de soin</a></li>
+                    </ul>
+                </aside>
+
+
+            </nav>
+        </header>
 
         
         <p>Yep, that's a 404</p>
@@ -42,7 +112,7 @@
 
         <script src="../js/TweenMax.min-84de151b.js" type="text/javascript"></script>
         <script src="../js/parsley.min-494b4087.js" type="text/javascript"></script>
-        <script src="../js/plugins-f56cfde7.js" type="text/javascript"></script>
+        <script src="../js/plugins-06b8e882.js" type="text/javascript"></script>
 
         <script>
             var _gaq=[['_setAccount','UA-XXXXXXX'],['_trackPageview']];
