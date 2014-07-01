@@ -20,7 +20,7 @@ if (!(window.console && console.log)) {
 
 		triggers.click(function(event){
 			event.preventDefault();
-			var target = $(this).siblings("ul");
+			var target = $(this).siblings("ul"); 
 
 			if($(this).attr("id")=="user"){
 				var mx = "490px";
@@ -39,15 +39,35 @@ if (!(window.console && console.log)) {
 		    cl.to(target, 0, {display:"none", ease:Sine.easeInOut}, "=-0.1");
 
 
-		    if($(this).hasClass("expended")){
-		    	cl.play();
-		    	$(this).removeClass("expended");
-		    }
-		    else{
-		    	op.play();
-		    	$(this).addClass("expended");
-		    }
+		    // Close other panels
+		    	var other = $(this).parent("li").siblings().find(".trigger");
+		    	var clo = new TimelineLite();
+		    	clo.pause();
+		    	clo.to(other.siblings("ul"), 0.5, {maxHeight:"0px", ease:Sine.easeInOut});
+		    	clo.to(other.siblings("ul"), 0, {display:"none", ease:Sine.easeInOut}, "=-0.1");
 
+		    	other.removeClass("expended");
+		    	clo.play();
+
+
+		    // Animate open or close depending on current state
+			    if($(this).hasClass("expended")){
+			    	cl.play();
+			    	$(this).removeClass("expended");
+			    }
+			    else{
+			    	op.play();
+			    	$(this).addClass("expended");
+			    }
+
+		})
+
+	// Main menu
+		var expand = $("#mainNav").find(".flyout");
+		expand.click(function(event){
+			event.preventDefault();
+			$(this).toggleClass("active");
+			$("#mainNav").toggleClass("expended");
 		})
 
 // Parsley 

@@ -1,0 +1,117 @@
+#mainNav{
+	position:absolute;
+	top:40px;
+	left:0px;
+	z-index:98;
+	width:100%;
+	padding:20px 5px;
+	text-align:center;
+	.mainLogo{
+		display:inline;
+		position:relative;
+		z-index:2;
+	}
+	>ul{
+		display:block;
+		width:100%;
+		max-width:784px;
+		margin:0 auto;
+		text-align: center;
+		padding:35px 0px;
+		position:relative;
+		z-index:2;
+		li{
+			display:inline-block;
+			&:first-child a{
+				padding-left:0px;
+			}
+			&:last-child a{
+				padding-right:0px;
+			}
+			a{
+				@include futuraBold(12px, $black);
+				@include transition(all 300ms);
+				text-decoration: none;
+				text-transform: uppercase;
+				position:relative;
+				text-align:center;
+				display:block;
+				padding:0 15px;
+				&:after{
+					@include transition(all 300ms);
+					content:"";
+					display:block;
+					width:15px;
+					height:0px;
+					background:$violet;
+					position:absolute;
+					bottom:-3px;
+					left:50%;
+					margin-left:-7.5px;
+				}
+				&:hover, &.active{
+					color:$violet;
+					&:after{
+						height:2px;
+					}
+
+				}
+			}
+		}
+	}
+	#rituals{
+		@include transition(all 500ms ease-out);
+		overflow: hidden;
+		display:block;
+		max-height:0px;
+		width:100%;
+		max-width:784px;
+		margin:0 auto;
+		padding:0 35px;
+		position:relative;
+		z-index:2;
+		text-align:left;
+		h3{
+			@include futura(16px, $gold);
+			text-transform: uppercase;
+			margin:0px 0px 20px 0px;
+		}
+		ul{
+			max-width:550px;
+			li{
+				float:left;
+				width:50%;
+				a{
+					@include futuraBold(12px, #626262);
+					@include transition(all 300ms);
+					text-transform: uppercase;
+					text-decoration: none;
+					line-height:1.8em;
+					&:hover, &.active{
+						color:$violet;
+					}
+				}
+			}
+		}
+
+	}
+	.screen{
+		position:absolute;
+		z-index:1;
+		width:100%;
+		bottom:0px;
+		left:0px;
+		height:100%;
+		background:transparent;
+		display:block;
+		@include transition(all 300ms);
+	}
+	&.expended{
+		#rituals{
+			max-height:300px;
+		} 
+		.screen{
+			background:$white;
+		}
+	}
+}

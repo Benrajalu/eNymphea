@@ -36,7 +36,7 @@
                 <section class="cf">
                     <button id="mobileOn">Ouvrir le menu</button>
                     <ul class="cf">
-                        <li><%= magic_link_to 'Enregistrez-vous', '/user.html', :id => "user", :class => "trigger" %>
+                        <li><%= magic_link_to '<span class="mobileOff">Enregistrez-vous</span>', '/user.html', :id => "user", :class => "trigger" %>
                             <ul id="log">
                                 <li>
                                     <h3>Me connecter</h3>
@@ -60,19 +60,21 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><%= magic_link_to '<span>0</span> Mon panier', '/order.html', :id => 'basket' %></li>
+                        <li><%= magic_link_to '<span class="total">0</span> <span class="mobileOff">Mon panier</span>', '/order.html', :id => 'basket' %></li>
                         <li><a href="#" id="currentLanguage" class="trigger">FR</a>
                             <ul id="languages">
                                 <li><a href="#" class="active">FR</a></li>
                                 <li><a href="#">ES</a></li>
-                                <li><a href="#">FR</a></li>
+                                <li><a href="#">EN</a></li>
+                                <li><a href="#">IT</a></li>
                             </ul>
                         </li>
                     </ul>
                 </section>
             </nav>
 
-            <nav id='mainNav'>
+            <nav id='mainNav' class="cf">
+                <div class="screen"></div>
                 <% link_to '/index.html', :class => 'mainLogo' do %>
                   <%= image_tag 'logo.png' %>
                 <% end %>
@@ -88,7 +90,7 @@
 
                 <aside id="rituals">
                     <h3>Découvrez nos rituels de beauté</h3>
-                    <ul>
+                    <ul class="cf">
                         <li><a href="#">Soins du visage</a></li>
                         <li><a href="#">Minceur et fermeté</a></li>
                         <li><a href="#">Massages du corps</a></li>

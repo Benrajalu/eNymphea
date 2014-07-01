@@ -13,25 +13,24 @@
 		> ul{
 			text-align:right;
 			float:right;
-			line-height:44px;
+			line-height:43px;
 			vertical-align: middle;
 			> li{
 				float:left;
 				text-align:center;
 				border-right:1px solid #acacac;
 				position:relative;
-				top:-1px;
 				&:first-child{
 					border-left:1px solid #acacac;
 				}
 				a{
-					display:block;
-					height:40px;
-					padding:0 20px;
 					@include futura(11px, $black);
+					@include transition(all 300ms);
+					display:block;
+					height:39px;
+					padding:0 20px;
 					text-decoration: none;
 					text-transform: uppercase;
-					@include transition(all 300ms);
 					position:relative;
 					&#user{
 						padding:0 20px 0 40px;
@@ -48,8 +47,8 @@
 							margin-top:-7.5px;
 						}
 						&:after{
-							opacity:0;
 							@include transition(all 300ms);
+							opacity:0;
 							display:block;
 							content:"";
 							width:15px;
@@ -59,11 +58,12 @@
 							bottom:-19px;
 							left:50%;
 							margin-left:-7.5px;
+							z-index:99;
 						}
 						&.expended{
 							&:after{
 								opacity:1;
-								bottom:-9px;
+								bottom:-10px;
 							}
 						}
 					}
@@ -80,7 +80,7 @@
 							left:20px;
 							margin-top:-8px;
 						}
-						span{
+						span.total{
 							font-size:14px;
 							margin-right:5px;
 						}
@@ -100,8 +100,8 @@
 							margin-top:-1.5px;
 						}
 						&:before{
-							opacity:0;
 							@include transition(all 300ms);
+							opacity:0;
 							display:block;
 							content:"";
 							width:15px;
@@ -111,11 +111,12 @@
 							bottom:-19px;
 							left:50%;
 							margin-left:-7.5px;
+							z-index:99;
 						}
 						&.expended{
 							&:before{
 								opacity:1;
-								bottom:-9px;
+								bottom:-10px;
 							}
 						}
 					}
@@ -128,6 +129,7 @@
 					max-height:0px;
 					overflow: hidden;
 					position:absolute;
+					z-index:99;
 					top:49px;
 					border:1px solid #acacac;
 					min-width:100%;
@@ -178,13 +180,13 @@
 								@include futura(13px, $black);
 							}
 							input[type="text"], input[type="password"]{
+								@include box-shadow(0px 0px 0px transparent);
+								@include border-radius(5px);
+								@include futura(13px, $black);
 								height:40px;
 								-webkit-appearance: none;
 								background:$pale;
 								border:0px;
-								@include box-shadow(0px 0px 0px transparent);
-								@include border-radius(5px);
-								@include futura(13px, $black);
 								width:100%;
 								padding:0px 10px;
 								margin-bottom:10px;
@@ -193,12 +195,12 @@
 								}
 							}
 							input[type="submit"]{
+								@include futura(12px, $white);
+								@include border-radius(3px);
 								-webkit-appearance: none;
 								border:0px;
 								background:$violet;
-								@include futura(12px, $white);
 								text-transform: uppercase;
-								@include border-radius(3px);
 								display:block;
 								height:30px;
 								padding:0px 10px;
@@ -224,6 +226,111 @@
 									margin-top: 20px;
 								}
 							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	// Mobile behaviour
+
+	@media only screen and (max-width: 780px){
+		height:50px;
+		section{
+			padding:0px 0px 0px 10px;
+			line-height:50px;
+			.mobileOff{
+				display:none !important;
+			}
+			#mobileOn{
+				@include transition(all 300ms);
+				display:inline-block;
+				border:0px;
+				-webkit-appearance: none;
+				background:url('../img/hamburger.png') center center no-repeat;
+				height:40px;
+				width:40px;
+				cursor:pointer;
+				text-indent:-999px;
+				overflow:hidden;
+				position:relative;
+				top:-1px;
+				&:active, &:focus{
+					background:$pale url('../img/hamburger.png') center center no-repeat;
+					outline:0px;
+				}
+			}
+			> ul{
+				line-height:55px;
+				> li{
+					position:static;
+					> a{
+						height:49px;
+						&#user{
+							padding:0 20px 0 40px;
+							overflow: visible;
+							&:before{
+								width:30px;
+								height:37px;
+								background: url("../img/userXL.png") center center no-repeat;
+								background-size:20px 24.66px;
+								position:absolute;
+								left:15px;
+								margin-top:-17.5px;
+							}
+						}
+						&#basket{
+							padding:0 20px 0 60px;
+							&:before{
+								width:28px;
+								height:37px;
+								background: url("../img/cartXL.png") center center no-repeat;
+								background-size:18px 24.66px;
+								left:20px;
+								margin-top:-17.5px;
+							}
+							span.total{
+								font-size:25px;
+								margin-right:0px;
+							}
+						}
+						&#currentLanguage{
+							@include futuraBold(20px, $black);
+							padding:0 45px 0 20px;
+							&:after{
+								width:31px;
+								height:20px;
+								background: url("../img/largeDownArrow.png") center center no-repeat;
+								background-size:15px 10px;
+								right:10px;
+								margin-top:-8px;
+							}
+						}
+					}
+
+					> ul{
+						display:none;
+						max-height:0px;
+						overflow: hidden;
+						position:absolute;
+						top:59px;
+						left:5%;
+						z-index:999;
+						border:1px solid #acacac;
+						min-width:90%;
+						width:90%;
+						background:#fff;
+
+						&#log{
+							width:90%;
+							left:5%;
+							padding-bottom:5px;
+						}
+
+						&#languages{
+							line-height:40px;
 						}
 					}
 				}
