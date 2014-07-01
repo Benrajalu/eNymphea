@@ -23,7 +23,7 @@
         <meta property="og:url" content="http://e-nymphea.net/" />
         <meta property="og:description" content="E-Nymphea" /> 
 
-        <link href="../css/global-283c83ea.css" rel="stylesheet" type="text/css" />
+        <link href="../css/global-51210638.css" rel="stylesheet" type="text/css" />
         <script src="../js/vendor/modernizr-2.6.1.min-68fdcc99.js" type="text/javascript"></script>
     </head>
     <body>
@@ -34,7 +34,7 @@
         <header>
             <nav id="topBar">
                 <section class="cf">
-                    <button id="mobileOn">Ouvrir le menu</button>
+                    <button id="mobileOn" class="mobileToggle">Ouvrir le menu</button>
                     <ul class="cf">
                         <li><a id="user" class="trigger" href="/user.html"><span class="mobileOff">Enregistrez-vous</span></a>
                             <ul id="log">
@@ -77,27 +77,33 @@
                 <div class="screen"></div>
 <a class="mainLogo" href="/">                  <img src="../img/logo-45ccf6da.png" />
 </a>
-                <ul>
-                    <li><a href="/espace.html">L'espace bien-être</a></li>
-                    <li><a href="#rituals" class="flyout">Nos rituels</a></li>
-                    <li><a href="/book.html">Réserver</a></li>
-                    <li><a href="/offer.html">offir</a></li>
-                    <li><a href="/news.html">Actualités</a></li>
-                    <li><a href="/infos.html">Informations pratiques</a></li>
-                </ul>
+                <section class="navigate cf">
+                    <button id="mobileOff" class="mobileToggle">Fermer le menu</button>
 
-                <aside id="rituals">
-                    <h3>Découvrez nos rituels de beauté</h3>
-                    <ul class="cf">
-                        <li><a href="#">Soins du visage</a></li>
-                        <li><a href="#">Minceur et fermeté</a></li>
-                        <li><a href="#">Massages du corps</a></li>
-                        <li><a href="#">Soin d'exception espace privé Paris</a></li>
-                        <li><a href="#">Rituels du bain & soins corps</a></li>
-                        <li><a href="#">Abonnements</a></li>
-                        <li><a href="#">Rituels de soin</a></li>
+                    <ul>
+                        <li><a href="/espace.html">L'espace bien-être</a></li>
+                        <li><a href="#rituals" class="flyout">Nos rituels</a></li>
+                        <li><a href="/book.html">Réserver</a></li>
+                        <li><a href="/offer.html">offir</a></li>
+                        <li><a href="/news.html">Actualités</a></li>
+                        <li><a href="/infos.html">Informations pratiques</a></li>
                     </ul>
-                </aside>
+
+                    <aside id="rituals">
+                        <a href="#" id="back" class="mobileOn">Revenir</a>
+                        <h3 class="menuTitle mobileOn">Nos rituels de soin</h3>
+                        <h3>Découvrez nos rituels de beauté</h3>
+                        <ul class="cf">
+                            <li><a href="#">Soins du visage</a></li>
+                            <li><a href="#">Minceur et fermeté</a></li>
+                            <li><a href="#">Massages du corps</a></li>
+                            <li><a href="#">Soin d'exception espace privé Paris</a></li>
+                            <li><a href="#">Rituels du bain & soins corps</a></li>
+                            <li><a href="#">Abonnements</a></li>
+                            <li><a href="#">Rituels de soin</a></li>
+                        </ul>
+                    </aside>
+                </section>
 
 
             </nav>
@@ -114,7 +120,7 @@
 
         <script src="../js/TweenMax.min-84de151b.js" type="text/javascript"></script>
         <script src="../js/parsley.min-494b4087.js" type="text/javascript"></script>
-        <script src="../js/plugins-7f4dc92d.js" type="text/javascript"></script>
+        <script src="../js/plugins-2800bf57.js" type="text/javascript"></script>
 
         <script>
             var _gaq=[['_setAccount','UA-XXXXXXX'],['_trackPageview']];
