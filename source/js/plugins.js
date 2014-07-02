@@ -23,13 +23,24 @@ if (!(window.console && console.log)) {
 
 	$("select, input[type='checkbox'], input[type='radio']").uniform();
 
-	var validateFront = function () {
-	  if (true === $('#contactForm').parsley().isValid()) {
-	    $('#feedback').addClass('hidden').html("");
-	  } else {
-	    $('#feedback').removeClass('hidden').html("Tous les champs sont obligatoires, et votre adresse email doit être valide...");
-	  }
-	};
+	// Parsley on selects
+		var forms = $('.form'),
+			selects = forms.find(".selector"),
+			classSwitch = function(target){
+				var status = $(target).val();
+				if(status=="" && typeof target.attr("data-parsley-required") !== typeof undefined && target.attr("data-parsley-required") !== false){
+					$(target).parent(".selector").addClass("parsley-error");
+				}
+				else{
+					$(target).parent(".selector").removeClass("parsley-error");
+				}
+			};
+
+		$(".form select").change(function(){
+			classSwitch($(this));
+		}).focus(function(){
+			classSwitch($(this));
+		});
 
 	/* var sendMessage = function(){
 		if (true === $('#contactForm').parsley().isValid()) {
@@ -58,14 +69,31 @@ if (!(window.console && console.log)) {
 $(window).load(function () {
 	// Parsley
 		/* $.listen('parsley:field:validate', function () {
-			validateFront();
-		});
+			
+		}); */
 
 		$.listen('parsley:form:validated', function() {
-			sendMessage();
+			$(".form").each(function(){
+				tar = $(this).find('select.parsley-error');
+				classSwitch(tar);
+
+				// Messages outside filedset for radios and checkboxes
+				$(".selector").each(function(){
+					var message = $(this).find('.parsley-errors-list');
+					message.remove();
+					$(this).after(message);
+					message.addClass("outsource");
+				})
+				$("fieldset").each(function(){
+					var message = $(this).find('.parsley-errors-list');
+					message.remove();
+					$(this).after(message);
+					message.addClass("outsource");
+				})
+			})
 		});
 
-		$('#contactForm input[type="submit"]').on('click', function () {
+		/* $('#contactForm input[type="submit"]').on('click', function () {
 		  $('#contactForm').parsley().validate();
 		  validateFront();
 		}); */

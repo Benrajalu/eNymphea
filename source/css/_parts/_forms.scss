@@ -27,6 +27,9 @@
 				outline:0px;
 				border:1px solid $gold;
 			}
+			&.parsley-error{
+				border:1px solid $error;
+			}
 			&.inline{
 				@include inline-block();
 			}
@@ -63,6 +66,14 @@
 
 	.radio, .checker{
 		margin-bottom:15px;
+		span.parsley-error{
+			border:1px solid $error;
+		}
+	}
+	.radio{
+		span.parsley-error{
+			@include border-radius(99px);
+		}
 	}
 
 	select, .selector{
@@ -74,6 +85,7 @@
 	}
 
 	.selector{
+		overflow: visible;
 		select{
 			margin-bottom:0px;
 			height:40px;
@@ -81,11 +93,18 @@
 		}
 		span{
 			position: relative;
-			top: 3px;
+			top: 2px;
+		}
+		&.parsley-error{
+			border:1px solid $error;
+			span{
+				top:0px;
+			}
 		}
 	}
 
 	.inline{
+		@include clearfix();
 		margin-bottom:15px;
 		label, input, select, .selector{
 			display:inline;
@@ -99,6 +118,11 @@
 			&.lineLabel{
 				margin-right: 30px;
 			}
+		}
+
+		.parsley-errors-list{
+			position:relative;
+			top:5px;
 		}
 	}
 
@@ -125,6 +149,18 @@
 			span {
 				background-image:url("../img/uniform/spritePale.png");	
 			}
+		}
+	}
+
+	.parsley-errors-list{
+		position:relative;
+		margin:0px 0px 15px 0px;
+		padding:0px;
+		top:-5px;
+		display:block;
+		clear:both;
+		li{
+			@include futura(12px, $error);
 		}
 	}
 }

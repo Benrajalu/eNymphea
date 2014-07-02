@@ -254,6 +254,8 @@ div#{$class-wrapper}#{$class-select} {
 		display: block;
 		margin-right: 0px;
 		cursor: pointer;
+		position:relative;
+		top:-1px;
 	}
 
 	&.fixedWidth{
