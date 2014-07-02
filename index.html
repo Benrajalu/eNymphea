@@ -23,7 +23,7 @@
         <meta property="og:url" content="http://e-nymphea.net/" />
         <meta property="og:description" content="Home pour E-Nymphea" /> 
 
-        <link href="css/global-51210638.css" rel="stylesheet" type="text/css" />
+        <link href="css/global-c3784cc5.css" rel="stylesheet" type="text/css" />
         <script src="js/vendor/modernizr-2.6.1.min-68fdcc99.js" type="text/javascript"></script>
     </head>
     <body>
@@ -110,15 +110,85 @@
         </header>
 
         
-        
+        <div id="contents">
+	<div class="row">
+		<form class="form bgPattern" action="" data-parsley-validate data-parsley-trigger="change focusin focusout">
+			<label>Test Text</label>
+			<input type="text" data-parsley-required name="testText" />
+
+			<label>Test Email</label>
+			<input type="text" data-parsley-required data-parsley-type="email" name="testEmail" />
+
+			<label>Test Password</label>
+			<input type="password" data-parsley-required data-type="password" name="testEmail" />
+
+			<label>Test datepicker</label>
+			<input type="text" class="datepicker" data-parsley-required data-parsley-pattern="\d{2}\/\d{2}\/\d{4}" name="testDate" />
+
+
+			<label>Test radios</label>
+			<input type="radio" name="testradio" value="Mr."/>
+			<input type="radio" name="testradio" value="Mme."/>
+
+			<div class="inline">
+				<fieldset>
+					<label class="lineLabel">Je souhaite</label>
+					<input type="radio" data-parsley-required name="choice" value="book" id="book" /> <label for="book">réserver</label>
+					<input type="radio" data-parsley-required name="choice" value="gift" id="gift"/> <label for="gift">offrir</label>
+				</fieldset>
+			</div>
+
+			<fieldset>
+				<label>Test checkboxes</label>
+				<input type="checkbox" name="testCheck" value="Mr." data-parsley-mincheck="1" data-parsley-required/> 
+				<input type="checkbox" name="testCheck" value="Mme." data-parsley-required/>
+			</fieldset>
+
+			<label>Test select</label>
+			<select name="testSelect" data-parsley-required>
+				<option value="">Choisissez...</option>
+				<optgroup label="Group of options">
+					<option value="test">Option</option>
+					<option value="test">Option</option>
+					<option value="test">Option</option>
+				</optgroup>
+			</select>
+
+			<label>test split</label>
+			<div class="row">
+				<div class="large-5 columns pad0">
+					<input type="text" class="datepicker" data-parsley-required name="testDate2" />
+				</div>
+				<div class="large-7 columns pad0 padL">
+					<select name="testSelect2" data-parsley-required data-parsley-pattern="\w+">
+						<option value="">Choisissez...</option>
+						<optgroup label="Group of options">
+							<option value="test">Option</option>
+							<option value="test">Option</option>
+							<option value="test">Option</option>
+						</optgroup>
+					</select>
+				</div>
+			</div>
+
+			<input type="submit" value="valider" />
+		</form>
+	</div>
+</div>
+
 
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min-5ee64c85.js"><\/script>')</script>
-
+        
+        <script src="js/navigate-99dd6472.js" type="text/javascript"></script>
         <script src="js/TweenMax.min-84de151b.js" type="text/javascript"></script>
+        <script src="js/jquery.uniform.min-2e8d431e.js" type="text/javascript"></script>
+        <script src="js/bootstrap-datepicker-51f87289.js" type="text/javascript"></script>
+        <script src="js/locales/bootstrap-datepicker.fr-43d6e90b.js" type="text/javascript"></script>
         <script src="js/parsley.min-494b4087.js" type="text/javascript"></script>
-        <script src="js/plugins-1e593901.js" type="text/javascript"></script>
+        <script src="js/locales/parsley-fr-f2e67d07.js" type="text/javascript"></script>
+        <script src="js/plugins-156cbfdd.js" type="text/javascript"></script>
 
         <script>
             var _gaq=[['_setAccount','UA-XXXXXXX'],['_trackPageview']];
