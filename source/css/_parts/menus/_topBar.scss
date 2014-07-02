@@ -191,7 +191,8 @@
 								padding:0px 10px;
 								margin-bottom:10px;
 								&:active, &:focus{
-									outline:1px solid $gold;
+									outline:0px;
+									border:1px solid $gold;
 								}
 							}
 							input[type="submit"]{
@@ -317,7 +318,7 @@
 						position:absolute;
 						top:59px;
 						left:5%;
-						z-index:999;
+						z-index:99;
 						border:1px solid #acacac;
 						min-width:90%;
 						width:90%;

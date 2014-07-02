@@ -2,12 +2,24 @@ html, body{
 	background:$pale;
 }
 
+#contents{
+	padding-top:200px;
+}
+
+// Backgrounds
+	.bgWhite{
+		background-color:$white;
+	}
+	.bgPattern{
+		background:$pale url("../img/patternBack.png") center center repeat;
+	}
+
 // Rows
 	.row{
-		width:100%;
-		max-width:1200px;
-		position:relative;
 		@include clearfix();
+		width:100%;
+		max-width:964px;
+		position:relative;
 		margin:0 auto;
 		&.pad70{
 			padding:70px 0px;

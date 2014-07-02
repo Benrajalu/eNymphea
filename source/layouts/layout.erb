@@ -34,7 +34,7 @@
         <header>
             <nav id="topBar">
                 <section class="cf">
-                    <button id="mobileOn">Ouvrir le menu</button>
+                    <button id="mobileOn" class="mobileToggle">Ouvrir le menu</button>
                     <ul class="cf">
                         <li><%= magic_link_to '<span class="mobileOff">Enregistrez-vous</span>', '/user.html', :id => "user", :class => "trigger" %>
                             <ul id="log">
@@ -79,27 +79,33 @@
                   <%= image_tag 'logo.png' %>
                 <% end %>
 
-                <ul>
-                    <li><%= magic_link_to "L'espace bien-être", '/espace.html' %></li>
-                    <li><a href="#rituals" class="flyout">Nos rituels</a></li>
-                    <li><%= magic_link_to 'Réserver', '/book.html' %></li>
-                    <li><%= magic_link_to 'offir', '/offer.html' %></li>
-                    <li><%= magic_link_to 'Actualités', '/news.html' %></li>
-                    <li><%= magic_link_to 'Informations pratiques', '/infos.html' %></li>
-                </ul>
+                <section class="navigate cf">
+                    <button id="mobileOff" class="mobileToggle">Fermer le menu</button>
 
-                <aside id="rituals">
-                    <h3>Découvrez nos rituels de beauté</h3>
-                    <ul class="cf">
-                        <li><a href="#">Soins du visage</a></li>
-                        <li><a href="#">Minceur et fermeté</a></li>
-                        <li><a href="#">Massages du corps</a></li>
-                        <li><a href="#">Soin d'exception espace privé Paris</a></li>
-                        <li><a href="#">Rituels du bain & soins corps</a></li>
-                        <li><a href="#">Abonnements</a></li>
-                        <li><a href="#">Rituels de soin</a></li>
+                    <ul>
+                        <li><%= magic_link_to "L'espace bien-être", '/espace.html' %></li>
+                        <li><a href="#rituals" class="flyout">Nos rituels</a></li>
+                        <li><%= magic_link_to 'Réserver', '/book.html' %></li>
+                        <li><%= magic_link_to 'offir', '/offer.html' %></li>
+                        <li><%= magic_link_to 'Actualités', '/news.html' %></li>
+                        <li><%= magic_link_to 'Informations pratiques', '/infos.html' %></li>
                     </ul>
-                </aside>
+
+                    <aside id="rituals">
+                        <a href="#" id="back" class="mobileOn">Revenir</a>
+                        <h3 class="menuTitle mobileOn">Nos rituels de soin</h3>
+                        <h3>Découvrez nos rituels de beauté</h3>
+                        <ul class="cf">
+                            <li><a href="#">Soins du visage</a></li>
+                            <li><a href="#">Minceur et fermeté</a></li>
+                            <li><a href="#">Massages du corps</a></li>
+                            <li><a href="#">Soin d'exception espace privé Paris</a></li>
+                            <li><a href="#">Rituels du bain & soins corps</a></li>
+                            <li><a href="#">Abonnements</a></li>
+                            <li><a href="#">Rituels de soin</a></li>
+                        </ul>
+                    </aside>
+                </section>
 
 
             </nav>
@@ -111,8 +117,12 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
-
+        
+        <%= javascript_include_tag 'navigate.js' %>
         <%= javascript_include_tag 'TweenMax.min.js' %>
+        <%= javascript_include_tag 'jquery.uniform.min.js' %>
+        <%= javascript_include_tag 'bootstrap-datepicker.js' %>
+        <%= javascript_include_tag 'locales/bootstrap-datepicker.fr.js' %>
         <%= javascript_include_tag 'parsley.min.js' %>
         <%= javascript_include_tag 'plugins.js' %>
 

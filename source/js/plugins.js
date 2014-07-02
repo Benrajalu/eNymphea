@@ -11,66 +11,18 @@ if (!(window.console && console.log)) {
     }());
 }
 
+// Forms 
+	
+	$('.datepicker').datepicker({
+	    startDate: "today",
+	    todayBtn: "linked",
+	    language: "fr",
+	    daysOfWeekDisabled: "0",
+	    todayHighlight: true
+	});
 
-// Menus
-	// Top bar
+	$("select, input[type='checkbox'], input[type='radio']").uniform();
 
-		var topBar = $("#topBar"), 
-			triggers = topBar.find(".trigger");
-
-		triggers.click(function(event){
-			event.preventDefault();
-			var target = $(this).siblings("ul"); 
-
-			if($(this).attr("id")=="user"){
-				var mx = "490px";
-			}
-			else{
-				var mx = "200px";
-			}
-			
-			var op = new TimelineLite();
-		    op.pause();
-		    op.to(target, 0.5, {display:"block", maxHeight: mx, ease:Sine.easeInOut});
-
-		    var cl = new TimelineLite();
-		    cl.pause();
-		    cl.to(target, 0.5, {maxHeight:"0px", ease:Sine.easeInOut});
-		    cl.to(target, 0, {display:"none", ease:Sine.easeInOut}, "=-0.1");
-
-
-		    // Close other panels
-		    	var other = $(this).parent("li").siblings().find(".trigger");
-		    	var clo = new TimelineLite();
-		    	clo.pause();
-		    	clo.to(other.siblings("ul"), 0.5, {maxHeight:"0px", ease:Sine.easeInOut});
-		    	clo.to(other.siblings("ul"), 0, {display:"none", ease:Sine.easeInOut}, "=-0.1");
-
-		    	other.removeClass("expended");
-		    	clo.play();
-
-
-		    // Animate open or close depending on current state
-			    if($(this).hasClass("expended")){
-			    	cl.play();
-			    	$(this).removeClass("expended");
-			    }
-			    else{
-			    	op.play();
-			    	$(this).addClass("expended");
-			    }
-
-		})
-
-	// Main menu
-		var expand = $("#mainNav").find(".flyout");
-		expand.click(function(event){
-			event.preventDefault();
-			$(this).toggleClass("active");
-			$("#mainNav").toggleClass("expended");
-		})
-
-// Parsley 
 	var validateFront = function () {
 	  if (true === $('#contactForm').parsley().isValid()) {
 	    $('#feedback').addClass('hidden').html("");

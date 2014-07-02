@@ -3,3 +3,41 @@ title: E-Nymphea - Home
 description: Home pour E-Nymphea
 ---
 
+<div id="contents">
+	<div class="row">
+		<form class="form bgPattern" action="" data-parsley-validate>
+			<label>Test Text</label>
+			<input type="text" data-parsley-required name="testText" />
+
+			<label>Test Email</label>
+			<input type="text" data-parsley-required data-type="email" name="testEmail" />
+
+			<label>Test Password</label>
+			<input type="password" data-parsley-required data-type="password" name="testEmail" />
+
+			<label>Test datepicker</label>
+			<input type="text" class="datepicker" data-parsley-required name="testDate" />
+
+
+			<label>Test radios</label>
+			<input type="radio" data-parsley-required name="testradio" value="Mr."/>
+			<input type="radio" data-parsley-required name="testradio" value="Mme."/>
+
+			<label>Test checkboxes</label>
+			<input type="checkbox" data-parsley-required name="testCheck" value="Mr."/>
+			<input type="checkbox" data-parsley-required name="testCheck" value="Mme."/>
+
+			<label>Test select</label>
+			<select name="testSelect" data-parsley-required>
+				<option value="">Choisissez...</option>
+				<optgroup label="Group of options">
+					<option value="test">Option</option>
+					<option value="test">Option</option>
+					<option value="test">Option</option>
+				</optgroup>
+			</select>
+
+			<input type="submit" value="valider" />
+		</form>
+	</div>
+</div>
