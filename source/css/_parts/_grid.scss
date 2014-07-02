@@ -79,10 +79,20 @@ html, body{
 	.columns{
 		float:left;
 		display:block;
-		padding:0 20px;
+		padding:0 10px;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
+
+		&.pad0{
+			padding:0px;
+		}
+		&.padR{
+			padding-right:10px;
+		}
+		&.padL{
+			padding-left:10px;
+		}
 
 		@for $i from 1 through 12{
 			&.small-#{$i}{

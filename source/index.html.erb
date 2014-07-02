@@ -23,9 +23,15 @@ description: Home pour E-Nymphea
 			<input type="radio" data-parsley-required name="testradio" value="Mr."/>
 			<input type="radio" data-parsley-required name="testradio" value="Mme."/>
 
+			<div class="inline">
+				<label class="lineLabel">Je souhaite</label>
+				<input type="radio" data-parsley-required name="choice" value="book" id="book"/> <label for="book">réserver</label>
+				<input type="radio" data-parsley-required name="choice" value="gift" id="gift"/> <label for="gift">offrir</label>
+			</div>
+
 			<label>Test checkboxes</label>
-			<input type="checkbox" data-parsley-required name="testCheck" value="Mr."/>
-			<input type="checkbox" data-parsley-required name="testCheck" value="Mme."/>
+			<input type="checkbox" data-parsley-required name="testCheck" value="Mr."/> 
+			<input type="checkbox" data-parsley-required name="testCheck" value="Mme."/> 
 
 			<label>Test select</label>
 			<select name="testSelect" data-parsley-required>
@@ -36,6 +42,23 @@ description: Home pour E-Nymphea
 					<option value="test">Option</option>
 				</optgroup>
 			</select>
+
+			<label>test split</label>
+			<div class="row">
+				<div class="large-5 columns pad0">
+					<input type="text" class="datepicker" data-parsley-required name="testDate2" />
+				</div>
+				<div class="large-7 columns pad0 padL">
+					<select name="testSelect2" data-parsley-required>
+						<option value="">Choisissez...</option>
+						<optgroup label="Group of options">
+							<option value="test">Option</option>
+							<option value="test">Option</option>
+							<option value="test">Option</option>
+						</optgroup>
+					</select>
+				</div>
+			</div>
 
 			<input type="submit" value="valider" />
 		</form>

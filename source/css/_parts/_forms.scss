@@ -55,12 +55,76 @@
 				color:$black;
 			}
 		} 
+
+		&[type='checkbox'], &[type='radio']{
+			margin-bottom:15px;
+		}
+	}
+
+	.radio, .checker{
+		margin-bottom:15px;
 	}
 
 	select, .selector{
 		@include border-radius(3px);
 		@include futura(13px, $black);
-		background:$white;
+		background-color:$white;
 		width:100% !important;
+		margin-bottom:15px;
+	}
+
+	.selector{
+		select{
+			margin-bottom:0px;
+			height:40px;
+			cursor: pointer;
+		}
+		span{
+			position: relative;
+			top: 3px;
+		}
+	}
+
+	.inline{
+		margin-bottom:15px;
+		label, input, select, .selector{
+			display:inline;
+			margin-bottom: 0px;
+		}
+		.radio, .checker{
+			margin-bottom:0px;
+		}
+		label{
+			margin-right:15px;
+			&.lineLabel{
+				margin-right: 30px;
+			}
+		}
+	}
+
+	&.bgWhite{
+		input{
+			&[type='text'], &[type='password']{
+				background-color:$pale;
+			}
+		}
+		select, .selector{
+			background-color:$pale;
+		}
+
+		div#{$class-wrapper}#{$class-checkbox} {
+			span {
+				background-image:url("../img/uniform/spritePale.png");	
+			}
+
+		}
+
+		/* Radio */
+
+		div#{$class-wrapper}#{$class-radio} {
+			span {
+				background-image:url("../img/uniform/spritePale.png");	
+			}
+		}
 	}
 }
