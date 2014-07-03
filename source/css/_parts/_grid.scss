@@ -1,5 +1,5 @@
 html, body{
-	background:$pale;
+	background:$white;
 }
 
 #contents{
@@ -10,8 +10,14 @@ html, body{
 	.bgWhite{
 		background-color:$white;
 	}
+	.bgPale{
+		background-color:$pale;
+	}
 	.bgPattern{
 		background:$pale url("../img/patternBack.png") center center repeat;
+	}
+	.bgBlack{
+		background-color:#353534;
 	}
 
 // Rows
@@ -21,8 +27,11 @@ html, body{
 		max-width:964px;
 		position:relative;
 		margin:0 auto;
-		&.pad70{
-			padding:70px 0px;
+		&.pad40{
+			padding-top:40px;
+		}
+		&.pad30{
+			padding-top:30px;
 		}
 		&.table-large{
 			display:table;
@@ -66,7 +75,6 @@ html, body{
 		width:100%;
 		@include clearfix;
 		position:relative;
-		padding:70px 0px;
 		&.pad40{
 			padding:20px 0px 40px 0px;
 		}
@@ -157,6 +165,9 @@ html, body{
 
 
 		@media all and (max-width: 780px){
+			&.mpad0{
+				padding:0px;
+			}
 			&[class^=large-]{
 				width:100%;
 			}

@@ -154,13 +154,13 @@
 
 	.parsley-errors-list{
 		position:relative;
-		margin:0px 0px 15px 0px;
 		padding:0px;
 		top:-5px;
 		display:block;
 		clear:both;
 		li{
 			@include futura(12px, $error);
+			margin:0px 0px 15px 0px;
 		}
 	}
 }

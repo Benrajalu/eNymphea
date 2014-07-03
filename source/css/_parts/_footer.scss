@@ -1,0 +1,152 @@
+// Sticky footer
+	html, body {
+		height: 100%;
+	}
+	#wrapper {
+		min-height: 100%;
+		height: auto !important;
+		height: 100%;
+		margin: 0 auto; /* the bottom margin is the negative value of the footer's height */
+	}
+
+	#push{
+		margin-top:50px;
+	}
+	#footer, #push {
+		border:0px;
+	}
+
+// Contents
+	#footer{
+		.right{
+			float:right;
+		}
+		.left{
+			float:left;
+		}
+		#footerNav{
+			ul{
+				@extend .row;
+				text-align:right;
+				padding:35px 0px 25px 0px;
+				vertical-align: top;
+				li{
+					float:left;
+					display:block;
+					width:25%;
+					margin:0px 0px 15px 0px;
+					text-align:left;
+					padding-right:40px;
+					a{
+						@include futura(15px, $violet);
+						@include transition(all 300ms);
+						text-transform: uppercase;
+						text-align:left;
+						text-decoration: none;
+						&:hover, &:focus{
+							color:$black;
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+
+		h3, h4{
+			@include futura(14px, #979794);
+			text-transform: uppercase;
+			margin-bottom:15px;
+		}
+		h4{
+			font-size:10px;
+		}
+
+		ul{
+			li{
+				margin-bottom: 10px;
+				a{
+					@include futura(14px, #979794);
+					@include transition(all 300ms);
+					text-decoration: none;
+					&:hover{
+						color:$pale;
+						text-decoration: underline;
+					}
+				}
+				&#facebookFans{
+					a{
+						@include futura(30px, #3c58aa);
+						text-decoration: none;
+						background:url("../img/fbIcon.png") center left no-repeat;
+						padding-left:35px;
+					}
+				}
+			}
+		}
+
+		#newsletter{
+			padding:0px 60px 0px 0px;
+			position:relative;
+			input[type="submit"]{
+				position:absolute;
+				bottom:0px;
+				right:60px;
+				height:40px;
+				width:40px;
+				padding:0px;
+				background:transparent url('../img/uniform/formArrow.png') center center no-repeat;
+				overflow: hidden;
+				text-indent:-999px;
+			}
+		}
+
+		#cautions{
+			border-bottom:1px solid #555555;
+			.left{
+				ul{
+					li:last-child{
+						border-left:1px solid #555555;
+						padding-left:15px;
+					}
+				}
+			}
+			ul{
+				display:block;
+				vertical-align: top;
+				li{
+					@include inline-block();
+					vertical-align: top;
+					margin-right:15px;
+					h4{
+						position:relative;
+						top:1px;
+					}
+					a{
+						display:block;
+					}
+					&.card{
+						margin-right:0px;
+					}
+				}
+			}
+		}
+
+		#credits{
+			padding-top:10px;
+			a{
+				@include futura(10px, #979794);
+				@include transition(all 300ms);
+				text-decoration: none;
+				text-transform: uppercase;
+				&:hover{
+					color:$pale;
+					text-decoration: underline;
+				}
+			}
+			ul{
+				li{
+					@include inline-block();
+				}
+			}
+		}
+	}

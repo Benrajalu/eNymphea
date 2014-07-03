@@ -26,6 +26,20 @@ if (!(window.console && console.log)) {
 	// Parsley on selects
 		var forms = $('.form'),
 			selects = forms.find(".selector"),
+			outsource = function(){
+				$(".selector").each(function(){
+					var message = $(this).find('.parsley-errors-list');
+					message.remove();
+					$(this).after(message);
+					message.addClass("outsource");
+				})
+				$("fieldset").each(function(){
+					var message = $(this).find('.parsley-errors-list');
+					message.remove();
+					$(this).after(message);
+					message.addClass("outsource");
+				});
+			},
 			classSwitch = function(target){
 				var status = $(target).val();
 				if(status=="" && typeof target.attr("data-parsley-required") !== typeof undefined && target.attr("data-parsley-required") !== false){
@@ -42,35 +56,24 @@ if (!(window.console && console.log)) {
 			classSwitch($(this));
 		});
 
-	/* var sendMessage = function(){
-		if (true === $('#contactForm').parsley().isValid()) {
-			event.preventDefault();
-			$("#contactForm").find("#submit").attr("value", "Envoi en cours...").attr("disabled", "disabled");
-			var sendTo = $("#contactForm").attr("action");
-			$.ajax({
-			  type: "POST",
-			  url: sendTo,
-			  data: $("#contactForm").serialize(),
-			  success: function() {
-			    $('#feedback').addClass("success").html("Message reçu");
-			    $("#contactForm").find("#submit").attr("value", "Nouvel envoi").removeAttr("disabled");
-			  }, 
-			  error: function() {
-			  	$('#feedback').removeClass("success").html("Oups, soucis de script. Merci de me joindre via email !");
-			  }
-			});
-			return false;
-		} else {
-		  $('#feedback').removeClass('success').html("Tous les champs sont obligatoires, et votre adresse email doit être valide...");
-		}
-	} */
+		$(".form input[type='checkbox']").change(function(){
+			outsource();
+		}).focus(function(){
+			outsource();
+		})
+
+// Sticky footer
+	var stickyFooter = function(){
+		var h = $("#footer").height(), 
+			hr = $("#rituals").height();
+		$("#wrapper").css("margin-bottom", '-' + h + 'px');
+		$("#push").css("height", h);
+		$("#contents").css("padding-top", hr);
+	}
 
 
 $(window).load(function () {
 	// Parsley
-		/* $.listen('parsley:field:validate', function () {
-			
-		}); */
 
 		$.listen('parsley:form:validated', function() {
 			$(".form").each(function(){
@@ -78,47 +81,15 @@ $(window).load(function () {
 				classSwitch(tar);
 
 				// Messages outside filedset for radios and checkboxes
-				$(".selector").each(function(){
-					var message = $(this).find('.parsley-errors-list');
-					message.remove();
-					$(this).after(message);
-					message.addClass("outsource");
-				})
-				$("fieldset").each(function(){
-					var message = $(this).find('.parsley-errors-list');
-					message.remove();
-					$(this).after(message);
-					message.addClass("outsource");
-				})
+				outsource();
 			})
 		});
 
-		/* $('#contactForm input[type="submit"]').on('click', function () {
-		  $('#contactForm').parsley().validate();
-		  validateFront();
-		}); */
-
-
-	// Scroll top
-		$(function () {
-			$(window).scroll(function () {
-				if ($(this).scrollTop() > 200) {
-					$('#scrollTop').addClass("show");
-					$('#scrollTop').removeClass("hide");
-				} else {
-					$('#scrollTop').removeClass("show");
-					$('#scrollTop').addClass("hide");
-				}
-			});
-
-			// scroll body to 0px on click
-			$('#scrollTop').click(function () {
-				$('body,html').animate({
-					scrollTop: 0
-				}, 600);
-				return false;
-			});
-		});
+	// Sticky footer
+		stickyFooter();
+		$(window).resize(function(){
+			stickyFooter();
+		})
 
 	// Place any jQuery/helper plugins in here.
 	

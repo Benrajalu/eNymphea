@@ -31,88 +31,182 @@
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
 
-        <header>
-            <nav id="topBar">
-                <section class="cf">
-                    <button id="mobileOn" class="mobileToggle">Ouvrir le menu</button>
-                    <ul class="cf">
-                        <li><%= magic_link_to '<span class="mobileOff">Enregistrez-vous</span>', '/user.html', :id => "user", :class => "trigger" %>
-                            <ul id="log">
-                                <li>
-                                    <h3>Me connecter</h3>
-                                    <form id="logIn" name="logIn" action='/logged.html'>
-                                        <label for="mail">Email</label>
-                                        <input name="mail" id="mail" placeholder="Votre adresse email" type="text" />
-                                        <label for="pass">Mot de passe</label>
-                                        <input name="pass" id="pass" placeholder="Votre mot de passe" type="password" />
-                                        <p><a href="#passRetrival" class="pop">Mot de passe oublié ?</a></p>
-                                        <input type="submit" value="Connexion" class="button submit small" />
-                                    </form>
-                                </li>
-                                <li>
-                                    <h3>Créer un compte</h3>
-                                    <form id="signUp" name="signUp" action=''>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus odio minus, numquam libero deserunt dicta.</p>
-                                        <label for="email">Mot de passe</label>
-                                        <input name="email" id="email" placeholder="Votre adresse email" type="text" />
-                                        <input type="submit" value="Créer un compte" class="button submit small" />
-                                    </form>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><%= magic_link_to '<span class="total">0</span> <span class="mobileOff">Mon panier</span>', '/order.html', :id => 'basket' %></li>
-                        <li><a href="#" id="currentLanguage" class="trigger">FR</a>
-                            <ul id="languages">
-                                <li><a href="#" class="active">FR</a></li>
-                                <li><a href="#">ES</a></li>
-                                <li><a href="#">EN</a></li>
-                                <li><a href="#">IT</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </section>
-            </nav>
-
-            <nav id='mainNav' class="cf">
-                <div class="screen"></div>
-                <% link_to '/index.html', :class => 'mainLogo' do %>
-                  <%= image_tag 'logo.png' %>
-                <% end %>
-
-                <section class="navigate cf">
-                    <button id="mobileOff" class="mobileToggle">Fermer le menu</button>
-
-                    <ul>
-                        <li><%= magic_link_to "L'espace bien-être", '/espace.html' %></li>
-                        <li><a href="#rituals" class="flyout">Nos rituels</a></li>
-                        <li><%= magic_link_to 'Réserver', '/book.html' %></li>
-                        <li><%= magic_link_to 'offir', '/offer.html' %></li>
-                        <li><%= magic_link_to 'Actualités', '/news.html' %></li>
-                        <li><%= magic_link_to 'Informations pratiques', '/infos.html' %></li>
-                    </ul>
-
-                    <aside id="rituals">
-                        <a href="#" id="back" class="mobileOn">Revenir</a>
-                        <h3 class="menuTitle mobileOn">Nos rituels de soin</h3>
-                        <h3>Découvrez nos rituels de beauté</h3>
+        <div id="wrapper">
+            <header>
+                <nav id="topBar">
+                    <section class="cf">
+                        <button id="mobileOn" class="mobileToggle">Ouvrir le menu</button>
                         <ul class="cf">
-                            <li><a href="#">Soins du visage</a></li>
-                            <li><a href="#">Minceur et fermeté</a></li>
-                            <li><a href="#">Massages du corps</a></li>
-                            <li><a href="#">Soin d'exception espace privé Paris</a></li>
-                            <li><a href="#">Rituels du bain & soins corps</a></li>
-                            <li><a href="#">Abonnements</a></li>
-                            <li><a href="#">Rituels de soin</a></li>
+                            <li><%= magic_link_to '<span class="mobileOff">Enregistrez-vous</span>', '/user.html', :id => "user", :class => "trigger" %>
+                                <ul id="log">
+                                    <li>
+                                        <h3>Me connecter</h3>
+                                        <form id="logIn" name="logIn" action='/logged.html'>
+                                            <label for="mail">Email</label>
+                                            <input name="mail" id="mail" placeholder="Votre adresse email" type="text" />
+                                            <label for="pass">Mot de passe</label>
+                                            <input name="pass" id="pass" placeholder="Votre mot de passe" type="password" />
+                                            <p><a href="#passRetrival" class="pop">Mot de passe oublié ?</a></p>
+                                            <input type="submit" value="Connexion" class="button submit small" />
+                                        </form>
+                                    </li>
+                                    <li>
+                                        <h3>Créer un compte</h3>
+                                        <form id="signUp" name="signUp" action=''>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus odio minus, numquam libero deserunt dicta.</p>
+                                            <label for="email">Mot de passe</label>
+                                            <input name="email" id="email" placeholder="Votre adresse email" type="text" />
+                                            <input type="submit" value="Créer un compte" class="button submit small" />
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><%= magic_link_to '<span class="total">0</span> <span class="mobileOff">Mon panier</span>', '/order.html', :id => 'basket' %></li>
+                            <li><a href="#" id="currentLanguage" class="trigger">FR</a>
+                                <ul id="languages">
+                                    <li><a href="#" class="active">FR</a></li>
+                                    <li><a href="#">ES</a></li>
+                                    <li><a href="#">EN</a></li>
+                                    <li><a href="#">IT</a></li>
+                                </ul>
+                            </li>
                         </ul>
-                    </aside>
-                </section>
+                    </section>
+                </nav>
+
+                <nav id='mainNav' class="cf">
+                    <div class="screen"></div>
+                    <% link_to '/index.html', :class => 'mainLogo' do %>
+                      <%= image_tag 'logo.png' %>
+                    <% end %>
+
+                    <section class="navigate cf">
+                        <button id="mobileOff" class="mobileToggle">Fermer le menu</button>
+
+                        <ul>
+                            <li><%= magic_link_to "L'espace bien-être", '/espace.html' %></li>
+                            <li><a href="#rituals" class="flyout">Nos rituels</a></li>
+                            <li><%= magic_link_to 'Réserver', '/book.html' %></li>
+                            <li><%= magic_link_to 'offir', '/offer.html' %></li>
+                            <li><%= magic_link_to 'Actualités', '/news.html' %></li>
+                            <li><%= magic_link_to 'Informations pratiques', '/infos.html' %></li>
+                        </ul>
+
+                        <aside id="rituals">
+                            <a href="#" id="back" class="mobileOn">Revenir</a>
+                            <h3 class="menuTitle mobileOn">Nos rituels de soin</h3>
+                            <h3>Découvrez nos rituels de beauté</h3>
+                            <ul class="cf">
+                                <li><a href="#">Soins du visage</a></li>
+                                <li><a href="#">Minceur et fermeté</a></li>
+                                <li><a href="#">Massages du corps</a></li>
+                                <li><a href="#">Soin d'exception espace privé Paris</a></li>
+                                <li><a href="#">Rituels du bain & soins corps</a></li>
+                                <li><a href="#">Abonnements</a></li>
+                                <li><a href="#">Rituels de soin</a></li>
+                            </ul>
+                        </aside>
+                    </section>
 
 
+                </nav>
+            </header>
+
+            <div id="contents">
+                <%= yield %>
+            </div>
+
+
+            <hr id="push" />
+        </div>
+
+        <footer id="footer">
+            <nav id="footerNav" class="bgPale">
+                <ul class="cf">
+                    <li><a href="#">Soins du visage</a></li>
+                    <li><a href="#">Minceur et fermeté</a></li>
+                    <li><a href="#">Massages du corps</a></li>
+                    <li><a href="#">Soin d'exception espace privé Paris</a></li>
+                    <li><a href="#">Rituels du bain & soins corps</a></li>
+                    <li><a href="#">Abonnements</a></li>
+                    <li><a href="#">Rituels de soin</a></li>
+                </ul>
             </nav>
-        </header>
 
-        
-        <%= yield %>
+            <div class="rowFluid bgBlack">
+                <div class="row pad30">
+                    <div class="large-4 columns">
+                        <form id="newsletter" class="form" data-parsley-validate>
+                            <h3>Abonnez-vous à la newsletter</h3>
+                            <input type="text" placeholder="Votre adresse email" data-parsley-required data-parsley-type="email" />
+                            <input type="submit" class="inline" value="ok" />
+                        </form>
+                    </div>
+
+                    <div class="large-3 columns">
+                        <h3>Nos engagements</h3>
+                        <ul>
+                            <li><a href="#">Qualité</a></li>
+                            <li><a href="#">Sécurité</a></li>
+                            <li><a href="#">Livraison</a></li>
+                            <li><a href="#">Cadeau</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="large-2 columns">
+                        <h3>Mon Compte</h3>
+                        <ul>
+                            <li><a href="#">Connexion</a></li>
+                            <li><a href="#">Mes commandes</a></li>
+                            <li><a href="#">Mes données</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="large-3 columns">
+                        <h3>A propos de nous</h3>
+                        <ul>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Où trouver nos produits</a></li>
+                            <li><a href="#">Presse</a></li>
+                            <li><a href="#">Professionels</a></li>
+                            <li id="facebookFans"><a href="#">7659</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row pad40" id="cautions">
+                    <div class="left">
+                        <ul>
+                            <li><h4>Propulsé par</h4></li>
+                            <li><a href="#"><%= image_tag 'eNymphea.png' %></a></li>
+                            <li><a href="#"><%= image_tag 'logoSmall.png' %></a></li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li><h4>Tous nos paiements sont sécurisés</h4></li>
+                            <li class="card"><a href="#"><%= image_tag 'visa.png' %></a></li>
+                            <li class="card"><a href="#"><%= image_tag 'mastercard.png' %></a></li>
+                            <li class="card"><a href="#"><%= image_tag 'paypal.png' %></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row" id="credits">
+                    <div class="left">
+                        <a href="#">Copyright © 2014 SPA-Collection. - Tous droits réservés -</a>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li><a href="#">Politique en matière de cookies</a></li>
+                            <li><a href="#">Mentions légales</a></li>
+                            <li><a href="#">Politique de confidentialité</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
 
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
