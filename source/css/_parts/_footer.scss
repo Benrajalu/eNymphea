@@ -26,7 +26,6 @@
 		}
 		#footerNav{
 			ul{
-				@extend .row;
 				text-align:right;
 				padding:35px 0px 25px 0px;
 				vertical-align: top;
@@ -50,12 +49,41 @@
 					}
 				}
 			}
+
+			@media all and (max-width: 780px){
+				ul{
+					li{
+						float:none;
+						width:100%;
+						padding:0 10px;
+						a{
+							display:block;
+							text-align:center;
+						}
+					}
+				}
+			}
 		}
 
 		h3, h4{
 			@include futura(14px, #979794);
 			text-transform: uppercase;
 			margin-bottom:15px;
+			a{
+				text-decoration: none;
+				@include futura(14px, #979794);
+				
+				@media all and (max-width: 780px){
+					border-bottom:1px solid #555555;
+					display:block;
+					padding:0px 0px 10px 0px;
+					background:url('../img/cross.png') top right no-repeat;
+					line-height:19px;
+					&.active{
+						background:url('../img/minus.png') top right no-repeat;
+					}
+				}
+			}
 		}
 		h4{
 			font-size:10px;
@@ -82,6 +110,11 @@
 					}
 				}
 			}
+			@media all and (max-width: 780px){
+				&.show{
+					margin-bottom: 30px;
+				}
+			}
 		}
 
 		#newsletter{
@@ -97,6 +130,17 @@
 				background:transparent url('../img/uniform/formArrow.png') center center no-repeat;
 				overflow: hidden;
 				text-indent:-999px;
+			}
+			@media all and (max-width: 780px){
+				padding:0px;
+				&.show{
+					margin-bottom: 30px;
+				}
+				input[type="submit"]{
+					margin-top:0px;
+					bottom:14px;
+					right: 0px;
+				}
 			}
 		}
 
@@ -129,6 +173,10 @@
 					}
 				}
 			}
+
+			@media all and (max-width: 780px){
+				padding:0 10px;
+			}
 		}
 
 		#credits{
@@ -147,6 +195,20 @@
 				li{
 					@include inline-block();
 				}
+			}
+			@media all and (max-width: 780px){
+				padding:10px;
+				.left{
+					float:none;
+					width:100%;
+					text-align:center;
+				}
+			}
+		}
+
+		@media all and (max-width: 780px){
+			.mobileOff{
+				display:none !important;
 			}
 		}
 	}

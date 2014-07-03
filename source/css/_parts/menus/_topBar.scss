@@ -15,6 +15,8 @@
 			float:right;
 			line-height:43px;
 			vertical-align: middle;
+
+			@include inline-block();
 			> li{
 				float:left;
 				text-align:center;
@@ -247,7 +249,8 @@
 			}
 			#mobileOn{
 				@include transition(all 300ms);
-				display:inline-block;
+				display:block;
+				float:left;
 				border:0px;
 				-webkit-appearance: none;
 				background:url('../img/hamburger.png') center center no-repeat;
@@ -257,7 +260,7 @@
 				text-indent:-999px;
 				overflow:hidden;
 				position:relative;
-				top:-1px;
+				top:3px;
 				&:active, &:focus{
 					background:$pale url('../img/hamburger.png') center center no-repeat;
 					outline:0px;

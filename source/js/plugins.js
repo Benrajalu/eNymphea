@@ -64,12 +64,18 @@ if (!(window.console && console.log)) {
 
 // Sticky footer
 	var stickyFooter = function(){
-		var h = $("#footer").height(), 
-			hr = $("#rituals").height();
+		var h = $("#footer").height();
 		$("#wrapper").css("margin-bottom", '-' + h + 'px');
 		$("#push").css("height", h);
-		$("#contents").css("padding-top", hr);
 	}
+
+// Reveal
+	$(".reveal").click(function(event){
+		$(this).toggleClass("active");
+		event.preventDefault();
+		var tar = $(this).attr("href");
+		$(tar).toggleClass("show");
+	})
 
 
 $(window).load(function () {
