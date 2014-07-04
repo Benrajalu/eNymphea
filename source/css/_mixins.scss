@@ -30,6 +30,13 @@
 	*zoom: 1;
 }
 
+@mixin PE(){
+	content:"";
+	display:block;
+	position:absolute;
+	top:50%;
+}
+
 .cf{
 	@include clearfix;
 }

@@ -72,6 +72,7 @@
 			event.preventDefault();
 			$(this).toggleClass("active");
 			$("#mainNav").toggleClass("expended");
+			$("#contents").toggleClass("push");
 		});
 		$("#back").click(function(event){
 			event.preventDefault();
@@ -81,5 +82,6 @@
 		expand.each(function(){
 			if($(this).hasClass("active")){
 				$('#mainNav').addClass("expended");
+				$("#contents").addClass("push");
 			}
 		})

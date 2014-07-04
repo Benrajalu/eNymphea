@@ -270,3 +270,17 @@
 		}
 	}
 }
+
+#contents{
+	@include transition(padding 300ms);
+	padding:0px;
+	&.push{
+		padding-top:100px;
+	}
+
+	@media only screen and (max-width:780px){
+		&.push{
+			padding-top:0px;
+		}
+	}
+}

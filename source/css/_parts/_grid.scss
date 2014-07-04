@@ -2,10 +2,6 @@ html, body{
 	background:$white;
 }
 
-#contents{
-	padding-top:200px;
-}
-
 // Backgrounds
 	.bgWhite{
 		background-color:$white;
@@ -33,6 +29,9 @@ html, body{
 		}
 		&.pad30{
 			padding-top:30px;
+		}
+		&.pad0{
+			padding:0px;
 		}
 		&.table-large{
 			display:table;

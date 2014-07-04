@@ -1,5 +1,10 @@
 .form{
 	padding:30px;
+	
+	h2{
+		@include futura(18px, #363636);
+	}
+
 	label{
 		@include futura(14px, $black);
 		display:block;
@@ -83,7 +88,6 @@
 		width:100% !important;
 		margin-bottom:15px;
 	}
-
 	.selector{
 		overflow: visible;
 		select{
@@ -164,3 +168,11 @@
 		}
 	}
 }
+
+// Specific forms
+	#mainForm{
+		margin-bottom:50px;
+		border-left:1px solid #d5d5d5;
+		position:relative;
+		z-index:4;
+	}

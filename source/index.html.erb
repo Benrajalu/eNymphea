@@ -4,3 +4,173 @@ description: Home pour E-Nymphea
 ---
 
 
+<!-- Slider -->
+	<div id="mainSlider" class="flexslider large">
+		<ul class="slides">
+			<li>
+				<%= image_tag 'slides/slide1.jpg' %>
+				<article class="caption">
+						<h3>Nos rituels de soins</h3>
+						<p>Une palette de soins et de traditions ancestrales, empreints de Qualité, d'Authenticité et de Cérémonial.</p>
+						<a href="#">En savoir plus</a>
+				</article>
+			</li>
+			<li>
+				<%= image_tag 'slides/slide2.jpg' %>
+				<article class="caption">
+						<h3>Nos rituels de soins</h3>
+						<p>Une palette de soins et de traditions ancestrales, empreints de Qualité, d'Authenticité et de Cérémonial.</p>
+						<a href="#">En savoir plus</a>
+				</article>
+			</li>
+			<li>
+				<%= image_tag 'slides/slide1.jpg' %>
+				<article class="caption">
+						<h3>Nos rituels de soins</h3>
+						<p>Une palette de soins et de traditions ancestrales, empreints de Qualité, d'Authenticité et de Cérémonial.</p>
+						<a href="#">En savoir plus</a>
+				</article>
+			</li>
+			<li>
+				<%= image_tag 'slides/slide2.jpg' %>
+				<article class="caption">
+						<h3>Nos rituels de soins</h3>
+						<p>Une palette de soins et de traditions ancestrales, empreints de Qualité, d'Authenticité et de Cérémonial.</p>
+						<a href="#">En savoir plus</a>
+				</article>
+			</li>
+			<li>
+				<%= image_tag 'slides/slide1.jpg' %>
+				<article class="caption">
+						<h3>Nos rituels de soins</h3>
+						<p>Une palette de soins et de traditions ancestrales, empreints de Qualité, d'Authenticité et de Cérémonial.</p>
+						<a href="#">En savoir plus</a>
+				</article>
+			</li>
+		</ul>
+	</div>
+
+<!-- Contents -->
+	<div class="row">
+		<div class="large-7 large-push-5 columns pad0">
+			<form id="mainForm" class="form bgPattern" action="" data-parsley-validate data-parsley-trigger="change focusout">
+				
+				<h2 class="centered">Réserver en ligne</h2>
+				<hr class="smallLine centered" />
+
+				<div class="inline cf">
+					<fieldset>
+						<label class="lineLabel">Je souhaite</label>
+						<input type="radio" data-parsley-required name="choice" value="book" id="book" /> <label for="book">réserver</label>
+						<input type="radio" data-parsley-required name="choice" value="gift" id="gift"/> <label for="gift">offrir</label>
+					</fieldset>
+				</div>
+
+				<label>Sélectionnez un établissement</label>
+				<select name="etablissement" data-parsley-required>
+					<option value="">Choisir un établissement</option>
+					<option value="nomdeletablissement">Etablissement 1</option>
+					<option value="nomdeletablissement">Etablissement 2</option>
+					<option value="nomdeletablissement">Etablissement 3</option>
+				</select>
+
+				<label>Sélectionnez une date pour un rendez-vous (et / ou)</label>
+				<div class="row pad0">
+					<div class="large-5 columns pad0">
+						<input type="text" class="datepicker" data-parsley-required name="date" />
+					</div>
+					<div class="large-7 columns pad0 padL mpad0">
+						<select name="moment" data-parsley-required data-parsley-pattern="\w+">
+							<option value="À tout moment de la journée">À tout moment de la journée</option>
+							<optgroup label="Matinée">
+								<option value="9h">9h-10h</option>
+								<option value="10h">10h-11h</option>
+								<option value="11h">11h-12h</option>
+							</optgroup>
+							<optgroup label="Après-midi">
+								<option value="14h">14h-15h</option>
+								<option value="15h">15h-16h</option>
+								<option value="16h">16h-17h</option>
+								<option value="17h">17h-18h</option>
+								<option value="18h">18h-19h</option>
+							</optgroup>
+						</select>
+					</div>
+				</div>
+
+				<label>Sélectionnez un type de soin</label>
+				<select name="soin" data-parsley-required data-parsley-pattern="\w+">
+					<option value="">Choisir un type de soin</option>
+					<optgroup label="Soin du visage">
+						<option value="nomdusoin">Nom du soin</option>
+						<option value="nomdusoin">Nom du soin</option>
+						<option value="nomdusoin">Nom du soin</option>
+					</optgroup>
+					<optgroup label="Minceur & fermeté">
+						<option value="nomdusoin">Nom du soin</option>
+						<option value="nomdusoin">Nom du soin</option>
+						<option value="nomdusoin">Nom du soin</option>
+					</optgroup>
+					<optgroup label="Massages corps">
+						<option value="nomdusoin">Nom du soin</option>
+						<option value="nomdusoin">Nom du soin</option>
+						<option value="nomdusoin">Nom du soin</option>
+					</optgroup>
+					<optgroup label="Soins d'exception espace privé Paris">
+						<option value="nomdusoin">Nom du soin</option>
+						<option value="nomdusoin">Nom du soin</option>
+						<option value="nomdusoin">Nom du soin</option>
+					</optgroup>
+					<optgroup label="Rituels du bain & soins corps">
+						<option value="nomdusoin">Nom du soin</option>
+						<option value="nomdusoin">Nom du soin</option>
+						<option value="nomdusoin">Nom du soin</option>
+					</optgroup>
+					<optgroup label="Rituels de soin">
+						<option value="nomdusoin">Nom du soin</option>
+						<option value="nomdusoin">Nom du soin</option>
+						<option value="nomdusoin">Nom du soin</option>
+					</optgroup>
+				</select>
+
+				<input type="submit" value="valider" />
+			</form>
+		</div>
+		<div class="large-5 large-pull-7 columns pad0" id="pushOffers">
+			<h3 class="subheader">Les soins du moment</h3>
+			<div class="flexslider" id="soinSlider">
+				<ul class="slides">
+					<li>
+						<%= image_tag 'slides/smallSlide1.jpg' %>
+						<article class="content">
+							<p class="price">80€</p>
+							<h3><a href="#">Expérience du spa - Abo</a></h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam et consectetur fuga ratione exercitationem fugiat? Harum aut corrupti minus ratione commodi, nostrum fugit iure impedit quod, voluptate eaque quia ipsa. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, enim, laborum. Inventore aliquid tenetur animi repellendus blanditiis sint amet culpa dolore ratione, vero, consequuntur impedit temporibus ea eius doloremque quam.</p>
+							<ul class="infoList cf">
+								<li class="time">3 x 50min</li>
+								<li class="book"><a href="#">Réserver</a></li>
+								<li class="offer"><a href="#">Offrir</a></li>
+							</ul>
+							<a href="#" class="more">En savoir plus</a>
+						</article>
+					</li>
+					<li>
+						<%= image_tag 'slides/smallSlide1.jpg' %>
+						<article class="content">
+							<p class="price">30€</p>
+							<h3><a href="#">Seconde slide</a></h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam et consectetur fuga ratione exercitationem fugiat? Harum aut corrupti minus ratione commodi, nostrum fugit iure impedit quod, voluptate eaque quia ipsa. Lorem ipsum dolor sit amet.</p>
+							<ul class="infoList cf">
+								<li class="time">30min</li>
+								<li class="book"><a href="#">Réserver</a></li>
+								<li class="offer"><a href="#">Offrir</a></li>
+							</ul>
+							<a href="#" class="more">En savoir plus</a>
+						</article>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+

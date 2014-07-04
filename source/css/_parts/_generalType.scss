@@ -1,0 +1,42 @@
+// here are the general typo rules to be overriden on specefic blocks
+	h1, h2, h3, h4, h5, h6{
+		font-family:'futuraBold';
+		text-transform: uppercase;
+		&.centered{
+			text-align: center;
+		}
+		&.subheader{
+			@include futuraBold(10px, #5b5959);
+			line-height:40px;
+		}
+	}
+
+	p{
+		@include helvetica(12px, $black);
+		a{
+			@include transition(all 300ms);
+			@include helvetica(12px, $violet);
+			text-decoration: none;
+			&:hover{
+				text-decoration: underline;
+				color:$black;
+			}
+		}
+	}
+
+	hr{
+		display:block;
+		margin:0px;
+		padding:0px;
+		&.smallLine{
+			width:20px;
+			border:0px;
+			border-top:1px solid $black;
+			margin-bottom:30px;
+			margin-top:5px;
+		}
+		&.centered{
+			margin-left:auto;
+			margin-right:auto;
+		}
+	}

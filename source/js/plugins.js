@@ -98,5 +98,17 @@ $(window).load(function () {
 		})
 
 	// Place any jQuery/helper plugins in here.
-	
+		// Flexslider
+		$('#mainSlider').flexslider({
+			slideshowSpeed : 8000,
+			pauseOnHover: true,
+			directionNav: false,
+		});
+		$("#soinSlider").flexslider({
+			slideshowSpeed: 8000,
+			pauseOnHover: true,
+			controlNav: false,
+			controlsContainer: "#pushOffers",
+			slideshow: false, 
+		});
 });
