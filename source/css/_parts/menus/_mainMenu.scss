@@ -96,7 +96,7 @@
 				line-height: 1.3em;
 			}
 			ul{
-				max-width:550px;
+				max-width:$mobile;
 				li{
 					float:left;
 					width:50%;
@@ -131,7 +131,7 @@
 
 	// Mobile version
 
-	@media only screen and (max-width: 780px){
+	@media only screen and (max-width: $tablet){
 		.screen{
 			display:none;
 		}
@@ -278,7 +278,7 @@
 		padding-top:100px;
 	}
 
-	@media only screen and (max-width:780px){
+	@media only screen and (max-width:$tablet){
 		&.push{
 			padding-top:0px;
 		}

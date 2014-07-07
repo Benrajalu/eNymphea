@@ -13,15 +13,17 @@ if (!(window.console && console.log)) {
 
 // Forms 
 	
-	$('.datepicker').datepicker({
-	    startDate: "today",
-	    todayBtn: "linked",
-	    language: "fr",
-	    daysOfWeekDisabled: "0",
-	    todayHighlight: true
-	});
+	// Dates
+		$('.datepicker').datepicker({
+		    startDate: "today",
+		    todayBtn: "linked",
+		    language: "fr",
+		    daysOfWeekDisabled: "0",
+		    todayHighlight: true
+		});
 
-	$("select, input[type='checkbox'], input[type='radio']").uniform();
+	// Uniform
+		$("select, input[type='checkbox'], input[type='radio']").uniform();
 
 	// Parsley on selects
 		var forms = $('.form'),
@@ -62,12 +64,27 @@ if (!(window.console && console.log)) {
 			outsource();
 		})
 
+	// Switch between forms
+		$(".formSwitch").on("click", function(event){
+			tar = $(this).attr("value");
+			$(".formPanel").each(function(){
+				if($(this).attr("id")!=tar){
+					$(this).hide();
+				}
+				else{
+					$(this).show();
+				}
+			})
+		})
+
+
 // Sticky footer
 	var stickyFooter = function(){
 		var h = $("#footer").height();
 		$("#wrapper").css("margin-bottom", '-' + h + 'px');
 		$("#push").css("height", h);
 	}
+
 
 // Reveal
 	$(".reveal").click(function(event){
@@ -99,16 +116,19 @@ $(window).load(function () {
 
 	// Place any jQuery/helper plugins in here.
 		// Flexslider
-		$('#mainSlider').flexslider({
-			slideshowSpeed : 8000,
-			pauseOnHover: true,
-			directionNav: false,
-		});
-		$("#soinSlider").flexslider({
-			slideshowSpeed: 8000,
-			pauseOnHover: true,
-			controlNav: false,
-			controlsContainer: "#pushOffers",
-			slideshow: false, 
-		});
+			$('#mainSlider').flexslider({
+				slideshowSpeed : 5000,
+				pauseOnHover: true,
+				directionNav: false,
+			});
+			$("#soinSlider").flexslider({
+				slideshowSpeed: 8000,
+				pauseOnHover: true,
+				controlNav: false,
+				controlsContainer: "#pushOffers",
+				slideshow: false, 
+			});
+
+		// Pop-ins
+			$('.pop').magnificPopup();
 });

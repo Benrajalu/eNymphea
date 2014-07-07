@@ -50,8 +50,9 @@
 				}
 			}
 
-			@media all and (max-width: 780px){
+			@media all and (max-width: $tablet){
 				ul{
+					padding:20px 0px 5px 0px;
 					li{
 						float:none;
 						width:100%;
@@ -73,7 +74,7 @@
 				text-decoration: none;
 				@include futura(14px, #979794);
 				
-				@media all and (max-width: 780px){
+				@media all and (max-width: $tablet){
 					border-bottom:1px solid #555555;
 					display:block;
 					padding:0px 0px 10px 0px;
@@ -110,7 +111,7 @@
 					}
 				}
 			}
-			@media all and (max-width: 780px){
+			@media all and (max-width: $tablet){
 				&.show{
 					margin-bottom: 30px;
 				}
@@ -130,8 +131,11 @@
 				background:transparent url('../img/uniform/formArrow.png') center center no-repeat;
 				overflow: hidden;
 				text-indent:-999px;
+				&:hover{
+					background:transparent url('../img/uniform/formArrowHover.png') center center no-repeat;
+				}
 			}
-			@media all and (max-width: 780px){
+			@media all and (max-width: $tablet){
 				padding:0px;
 				&.show{
 					margin-bottom: 30px;
@@ -174,29 +178,40 @@
 				}
 			}
 
-			@media all and (max-width: 780px){
+			@media all and (max-width: $tablet){
 				padding:0 10px;
 			}
 		}
 
 		#credits{
 			padding-top:10px;
-			a{
+			p{
 				@include futura(10px, #979794);
 				@include transition(all 300ms);
 				text-decoration: none;
 				text-transform: uppercase;
-				&:hover{
-					color:$pale;
-					text-decoration: underline;
-				}
+				height:30px;
+				line-height:20px;
 			}
 			ul{
 				li{
 					@include inline-block();
+					height:30px;
+					line-height:20px;
+					margin:0px;
+					a{
+						@include futura(10px, #979794);
+						@include transition(all 300ms);
+						text-decoration: none;
+						text-transform: uppercase;
+						&:hover{
+							color:$pale;
+							text-decoration: underline;
+						}
+					}
 				}
 			}
-			@media all and (max-width: 780px){
+			@media all and (max-width: $tablet){
 				padding:10px;
 				.left{
 					float:none;
@@ -206,7 +221,7 @@
 			}
 		}
 
-		@media all and (max-width: 780px){
+		@media all and (max-width: $tablet){
 			.mobileOff{
 				display:none !important;
 			}

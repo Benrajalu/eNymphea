@@ -23,7 +23,7 @@ html, body{
 		max-width:984px;
 		position:relative;
 		margin:0 auto;
-		padding:0 10px;
+		padding:0 15px;
 		&.pad40{
 			padding-top:40px;
 		}
@@ -40,7 +40,7 @@ html, body{
 				vertical-align: middle;
 				float:none;
 			}
-			@media all and (max-width: 780px){
+			@media all and (max-width: $tablet){
 				display:block;
 				.columns{
 					display:block;
@@ -54,7 +54,7 @@ html, body{
 				vertical-align: middle;
 				float:none;
 			}
-			@media all and (max-width: 550px){
+			@media all and (max-width: $mobile){
 				display:block;
 				.columns{
 					display:block;
@@ -164,12 +164,13 @@ html, body{
 		}
 
 
-		@media all and (max-width: 780px){
+		@media all and (max-width: $tablet){
 			&.mpad0{
 				padding:0px;
 			}
 			&[class^=large-]{
 				width:100%;
+				padding:0px;
 			}
 			@for $i from 1 through 12{
 				&.large-pull-#{$i}{
@@ -196,13 +197,15 @@ html, body{
 			}
 
 		}
-		@media all and (max-width: 550px){
+		@media all and (max-width: $mobile){
 			&[class^=large-]{
 				width:100%;
+				padding:0px;
 			}
 
 			&[class^=medium-]{
 				width:100%;
+				padding:0px;
 			}
 
 			@for $i from 1 through 12{
@@ -227,7 +230,7 @@ html, body{
 	}
 
 // Reveal
-	@media all and (max-width: 780px){
+	@media all and (max-width: $tablet){
 		.toReveal{
 			@include transition(all 300ms);
 			max-height:0px;

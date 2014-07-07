@@ -6,7 +6,7 @@
 
 		// Close all panels
 			var closePanels = function(){
-				var panels = triggers.siblings('ul')
+				var panels = $(".layer");
 				var clo = new TimelineLite();
 				clo.pause();
 				clo.to(panels, 0.5, {maxHeight:"0px", ease:Sine.easeInOut});
@@ -16,12 +16,25 @@
 				clo.play();
 			}
 
+		// Close panels on body click
+			var bodyClose = function(){
+				$('body').bind('click', function(e) {
+					if($('#log').height() > 50 || $("#languages").height() > 50 || $("#cart").height() > 20){
+						if($(e.target).closest('.layer').length == 0 && $(e.target).closest('.trigger').length == 0 ) {
+						    closePanels();
+						}	
+					}
+				});
+			}
+
+			bodyClose();
+
 		triggers.click(function(event){
 			event.preventDefault();
 			var target = $(this).siblings("ul"); 
 
 			if($(this).attr("id")=="user"){
-				var mx = "490px";
+				var mx = "700px";
 			}
 			else{
 				var mx = "200px";
@@ -59,6 +72,7 @@
 			    }
 
 		})
+
 
 	// Main menu
 		$(".mobileToggle").click(function(event){

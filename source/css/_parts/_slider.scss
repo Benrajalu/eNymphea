@@ -1,4 +1,7 @@
 .flexslider{
+	*{
+		vertical-align: top;
+	}
 	.caption{
 		position:absolute;
 		bottom:-5px;
@@ -43,13 +46,14 @@
 
 		// main (homepage)
 			&#mainSlider{
-				margin-bottom:50px;
+				margin:0px;
+				padding-bottom:50px;
 				.flex-control-nav{
-					bottom:-35px;
+					bottom:15px;
 				}
 			}
 
-			@media only screen and (max-width:780px){
+			@media only screen and (max-width:$tablet){
 				.caption{
 					position:relative;
 					left:0px;
@@ -83,11 +87,14 @@
 							color:$violet;
 							text-decoration: none;
 						}
+						@media only screen and (max-width:$tablet){
+							padding:0px 15px;
+						}
 					}
 					p{
 						@include futura(12px, #5b5959);
 						line-height:1.8;
-						max-height:120px;
+						max-height:109px;
 						overflow: hidden;
 						position:relative;
 						margin-bottom:15px;
@@ -102,12 +109,25 @@
 							position:absolute;
 							top:-25px;
 							left:50%;
-							margin-left:-25px;
+							margin:0px 0px 0px -25px;
 							background:$violet;
+						}
+
+						@media only screen and (max-width:$tablet){
+							max-height:35px;
+							padding:0px 15px;
+							&.price{
+								max-height: 50px;
+								padding:0px;
+								margin-left:-25px;
+							}
 						}
 					}
 					.infoList{
 						margin-bottom:5px;
+						@media only screen and (max-width:$tablet){
+							padding:0px 15px;
+						}
 						li{
 							float:left;
 							margin-right:10px;
@@ -174,6 +194,9 @@
 						overflow:hidden;
 						text-indent:-999px;
 						background:url("../img/moreArrowSmall.png") center right no-repeat;
+						&:hover{
+							background:url("../img/moreArrowSmallHover.png") center right no-repeat;
+						}
 					}
 				}
 			}
