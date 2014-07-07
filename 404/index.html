@@ -23,7 +23,7 @@
         <meta property="og:url" content="http://e-nymphea.net/" />
         <meta property="og:description" content="E-Nymphea" /> 
 
-        <link href="../css/global-1019ee53.css" rel="stylesheet" type="text/css" />
+        <link href="../css/global-2eff811b.css" rel="stylesheet" type="text/css" />
         <script src="../js/vendor/modernizr-2.6.1.min-68fdcc99.js" type="text/javascript"></script>
     </head>
     <body>
@@ -37,33 +37,37 @@
                     <section class="cf">
                         <button id="mobileOn" class="mobileToggle">Ouvrir le menu</button>
                         <ul class="cf">
-                            <li><a id="user" class="trigger" href="/user.html"><span class="mobileOff">Enregistrez-vous</span></a>
-                                <ul id="log">
+                            <li><a id="user" class="trigger" href="/user/"><span class="mobileOff">Enregistrez-vous</span></a>
+                                <ul id="log" class="layer">
                                     <li>
                                         <h3>Me connecter</h3>
-                                        <form id="logIn" name="logIn" action='/logged.html'>
+                                        <form id="logIn" name="logIn" data-parsley-validate class="form" data-parsley-trigger='change focusout' action='/logged.html'>
                                             <label for="mail">Email</label>
-                                            <input name="mail" id="mail" placeholder="Votre adresse email" type="text" />
+                                            <input name="mail" id="mail" data-parsley-required="required" placeholder="Votre adresse email" type="text" />
                                             <label for="pass">Mot de passe</label>
-                                            <input name="pass" id="pass" placeholder="Votre mot de passe" type="password" />
+                                            <input name="pass" id="pass" placeholder="Votre mot de passe" data-parsley-required="required" type="password" />
                                             <p><a href="#passRetrival" class="pop">Mot de passe oublié ?</a></p>
                                             <input type="submit" value="Connexion" class="button submit small" />
                                         </form>
                                     </li>
                                     <li>
                                         <h3>Créer un compte</h3>
-                                        <form id="signUp" name="signUp" action=''>
+                                        <form id="signUp" name="signUp" class="form" data-parsley-validate data-parsley-trigger='change focusout'>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus odio minus, numquam libero deserunt dicta.</p>
-                                            <label for="email">Mot de passe</label>
-                                            <input name="email" id="email" placeholder="Votre adresse email" type="text" />
-                                            <input type="submit" value="Créer un compte" class="button submit small" />
+                                            <label for="email">Email</label>
+                                            <input name="email" id="email" data-parsley-required="required" data-parsley-type="email" placeholder="Votre adresse email" type="text" />
+                                            <input type="submit" value="Créer un compte" href="#create" class="button submit small pop" />
                                         </form>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a id="basket" href="/order.html"><span class="total">0</span> <span class="mobileOff">Mon panier</span></a></li>
+                            <li><a id="basket" class="trigger" href="/order/"><span class="total">0</span> <span class="mobileOff">Mon panier</span></a>
+                                <ul id="cart" class="layer">
+                                    <p class="info">Votre panier est vide!</p>
+                                </ul>
+                            </li>
                             <li><a href="#" id="currentLanguage" class="trigger">FR</a>
-                                <ul id="languages">
+                                <ul id="languages" class="layer">
                                     <li><a href="#" class="active">FR</a></li>
                                     <li><a href="#">ES</a></li>
                                     <li><a href="#">EN</a></li>
@@ -82,12 +86,12 @@
                         <button id="mobileOff" class="mobileToggle">Fermer le menu</button>
 
                         <ul>
-                            <li><a href="/espace.html">L'espace bien-être</a></li>
+                            <li><a href="/espace/">L'espace bien-être</a></li>
                             <li><a href="#rituals" class="flyout">Nos rituels</a></li>
-                            <li><a href="/book.html">Réserver</a></li>
-                            <li><a href="/offer.html">offir</a></li>
-                            <li><a href="/news.html">Actualités</a></li>
-                            <li><a href="/infos.html">Informations pratiques</a></li>
+                            <li><a href="/book/">Réserver</a></li>
+                            <li><a href="/gift/">offrir</a></li>
+                            <li><a href="/news/">Actualités</a></li>
+                            <li><a href="/infos/">Informations pratiques</a></li>
                         </ul>
 
                         <aside id="rituals">
@@ -170,7 +174,7 @@
                             <li><a href="#">Contact</a></li>
                             <li><a href="#">Où trouver nos produits</a></li>
                             <li><a href="#">Presse</a></li>
-                            <li><a href="#">Professionels</a></li>
+                            <li><a href="#">Professionnels</a></li>
                             <li id="facebookFans"><a href="#">7659</a></li>
                         </ul>
                     </div>
@@ -196,7 +200,7 @@
 
                 <div class="row" id="credits">
                     <div class="left">
-                        <a href="#">Copyright © 2014 SPA-Collection. - Tous droits réservés -</a>
+                        <p>Copyright © 2014 SPA-Collection. - Tous droits réservés -</p>
                     </div>
                     <div class="right mobileOff">
                         <ul>
@@ -210,11 +214,92 @@
 
         </footer>
 
+        <article class="popIn mfp-hide" id="passRetrival">
+            <header>
+                <h4>Mot de passe oublié</h4>
+                <img src="../img/popIns/lock-ab3fbb95.png" />
+            </header>
+
+<form action="/" accept-charset="UTF-8" id="passwordFom" class="form" data-parsley-validate="" data-parsley-trigger="change focusout" method="post">                <label>Saisissez l'email renseigné lors de la création de compte. Votre mot de passe vous sera renvoyé à cette addresse.</label>
+                <div class="row pad0">
+                    <div class="large-9 columns pad0">
+                        <input type="text" data-parsley-required data-parsley-type="email" name="passEmail" placeholder="Votre adresse email" />
+                    </div>
+                    <div class="large-3 columns pad0 padL">
+                        <input type="submit" class="block" value="valider" />
+                    </div>
+                </div>
+</form>        </article>
+
+        <article class="popIn mfp-hide" id="create">
+            <header>
+                <h4>Créer un compte</h4>
+                <img src="../img/popIns/lock-ab3fbb95.png" />
+            </header>
+
+<form action="/user/" accept-charset="UTF-8" id="accountForm" class="form" data-parsley-validate="" data-parsley-trigger="change focusout" method="post">                <p class="intro">Gagnez en sérénité... Retrouvez toutes vos informations et suivez vos réservations dans cet espace sécurisé.</p>
+
+                <h3 class="centered">Vos informations</h3>
+                <hr class="smallLine centered">
+
+                <div class="inline">
+                    <fieldset>
+                        <label class="lineLabel">Civilité</label>
+                        <input type="radio" data-parsley-required name="gender" value="Mme" id="Mme" /> <label for="Mme">Mme</label>
+                        <input type="radio" data-parsley-required name="gender" value="Mr" id="Mr"/> <label for="Mr">Mr</label>
+                    </fieldset>
+                </div>
+
+                <div class="row pad0">
+                    <div class="large-6 columns pad0">
+                        <label>Nom*</label>
+                        <input type="text" data-parsley-required name="surname" />
+                    </div>
+                    <div class="large-6 columns pad0 padL">
+                        <label>Prénom*</label>
+                        <input type="text" data-parsley-required name="name" />
+                    </div>
+                </div>
+
+
+                <label>Email*</label>
+                <input type="text" data-parsley-type="email" data-parsley-required name="userMail" />
+
+                <div class="row pad0">
+                    <div class="large-6 columns pad0">
+                        <label>Tel. fixe</label>
+                        <input type="text" data-parsley-type="number" name="phone" />
+                    </div>
+                    <div class="large-6 columns pad0 padL">
+                        <label>Tel. portable*</label>
+                        <input type="text" data-parsley-required data-parsley-type="number" name="mobilePhone" />
+                    </div>
+                </div>
+
+
+                <h3 class="centered">Votre mot de passe</h3>
+                <hr class="smallLine centered">
+
+                <div class="row pad0">
+                    <div class="large-6 columns pad0">
+                        <label>Mot de passe*</label>
+                        <input type="password" data-parsley-required name="pass" id="createPassword"/>
+                    </div>
+                    <div class="large-6 columns pad0 padL">
+                        <label>Confirmez le mot de passe*</label>
+                        <input type="password" data-parsley-required name="passConfirmation" data-parsley-equalto="#createPassword" />
+                    </div>
+                </div>
+
+                <input type="submit" value="valider">
+
+</form>        </article>
+
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
         
-        <script src="../js/navigate-cbe3776f.js" type="text/javascript"></script>
+        <script src="../js/navigate-9897fe74.js" type="text/javascript"></script>
         <script src="../js/TweenMax.min-84de151b.js" type="text/javascript"></script>
         <script src="../js/jquery.uniform.min-2e8d431e.js" type="text/javascript"></script>
         <script src="../js/bootstrap-datepicker-51f87289.js" type="text/javascript"></script>
@@ -222,7 +307,8 @@
         <script src="../js/parsley.min-494b4087.js" type="text/javascript"></script>
         <script src="../js/locales/parsley-fr-f2e67d07.js" type="text/javascript"></script>
         <script src="../js/jquery.flexslider-min-6b684415.js" type="text/javascript"></script>
-        <script src="../js/plugins-4bb16b24.js" type="text/javascript"></script>
+        <script src="../js/jquery.magnific-popup.min-860bb02f.js" type="text/javascript"></script>
+        <script src="../js/plugins-eef4ebd3.js" type="text/javascript"></script>
 
         <script>
             var _gaq=[['_setAccount','UA-XXXXXXX'],['_trackPageview']];
