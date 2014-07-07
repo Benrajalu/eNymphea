@@ -123,6 +123,17 @@
 				margin-bottom:0px;
 				height:40px;
 				cursor: pointer;
+				option{
+					@include futura(13px, $black);
+					padding:0 10px;
+					text-transform: none;
+				}
+				optgroup{
+					@include futuraBold(10px, $black);
+					text-transform: uppercase;
+					font-style:none;
+					padding:0px 5px;
+				}
 			}
 			span{
 				position: relative;
@@ -162,6 +173,15 @@
 			.parsley-errors-list{
 				position:relative;
 				top:5px;
+			}
+
+			@media only screen and (max-width: $tablet){
+				label{
+					margin-right:5px;
+					&.lineLabel{
+						margin-right:20px;
+					}
+				}
 			}
 		}
 

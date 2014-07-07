@@ -255,6 +255,12 @@
 				}
 			}
 		}
+
+		.layer{
+			p{
+				@include futura(12px, $black);
+			}
+		}
 	}
 
 

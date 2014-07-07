@@ -37,29 +37,7 @@
                     <section class="cf">
                         <button id="mobileOn" class="mobileToggle">Ouvrir le menu</button>
                         <ul class="cf">
-                            <li><%= magic_link_to '<span class="mobileOff">Enregistrez-vous</span>', '/user.html', :id => "user", :class => "trigger" %>
-                                <ul id="log" class="layer">
-                                    <li>
-                                        <h3>Me connecter</h3>
-                                        <% form_tag '/connected.html', :id => 'logIn', :class => "form", :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => '' do %>
-                                            <label for="mail">Email</label>
-                                            <input name="mail" id="mail" data-parsley-required="required" data-parsley-type="email" placeholder="Votre adresse email" type="text" />
-                                            <label for="pass">Mot de passe</label>
-                                            <input name="pass" id="pass" placeholder="Votre mot de passe" data-parsley-required="required" type="password" />
-                                            <p><a href="#passRetrival" class="pop">Mot de passe oublié ?</a></p>
-                                            <input type="submit" value="Connexion" class="button submit small" />
-                                        <% end %>
-                                    </li>
-                                    <li>
-                                        <h3>Créer un compte</h3>
-                                        <form id="signUp" name="signUp" class="form" data-parsley-validate data-parsley-trigger='change focusout'>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus odio minus, numquam libero deserunt dicta.</p>
-                                            <label for="email">Email</label>
-                                            <input name="email" id="email" data-parsley-required="required" data-parsley-type="email" placeholder="Votre adresse email" type="text" />
-                                            <input type="submit" value="Créer un compte" href="#create" class="button submit small pop" />
-                                        </form>
-                                    </li>
-                                </ul>
+                            <li><%= magic_link_to '<span class="mobileOff">Bonjour, Céline</span>', '/user.html', :id => "user" %>
                             </li>
                             <li><%= magic_link_to '<span class="total">0</span> <span class="mobileOff">Mon panier</span>', '/order.html', :id => 'basket', :class => "trigger" %>
                                 <ul id="cart" class="layer">

@@ -19,7 +19,8 @@ if (!(window.console && console.log)) {
 		    todayBtn: "linked",
 		    language: "fr",
 		    daysOfWeekDisabled: "0",
-		    todayHighlight: true
+		    todayHighlight: true, 
+		    autoclose: true,
 		});
 
 	// Uniform
@@ -77,6 +78,15 @@ if (!(window.console && console.log)) {
 			})
 		})
 
+	// Display hours if asked to
+		$("#moment").on("change", function(){
+			if($(this).val() == "horaire"){
+				$("#timescale").show();
+			}
+			else{
+				$("#timescale").hide();
+			}
+		})
 
 // Sticky footer
 	var stickyFooter = function(){
