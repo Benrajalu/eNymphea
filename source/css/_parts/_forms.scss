@@ -232,6 +232,9 @@
 		border-left:1px solid #d5d5d5;
 		position:relative;
 		z-index:4;
+		&.noBorder{
+			border-left:0px;
+		}
 		#giftForm{
 			.form{
 				padding:0px;

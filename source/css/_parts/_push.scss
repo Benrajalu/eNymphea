@@ -1,0 +1,201 @@
+.push{
+	background:$white;
+	margin-bottom:15px;
+	.bgWhite &{
+		background:$pale;
+		.contents{
+			h3{
+				background:$pale;
+			}
+		}
+	}
+	> a img{
+		width:100%;
+		display:block;
+	}
+	.contents{
+		position:relative;
+		padding:30px 20px;
+		h3{
+			display:block;
+			height:65px;
+			text-align:center;
+			line-height:65px;
+			position:absolute;
+			top:-40px;
+			left:5%;
+			width:90%;
+			background:$white;
+			a{
+				@include futura(18px, #5b5959);
+				@include inline-block();
+				vertical-align: middle;
+				line-height:20px;
+				text-decoration: none;
+				padding:0 15px;
+				&:hover{
+					color:$violet;
+				}
+			}
+		}
+		p{
+			@include helvetica(11px, #5b5959);
+			line-height:1.6;
+			height:70px;
+			overflow: hidden;
+			margin-bottom:15px;
+		}
+		&.noPrice{
+			p{
+				height:120px;
+				margin-top:20px;
+			}
+		}
+		p.price{
+			@include border-radius(99px);
+			@include futuraBold(15px, $white);
+			text-transform: uppercase;
+			height:55px;
+			width:90%;
+			max-width:55px;
+			margin:0 auto 15px auto;
+			line-height:55px;
+			text-align:center;
+			background:$violet;
+		}
+	}
+	.infoList{
+		margin-bottom:5px;
+		@media only screen and (max-width:$tablet){
+			padding:0px 15px;
+		}
+		li{
+			float:left;
+			margin-right:10px;
+			height:16px;
+			line-height:20px;
+			position:relative;
+			&.time{
+				@include futura(11px, #7a7878);
+				line-height: 16px;
+				padding-left:23px;
+				&:before{
+					@include PE();
+					width:16px;
+					height:16px;
+					left:0px;
+					margin-top:-8px;
+					background:url("../img/clock.png") left center no-repeat;
+				}
+			}
+			&.book, &.offer{
+				a{
+					display:block;
+					@include futuraBold(10px, $violet);
+					@include transition(all 300ms);
+					text-transform: uppercase;
+					padding-left:23px;
+					text-decoration: none;
+					&:hover, &:focus{
+						text-decoration:underline;
+					}
+				}
+			}
+			&.book{
+				a{
+					&:before{
+						@include PE();
+						width:15px;
+						height:13px;
+						left:0px;
+						margin-top:-6.5px;
+						background:url("../img/bookSmall.png") 0px 0px no-repeat;
+					}
+				}
+			}
+			&.offer{
+				a{
+					&:before{
+						@include PE();
+						width:14px;
+						height:15px;
+						left:0px;
+						margin-top:-7.5px;
+						background:url("../img/giftSmall.png") 0px 0px no-repeat;
+					}
+				}
+			}
+		}
+	}
+	.more{
+		display:block;
+		clear:both;
+		float:none;
+		width:100%;
+		overflow:hidden;
+		text-indent:-999px;
+		background:url("../img/moreArrowSmall.png") center right no-repeat;
+		&:hover{
+			background:url("../img/moreArrowSmallHover.png") center right no-repeat;
+		}
+	}
+
+	@media only screen and (max-width:$tablet){
+		display:table;
+		background:$pale;
+		vertical-align: middle;
+		> a, .contents{
+			display:table-cell;
+			vertical-align: middle;
+		}
+		>a{
+			width:40%;
+		}
+		.contents{
+			padding:0px;
+			padding-left:30px;
+			h3{
+				position:static;
+				height:auto;
+				width:100%;
+				line-height:1;
+				background:transparent;
+				text-align:left;
+				margin-bottom:5px;
+				padding:0px 15px;
+				a{
+					padding:0px;
+					display:block;
+				}
+			}
+			p{
+				display:none;
+			}
+			p.price{
+				display:block;
+				position:absolute;
+				left:-27.5px;
+				top:50%;
+				margin-top: -27.5px;
+			}
+		}
+		.infoList{
+			margin-bottom:5px;
+			li{
+				&.time{
+					float:none;
+					clear:both;
+					margin-bottom:5px;
+				}
+			}
+		}
+		.more{
+			position:absolute;
+			top:50%;
+			right:5px;
+			width:40px;
+			height:40px;
+			margin-top:-20px;
+		}
+	}
+}

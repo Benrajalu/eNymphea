@@ -51,6 +51,9 @@
 				.flex-control-nav{
 					bottom:15px;
 				}
+				&.noCaptions{
+					padding-bottom:0px;
+				}
 			}
 
 			@media only screen and (max-width:$tablet){
@@ -70,6 +73,10 @@
 					.flex-control-nav{
 						bottom:10px;
 						z-index:3;
+					}
+					&.noCaptions{
+						padding-bottom:0px;
+						margin-bottom:0px;
 					}
 				}
 			}

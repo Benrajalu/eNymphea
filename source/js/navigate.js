@@ -93,9 +93,17 @@
 			$("#mainNav").removeClass("expended");
 			expand.removeClass("active");
 		})
-		expand.each(function(){
+
+		/*expand.each(function(){
 			if($(this).hasClass("active")){
 				$('#mainNav').addClass("expended");
 				$("#contents").addClass("push");
 			}
+		})*/
+
+	// Rituals on category page
+		$("#toggle").click(function(event){
+			event.preventDefault();
+			$(this).toggleClass("reverse");
+			$("#categories").toggleClass("open");
 		})
