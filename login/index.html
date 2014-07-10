@@ -7,8 +7,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <!-- Use title if it's in the page YAML frontmatter -->
-        <title>E-Nymphea</title>
-        <meta name="description" content="Site E-Nymphea">
+        <title>E-Nymphea - Se connecter</title>
+        <meta name="description" content="Se connecter sur la plateforme E-Nymphea">
         <meta name="viewport" content="width=device-width">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -17,11 +17,11 @@
         <meta name="application-name" content="Site E-Nymphea" />
       
         <!-- for Facebook -->          
-        <meta property="og:title" content="Description E-Nymphea" /> 
+        <meta property="og:title" content="E-Nymphea - Se connecter" /> 
         <meta property="og:type" content="website" />
         <meta property="og:image" content="http://e-nyphea.net/logo.jpg" />
         <meta property="og:url" content="http://e-nymphea.net/" />
-        <meta property="og:description" content="E-Nymphea" /> 
+        <meta property="og:description" content="Se connecter sur la plateforme E-Nymphea" /> 
 
         <link href="../css/global-99e437d4.css" rel="stylesheet" type="text/css" />
         <script src="../js/vendor/modernizr-2.6.1.min-68fdcc99.js" type="text/javascript"></script>
@@ -59,7 +59,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li><a id="basket" class="trigger" href="./"><span class="total">0</span> <span class="mobileOff">Mon panier</span></a>
+                            <li><a id="basket" class="trigger" href="../order/"><span class="total">0</span> <span class="mobileOff">Mon panier</span></a>
                                 <ul id="cart" class="layer">
                                     <p class="info">Votre panier est vide!</p>
                                 </ul>
@@ -113,7 +113,214 @@
             </header>
 
             <div id="contents">
-                
+                <!-- Slider -->
+	<section id="largePicture">
+		<div id="mainSlider" class="flexslider large noCaptions">
+			<ul class="slides">
+				<li>
+					<img src="../img/slides/thinSlide1-da7c7a1b.jpg" />
+				</li>
+			</ul>
+		</div>
+	</section>
+
+<!-- Contents -->
+
+	<div class="rowFluid bgPattern mar40">
+		<nav id="breadcrumbs" class="row">
+			<ul>
+				<li><a href="../">Accueil /</a></li>
+				<li>Réserver</li>
+			</ul>
+		</nav>
+
+		<div class="row">
+			<div class="large-8 columns">
+				<h1>Réserver</h1>
+				<nav id="tunnel">
+					<ul>
+						<li class="t1"><a href="../book/">1</a></li>
+						<li class="t2"><a class="active" href="./">2</a></li>
+						<li class="t3"><span>3</span></li>
+						<li class="t4"><span>4</span></li>
+					</ul>
+				</nav>
+
+				<article id="logInForm" class="formHolder formPanel bgWhite">
+					<hgroup>
+						<h2>Déjà client ?</h2> 
+						<a href="subscriber" class="formSwitch">Utilisez votre carte d'abonné</a>
+					</hgroup>
+
+<form action="/cart.html" accept-charset="UTF-8" id="logInLarge" class="form bgWhite" data-parsley-validate="" data-parsley-trigger="change focusout" method="post">						<div class="row pad0">
+							<div class="large-6 columns pad0">
+							    <label for="mail">Email</label>
+							    <input name="mail" id="logMail" data-parsley-required="required" data-parsley-type="email" placeholder="Votre adresse email" type="text" />
+							</div>
+							<div class="large-6 columns pad0 padL">
+							    <label for="pass">Mot de passe</label>
+							    <input name="pass" id="logPass" placeholder="Votre mot de passe" data-parsley-required="required" type="password" />
+							</div>
+						</div>
+						<div class="inline footer">
+						    <p><a href="#passRetrival" class="pop">Mot de passe oublié ?</a></p>
+						    <input type="submit" value="Se connecter" class="button submit small" />
+						</div>
+</form>				</article>
+				<article id="subscriber" class="formHolder formPanel bgWhite" style="display:none;">
+					<hgroup>
+						<h2>Déjà client ?</h2> 
+						<a href="logInForm" class="formSwitch">Pas de carte ? Indentifiez vous</a>
+					</hgroup>
+
+<form action="/cart.html" accept-charset="UTF-8" id="subscriberForm" class="form bgWhite" data-parsley-validate="" data-parsley-trigger="change focusout" method="post">						<div class="row pad0">
+							<div class="large-6 columns pad0">
+							    <label for="mail">Numéro de carte</label>
+							    <input name="mail" id="logNumber" data-parsley-required="required" data-parsley-type="digits" placeholder="Votre numéro d'abonné" type="text" />
+							</div>
+							<div class="large-6 columns pad0 padL">
+							    <label for="pass">Nom</label>
+							    <input name="pass" id="logSubName" placeholder="Votre nom" data-parsley-required="required" type="text" />
+							</div>
+						</div>
+						<div class="inline footer">
+						    <input type="submit" value="Se connecter" class="button submit small" />
+						</div>
+</form>				</article>
+
+				<article class="formHolder">
+					<hgroup>
+						<hr class="smallLine centered" />
+						<h2>Inscrivez-vous en quelques secondes !</h2> 
+					</hgroup>
+<form action="../user/" accept-charset="UTF-8" id="createAccount" class="form" data-parsley-validate="" data-parsley-trigger="change focusout" method="post">
+					    <div class="inline">
+					        <fieldset>
+					            <label class="lineLabel">Civilité</label>
+					            <input type="radio" data-parsley-required name="gender" value="Mme" id="MmeL" /> <label for="MmeL">Mme</label>
+					            <input type="radio" data-parsley-required name="gender" value="Mr" id="MrL"/> <label for="MrL">Mr</label>
+					        </fieldset>
+					    </div>
+
+					    <div class="row pad0">
+					        <div class="large-6 columns pad0">
+					            <label>Nom</label>
+					            <input type="text" data-parsley-required name="surname" placeholder="Votre nom" />
+					        </div>
+					        <div class="large-6 columns pad0 padL">
+					            <label>Prénom</label>
+					            <input type="text" data-parsley-required name="name" placeholder="Votre prénom" />
+					        </div>
+					    </div>
+
+					    <div class="row pad0">
+					    	<div class="large-6 columns pad0">
+					    	    <label>Email</label>
+					   			<input type="text" data-parsley-type="email" data-parsley-required name="userMail" placeholder="Votre adresse email"/>
+					    	</div>
+					    	<div class="large-6 columns pad0 padL">
+					    	    <label>Téléphone</label>
+					    	    <input type="text" data-parsley-required data-parsley-type="number" name="mobilePhone" placeholder="Un numéro de portable ou de fixe"/>
+					    	</div>
+					    </div>
+
+					    <div class="row pad0">
+					        <div class="large-6 columns pad0">
+					            <label>Mot de passe</label>
+					            <input type="password" data-parsley-required name="pass" id="createPassword" placeholder="Votre mot de passe" />
+					        </div>
+					        <div class="large-6 columns pad0 padL">
+					            <label>Confirmez le mot de passe</label>
+					            <input type="password" data-parsley-required name="passConfirmation" data-parsley-equalto="#createPassword" placeholder="Confirmez votre mot de passe"/>
+					        </div>
+					    </div>
+
+					    <div class="inline footer">
+					        <p>(Tous les champs sont obligatoires)</p>
+					        <input type="submit" value="Créer un compte" class="button submit small" />
+					    </div>
+
+</form>				</article>
+			</div>
+
+			<div class="large-4 columns">
+				<article class="advice">
+					<img src="../img/advice-f0e83f79.png" />
+					<section class="copy">
+						<p class="bubble">15 <span>min</span></p>
+						<img class="picto" src="../img/hanger-e4f31622.png" />
+						<p>POUR UNE MEILLEURE APPRÉCIATION DE VOTRE SOIN, PRÉVOYEZ D’ARRIVER 15 MINUTES AVANT le début de la prestation.</p>
+					</section>
+				</article>
+
+				<article class="advice solo">
+					<section class="copy">
+						<h3>Votre compte client</h3>
+						<p>Inscrivez-vous simplement et rapidement ! Votre espace membre contient tous vos rendez-vous et sera l'agenda de vos moments détente...</p>
+					</section>
+				</article>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Pushes -->
+	<div class="rowFluid bgPattern mar40 pad30">
+		<h3 class="centered">Les offres du moment</h3>
+
+		<div class="row">
+			<div class="large-4 columns">
+				<article class="push">
+<a href="../soin/">						<img src="../img/push/push1-caf63043.jpg" />
+</a>					<section class="contents">
+						<h3><a href="../soin/">Rituel Brésilien</a></h3>
+						<p class="price">80€</p>
+						<p>Hammam Arômes et Couleurs® ou Bain Japonais d’Arômes et de Fleurs®, Gommage aromatique Energisant aux Epices rares et précieuses et Soin-Massage du Visage...</p>
+						<ul class="infoList cf">
+							<li class="time">3 x 50min</li>
+							<li class="book"><a href="../book/">Réserver</a></li>
+							<li class="offer"><a href="../gift/">Offrir</a></li>
+						</ul>
+						<a class="more" href="../soin/">En savoir plus</a>
+					</section>
+				</article>
+			</div>
+
+			<div class="large-4 columns">
+				<article class="push">
+<a href="../soin/">						<img src="../img/push/push2-58556111.jpg" />
+</a>					<section class="contents">
+						<h3><a href="../soin/">Rituel Tropical</a></h3>
+						<p class="price">80€</p>
+						<p>Hammam Arômes et Couleurs® ou Bain Japonais d’Arômes et de Fleurs®, Gommage aromatique Energisant...</p>
+						<ul class="infoList cf">
+							<li class="time">3 x 50min</li>
+							<li class="book"><a href="../book/">Réserver</a></li>
+							<li class="offer"><a href="../gift/">Offrir</a></li>
+						</ul>
+						<a class="more" href="../soin/">En savoir plus</a>
+					</section>
+				</article>
+			</div>
+
+			<div class="large-4 columns">
+				<article class="push">
+<a href="../soin/">						<img src="../img/push/push3-e1f07aa7.jpg" />
+</a>					<section class="contents noPrice">
+						<h3><a href="../soin/">Abonnement spa Céleste</a></h3>
+						<p>Hammam Arômes et Couleurs® ou Bain Japonais d’Arômes et de Fleurs®, Gommage aromatique Energisant aux Epices rares et précieuses et Soin-Massage du Visage... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam animi voluptate tenetur velit doloremque corporis, tempore ducimus, reprehenderit a cupiditate! Quasi repudiandae consectetur vero officia, autem ea rem impedit beatae.</p>
+						<ul class="infoList cf">
+							<li class="time">3 x 50min</li>
+							<li class="book"><a href="../book/">Réserver</a></li>
+							<li class="offer"><a href="../gift/">Offrir</a></li>
+						</ul>
+						<a class="more" href="../soin/">En savoir plus</a>
+					</section>
+				</article>
+			</div>
+		</div>
+
+	</div>
             </div>
 
 
