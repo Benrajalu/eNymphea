@@ -1,5 +1,10 @@
 .advice{
 	margin-bottom:40px;
+	&.solo{
+		.copy{
+			padding:40px 30px;
+		}
+	}
 	> img{
 		width:100%;
 		display:block;
@@ -50,7 +55,12 @@
 				letter-spacing: 0px;
 			}
 		}
-
+		
+		h3{
+			margin:10px 0 10px 0;
+			@include futura(15px, $black);
+			text-align: left;
+		}
 		p{
 			@include futura(13px, $gold);
 			text-transform: uppercase;
@@ -61,5 +71,13 @@
 
 	@media only screen and (max-width: $tablet){
 		display:none;
+		&.solo{
+			display:block;
+			.copy{
+				h3, p{
+					text-align: center;
+				}
+			}
+		}
 	}
 }

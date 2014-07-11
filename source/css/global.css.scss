@@ -16,25 +16,37 @@
 @import "_parts/grid";
 @import "_parts/generalType";
 
-@import "_parts/menus/topBar";
-@import "_parts/menus/mainMenu";
-@import "_parts/menus/rituals";
-@import "_parts/menus/breadcrumbs";
-@import "_parts/menus/tunnel";
+	// Navigation tools (menus, sub-menus and so on)
+	@import "_parts/menus/topBar";
+	@import "_parts/menus/mainMenu";
+	@import "_parts/menus/rituals";
+	@import "_parts/menus/breadcrumbs";
+	@import "_parts/menus/tunnel";
 
-@import "_parts/forms";
+	// Everything about the forms
+	@import "_parts/forms";
 
-@import "_parts/slider";
+	// All sliders
+	@import "_parts/slider";
 
-@import "_parts/advice";
-@import "_parts/push";
-@import "_parts/teaser";
-@import "_parts/wysiwyg";
-@import "_parts/tabs";
+	// Cards (non-primary content)
+	@import "_parts/advice";
+	@import "_parts/push";
 
-@import "_parts/searchResults";
+	// Product displays
+	@import "_parts/teaser";
+	@import "_parts/recap";
 
-@import "_parts/popIns";
+	// Page structure
+	@import "_parts/wysiwyg"; // Most elements filled by the user
+	@import "_parts/tabs"; // Tab system
 
-@import "_parts/footer";
+	// Product search results
+	@import "_parts/searchResults";
+
+	// Pop ins
+	@import "_parts/popIns";
+
+	// Footer elements
+	@import "_parts/footer";
 

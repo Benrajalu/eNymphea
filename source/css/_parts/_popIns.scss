@@ -1,5 +1,8 @@
 .popIn{
 	padding:70px 50px;
+	&.pad0{
+		padding:70px 5px;
+	}
 	header{
 		position:absolute;
 		top:0px;
@@ -34,4 +37,74 @@
 			margin-top:15px;
 		}
 	}
+
+	@media only screen and (max-width: $tablet){
+		padding:70px 15px;
+		&.pad0{
+			padding:70px 0px;
+		}
+	}
 }
+
+// Gallery triggers
+
+	.gallery{
+		position:relative;
+		overflow: hidden;
+		margin-bottom:30px;
+		> a > img{
+			width:100%;
+			display:block;
+		}
+		.legend{
+			display:block;
+			background:$pale;
+			height:40px;
+			line-height:40px;
+			width:100%;
+			border:0px;
+			margin:0px;
+			position:relative;
+			a{
+				@include futura(17px, $black);
+				padding:0px 20px;
+				text-transform: uppercase;
+				text-decoration: none;
+				&:hover{
+					color:$violet;
+				}
+			}
+			.icon{
+				position:absolute;
+				right:20px;
+				top:50%;
+				margin-top:-11.5px;
+			}
+		}
+		.overlay{
+			@include PE();
+			@include transition(all 300ms);
+			opacity:0;
+			width:75px;
+			height:75px;
+			background:url('../img/play.png') center center no-repeat;
+			top:20%;
+			left:50%;
+			margin-top:-57.5px;
+			margin-left:-37.5px;
+			text-indent: -999px;
+			overflow: hidden;
+		}
+
+		&:hover{
+			.overlay{
+				top:50%;
+				opacity: 1;
+			}
+		}
+
+		@media only screen and (max-width: $mobile){
+			padding:0 15px;
+		}
+
+	}

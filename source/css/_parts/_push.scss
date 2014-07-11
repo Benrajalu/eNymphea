@@ -64,69 +64,6 @@
 			background:$violet;
 		}
 	}
-	.infoList{
-		margin-bottom:5px;
-		@media only screen and (max-width:$tablet){
-			padding:0px 15px;
-		}
-		li{
-			float:left;
-			margin-right:10px;
-			height:16px;
-			line-height:20px;
-			position:relative;
-			&.time{
-				@include futura(11px, #7a7878);
-				line-height: 16px;
-				padding-left:23px;
-				&:before{
-					@include PE();
-					width:16px;
-					height:16px;
-					left:0px;
-					margin-top:-8px;
-					background:url("../img/clock.png") left center no-repeat;
-				}
-			}
-			&.book, &.offer{
-				a{
-					display:block;
-					@include futuraBold(10px, $violet);
-					@include transition(all 300ms);
-					text-transform: uppercase;
-					padding-left:23px;
-					text-decoration: none;
-					&:hover, &:focus{
-						text-decoration:underline;
-					}
-				}
-			}
-			&.book{
-				a{
-					&:before{
-						@include PE();
-						width:15px;
-						height:13px;
-						left:0px;
-						margin-top:-6.5px;
-						background:url("../img/bookSmall.png") 0px 0px no-repeat;
-					}
-				}
-			}
-			&.offer{
-				a{
-					&:before{
-						@include PE();
-						width:14px;
-						height:15px;
-						left:0px;
-						margin-top:-7.5px;
-						background:url("../img/giftSmall.png") 0px 0px no-repeat;
-					}
-				}
-			}
-		}
-	}
 	.more{
 		display:block;
 		clear:both;
@@ -196,6 +133,88 @@
 			width:40px;
 			height:40px;
 			margin-top:-20px;
+		}
+	}
+}
+
+.infoList{
+	margin-bottom:5px;
+	@media only screen and (max-width:$tablet){
+		padding:0px 15px;
+	}
+	li{
+		float:left;
+		margin-right:10px;
+		height:16px;
+		line-height:20px;
+		position:relative;
+		&.time{
+			@include futura(11px, #7a7878);
+			line-height: 16px;
+			padding-left:23px;
+			&:before{
+				@include PE();
+				width:16px;
+				height:16px;
+				left:0px;
+				margin-top:-8px;
+				background:url("../img/clock.png") left center no-repeat;
+			}
+		}
+		&.book, &.offer{
+			a{
+				display:block;
+				@include futuraBold(10px, $violet);
+				@include transition(all 300ms);
+				text-transform: uppercase;
+				padding-left:23px;
+				text-decoration: none;
+				&:hover, &:focus{
+					text-decoration:underline;
+				}
+			}
+		}
+		&.book{
+			a{
+				&:before{
+					@include PE();
+					width:15px;
+					height:13px;
+					left:0px;
+					margin-top:-6.5px;
+					background:url("../img/bookSmall.png") 0px 0px no-repeat;
+				}
+			}
+		}
+		&.offer{
+			a{
+				&:before{
+					@include PE();
+					width:14px;
+					height:15px;
+					left:0px;
+					margin-top:-7.5px;
+					background:url("../img/giftSmall.png") 0px 0px no-repeat;
+				}
+			}
+		}
+		&.date{
+			@include futuraBold(10px, $violet);
+			text-transform: uppercase;
+			padding-left:23px;
+			text-decoration: none;
+			span{
+				@include futuraBold(10px, #5b5959);
+				padding-left:5px;
+			}
+			&:before{
+				@include PE();
+				width:15px;
+				height:13px;
+				left:0px;
+				margin-top:-6.5px;
+				background:url("../img/bookSmall.png") 0px 0px no-repeat;
+			}
 		}
 	}
 }
