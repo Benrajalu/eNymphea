@@ -6,6 +6,9 @@
 	&.formPanel{
 		padding-top:0px;
 	}
+	&.pad10{
+		padding:10px 30px;;
+	}
 	&.pad0{
 		padding:0px !important;
 	}
@@ -209,6 +212,11 @@
 			input{
 				&[type='text'], &[type='password']{
 					background-color:$pale;
+					border:1px solid #c0c0c0;
+				}
+				&:active, &:focus{
+					outline:0px;
+					border:1px solid $gold;
 				}
 			}
 			select, .selector{
@@ -343,4 +351,9 @@
 				}
 			}
 		}
+	}
+	.or{
+		text-align:center;
+		@include futuraBold(13px, $gold);
+		text-transform: uppercase;
 	}

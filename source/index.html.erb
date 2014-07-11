@@ -152,7 +152,7 @@ description: Home pour E-Nymphea
 				<% end %>
 
 				<section id="giftForm" class="form formPanel" style="display:none;">
-					<% form_tag 'gift.html', :id => 'giftAmount', :class => 'form', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
+					<% form_tag 'cart.html', :id => 'giftAmount', :class => 'form', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
 						<label>Précisez un montant</label>
 						<div class="row pad0">
 							<div class="large-9 columns pad0">
@@ -166,7 +166,7 @@ description: Home pour E-Nymphea
 
 					<p class="info">Ou</p>
 					
-					<% form_tag 'gift.html', :id => 'giftItem', :class => 'form', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
+					<% form_tag 'cart.html', :id => 'giftItem', :class => 'form', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
 						<label>Sélectionnez un soin</label>
 						<div class="row pad0">
 							<div class="large-9 columns pad0">

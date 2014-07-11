@@ -97,11 +97,11 @@
 			}
 
 			p{
-				@include helvetica(14px, $black);
+				@include helvetica(14px, #5b5959);
 				margin-bottom:10px;
 				line-height: 1.4;
 				a{
-					@include helvetica(16px, $violet);
+					@include helvetica(14px, $violet);
 					&:hover{
 						color:$black;
 					}

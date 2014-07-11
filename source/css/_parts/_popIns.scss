@@ -38,6 +38,13 @@
 		}
 	}
 
+	.flexslider{
+		margin-bottom:0px;
+		&.galleryNav{
+			margin-top:30px;
+		}
+	}
+
 	@media only screen and (max-width: $tablet){
 		padding:70px 15px;
 		&.pad0{
@@ -105,6 +112,10 @@
 
 		@media only screen and (max-width: $mobile){
 			padding:0 15px;
+			.overlay{
+				opacity:1;
+				top:50%;
+			}
 		}
 
 	}

@@ -8,11 +8,13 @@
 		&.subheader{
 			@include futuraBold(10px, #5b5959);
 			line-height:40px;
+			margin-bottom:0px;
 		}
 	}
 
 	h1{
 		@include futura(24px, $violet);
+		margin-bottom:20px;
 		@media only screen and (max-width: $tablet){
 			text-align:center;
 			@include futuraBold(20px, $violet);
