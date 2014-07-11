@@ -94,6 +94,45 @@ if (!(window.console && console.log)) {
 			}
 		})
 
+
+	// Cart
+		// Count total
+		var cartCount = function(){
+			var sum = 0;
+
+			$('#items').find('.price').each(function() {
+				var clean = $(this).html().replace('€', '');
+		        sum += Number(clean);
+		    });
+
+		    $("#total span").html(sum + '€');
+		}
+
+		// Redirect to home if no products
+		var toHome = function(){
+			if($('#items').find('.product').length == 0){
+				location.href="/";
+			}
+		}
+
+		// Remove items
+		$(document).on('click', '.product .remove', function(event){
+			event.preventDefault();
+			var product = $(this).parents(".product");
+			if(confirm("Souhaitez vous retirer cet article du panier ?")){
+				$(product).fadeOut(300);
+				setTimeout(function(){
+					$(product).remove();
+					cartCount();
+					toHome();
+				}, 300);
+			}
+			else{
+				return false;
+			}
+		})
+		cartCount();
+
 // Sticky footer
 	var stickyFooter = function(){
 		var h = $("#footer").height();

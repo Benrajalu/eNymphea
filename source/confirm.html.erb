@@ -1,0 +1,129 @@
+---
+title: E-Nymphea - Confirmation
+description: Confirmation achat - plateforme E-Nymphea
+---
+
+<!-- Slider -->
+	<section id="largePicture">
+		<div id="mainSlider" class="flexslider large noCaptions">
+			<ul class="slides">
+				<li>
+					<%= image_tag 'slides/thinSlide1.jpg' %>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+<!-- Contents -->
+
+	<div class="rowFluid bgPattern mar40">
+		<nav id="breadcrumbs" class="row">
+			<ul>
+				<li><%= link_to 'Accueil /', '/index.html' %></li>
+				<li>Réserver</li>
+			</ul>
+		</nav>
+
+		<div class="row">
+			<div class="large-8 columns">
+				<h1>Réserver</h1>
+				<nav id="tunnel">
+					<ul>
+						<li class="t1"><%= link_to '1', '/book.html' %></li>
+						<li class="t2"><%= link_to '2', '/login.html' %></li>
+						<li class="t3"><%= link_to '3', '/cart.html' %></li>
+						<li class="t4"><%= link_to '4', '/confirm.html', :class=> 'active' %></li>
+					</ul>
+				</nav>
+				
+				<h2 class="subtitle">Confirmation</h2> 
+				<article class="wysiwyg message bgWhite">
+					<h4>Votre réservation a bien été enregistrée. Nous vous en remercions. </h4>
+					<p>Un mail de confirmation viens de vous être adressé.</p>
+					<p>Pour toute question ou demande, nous sommes à votre disposition au 00.00.00.00.00.</p>
+					<p>Merci de votre confiance, et à bientôt !</p>
+					<p><strong>L'équipe Cinq Mondes</strong></p>
+				</article>
+				<aside class="messageNav">
+					<%= link_to 'Réserver un soin', '/book.html', :class => "button book" %>
+					<%= link_to 'Mon espace client', '/account.html', :class => "button account" %>
+				</aside>
+			</div>
+
+			<div class="large-4 columns">
+				<article class="advice">
+					<%= image_tag 'advice.png' %>
+					<section class="copy">
+						<p class="bubble">15 <span>min</span></p>
+						<%= image_tag 'hanger.png', :class=>'picto' %>
+						<p>POUR UNE MEILLEURE APPRÉCIATION DE VOTRE SOIN, PRÉVOYEZ D’ARRIVER 15 MINUTES AVANT le début de la prestation.</p>
+					</section>
+				</article>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Pushes -->
+	<div class="rowFluid bgPattern mar40 pad30">
+		<h3 class="centered">Les offres du moment</h3>
+
+		<div class="row">
+			<div class="large-4 columns">
+				<article class="push">
+					<% link_to "/soin.html" do %>
+						<%= image_tag 'push/push1.jpg' %>
+					<% end %>
+					<section class="contents">
+						<h3><%= link_to "Rituel Brésilien", "/soin.html" %></h3>
+						<p class="price">80€</p>
+						<p>Hammam Arômes et Couleurs® ou Bain Japonais d’Arômes et de Fleurs®, Gommage aromatique Energisant aux Epices rares et précieuses et Soin-Massage du Visage...</p>
+						<ul class="infoList cf">
+							<li class="time">3 x 50min</li>
+							<li class="book"><%= link_to 'Réserver', '/book.html' %></li>
+							<li class="offer"><%= link_to 'Offrir', '/gift.html' %></li>
+						</ul>
+						<%= link_to 'En savoir plus', '/soin.html', :class => 'more' %>
+					</section>
+				</article>
+			</div>
+
+			<div class="large-4 columns">
+				<article class="push">
+					<% link_to "/soin.html" do %>
+						<%= image_tag 'push/push2.jpg' %>
+					<% end %>
+					<section class="contents">
+						<h3><%= link_to "Rituel Tropical", "/soin.html" %></h3>
+						<p class="price">80€</p>
+						<p>Hammam Arômes et Couleurs® ou Bain Japonais d’Arômes et de Fleurs®, Gommage aromatique Energisant...</p>
+						<ul class="infoList cf">
+							<li class="time">3 x 50min</li>
+							<li class="book"><%= link_to 'Réserver', '/book.html' %></li>
+							<li class="offer"><%= link_to 'Offrir', '/gift.html' %></li>
+						</ul>
+						<%= link_to 'En savoir plus', '/soin.html', :class => 'more' %>
+					</section>
+				</article>
+			</div>
+
+			<div class="large-4 columns">
+				<article class="push">
+					<% link_to "/soin.html" do %>
+						<%= image_tag 'push/push3.jpg' %>
+					<% end %>
+					<section class="contents noPrice">
+						<h3><%= link_to "Abonnement spa Céleste", "/soin.html" %></h3>
+						<p>Hammam Arômes et Couleurs® ou Bain Japonais d’Arômes et de Fleurs®, Gommage aromatique Energisant aux Epices rares et précieuses et Soin-Massage du Visage... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam animi voluptate tenetur velit doloremque corporis, tempore ducimus, reprehenderit a cupiditate! Quasi repudiandae consectetur vero officia, autem ea rem impedit beatae.</p>
+						<ul class="infoList cf">
+							<li class="time">3 x 50min</li>
+							<li class="book"><%= link_to 'Réserver', '/book.html' %></li>
+							<li class="offer"><%= link_to 'Offrir', '/gift.html' %></li>
+						</ul>
+						<%= link_to 'En savoir plus', '/soin.html', :class => 'more' %>
+					</section>
+				</article>
+			</div>
+		</div>
+
+	</div>

@@ -6,6 +6,9 @@
 	&.formPanel{
 		padding-top:0px;
 	}
+	&.pad0{
+		padding:0px !important;
+	}
 	h2, h3{
 		@include futura(18px, #363636);
 	}
@@ -15,6 +18,12 @@
 			@include futura(14px, $black);
 			display:block;
 			margin-bottom:15px;
+			a{
+				color:$violet;
+				&:hover{
+					color:$black;
+				}
+			}
 			&.inline{
 				display: inline;
 			}
@@ -154,6 +163,10 @@
 			label, input, select, .selector{
 				display:inline;
 				margin-bottom: 0px;
+				&[type='radio'], &[type='checkbox']{
+					@include inline-block();
+					cursor: pointer;
+				}
 			}
 			.radio, .checker{
 				margin-bottom:0px;
@@ -173,6 +186,12 @@
 			.parsley-errors-list{
 				position:relative;
 				top:5px;
+			}
+
+			#feedback{
+				clear:both;
+				float:none;
+				display:block;
 			}
 
 			@media only screen and (max-width: $tablet){
@@ -256,7 +275,6 @@
 				float:left;
 			}
 			h2{
-				@include futura(20px, $violet);
 				margin-right:10px;
 			}
 			a{
@@ -273,19 +291,21 @@
 					background:$violet;
 				}
 			}
-			p{
-				@include futura(11px, $black);
-				text-transform: uppercase;
-				&.right{
-					float: none;
-					clear:both;
-					text-align: right;
-				}
-			}
 		}
 		
 		h2{
 			margin-bottom:10px;
+			@include futura(20px, $violet);
+		}
+		> p{
+			@include futura(11px, $black);
+			text-transform: uppercase;
+			margin-bottom:20px;
+			&.right{
+				float: none;
+				clear:both;
+				text-align: right;
+			}
 		}
 
 		.form{
@@ -297,8 +317,16 @@
 		.inline.footer{
 			text-align:right;
 			p{
-				display:inline;
+				@include inline-block();
 				margin-right:15px;
+				&#total{
+					@include futura(17px, #5b5959);
+					text-transform: uppercase;
+					margin:0 0 10px 0;
+					span{
+						@include futuraBold(17px, $violet);
+					}
+				}
 			}
 		}
 

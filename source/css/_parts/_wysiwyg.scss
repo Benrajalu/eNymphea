@@ -97,9 +97,9 @@
 			}
 
 			p{
-				@include helvetica(16px, $black);
-				margin-bottom:20px;
-				line-height: 1.2;
+				@include helvetica(14px, $black);
+				margin-bottom:10px;
+				line-height: 1.4;
 				a{
 					@include helvetica(16px, $violet);
 					&:hover{
@@ -147,6 +147,17 @@
 
 			@media only screen and (max-width:$tablet){
 				padding:10px 20px;
+			}
+		}
+
+		&.message{
+			padding:20px;
+			@extend .wysiwyg.article;
+			h4{
+				text-transform: none;
+				color:$violet;
+				font-size:15px;
+				margin-bottom:20px;
 			}
 		}
 
@@ -291,5 +302,52 @@
 				width:100%;
 				padding:25px 0px;
 			}
+		}
+	}
+
+// Message navigation (what's after confirmation messages)
+	.messageNav{
+		text-align:right;
+	}
+	a.button{
+		@include inline-block();
+		@include futuraBold(13px, $violet);
+		@include transition(all 300ms);
+		text-transform: uppercase;
+		text-decoration: none;
+		height:40px;
+		line-height: 40px;
+		padding:0px 10px 0px 50px;
+		background:$white;
+		position:relative;
+		margin:0px 0px 15px 15px;
+		&:before{
+			@include PE();
+			width:40px;
+			height:40px;
+			left:0px;
+			top:0px;
+			background:$violet;
+		}
+		&:hover{
+			background:$violet;
+			color:$white;
+		}
+		&.book{
+			&:before{
+				background:$violet url('../img/hangerWhite.png') center center no-repeat;
+			}
+		}
+		&.account{
+			&:before{
+				background:$violet url('../img/userWhite.png') center center no-repeat;
+			}
+		}
+
+		@media only screen and (max-width:$tablet){
+			display:block;
+			width:100%;
+			text-align:center;
+			margin:15px 0px;
 		}
 	}
