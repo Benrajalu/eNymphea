@@ -140,7 +140,6 @@ if (!(window.console && console.log)) {
 		$("#push").css("height", h);
 	}
 
-
 // Reveal
 	$(".reveal").click(function(event){
 		$(this).toggleClass("active");
@@ -149,6 +148,11 @@ if (!(window.console && console.log)) {
 		$(tar).toggleClass("show");
 	})
 
+// Archive panel
+	$(document).on("click", ".archive .open", function(event){
+		event.preventDefault();
+		$(this).parent('.panel').toggleClass("on");
+	})
 
 $(window).load(function () {
 	// Parsley
