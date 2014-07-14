@@ -8,6 +8,9 @@
 		margin-right:10px;
 		line-height:20px;
 		position:relative;
+		&:last-child{
+			margin-bottom:0px !important;
+		}
 		&.time{
 			@include futura(11px, #7a7878);
 			line-height: 16px;
@@ -65,7 +68,6 @@
 			text-decoration: none;
 			span{
 				@include futuraBold(10px, #5b5959);
-				padding-left:5px;
 			}
 			&:before{
 				@include PE();
