@@ -43,45 +43,12 @@ description: Home pour E-Nymphea
 				</hgroup>
 				
 				<div class="history">
-					<article class="product recap">
-						<section class="image">
-							<% link_to '/soin.html' do %><%= image_tag "products/rituel-tropicalS.jpg" %><% end %>
-						</section>
-						<section class="description">
-							<h3>Rituel Tropical</h3>
-							<ul class="infoList cf">
-								<li class="date">17/06/2014 <span>à 19h</span></li>
-								<li class="time">Durée du soin: 1h</li>
-								<li class="place">Nom de l'établissement</li>
-							</ul>
-						</section>
-					</article>
 
-					<article class="product recap">
-						<section class="image">
-							<% link_to '/soin.html' do %><%= image_tag "products/rituel-bresilienS.jpg" %><% end %>
-						</section>
-						<section class="description">
-							<h3>Rituel Brésilien</h3>
-							<ul class="infoList cf">
-								<li class="date">17/06/2014 <span>à 19h</span></li>
-								<li class="time">Durée du soin: 1h</li>
-								<li class="place">Nom de l'établissement</li>
-							</ul>
-						</section>
-					</article>
 
-					<article class="product recap">
-						<section class="image">
-							<% link_to '/soin.html' do %><%= image_tag "products/rituel-tropicalS.jpg" %><% end %>
-						</section>
-						<section class="description">
-							<h3>Rituel Tropical</h3>
-							<ul class="infoList cf">
-								<li class="date">17/06/2014 <span>à 19h</span></li>
-								<li class="time">Durée du soin: 1h</li>
-								<li class="place">Nom de l'établissement</li>
-							</ul>
+					<article class="noHistory">
+						<h3>Aucun rendez-vous à venir...</h3>
+						<section class="messageNav">
+							<%= link_to 'Consultez les soins disponibles', '/book.html', :class => "button book" %>
 						</section>
 					</article>
 				</div>

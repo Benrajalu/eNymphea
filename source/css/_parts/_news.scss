@@ -1,0 +1,166 @@
+.news.wysiwyg{
+	margin-bottom:30px;
+	.columns{
+		> a > img{
+			width:100%;
+			display:block;
+			margin-bottom:30px;
+		}
+	}
+
+	.infoList{
+		margin-bottom:15px;
+		@media only screen and (max-width:$tablet){
+			margin:0 0 15px 0;
+			padding:0px;
+		}
+	}
+
+	&.hero{
+		margin-bottom:0px;
+		.date{
+			@include inline-block();
+			@include futura(13px, $violet);
+			position:relative;
+			height:30px;
+			line-height: 30px;
+			padding:0px 15px 0px 40px;
+			background:#d8d8d8;
+			margin-bottom:15px;
+			&:before{
+				@include PE();
+				left:0px;
+				top:0px;
+				height:30px;
+				width:30px;
+				background:$violet url('../img/dateWhite.png') center center no-repeat;
+			}
+		}
+		p{
+			font-size:13px;
+		}
+		.heightLimit{
+			display:block;
+			position:relative;
+			max-height:130px;
+			overflow: hidden;
+			margin-bottom: 10px;
+			&:after{
+				@include PE();
+				position:absolute;
+				top:auto;
+				bottom:0px;
+				left:0px;
+				width:100%;
+				background:url('../img/newsGrad.png') left bottom repeat-x;
+				height:30px;
+			}
+		}
+
+		.readMore{
+			@extend .date;
+			@include transition(all 300ms);
+			background:$violet;
+			color:$white;
+			text-transform: uppercase;
+			text-decoration: none;
+			margin-bottom:30px;
+			&:before{
+				background:#d8d8d8 url('../img/moreArrowSmallHover.png') center center no-repeat;
+			}
+			&:hover{
+				background:$gold;
+				color:$black;
+			}
+		}
+
+		@media only screen and (max-width:$tablet){
+			.columns > a > img{
+				width:100%;
+				margin:0 0 20px 0;
+			}
+		}
+	}
+
+	&.teaser{
+		background:$white;
+		padding:0px !important;
+		margin-bottom:15px;
+		> a img{
+			margin:0px;
+			width:100%;
+		}
+		.contents{
+			background:$white;
+			padding:10px 10px 0px 10px;
+			position:relative;
+			top:-15px;
+			width:95%;
+			margin:0 2.5%;
+			h3{
+				margin:0px;
+				a{
+					display:block;
+					white-space: nowrap;
+					padding:0px 30px 0px 0px;
+					overflow: hidden;
+					text-overflow:ellipsis;
+					@include futura(13px, $black);
+					text-decoration: none;
+					line-height:30px;
+					&:hover{
+						color:$violet;
+					}
+				}
+			}
+			.heightLimit{
+				display:block;
+				position:relative;
+				max-height:50px;
+				overflow: hidden;
+				margin-bottom:0px;
+				&:after{
+					@include PE();
+					position:absolute;
+					top:auto;
+					bottom:0px;
+					left:0px;
+					width:100%;
+					background:url('../img/newsGrad.png') left bottom repeat-x;
+					height:30px;
+				}
+				p{
+					font-size: 13px;
+					.date{
+						color:$violet;
+					}
+				}
+			}
+			.readMore{
+				position:absolute;
+				top:14px;
+				right:8px;
+				width:20px;
+				height:20px;
+				overflow: hidden;
+				text-indent:-999px;
+				background:url('../img/moreArrowSmall.png') center center no-repeat;
+				&:hover{
+					background:url('../img/moreArrowSmallHover.png') center center no-repeat;
+				}
+			}
+		}
+
+		.bgWhite &{
+			background:$pale;
+			.contents{
+				background:$pale;
+				.heightLimit{
+					&:after{
+						background:url('../img/newsGradPale.png') left center repeat-x;
+					}
+				}
+			}
+		}
+	}
+}

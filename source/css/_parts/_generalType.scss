@@ -41,6 +41,10 @@
 	h3{
 		@include futuraBold(12px, #5b5959);
 		margin-bottom:30px;
+		.aside &{
+			line-height:30px;
+			margin:10px 0px 0px 0px;
+		}
 	}
 
 	p{
@@ -81,5 +85,9 @@
 		&.centered{
 			margin-left:auto;
 			margin-right:auto;
+		}
+
+		.aside &{
+			margin-bottom:15px;
 		}
 	}
