@@ -74,6 +74,12 @@
 						display:none;
 					}
 				}
+				&:hover{
+					background:$violet url("../img/tab.png") center right no-repeat;
+					&:after{
+						display:none;
+					}
+				}
 				&.mobileActive{
 					background:$violet url("../img/tabActive.png") center right no-repeat;
 				}

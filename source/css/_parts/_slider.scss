@@ -122,7 +122,7 @@
 						}
 
 						@media only screen and (max-width:$tablet){
-							max-height:35px;
+							max-height:40px;
 							padding:0px 15px;
 							&.price{
 								max-height: 50px;
@@ -205,6 +205,10 @@
 						&:hover{
 							background:url("../img/moreArrowSmallHover.png") center right no-repeat;
 						}
+					}
+
+					@media only screen and (max-width:$tablet){
+						padding:30px 0px;
 					}
 				}
 			}

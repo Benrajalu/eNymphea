@@ -144,8 +144,8 @@
 			}
 		}
 		.contents{
-			position:absolute;
-			bottom:0px;
+			position:relative;
+			top:-20px;
 			padding:25px 5px 0px 5px;
 			background:$white;
 			width:100%;

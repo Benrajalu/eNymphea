@@ -36,6 +36,16 @@
 			@include futuraBold(14px, $black);
 			text-transform: uppercase;
 		}
+		p.small{
+			margin:5px 0px;
+			@include futura(12px, $black);
+			font-style:italic;
+		}
+		p.success{
+			margin:25px 0px 15px 0px;
+			@include futura(14px, #0e8d5f);
+			text-align: center;
+		}
 
 	// Inputs (text, password, date, validate)
 		input{
@@ -66,6 +76,7 @@
 				&.euros{
 					background:$white url('../img/uniform/euro.jpg') center right no-repeat;
 					padding-right:35px;
+					text-align:right;
 				}
 			}
 
@@ -178,6 +189,11 @@
 				margin-right:15px;
 				&.lineLabel{
 					margin-right: 30px;
+					@media only screen and (max-width:$tablet){
+						display:block;
+						width:100%;
+						margin-bottom:15px;
+					}
 				}
 			}
 			input{
