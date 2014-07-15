@@ -52,6 +52,7 @@
 					text-align:center;
 					display:block;
 					padding:0 15px;
+					text-shadow: 0.1px 0.1px 1px #fff;
 					&:after{
 						@include transition(all 300ms);
 						content:"";
