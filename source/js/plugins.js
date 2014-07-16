@@ -154,6 +154,70 @@ if (!(window.console && console.log)) {
 		$(this).parent('.panel').toggleClass("on");
 	})
 
+// Promo panels
+	$(document).on("click", ".badge", function(event){
+		event.preventDefault();
+		$(this).parents('.promo').toggleClass("open");
+	})
+	$(document).on("click", ".description .close", function(event){
+		event.preventDefault();
+		$(this).parents('.promo').toggleClass("open");
+	})
+
+// Search results
+	// Display products
+		$(document).on("click", ".entries a", function(event){
+			event.preventDefault();
+
+			var scope = $(this).parents(".line"), 
+				tar = $(this).attr("href"), 
+				par = $(this).parent();
+
+			$(scope).find(".entries li").removeClass("active");
+
+			$(scope).find(".products").each(function(){
+				if($(this).is(tar) && $(this).is(":hidden")){
+					$(this).addClass("active").slideDown(300);
+					$(".entries li a").each(function(){
+						if($(this).attr("href") == tar){
+							$(this).parent().addClass('active');
+						}
+					})
+				}
+				else{
+					$(this).removeClass("active").slideUp(300);
+					$(".entries li a").each(function(){
+						if($(this).attr("href") != tar){
+							$(this).parent().removeClass('active');
+						}
+					})
+				}
+			})
+		})
+		$(document).on("click", ".products .close", function(event){
+			event.preventDefault();
+			$(this).parents(".line").find(".entries li").removeClass("active");
+			$(this).parent(".products").removeClass(".active").slideUp(300);
+		})
+
+	// Mobile / Display categories
+		$(document).on("click", ".unit", function(event){
+			event.preventDefault();
+			if(Modernizr.mq('only all and (max-width: 780px)')){
+				var target = $(this).attr("href");
+				$('.entries').each(function(){
+					if($(this).is(target) && $(this).height() == 0){
+						$(this).addClass("open");
+					}
+					else if($(this).is(target) && $(this).height() != 0){
+						$(this).removeClass("open");
+					}
+				})
+			}
+		})
+
+
+
 $(window).load(function () {
 	// Parsley
 

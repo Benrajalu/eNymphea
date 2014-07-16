@@ -94,7 +94,7 @@
 		@media only screen and (max-width:$tablet){
 			display:block;
 			li{
-				width:16%;
+				width:26.66%;
 				display:block;
 				float:left;
 				a{
@@ -113,95 +113,325 @@
 		}
 	}
 
-	.line{
-		padding-left: 40px;
-		height:70px;
-		display:table;
-		width:100%;
-		&:nth-child(odd){
-			background:#f0efef;
-		}
-		.unit{
-			display:table-cell;
-			vertical-align: middle;
-			padding:0 15px 0px 0px;
-			@include futuraBold(15px, $black);
-			text-decoration:none;
-			text-align: center;
-		}
-		.entries{
-			li{
-				display:table-cell;
-				vertical-align: middle;
+	#resultContents{
+		margin-bottom:40px;
+		.line{
+			display:block;
+			width:100%;
+			position:relative;
+			&:nth-child(odd){
+				@extend .bgPattern;
+			}
+
+			.categories{
+				display:table;
 				height:70px;
-				line-height:70px;
-				&:hover{
-					background:#e3e3e3;
-				}
-				a{
-					@include inline-block();
+			}
+
+			.categories{
+				table-layout:fixed;
+				.unit{
+					display:table-cell;
 					vertical-align: middle;
-					line-height: 1;
-					text-decoration: none;
+					padding:0px;
+					@include futuraBold(15px, $black);
+					text-decoration:none;
 					text-align: center;
-					@include futura(11px, #626262);
-					text-transform: uppercase;
-					padding:0px 10px;
-					span{
-						@include futuraBold(11px, $violet);
+					width:10%;
+					background:transparent;
+					border:0px;
+					&:active, &:focus{
+						outline:0;
 					}
-					strong{
+				}
+				.entries{
+					li{
+						display:table-cell;
+						vertical-align: middle;
+						height:70px;
+						line-height:70px;
+						&:hover, &.active{
+							background:#e3e3e3;
+						}
+						a{
+							@include inline-block();
+							vertical-align: middle;
+							line-height: 1;
+							text-decoration: none;
+							text-align: center;
+							@include futura(11px, #626262);
+							text-transform: uppercase;
+							padding:0px 10px;
+							span{
+								@include futuraBold(11px, $violet);
+							}
+							strong{
+								display:block;
+								margin-bottom:5px;
+								@include futuraBold(12px, #626262);
+							}
+						}
+					}
+				}
+			}	
+
+
+			.products{
+				width:100%;
+				display:none;
+				height: auto;
+				position:relative;
+				background:#dbd7d7 url("../img/patternBack.png") center center;
+				> button.close{
+					border:0px;
+					display:block;
+					width:30px;
+					height:30px;
+					position:absolute;
+					top:10px;
+					right:10px;
+					background:transparent url('../img/smallClose.png') center center no-repeat;
+					text-indent:-999px;
+					overflow: hidden;
+					cursor:pointer;
+					@include transition(all 300ms);
+					&:hover{
+						@include border-radius(99px);
+						background-color:$pale;
+					}
+					&:active, &:focus{
+						outline:0;
+					}
+				}
+				.offer{
+					@include clearfix();
+					padding:20px 40px;
+					> li{
 						display:block;
-						margin-bottom:5px;
-						@include futuraBold(12px, #626262);
+						height:42px;
+						width:40%;
+						float:left;
+						padding-right:10px;
+						border-left:3px solid $violet;
+						padding:0px 10px 0px 10px;
+						margin-bottom:10px;
+						margin-left:20px;
+						position:relative;
+						> a{
+							@include futura(12px, #5b5959);
+							text-transform: uppercase;
+							text-decoration: none;
+							&:hover{
+								color:$violet;
+							}
+						}
+						.noResults{
+							@include futura(12px, #5b5959);
+							padding:10px 0px;
+						}
+						.infos{
+							float:none;
+							text-align:right;
+							li{
+								float:left;
+								width:auto;
+								position:relative;
+								line-height:25px;
+								margin-right:3px;
+								&.time{
+									@include futura(11px, #7a7878);
+									padding-left:23px;
+									&:before{
+										@include PE();
+										width:16px;
+										height:16px;
+										left:0px;
+										margin-top:-9px;
+										background:url("../img/clock.png") left center no-repeat;
+									}
+								}
+								&.price{
+									@include futura(11px, $violet);
+								}
+								&.cart{
+									a{
+										@include futura(11px, $violet);
+										text-transform: uppercase;
+										text-decoration: none;
+										padding-left:20px;
+										@include transition(all 300ms);
+										&:before{
+											@include PE();
+											width:16px;
+											height:16px;
+											left:0px;
+											margin-top:-10px;
+											background:url("../img/cartS.png") left center no-repeat;
+										}
+										&:hover{
+											color:$black;
+											text-decoration: underline;
+											&:before{
+												background:url("../img/cartShover.png") left center no-repeat;
+											}
+										}
+									}
+								}
+							}
+						}
+
+						.promo{
+							position:absolute;
+							left:-20px;
+							top:0px;
+							height:100%;
+							width:30px;
+							&.open{
+								width:100%;
+								.description{
+									width:100%;	
+									opacity:1;
+								}
+							}
+							.badge{
+								cursor: pointer;
+								position:absolute;
+								top:50%;
+								left:-15px;
+								width:30px;
+								height:30px;
+								display:block;
+								border:0px;
+								@include border-radius(99px);
+								background:$gold url("../img/promo.png") center center no-repeat;
+								margin-top:-15px;
+								text-indent: -999px;
+								overflow: hidden;
+								&:active, &:focus{
+									outline:0px;
+								}
+							}
+							.description{
+								@include transition(all 300ms);
+								opacity:0;
+								display:block;
+								height:42px;
+								line-height:42px;
+								display: block;
+								background: #fff;
+								border: 1px solid $gold;
+								width: 0%;
+								margin:0 0 0 20px;
+								padding: 0px 10px;
+								overflow:hidden;
+								position:relative;
+								p{
+									@include inline-block();
+									vertical-align: middle;
+									@include futura(11px, #5b5959);
+									text-transform: uppercase;
+									line-height:1.2;
+									padding-right:25px;
+								}
+
+								button.close{
+									border:0px;
+									display:block;
+									width:30px;
+									height:30px;
+									position:absolute;
+									top:50%;
+									right:5px;
+									margin-top:-15px;
+									background:transparent url('../img/smallClose.png') center center no-repeat;
+									text-indent:-999px;
+									overflow: hidden;
+									cursor:pointer;
+									@include transition(all 300ms);
+									&:hover{
+										@include border-radius(99px);
+										background-color:$pale;
+									}
+									&:active, &:focus{
+										outline:0;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		@media only screen and (max-width:$tablet){
+			.line{
+				display:block;
+				position:relative;
+				.categories{
+					display:block;
+					height:auto;
+					.unit{
+						display: block;
+						width:100%;
+						padding:20px 0px;
+					}
+					.entries{
+						@include transition(all 300ms);
+						max-height:0px;
+						overflow: hidden;
+						padding:0px;
+						display:block;
+						width:100%;
+						&.open{
+							min-height: 260px;
+							max-height:700px;
+							padding:0px 20px 20px 20px;
+							overflow: auto;
+						}
+						li{
+							display:block;
+							height:auto;
+							line-height:3;
+							a{
+								text-align: left;
+							}
+						}
+					}
+				}
+				.products{
+					position:absolute;
+					z-index:20;
+					top:55px;
+					left:0px;
+					width:100%;
+					overflow: auto;
+					>button.close{
+						z-index:30;
+					}
+					.offer{
+						padding:20px 15px;
+						overflow: auto;
+						> li{
+							width:100%;
+							margin:0 0 20px 0px;
+							float:none;
+							.promo{
+								display:none;
+							}
+						}
 					}
 				}
 			}
 		}
 	}
+}
 
-	.offer{
-		@include clearfix();
-		@extend .bgPattern;
-		padding:20px 60px;
-		li{
-			display:block;
-			width:50%;
-			float:left;
-			padding-right:10px;
-			a{
-				@include futura(12px, #5b5959);
-				text-transform: uppercase;
-				text-decoration: none;
-				&:hover{
-					color:$violet;
-				}
-			}
-			.infos{
-				float:right;
-				text-align:right;
-				li{
-					float:left;
-					width:auto;
-					position:relative;
-					&.time{
-						@include futura(11px, #7a7878);
-						line-height: 16px;
-						padding-left:23px;
-						&:before{
-							@include PE();
-							width:16px;
-							height:16px;
-							left:0px;
-							margin-top:-8px;
-							background:url("../img/clock.png") left center no-repeat;
-						}
-					}
-					&.price{
-						@include futuraBold(11px, $violet);
-					}
-				}
-			}
+#results{
+	.message{
+		p{
+
+			@include futura(14px, $black);
+			line-height:1.3;
 		}
 	}
 }

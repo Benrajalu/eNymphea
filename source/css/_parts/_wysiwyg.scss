@@ -402,6 +402,9 @@
 // Message navigation (what's after confirmation messages)
 	.messageNav{
 		text-align:right;
+		.popIn &{
+			padding-top:40px;
+		}
 	}
 	a.button{
 		@include inline-block();
@@ -438,10 +441,17 @@
 			}
 		}
 
+		&.left{
+			float:left;
+		}
+
 		@media only screen and (max-width:$tablet){
 			display:block;
 			width:100%;
 			text-align:center;
 			margin:15px 0px;
+			&.left{
+				float:none;
+			}
 		}
 	}
