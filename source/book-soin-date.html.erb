@@ -50,10 +50,10 @@ description: Réserver un soin sur la plateforme E-Nymphea
 						<label>Sélectionnez une date pour un rendez-vous</label>
 						<div class="row pad0">
 							<div class="large-5 columns pad0">
-								<input type="text" class="datepicker" placeholder="JJ/MM/AAAA" name="date" />
+								<input type="text" class="datepicker" placeholder="JJ/MM/AAAA" data-parsley-required name="date" />
 							</div>
 							<div class="large-7 columns pad0 padL mpad0">
-								<select name="moment" data-parsley-pattern="\w+" id="moment">
+								<select name="moment" data-parsley-required data-parsley-pattern="\w+" id="moment">
 									<option value="À tout moment de la journée">À tout moment de la journée</option>
 									<option value="horaire">Choisir une heure précise</option>
 									<option value="matin">Matin (9h - 12h)</option>
@@ -82,7 +82,7 @@ description: Réserver un soin sur la plateforme E-Nymphea
 						</div>
 
 						<label>Sélectionnez un type de soin</label>
-						<select name="soin" data-parsley-pattern="\w+">
+						<select name="soin" data-parsley-required data-parsley-pattern="\w+">
 							<option value="">Choisir un type de soin</option>
 							<optgroup label="Soin du visage">
 								<option value="nomdusoin">Nom du soin</option>
@@ -135,6 +135,216 @@ description: Réserver un soin sur la plateforme E-Nymphea
 
 	</div>
 
+	<!-- Results -->
+	<div class="row">
+
+		<div id="results">
+			<article id="resultHead">
+				<p>Vos résultats</p>
+				<p>Pour le soin "Rituel Brésilien", le 16 Janvier 2015</p>
+			</article>
+
+			<div class="row">
+				<div class="large-4 columns">
+					<article class="product teaser">
+						<% link_to "/soin.html" do %>
+							<%= image_tag 'push/push7.jpg' %>
+						<% end %>
+						<section class="contents">
+							<p class="price">80€</p>
+							<h3><%= link_to 'Rituel Brésilien "crème de café" minceur et raffermissant' , "/soin.html" %></h3>
+							<p>Selon un rituel brésilien, ce soin raffermissant et sculptant associe les propriétés « brûle graisse » de la Caféine à une technique de massage et de palper-rouler unique pour lutter contre la cellulite adipeuse sur les jambes, le ventre, les hanches et les bras. Ce soin est suivi d’un enveloppement frais, raffermissant et purifiant.</p>
+						</section>
+					</article>
+				</div>
+
+				<div class="large-8 columns">
+					<div id="table" class="lessPad">
+						<header id="resultNavigation">
+							<ul>
+								<li class="prev"><a href="#" title="Dates précédentes">Dates précédentes</a></li>
+								<li><a href="#" class="active"><span class="verticalAlign"><span>Jeudi</span> 16 Janvier</span></a></li>
+								<li><a href="#"><span class="verticalAlign"><span>Vendredi</span> 17 Janvier</span></a></li>
+								<li><a href="#"><span class="verticalAlign"><span>Samedi</span> 18 Janvier</span></a></li>
+								<li class="next"><a href="#" title="Dates Suivantes">Dates Suivantes</a></li>
+							</ul>
+						</header>
+
+						<div id="resultContents">
+							<div class="line">
+								<div class="product">
+									<a href="#h9" class="unit">09:00</a>
+									<ul id="h9" class="entries">
+										<li>
+											<%= link_to "Rituel Brésilien", "/soin.html", :target => "_blank"%> 
+											<span class="infos">
+												<ul>
+													<li class="time">40 min -</li> 
+													<li class="price">80€ -</li> 
+													<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+												</ul>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="line">
+								<div class="product">
+									<a href="#h10" class="unit">10:00</a>
+									<ul id="h10" class="entries">
+										<li>
+											<%= link_to "Rituel Brésilien", "/soin.html", :target => "_blank"%> 
+											<span class="infos">
+												<ul>
+													<li class="time">40 min -</li> 
+													<li class="price">80€ -</li> 
+													<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+												</ul>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="line">
+								<div class="product">
+									<a href="#h11" class="unit">11:00</a>
+									<ul id="h11" class="entries">
+										<li>
+											<%= link_to "Rituel Brésilien", "/soin.html", :target => "_blank"%> 
+											<span class="infos">
+												<ul>
+													<li class="time">40 min -</li> 
+													<li class="price">80€ -</li> 
+													<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+												</ul>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="line">
+								<div class="product">
+									<a href="#h12" class="unit">12:00</a>
+									<ul id="h12" class="entries">
+										<li>
+											<%= link_to "Rituel Brésilien", "/soin.html", :target => "_blank"%> 
+											<span class="infos">
+												<ul>
+													<li class="time">40 min -</li> 
+													<li class="price">80€ -</li> 
+													<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+												</ul>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="line">
+								<div class="product">
+									<a href="#h13" class="unit">13:00</a>
+									<ul id="h13" class="entries">
+										<li>
+											<%= link_to "Rituel Brésilien", "/soin.html", :target => "_blank"%> 
+											<span class="infos">
+												<ul>
+													<li class="time">40 min -</li> 
+													<li class="price">80€ -</li> 
+													<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+												</ul>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="line">
+								<div class="product">
+									<a href="#h14" class="unit">14:00</a>
+									<ul id="h14" class="entries">
+										<li>
+											<%= link_to "Rituel Brésilien", "/soin.html", :target => "_blank"%> 
+											<span class="infos">
+												<ul>
+													<li class="time">40 min -</li> 
+													<li class="price">80€ -</li> 
+													<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+												</ul>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="line">
+								<div class="product">
+									<a href="#h15" class="unit">15:00</a>
+									<ul id="h15" class="entries">
+										<li>
+											<%= link_to "Rituel Brésilien", "/soin.html", :target => "_blank"%> 
+											<span class="infos">
+												<ul>
+													<li class="time">40 min -</li> 
+													<li class="price">80€ -</li> 
+													<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+												</ul>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="line">
+								<div class="product">
+									<a href="#h16" class="unit">16:00</a>
+									<ul id="h16" class="entries">
+										<li>
+											<%= link_to "Rituel Brésilien", "/soin.html", :target => "_blank"%> 
+											<span class="infos">
+												<ul>
+													<p class="noResults">Ce créneau n'est malheureusement pas disponible.</p>
+												</ul>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="line">
+								<div class="product">
+									<a href="#h17" class="unit">17:00</a>
+									<ul id="h17" class="entries">
+										<li>
+											<%= link_to "Rituel Brésilien", "/soin.html", :target => "_blank"%> 
+											<span class="infos">
+												<ul>
+													<li class="time">40 min -</li> 
+													<li class="price">80€ -</li> 
+													<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+												</ul>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="line">
+								<div class="product">
+									<a href="#h18" class="unit">18:00</a>
+									<ul id="h18" class="entries">
+										<li>
+											<%= link_to "Rituel Brésilien", "/soin.html", :target => "_blank"%> 
+											<span class="infos">
+												<ul>
+													<li class="time">40 min -</li> 
+													<li class="price">80€ -</li> 
+													<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+												</ul>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- Pushes -->
 	<div class="rowFluid bgPattern mar40 pad30">

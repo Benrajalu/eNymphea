@@ -104,6 +104,9 @@
 					color:$black;
 					border:0px;
 				}
+				&:active, &:focus{
+					outline:0;
+				}
 				&.block{
 					display:block;
 					height:40px;

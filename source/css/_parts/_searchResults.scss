@@ -1,4 +1,4 @@
-#noResults{
+#resultHead{
 	text-align:center;
 	position:relative;
 	margin-bottom:40px;
@@ -24,6 +24,9 @@
 
 #table{
 	margin:30px 0px;
+	&.lessPad{
+		margin:0px 0px 0px 0px;
+	}
 	#resultNavigation{
 		@include clearfix();
 		@include border-radius(2px);
@@ -99,6 +102,10 @@
 				float:left;
 				a{
 					padding:0 5px;
+					font-size:12px;
+					.verticalAlign > span{
+						font-size:11px;
+					}
 				}
 			}
 			li.prev, li.next{
@@ -145,7 +152,7 @@
 					}
 				}
 				.entries{
-					li{
+					> li{
 						display:table-cell;
 						vertical-align: middle;
 						height:70px;
@@ -169,6 +176,106 @@
 								display:block;
 								margin-bottom:5px;
 								@include futuraBold(12px, #626262);
+							}
+						}
+					}
+				}
+			}
+
+			.product{
+				display:block;
+				height:70px;
+				line-height:70px;
+				.unit, >ul{
+					float:left;
+					display:block;height:70px;
+					line-height:70px;
+				}
+				.unit{
+					@include futuraBold(15px, $black);
+					text-decoration:none;
+					text-align: center;
+					width:20%;
+					background:transparent;
+					border:0px;
+					&:active, &:focus{
+						outline:0;
+					}
+				}
+				>ul{
+					width:80%;
+					display:block;
+					height:70px;
+					line-height: 70px;
+					>li{
+						@include inline-block();
+						line-height: 1;
+						vertical-align: middle;
+						padding-right:10px;
+						border-left:3px solid $violet;
+						padding:0px 10px 0px 10px;
+						margin-left:20px;
+						position:relative;
+						> a{
+							@include futura(12px, #5b5959);
+							text-transform: uppercase;
+							text-decoration: none;
+							&:hover{
+								color:$violet;
+							}
+						}
+						.noResults{
+							@include futura(12px, #5b5959);
+							padding:10px 0px;
+						}
+						.infos{
+							float:none;
+							text-align:right;
+							li{
+								float:left;
+								width:auto;
+								position:relative;
+								line-height:25px;
+								margin-right:3px;
+								&.time{
+									@include futura(11px, #7a7878);
+									padding-left:23px;
+									&:before{
+										@include PE();
+										width:16px;
+										height:16px;
+										left:0px;
+										margin-top:-9px;
+										background:url("../img/clock.png") left center no-repeat;
+									}
+								}
+								&.price{
+									@include futura(11px, $violet);
+								}
+								&.cart{
+									a{
+										@include futura(11px, $violet);
+										text-transform: uppercase;
+										text-decoration: none;
+										padding-left:20px;
+										@include transition(all 300ms);
+										&:before{
+											@include PE();
+											width:16px;
+											height:16px;
+											left:0px;
+											margin-top:-10px;
+											background:url("../img/cartS.png") left center no-repeat;
+										}
+										&:hover{
+											color:$black;
+											text-decoration: underline;
+											&:before{
+												background:url("../img/cartShover.png") left center no-repeat;
+											}
+										}
+									}
+								}
 							}
 						}
 					}
@@ -398,6 +505,42 @@
 						}
 					}
 				}
+				.product{
+					display:block;
+					height:auto;
+					.unit{
+						display: block;
+						clear:both;
+						float:none;
+						width:100%;
+						padding:0px 0px;
+						height: 40px;
+						line-height: 40px;
+					}
+					.entries{
+						clear:both;
+						float:none;
+						@include transition(all 300ms);
+						max-height:0px;
+						overflow: hidden;
+						padding:0px;
+						display:block;
+						width:100%;
+						&.open{
+							min-height: 80px;
+							max-height:70px;
+							padding:0px 20px 20px 20px;
+							overflow: auto;
+						}
+						li{
+							text-align:left;
+							margin-left:0px;
+							p{
+								text-align: left;
+							}
+						}
+					}
+				}
 				.products{
 					position:absolute;
 					z-index:20;
@@ -427,6 +570,11 @@
 }
 
 #results{
+	h1{
+		font-size:18px;
+		line-height:1.7;
+		text-align:center;
+	}
 	.message{
 		p{
 
