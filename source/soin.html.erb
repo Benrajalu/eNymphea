@@ -33,7 +33,7 @@ description: Fiche de soin plateforme E-Nymphea
 					<p>Selon un rituel brésilien, ce soin raffermissant et sculptant associe les propriétés « brûle graisse » de la Caféine à une technique de massage et de palper-rouler unique pour lutter contre la cellulite adipeuse sur les jambes, le ventre, les hanches et les bras. Ce soin est suivi d’un enveloppement frais, raffermissant et purifiant.</p>
 
 					<ul class="infoList cf">
-						<li class="book"><%= link_to 'Réserver', '/book.html' %></li>
+						<li class="book"><%= link_to 'Réserver', '/book-soin.html' %></li>
 						<li class="offer"><%= link_to 'Offrir', '/gift.html' %></li>
 					</ul>
 				</article>
@@ -73,7 +73,7 @@ description: Fiche de soin plateforme E-Nymphea
 						</div>
 					</form>
 					
-					<% form_tag 'book.html', :id => 'bookForm', :class => 'form formPanel', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
+					<% form_tag '/book-soin.html#results', :id => 'bookForm', :class => 'form formPanel', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'none' do %>
 						<label>Sélectionnez un établissement</label>
 						<select name="etablissement" data-parsley-required>
 							<option value="">Choisir un établissement</option>
@@ -85,10 +85,10 @@ description: Fiche de soin plateforme E-Nymphea
 						<label>Sélectionnez une date pour un rendez-vous</label>
 						<div class="row pad0">
 							<div class="large-5 columns pad0">
-								<input type="text" class="datepicker" placeholder="JJ/MM/AAAA" data-parsley-required name="date" />
+								<input type="text" class="datepicker" placeholder="JJ/MM/AAAA" name="date" />
 							</div>
 							<div class="large-7 columns pad0 padL mpad0">
-								<select name="moment" data-parsley-required data-parsley-pattern="\w+" id="moment">
+								<select name="moment" data-parsley-pattern="\w+" id="moment">
 									<option value="À tout moment de la journée">À tout moment de la journée</option>
 									<option value="horaire">Choisir une heure précise</option>
 									<option value="matin">Matin (9h - 12h)</option>
@@ -156,7 +156,7 @@ description: Fiche de soin plateforme E-Nymphea
 
 					<section id="giftForm" class="form formPanel" style="display:none;">
 						
-						<% form_tag 'gift.html', :id => 'giftItem', :class => 'form', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
+						<% form_tag 'login.html', :id => 'giftItem', :class => 'form', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
 							<label>Sélectionnez un soin</label>
 							<div class="row pad0">
 								<div class="large-9 columns pad0">
@@ -232,7 +232,7 @@ description: Fiche de soin plateforme E-Nymphea
 						<p>Hammam Arômes et Couleurs® ou Bain Japonais d’Arômes et de Fleurs®, Gommage aromatique Energisant aux Epices rares et précieuses et Soin-Massage du Visage...</p>
 						<ul class="infoList cf">
 							<li class="time">3 x 50min</li>
-							<li class="book"><%= link_to 'Réserver', '/book.html' %></li>
+							<li class="book"><%= link_to 'Réserver', '/book-soin.html' %></li>
 							<li class="offer"><%= link_to 'Offrir', '/gift.html' %></li>
 						</ul>
 						<%= link_to 'En savoir plus', '/soin.html', :class => 'more' %>
@@ -251,7 +251,7 @@ description: Fiche de soin plateforme E-Nymphea
 						<p>Hammam Arômes et Couleurs® ou Bain Japonais d’Arômes et de Fleurs®, Gommage aromatique Energisant...</p>
 						<ul class="infoList cf">
 							<li class="time">3 x 50min</li>
-							<li class="book"><%= link_to 'Réserver', '/book.html' %></li>
+							<li class="book"><%= link_to 'Réserver', '/book-soin.html' %></li>
 							<li class="offer"><%= link_to 'Offrir', '/gift.html' %></li>
 						</ul>
 						<%= link_to 'En savoir plus', '/soin.html', :class => 'more' %>
@@ -269,7 +269,7 @@ description: Fiche de soin plateforme E-Nymphea
 						<p>Hammam Arômes et Couleurs® ou Bain Japonais d’Arômes et de Fleurs®, Gommage aromatique Energisant aux Epices rares et précieuses et Soin-Massage du Visage... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam animi voluptate tenetur velit doloremque corporis, tempore ducimus, reprehenderit a cupiditate! Quasi repudiandae consectetur vero officia, autem ea rem impedit beatae.</p>
 						<ul class="infoList cf">
 							<li class="time">3 x 50min</li>
-							<li class="book"><%= link_to 'Réserver', '/book.html' %></li>
+							<li class="book"><%= link_to 'Réserver', '/book-soin.html' %></li>
 							<li class="offer"><%= link_to 'Offrir', '/gift.html' %></li>
 						</ul>
 						<%= link_to 'En savoir plus', '/soin.html', :class => 'more' %>

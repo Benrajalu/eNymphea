@@ -216,8 +216,6 @@ if (!(window.console && console.log)) {
 			}
 		})
 
-
-
 $(window).load(function () {
 	// Parsley
 
@@ -320,6 +318,12 @@ $(window).load(function () {
 
 		// Pop-ins
 			$('.pop').magnificPopup({
+				// Delay in milliseconds before popup is removed
+				removalDelay: 300,
+
+				// Class that is added to popup wrapper and background
+				// make it unique to apply your CSS animations just to this exact popup
+				mainClass: 'mfp-fade',
 				callbacks : {
 					open : function(){
 						setTimeout(function(){
@@ -333,4 +337,139 @@ $(window).load(function () {
 					}
 				}
 			});
+
+			$(".closePop").click(function(){
+				event.preventDefault();
+				$.magnificPopup.close();
+			});
+
+	// Form behaviors
+		// Password retrival
+			$('#passwordFom').parsley().subscribe('parsley:form:validate', function(formInstance){
+				if(formInstance.isValid()){
+					event.preventDefault();
+					// Do the ajax dance here
+					$("#passwordFom").find(".feedback").html("Un nouveau mot de passe vous a été envoyé à cette adresse.")
+				}
+			})
+
+		// Newsletter message
+			$('#newsletter').parsley().subscribe('parsley:form:validate', function(formInstance){
+				if(formInstance.isValid()){
+					event.preventDefault();
+					// Do the ajax dance here
+					$("#newsletter").find(".feedback").html("Vous êtes désormais inscrit à la newsletter.")
+				}
+			})
+
+		// Add to cart pop-in
+			if($("#giftAmount").length){
+				$('#giftAmount').parsley().subscribe('parsley:form:validate', function(formInstance){
+					if(formInstance.isValid()){
+						event.preventDefault();
+						// Do the ajax dance here
+						$.magnificPopup.open({
+							items: {
+								src: '#addCart'
+							},
+							type:"inline", 
+							removalDelay: 300,
+							// Class that is added to popup wrapper and background
+							// make it unique to apply your CSS animations just to this exact popup
+							mainClass: 'mfp-fade'
+						});
+					}
+				})
+			}
+
+			if($("#giftItem").length){
+				$('#giftItem').parsley().subscribe('parsley:form:validate', function(formInstance){
+					if(formInstance.isValid()){
+						event.preventDefault();
+						// Do the ajax dance here
+						$.magnificPopup.open({
+							items: {
+								src: '#addCart'
+							},
+							type:"inline", 
+							removalDelay: 300,
+							// Class that is added to popup wrapper and background
+							// make it unique to apply your CSS animations just to this exact popup
+							mainClass: 'mfp-fade'
+						});
+					}
+				})
+			}
+
+			if($("#bookForm").length && $("#bookForm").hasClass("satellite")){
+				$('#bookForm').parsley().subscribe('parsley:form:validate', function(formInstance){
+					if(formInstance.isValid()){
+						var shell = $("#bookForm"), 
+							date = $(shell).find("input[name='date']"),
+							moment = $(shell).find("select[name='moment']"),
+							soin = $(shell).find("select[name='soin']"),
+							hour = $(shell).find("select[name='horaire']");
+
+						event.preventDefault();
+						if(date.val()){
+							if(moment.val() != ""){
+								if(hour.val()){
+									if(soin.val()){
+										window.location.href = "book-soin-precise.html#results";
+									}
+									else{
+										window.location.href = "book-precise.html#results";
+									}
+								}
+								else{
+									window.location.href = "book-period.html#results";
+								}
+							}
+							else{
+								window.location.href = "book-date.html#results";
+							}
+						}
+						else if(moment.val() != ""){
+							if(date.val() != ""){
+								if(hour.val()){
+									if(soin.val()){
+										window.location.href = "book-soin-precise.html#results";
+									}
+									else{
+										window.location.href = "book-precise.html#results";
+									}
+								}
+								else{
+									window.location.href = "book-period.html#results";
+								}
+							}
+							else{
+								window.location.href = "book-period.html#results";
+							}
+						}
+						else if(soin.val()){
+							if(moment.val() != ""){
+								if(hour.val()){
+									if(soin.val()){
+										window.location.href = "book-soin-precise.html#results";
+									}
+									else{
+										window.location.href = "book-precise.html#results";
+									}
+								}
+								else{
+									window.location.href = "book-period.html#results";
+								}
+							}
+							else{
+								window.location.href = "book-date.html#results";
+							}
+						}
+						else{
+							window.location = "book-empty.html#results";
+						}
+						
+					}
+				})
+			}
 });

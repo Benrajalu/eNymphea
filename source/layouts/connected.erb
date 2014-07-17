@@ -106,13 +106,13 @@
             <nav id="footerNav" class="bgPale">
                 <div class="row">
                     <ul class="cf">
-                        <li><a href="#">Soins du visage</a></li>
-                        <li><a href="#">Minceur et fermeté</a></li>
-                        <li><a href="#">Massages du corps</a></li>
-                        <li><a href="#">Soin d'exception espace privé Paris</a></li>
-                        <li><a href="#">Rituels du bain & soins corps</a></li>
-                        <li><a href="#">Abonnements</a></li>
-                        <li><a href="#">Rituels de soin</a></li>
+                        <li><%= link_to "Soins du visage", "/category.html" %></li>
+                        <li><%= link_to "Minceur et fermeté", "/category.html" %></li>
+                        <li><%= link_to "Massages du corps", "/category.html" %></li>
+                        <li><%= link_to "Soin d'exception espace privé Paris", "/category.html" %></li>
+                        <li><%= link_to "Rituels du bain & soins corps", "/category.html" %></li>
+                        <li><%= link_to "Abonnements", "/category.html" %></li>
+                        <li><%= link_to "Rituels de soin", "/category.html" %></li>
                     </ul>
                 </div>
             </nav>
@@ -205,6 +205,7 @@
                         <input type="text" data-parsley-required data-parsley-type="email" name="passEmail" placeholder="Votre adresse email" />
                     </div>
                     <div class="large-3 columns pad0 padL">
+                        <p class="feedback"></p>
                         <input type="submit" class="block" value="valider" />
                     </div>
                 </div>
@@ -276,6 +277,35 @@
 
             <% end %>
         </article>
+
+        <div class="popIn mfp-hide" id="addCart">
+            <header>
+                <h4>Soin ajouté au panier</h4>
+                <%= image_tag 'popIns/cart.png' %>
+            </header>
+            <article class="product recap">
+                <section class="image">
+                    <%= image_tag "products/rituel-bresilienS.jpg" %>
+                </section>
+                <section class="description">
+                    <h3>Rituel Brésilien</h3>
+                    <p>Selon un rituel brésilien, ce soin raffermissant et sculptant associe les propriétés « brûle graisse » de la Caféine...</p>
+                    <p class="price">100€</p>
+
+                    <ul class="infoList cf">
+                        <li class="date">31/12/2014 <span>à 10h</span></li>
+                    </ul>
+                </section>
+            </article>
+            <article class="wysiwyg article">
+                <h3>Votre soin "NOM DU SOIN" a bien été ajouté à votre panier</h3>
+                <p>Nous vous attendons le 10/10/2014 à 10h pour votre soin.</p>
+                <aside class="messageNav">
+                    <%= link_to 'Retour aux soins', '/book.html', :class => "button book left" %>
+                    <%= link_to 'Valider mon panier', '/login.html', :class => "button account" %>
+                </aside>
+            </article>
+        </div>
 
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>

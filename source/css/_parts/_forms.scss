@@ -376,3 +376,11 @@
 		@include futuraBold(13px, $gold);
 		text-transform: uppercase;
 	}
+
+
+// feedback
+	.feedback{
+		@include futura(15px, $violet);
+		line-height:2;
+		font-style: italic;
+	}

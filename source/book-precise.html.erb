@@ -136,775 +136,773 @@ description: Réserver un soin sur la plateforme E-Nymphea
 	</div>
 
 	<!-- Results -->
-	<div class="row">
+	<div id="results" class="row">
 		<article id="resultHead">
 			<p>Vos résultats</p>
 			<p>Pour le 16 Janvier 2015 à 18h</p>
 		</article>
-		<div id="results">
-			
-			<div id="table">
-				<header id="resultNavigation">
-					<ul>
-						<li class="prev"><a href="#" title="Dates précédentes">Dates précédentes</a></li>
-						<li><a href="#" class="active"><span class="verticalAlign"><span>Jeudi</span> 16 Janvier</span></a></li>
-						<li><a href="#"><span class="verticalAlign"><span>Vendredi</span> 17 Janvier</span></a></li>
-						<li><a href="#"><span class="verticalAlign"><span>Samedi</span> 18 Janvier</span></a></li>
-						<li class="next"><a href="#" title="Dates Suivantes">Dates Suivantes</a></li>
-					</ul>
-				</header>
 
-				<div id="resultContents">
+		<div id="table">
+			<header id="resultNavigation">
+				<ul>
+					<li class="prev"><a href="#" title="Dates précédentes">Dates précédentes</a></li>
+					<li><a href="#" class="active"><span class="verticalAlign"><span>Jeudi</span> 16 Janvier</span></a></li>
+					<li><a href="#"><span class="verticalAlign"><span>Vendredi</span> 17 Janvier</span></a></li>
+					<li><a href="#"><span class="verticalAlign"><span>Samedi</span> 18 Janvier</span></a></li>
+					<li class="next"><a href="#" title="Dates Suivantes">Dates Suivantes</a></li>
+				</ul>
+			</header>
 
-					<div class="line">
-						<div class="categories">
-							<a href="#h18" class="unit">18:00</a>
-							<ul id="h18" class="entries">
-								<li>
-									<a href="#offer1_18h">
-										<strong>Soins du visage</strong>
-										<span>5</span> soins disponibles
-									</a>
+			<div id="resultContents">
+
+				<div class="line">
+					<div class="categories">
+						<a href="#h18" class="unit">18:00</a>
+						<ul id="h18" class="entries">
+							<li>
+								<a href="#offer1_18h">
+									<strong>Soins du visage</strong>
+									<span>5</span> soins disponibles
+								</a>
+							</li>
+							<li>
+								<a href="#offer2_18h">
+									<strong>Massages du corps</strong>
+									<span>18</span> soins disponibles
+								</a>
+							</li>
+							<li>
+								<a href="#offer3_18h">
+									<strong>Rituels du bain & soins du corps</strong>
+									<span>7</span> soins disponibles
+								</a>
+							</li>
+							<li>
+								<a href="#offer4_18h">
+									<strong>Rituels de soin</strong>
+									<span>10</span> soins disponibles
+								</a>
+							</li>
+							<li>
+								<a href="#offer5_18h">
+									<strong>Minceur & Fermeté</strong>
+									<span>0</span> soins disponibles
+								</a>
+							</li>
+						</ul>
+					</div>
+					<section class="productHolder">
+						<div class="products" id="offer1_18h">
+							<button class="close">Fermer le volet</button>
+							<ul  class="offer">
+								<li><%= link_to "Soin massage éclat du visage", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">50 min -</li> 
+											<li class="price">80€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
 								</li>
-								<li>
-									<a href="#offer2_18h">
-										<strong>Massages du corps</strong>
-										<span>18</span> soins disponibles
-									</a>
+								<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">60 min -</li> 
+											<li class="price">90€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>		
+								<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">20 min -</li> 
+											<li class="price">30€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
 								</li>
-								<li>
-									<a href="#offer3_18h">
-										<strong>Rituels du bain & soins du corps</strong>
-										<span>7</span> soins disponibles
-									</a>
+								<li><%= link_to "Soin massage jeunesse du visage", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">45 min -</li> 
+											<li class="price">65€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+									<div class="promo">
+										<button class="badge">Infos promotion</button>
+										<div class="description">
+											<p>Court texte promotionnel !</p>
+											<button class="close" href="#">Fermer</button>
+										</div>
+									</div>
 								</li>
-								<li>
-									<a href="#offer4_18h">
-										<strong>Rituels de soin</strong>
-										<span>10</span> soins disponibles
-									</a>
-								</li>
-								<li>
-									<a href="#offer5_18h">
-										<strong>Minceur & Fermeté</strong>
-										<span>0</span> soins disponibles
-									</a>
+								<li><%= link_to "Soin massage du visage précieux", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">50 min -</li> 
+											<li class="price">80€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
 								</li>
 							</ul>
 						</div>
-						<section class="productHolder">
-							<div class="products" id="offer1_18h">
-								<button class="close">Fermer le volet</button>
-								<ul  class="offer">
-									<li><%= link_to "Soin massage éclat du visage", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">50 min -</li> 
-												<li class="price">80€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">60 min -</li> 
-												<li class="price">90€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>		
-									<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">20 min -</li> 
-												<li class="price">30€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage jeunesse du visage", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">45 min -</li> 
-												<li class="price">65€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-										<div class="promo">
-											<button class="badge">Infos promotion</button>
-											<div class="description">
-												<p>Court texte promotionnel !</p>
-												<button class="close" href="#">Fermer</button>
-											</div>
-										</div>
-									</li>
-									<li><%= link_to "Soin massage du visage précieux", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">50 min -</li> 
-												<li class="price">80€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-								</ul>
-							</div>
-							<div class="products" id="offer2_18h">
-								<button class="close">Fermer le volet</button>
-								<ul  class="offer">
-									<li><%= link_to "Lorem ipsum soin", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">50 min -</li> 
-												<li class="price">80€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">60 min -</li> 
-												<li class="price">90€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>		
-									<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">20 min -</li> 
-												<li class="price">30€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Lorem ipsum soin", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">50 min -</li> 
-												<li class="price">80€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">60 min -</li> 
-												<li class="price">90€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>		
-									<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">20 min -</li> 
-												<li class="price">30€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Lorem ipsum soin", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">50 min -</li> 
-												<li class="price">80€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">60 min -</li> 
-												<li class="price">90€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>		
-									<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">20 min -</li> 
-												<li class="price">30€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Lorem ipsum soin", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">50 min -</li> 
-												<li class="price">80€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">60 min -</li> 
-												<li class="price">90€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>		
-									<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">20 min -</li> 
-												<li class="price">30€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-								</ul>
-							</div>
-							<div class="products" id="offer3_18h">
-								<button class="close">Fermer le volet</button>
-								<ul  class="offer">
-									<li><%= link_to "Soin massage éclat du visage", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">50 min -</li> 
-												<li class="price">80€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">60 min -</li> 
-												<li class="price">90€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>		
-									<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">20 min -</li> 
-												<li class="price">30€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage jeunesse du visage", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">45 min -</li> 
-												<li class="price">65€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-										<div class="promo">
-											<button class="badge">Infos promotion</button>
-											<div class="description">
-												<p>Court texte promotionnel !</p>
-												<button class="close" href="#">Fermer</button>
-											</div>
-										</div>
-									</li>
-									<li><%= link_to "Soin massage du visage précieux", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">50 min -</li> 
-												<li class="price">80€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage du visage précieux", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">50 min -</li> 
-												<li class="price">80€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-								</ul>
-							</div>
-							<div class="products" id="offer4_18h">
-								<button class="close">Fermer le volet</button>
-								<ul  class="offer">
-									<li><%= link_to "Soin massage éclat du visage", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">50 min -</li> 
-												<li class="price">80€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">60 min -</li> 
-												<li class="price">90€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>		
-									<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">20 min -</li> 
-												<li class="price">30€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage jeunesse du visage", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">45 min -</li> 
-												<li class="price">65€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-										<div class="promo">
-											<button class="badge">Infos promotion</button>
-											<div class="description">
-												<p>Court texte promotionnel !</p>
-												<button class="close" href="#">Fermer</button>
-											</div>
-										</div>
-									</li>
-									<li><%= link_to "Soin massage du visage précieux", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">50 min -</li> 
-												<li class="price">80€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">20 min -</li> 
-												<li class="price">30€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage jeunesse du visage", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">45 min -</li> 
-												<li class="price">65€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-										<div class="promo">
-											<button class="badge">Infos promotion</button>
-											<div class="description">
-												<p>Court texte promotionnel !</p>
-												<button class="close" href="#">Fermer</button>
-											</div>
-										</div>
-									</li>
-									<li><%= link_to "Soin massage du visage précieux", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">50 min -</li> 
-												<li class="price">80€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-								</ul>
-							</div>
-							<div class="products" id="offer5_18h">
-								<button class="close">Fermer le volet</button>
-								<ul  class="offer">
-									<li>
-										<p class="noResults">Il n'y a malheureusement pas d'offres disponibles dans cette catégorie.</p>
-									</li>
-								</ul>
-							</div>
-						</section>
-					</div>
-
-					<div class="line">
-						<div class="categories">
-							<a href="#h19" class="unit">19:00</a>
-							<ul id="h19" class="entries">
-								<li>
-									<a href="#offer1_19h">
-										<strong>Soins du visage</strong>
-										<span>5</span> soins disponibles
-									</a>
+						<div class="products" id="offer2_18h">
+							<button class="close">Fermer le volet</button>
+							<ul  class="offer">
+								<li><%= link_to "Lorem ipsum soin", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">50 min -</li> 
+											<li class="price">80€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
 								</li>
-								<li>
-									<a href="#offer2_19h">
-										<strong>Massages du corps</strong>
-										<span>19</span> soins disponibles
-									</a>
+								<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">60 min -</li> 
+											<li class="price">90€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>		
+								<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">20 min -</li> 
+											<li class="price">30€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
 								</li>
-								<li>
-									<a href="#offer3_19h">
-										<strong>Rituels du bain & soins du corps</strong>
-										<span>7</span> soins disponibles
-									</a>
+								<li><%= link_to "Lorem ipsum soin", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">50 min -</li> 
+											<li class="price">80€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
 								</li>
-								<li>
-									<a href="#offer4_19h">
-										<strong>Rituels de soin</strong>
-										<span>10</span> soins disponibles
-									</a>
+								<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">60 min -</li> 
+											<li class="price">90€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>		
+								<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">20 min -</li> 
+											<li class="price">30€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
 								</li>
-								<li>
-									<a href="#offer5_19h">
-										<strong>Minceur & Fermeté</strong>
-										<span>0</span> soins disponibles
-									</a>
+								<li><%= link_to "Lorem ipsum soin", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">50 min -</li> 
+											<li class="price">80€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">60 min -</li> 
+											<li class="price">90€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>		
+								<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">20 min -</li> 
+											<li class="price">30€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Lorem ipsum soin", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">50 min -</li> 
+											<li class="price">80€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">60 min -</li> 
+											<li class="price">90€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>		
+								<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">20 min -</li> 
+											<li class="price">30€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
 								</li>
 							</ul>
 						</div>
-						<section class="productHolder">
-							<div class="products" id="offer1_19h">
-								<button class="close">Fermer le volet</button>
-								<ul  class="offer">
-									<li><%= link_to "Soin massage éclat du visage", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">50 min -</li> 
-												<li class="price">80€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">60 min -</li> 
-												<li class="price">90€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>		
-									<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">20 min -</li> 
-												<li class="price">30€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage jeunesse du visage", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">45 min -</li> 
-												<li class="price">65€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-										<div class="promo">
-											<button class="badge">Infos promotion</button>
-											<div class="description">
-												<p>Court texte promotionnel !</p>
-												<button class="close" href="#">Fermer</button>
-											</div>
+						<div class="products" id="offer3_18h">
+							<button class="close">Fermer le volet</button>
+							<ul  class="offer">
+								<li><%= link_to "Soin massage éclat du visage", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">50 min -</li> 
+											<li class="price">80€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">60 min -</li> 
+											<li class="price">90€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>		
+								<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">20 min -</li> 
+											<li class="price">30€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Soin massage jeunesse du visage", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">45 min -</li> 
+											<li class="price">65€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+									<div class="promo">
+										<button class="badge">Infos promotion</button>
+										<div class="description">
+											<p>Court texte promotionnel !</p>
+											<button class="close" href="#">Fermer</button>
 										</div>
-									</li>
-									<li><%= link_to "Soin massage du visage précieux", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">50 min -</li> 
-												<li class="price">80€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-								</ul>
-							</div>
-							<div class="products" id="offer2_19h">
-								<button class="close">Fermer le volet</button>
-								<ul  class="offer">
-									<li><%= link_to "Lorem ipsum soin", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">50 min -</li> 
-												<li class="price">80€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">60 min -</li> 
-												<li class="price">90€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>		
-									<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">20 min -</li> 
-												<li class="price">30€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Lorem ipsum soin", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">50 min -</li> 
-												<li class="price">80€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">60 min -</li> 
-												<li class="price">90€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>		
-									<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">20 min -</li> 
-												<li class="price">30€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Lorem ipsum soin", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">50 min -</li> 
-												<li class="price">80€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">60 min -</li> 
-												<li class="price">90€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>		
-									<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">20 min -</li> 
-												<li class="price">30€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Lorem ipsum soin", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">50 min -</li> 
-												<li class="price">80€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">60 min -</li> 
-												<li class="price">90€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>		
-									<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">20 min -</li> 
-												<li class="price">30€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-								</ul>
-							</div>
-							<div class="products" id="offer3_19h">
-								<button class="close">Fermer le volet</button>
-								<ul  class="offer">
-									<li><%= link_to "Soin massage éclat du visage", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">50 min -</li> 
-												<li class="price">80€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">60 min -</li> 
-												<li class="price">90€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>		
-									<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">20 min -</li> 
-												<li class="price">30€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage jeunesse du visage", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">45 min -</li> 
-												<li class="price">65€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-										<div class="promo">
-											<button class="badge">Infos promotion</button>
-											<div class="description">
-												<p>Court texte promotionnel !</p>
-												<button class="close" href="#">Fermer</button>
-											</div>
+									</div>
+								</li>
+								<li><%= link_to "Soin massage du visage précieux", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">50 min -</li> 
+											<li class="price">80€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Soin massage du visage précieux", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">50 min -</li> 
+											<li class="price">80€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+							</ul>
+						</div>
+						<div class="products" id="offer4_18h">
+							<button class="close">Fermer le volet</button>
+							<ul  class="offer">
+								<li><%= link_to "Soin massage éclat du visage", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">50 min -</li> 
+											<li class="price">80€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">60 min -</li> 
+											<li class="price">90€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>		
+								<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">20 min -</li> 
+											<li class="price">30€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Soin massage jeunesse du visage", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">45 min -</li> 
+											<li class="price">65€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+									<div class="promo">
+										<button class="badge">Infos promotion</button>
+										<div class="description">
+											<p>Court texte promotionnel !</p>
+											<button class="close" href="#">Fermer</button>
 										</div>
-									</li>
-									<li><%= link_to "Soin massage du visage précieux", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">50 min -</li> 
-												<li class="price">80€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage du visage précieux", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">50 min -</li> 
-												<li class="price">80€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-								</ul>
-							</div>
-							<div class="products" id="offer4_19h">
-								<button class="close">Fermer le volet</button>
-								<ul  class="offer">
-									<li><%= link_to "Soin massage éclat du visage", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">50 min -</li> 
-												<li class="price">80€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">60 min -</li> 
-												<li class="price">90€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>		
-									<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">20 min -</li> 
-												<li class="price">30€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage jeunesse du visage", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">45 min -</li> 
-												<li class="price">65€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-										<div class="promo">
-											<button class="badge">Infos promotion</button>
-											<div class="description">
-												<p>Court texte promotionnel !</p>
-												<button class="close" href="#">Fermer</button>
-											</div>
+									</div>
+								</li>
+								<li><%= link_to "Soin massage du visage précieux", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">50 min -</li> 
+											<li class="price">80€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">20 min -</li> 
+											<li class="price">30€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Soin massage jeunesse du visage", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">45 min -</li> 
+											<li class="price">65€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+									<div class="promo">
+										<button class="badge">Infos promotion</button>
+										<div class="description">
+											<p>Court texte promotionnel !</p>
+											<button class="close" href="#">Fermer</button>
 										</div>
-									</li>
-									<li><%= link_to "Soin massage du visage précieux", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">50 min -</li> 
-												<li class="price">80€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">20 min -</li> 
-												<li class="price">30€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-									<li><%= link_to "Soin massage jeunesse du visage", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">45 min -</li> 
-												<li class="price">65€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-										<div class="promo">
-											<button class="badge">Infos promotion</button>
-											<div class="description">
-												<p>Court texte promotionnel !</p>
-												<button class="close" href="#">Fermer</button>
-											</div>
-										</div>
-									</li>
-									<li><%= link_to "Soin massage du visage précieux", "/soin.html", :target => "_blank"%> 
-										<span class="infos">
-											<ul>
-												<li class="time">50 min -</li> 
-												<li class="price">80€ -</li> 
-												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
-											</ul>
-										</span>
-									</li>
-								</ul>
-							</div>
-							<div class="products" id="offer5_19h">
-								<button class="close">Fermer le volet</button>
-								<ul  class="offer">
-									<li>
-										<p class="noResults">Il n'y a malheureusement pas d'offres disponibles dans cette catégorie.</p>
-									</li>
-								</ul>
-							</div>
-						</section>
+									</div>
+								</li>
+								<li><%= link_to "Soin massage du visage précieux", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">50 min -</li> 
+											<li class="price">80€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+							</ul>
+						</div>
+						<div class="products" id="offer5_18h">
+							<button class="close">Fermer le volet</button>
+							<ul  class="offer">
+								<li>
+									<p class="noResults">Il n'y a malheureusement pas d'offres disponibles dans cette catégorie.</p>
+								</li>
+							</ul>
+						</div>
+					</section>
+				</div>
+
+				<div class="line">
+					<div class="categories">
+						<a href="#h19" class="unit">19:00</a>
+						<ul id="h19" class="entries">
+							<li>
+								<a href="#offer1_19h">
+									<strong>Soins du visage</strong>
+									<span>5</span> soins disponibles
+								</a>
+							</li>
+							<li>
+								<a href="#offer2_19h">
+									<strong>Massages du corps</strong>
+									<span>19</span> soins disponibles
+								</a>
+							</li>
+							<li>
+								<a href="#offer3_19h">
+									<strong>Rituels du bain & soins du corps</strong>
+									<span>7</span> soins disponibles
+								</a>
+							</li>
+							<li>
+								<a href="#offer4_19h">
+									<strong>Rituels de soin</strong>
+									<span>10</span> soins disponibles
+								</a>
+							</li>
+							<li>
+								<a href="#offer5_19h">
+									<strong>Minceur & Fermeté</strong>
+									<span>0</span> soins disponibles
+								</a>
+							</li>
+						</ul>
 					</div>
+					<section class="productHolder">
+						<div class="products" id="offer1_19h">
+							<button class="close">Fermer le volet</button>
+							<ul  class="offer">
+								<li><%= link_to "Soin massage éclat du visage", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">50 min -</li> 
+											<li class="price">80€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">60 min -</li> 
+											<li class="price">90€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>		
+								<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">20 min -</li> 
+											<li class="price">30€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Soin massage jeunesse du visage", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">45 min -</li> 
+											<li class="price">65€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+									<div class="promo">
+										<button class="badge">Infos promotion</button>
+										<div class="description">
+											<p>Court texte promotionnel !</p>
+											<button class="close" href="#">Fermer</button>
+										</div>
+									</div>
+								</li>
+								<li><%= link_to "Soin massage du visage précieux", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">50 min -</li> 
+											<li class="price">80€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+							</ul>
+						</div>
+						<div class="products" id="offer2_19h">
+							<button class="close">Fermer le volet</button>
+							<ul  class="offer">
+								<li><%= link_to "Lorem ipsum soin", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">50 min -</li> 
+											<li class="price">80€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">60 min -</li> 
+											<li class="price">90€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>		
+								<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">20 min -</li> 
+											<li class="price">30€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Lorem ipsum soin", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">50 min -</li> 
+											<li class="price">80€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">60 min -</li> 
+											<li class="price">90€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>		
+								<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">20 min -</li> 
+											<li class="price">30€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Lorem ipsum soin", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">50 min -</li> 
+											<li class="price">80€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">60 min -</li> 
+											<li class="price">90€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>		
+								<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">20 min -</li> 
+											<li class="price">30€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Lorem ipsum soin", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">50 min -</li> 
+											<li class="price">80€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">60 min -</li> 
+											<li class="price">90€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>		
+								<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">20 min -</li> 
+											<li class="price">30€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+							</ul>
+						</div>
+						<div class="products" id="offer3_19h">
+							<button class="close">Fermer le volet</button>
+							<ul  class="offer">
+								<li><%= link_to "Soin massage éclat du visage", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">50 min -</li> 
+											<li class="price">80€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">60 min -</li> 
+											<li class="price">90€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>		
+								<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">20 min -</li> 
+											<li class="price">30€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Soin massage jeunesse du visage", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">45 min -</li> 
+											<li class="price">65€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+									<div class="promo">
+										<button class="badge">Infos promotion</button>
+										<div class="description">
+											<p>Court texte promotionnel !</p>
+											<button class="close" href="#">Fermer</button>
+										</div>
+									</div>
+								</li>
+								<li><%= link_to "Soin massage du visage précieux", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">50 min -</li> 
+											<li class="price">80€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Soin massage du visage précieux", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">50 min -</li> 
+											<li class="price">80€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+							</ul>
+						</div>
+						<div class="products" id="offer4_19h">
+							<button class="close">Fermer le volet</button>
+							<ul  class="offer">
+								<li><%= link_to "Soin massage éclat du visage", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">50 min -</li> 
+											<li class="price">80€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">60 min -</li> 
+											<li class="price">90€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>		
+								<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">20 min -</li> 
+											<li class="price">30€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Soin massage jeunesse du visage", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">45 min -</li> 
+											<li class="price">65€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+									<div class="promo">
+										<button class="badge">Infos promotion</button>
+										<div class="description">
+											<p>Court texte promotionnel !</p>
+											<button class="close" href="#">Fermer</button>
+										</div>
+									</div>
+								</li>
+								<li><%= link_to "Soin massage du visage précieux", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">50 min -</li> 
+											<li class="price">80€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">20 min -</li> 
+											<li class="price">30€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+								<li><%= link_to "Soin massage jeunesse du visage", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">45 min -</li> 
+											<li class="price">65€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+									<div class="promo">
+										<button class="badge">Infos promotion</button>
+										<div class="description">
+											<p>Court texte promotionnel !</p>
+											<button class="close" href="#">Fermer</button>
+										</div>
+									</div>
+								</li>
+								<li><%= link_to "Soin massage du visage précieux", "/soin.html", :target => "_blank"%> 
+									<span class="infos">
+										<ul>
+											<li class="time">50 min -</li> 
+											<li class="price">80€ -</li> 
+											<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+										</ul>
+									</span>
+								</li>
+							</ul>
+						</div>
+						<div class="products" id="offer5_19h">
+							<button class="close">Fermer le volet</button>
+							<ul  class="offer">
+								<li>
+									<p class="noResults">Il n'y a malheureusement pas d'offres disponibles dans cette catégorie.</p>
+								</li>
+							</ul>
+						</div>
+					</section>
 				</div>
 			</div>
 		</div>
@@ -972,33 +970,4 @@ description: Réserver un soin sur la plateforme E-Nymphea
 			</div>
 		</div>
 
-	</div>
-
-	<div class="popIn mfp-hide" id="addCart">
-		<header>
-		    <h4>Soin ajouté au panier</h4>
-		    <%= image_tag 'popIns/cart.png' %>
-		</header>
-		<article class="product recap">
-			<section class="image">
-				<%= image_tag "products/rituel-bresilienS.jpg" %>
-			</section>
-			<section class="description">
-				<h3>Rituel Brésilien</h3>
-				<p>Selon un rituel brésilien, ce soin raffermissant et sculptant associe les propriétés « brûle graisse » de la Caféine...</p>
-				<p class="price">100€</p>
-
-				<ul class="infoList cf">
-					<li class="date">31/12/2014 <span>à 10h</span></li>
-				</ul>
-			</section>
-		</article>
-	    <article class="wysiwyg article">
-			<h3>Votre soin "NOM DU SOIN" a bien été ajouté à votre panier</h3>
-			<p>Nous vous attendons le 10/10/2014 à 10h pour votre soin.</p>
-			<aside class="messageNav">
-				<%= link_to 'Retour aux soins', '/book.html', :class => "button book left" %>
-				<%= link_to 'Valider mon panier', '/login.html', :class => "button account" %>
-			</aside>
-	    </article>
 	</div>

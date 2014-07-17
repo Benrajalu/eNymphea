@@ -70,7 +70,7 @@ description: Home pour E-Nymphea
 					</div>
 				</form>
 				
-				<% form_tag 'book.html', :id => 'bookForm', :class => 'form formPanel', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
+				<% form_tag 'book.html', :id => 'bookForm', :class => 'form formPanel satellite', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
 					<label>Sélectionnez un établissement</label>
 					<select name="etablissement" data-parsley-required>
 						<option value="">Choisir un établissement</option>
@@ -86,7 +86,7 @@ description: Home pour E-Nymphea
 						</div>
 						<div class="large-7 columns pad0 padL mpad0">
 							<select name="moment" data-parsley-pattern="\w+" id="moment">
-								<option value="À tout moment de la journée">À tout moment de la journée</option>
+								<option value="">À tout moment de la journée</option>
 								<option value="horaire">Choisir une heure précise</option>
 								<option value="matin">Matin (9h - 12h)</option>
 								<option value="déjeuner">Pause déjeuner (12h - 14h)</option>
@@ -226,7 +226,7 @@ description: Home pour E-Nymphea
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam et consectetur fuga ratione exercitationem fugiat? Harum aut corrupti minus ratione commodi, nostrum fugit iure impedit quod, voluptate eaque quia ipsa. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, enim, laborum. Inventore aliquid tenetur animi repellendus blanditiis sint amet culpa dolore ratione, vero, consequuntur impedit temporibus ea eius doloremque quam.</p>
 							<ul class="infoList cf">
 								<li class="time">3 x 50min</li>
-								<li class="book"><%= link_to 'Réserver', '/book.html' %></li>
+								<li class="book"><%= link_to 'Réserver', '/book-soin.html' %></li>
 								<li class="offer"><%= link_to 'Offrir', '/gift.html' %></li>
 							</ul>
 							<%= link_to 'En savoir plus', '/soin.html', :class => 'more' %>
@@ -240,7 +240,7 @@ description: Home pour E-Nymphea
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam et consectetur fuga ratione exercitationem fugiat? Harum aut corrupti minus ratione commodi, nostrum fugit iure impedit quod, voluptate eaque quia ipsa. Lorem ipsum dolor sit amet.</p>
 							<ul class="infoList cf">
 								<li class="time">30min</li>
-								<li class="book"><%= link_to 'Réserver', '/book.html' %></li>
+								<li class="book"><%= link_to 'Réserver', '/book-soin.html' %></li>
 								<li class="offer"><%= link_to 'Offrir', '/gift.html' %></li>
 							</ul>
 							<%= link_to 'En savoir plus', '/soin.html', :class => 'more' %>

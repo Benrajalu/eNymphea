@@ -139,6 +139,11 @@
 					background:transparent url('../img/uniform/formArrowHover.png') center center no-repeat;
 				}
 			}
+			p.feedback{
+				font-size:12px;
+				line-height:1.2;
+				color:white;
+			}
 			@media all and (max-width: $tablet){
 				padding:0px;
 				&.show{
