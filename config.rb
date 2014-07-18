@@ -53,7 +53,7 @@ set :js_dir, 'js'
 
 set :images_dir, 'img'
 
- #set :relative_links, true
+set :relative_links, true
 
 # Build-specific configuration
 configure :build do
@@ -69,7 +69,7 @@ configure :build do
   # Use relative URLs
   activate :relative_assets
 
-  activate :directory_indexes
+  #activate :directory_indexes
 
   #activate :favicon_maker do |f|
     #f.template_dir  = File.join(root, 'source')
@@ -104,7 +104,7 @@ helpers do
     # <%= magic_link_to 'Home', '/index.html' %>
     def magic_link_to(link, url, opts={})
         current_url = current_resource.url
-        if current_url == url_for(url) || current_url == url_for(url) + "/"
+        if current_url == "/" + url || current_url == "/" + url_for(url)
             opts[:class] = "active"
         end
         link_to(link, url, opts)

@@ -8,6 +8,42 @@
 		&.subheader{
 			@include futuraBold(10px, #5b5959);
 			line-height:40px;
+			margin-bottom:0px;
+		}
+	}
+
+	h1{
+		@include futura(24px, $violet);
+		margin-bottom:20px;
+		@media only screen and (max-width: $tablet){
+			text-align:center;
+			@include futuraBold(20px, $violet);
+			margin:30px 0px;
+			position:relative;
+			&:after{
+				@include PE();
+				width:20px;
+				height:1px;
+				background:$violet;
+				left:50%;
+				top:auto;
+				bottom:-10px;
+				margin-left:-10px;
+			}
+		}
+	}
+
+	.subtitle{
+		margin-bottom:20px;
+		@include futura(20px, $violet);
+	}
+
+	h3{
+		@include futuraBold(12px, #5b5959);
+		margin-bottom:30px;
+		.aside &{
+			line-height:30px;
+			margin:10px 0px 0px 0px;
 		}
 	}
 
@@ -28,6 +64,11 @@
 			font-style: italic;
 			margin-bottom:30px;
 		}
+		&.chapo{
+			@include futura(16px, $black);
+			line-height:1.8;
+			margin-bottom:30px;
+		}
 	}
 
 	hr{
@@ -44,5 +85,9 @@
 		&.centered{
 			margin-left:auto;
 			margin-right:auto;
+		}
+
+		.aside &{
+			margin-bottom:15px;
 		}
 	}

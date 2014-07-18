@@ -1,0 +1,83 @@
+.advice{
+	margin-bottom:40px;
+	&.solo{
+		.copy{
+			padding:40px 30px;
+		}
+	}
+	> img{
+		width:100%;
+		display:block;
+	}
+	.copy{
+		display:block;
+		background:$white;
+		position:relative;
+		padding:15px 30px;
+		text-align: center;
+		.picto{
+			margin-bottom:10px;
+		}
+		.bubble{
+			@include border-radius(99px);
+			@include futura(63px, $white);
+			background:$gold;
+			display:block;
+			width:100px;
+			height:100px;
+			line-height:100px;
+			position:absolute;
+			top:-120px;
+			left:50%;
+			margin-left:-50px;
+			text-align:left;
+			letter-spacing: -10px;
+			padding:0px 0px 0px 15px;
+			&:after{
+				@include PE();
+				@include border-radius(99px);
+				width:104px;
+				height:104px;
+				background:transparent;
+				border:1px solid $gold;
+				top:-3px;
+				left:-3px;
+
+			}
+			span{
+				@include futuraBold(16px, $white);
+				position:absolute;
+				display:block;
+				background:$gold;
+				bottom:40px;
+				left:25px;
+				line-height:1;
+				letter-spacing: 0px;
+			}
+		}
+		
+		h3{
+			margin:10px 0 10px 0;
+			@include futura(15px, $black);
+			text-align: left;
+		}
+		p{
+			@include futura(13px, $gold);
+			text-transform: uppercase;
+			line-height:1.4;
+			text-align: left;
+		}
+	}
+
+	@media only screen and (max-width: $tablet){
+		display:none;
+		&.solo{
+			display:block;
+			.copy{
+				h3, p{
+					text-align: center;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <!-- Use title if it's in the page YAML frontmatter -->
+        <title><%= current_page.data.title || "E-Nymphea" %></title>
+        <meta name="description" content="<%= current_page.data.description || "Site E-Nymphea" %>">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <meta name="author" content="www.benrajalu.net" />
+        <meta name="application-name" content="Site E-Nymphea" />
+      
+        <!-- for Facebook -->          
+        <meta property="og:title" content="<%= current_page.data.title || "Description E-Nymphea" %>" /> 
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="http://e-nyphea.net/logo.jpg" />
+        <meta property="og:url" content="http://e-nymphea.net/" />
+        <meta property="og:description" content="<%= current_page.data.description || "E-Nymphea" %>" /> 
+
+        <%= stylesheet_link_tag 'global.css' %>
+        <%= javascript_include_tag 'vendor/modernizr-2.6.1.min.js' %>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <div id="wrapper">
+            <header>
+                <nav id="topBar">
+                    <section class="cf">
+                        <button id="mobileOn" class="mobileToggle">Ouvrir le menu</button>
+                        <ul class="cf">
+                            <li><%= magic_link_to '<span class="mobileOff">Bonjour, Céline</span>', '/user.html', :id => "user" %>
+                            </li>
+                            <li><%= magic_link_to '<span class="total">2</span> <span class="mobileOff">Mon panier</span>', '/order.html', :id => 'basket', :class => "trigger" %>
+                                <ul id="cart" class="layer full">
+                                    <h3>Votre panier</h3>
+                                    <article class="product recap">
+                                        <section class="image">
+                                            <% link_to "/soin.html" do %><%= image_tag "products/rituel-bresilienS.jpg" %><% end %>
+                                        </section>
+                                        <section class="description">
+                                            <h3><%= link_to "Rituel Brésilien", "/soin.html" %></h3>
+                                            <p class="price">100€</p>
+                                            <ul class="infoList cf">
+                                                <li class="date">31/12/2014 <span>à 10h</span></li>
+                                            </ul>
+                                        </section>
+                                    </article>
+
+                                    <article class="product recap">
+                                        <section class="image">
+                                            <% link_to "/soin.html" do %><%= image_tag "products/rituel-tropicalS.jpg" %><% end %>
+                                        </section>
+                                        <section class="description">
+                                            <h3><%= link_to "Rituel Tropical", "/soin.html" %></h3>
+                                            <p class="price">30€</p>
+                                            <ul class="infoList cf">
+                                                <li class="date">17/06/2014 <span>à 19h</span></li>
+                                            </ul>
+                                        </section>
+                                    </article>
+                                    
+                                    <p class="total">Total à payer <span>130€</span></p>
+
+                                    <%= link_to "Consulter mon panier", "/cart.html", :class=>"validate"%>
+                                </ul>
+                            </li>
+                            <li><a href="#" id="currentLanguage" class="trigger">FR</a>
+                                <ul id="languages" class="layer">
+                                    <li><a href="#" class="active">FR</a></li>
+                                    <li><a href="#">ES</a></li>
+                                    <li><a href="#">EN</a></li>
+                                    <li><a href="#">IT</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </nav>
+
+                <nav id='mainNav' class="cf">
+                    <div class="screen"></div>
+                    <% link_to '/index.html', :class => 'mainLogo' do %>
+                      <%= image_tag 'logo.png' %>
+                    <% end %>
+
+                    <section class="navigate cf">
+                        <button id="mobileOff" class="mobileToggle">Fermer le menu</button>
+
+                        <ul>
+                            <li><%= magic_link_to "L'espace bien-être", '/espace.html' %></li>
+                            <li><a href="#rituals" class="flyout">Nos rituels de soin</a></li>
+                            <li><%= magic_link_to 'Réserver', '/book.html' %></li>
+                            <li><%= magic_link_to 'offrir', '/gift.html' %></li>
+                            <li><%= magic_link_to 'Actualités', '/news.html' %></li>
+                            <li><%= magic_link_to 'Informations pratiques', '/infos.html' %></li>
+                        </ul>
+
+                        <aside id="rituals">
+                            <a href="#" id="back" class="mobileOn">Revenir</a>
+                            <h3 class="menuTitle mobileOn">Nos rituels de soin</h3>
+                            <h3>Découvrez nos rituels de beauté</h3>
+                            <ul class="cf">
+                                <li><%= magic_link_to "Soins du visage", "/category.html" %></li>
+                                <li><%= magic_link_to "Minceur et fermeté", "/category.html" %></li>
+                                <li><%= magic_link_to "Massages du corps", "/category.html" %></li>
+                                <li><%= magic_link_to "Soin d'exception espace privé Paris", "/category.html" %></li>
+                                <li><%= magic_link_to "Rituels du bain & soins corps", "/category.html" %></li>
+                                <li><%= magic_link_to "Abonnements", "/category.html" %></li>
+                                <li><%= magic_link_to "Rituels de soin", "/category.html" %></li>
+                            </ul>
+                        </aside>
+                    </section>
+
+
+                </nav>
+            </header>
+
+            <div id="contents">
+                <%= yield %>
+            </div>
+
+
+            <hr id="push" />
+        </div>
+
+        <footer id="footer">
+            <nav id="footerNav" class="bgPale">
+                <div class="row">
+                    <ul class="cf">
+                        <li><%= link_to "Soins du visage", "/category.html" %></li>
+                        <li><%= link_to "Minceur et fermeté", "/category.html" %></li>
+                        <li><%= link_to "Massages du corps", "/category.html" %></li>
+                        <li><%= link_to "Soin d'exception espace privé Paris", "/category.html" %></li>
+                        <li><%= link_to "Rituels du bain & soins corps", "/category.html" %></li>
+                        <li><%= link_to "Abonnements", "/category.html" %></li>
+                        <li><%= link_to "Rituels de soin", "/category.html" %></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="rowFluid bgBlack">
+                <div class="row pad30">
+                    <div class="large-4 columns">
+                        <h3><a href="#newsletter" class="reveal">Abonnez-vous à la newsletter</a></h3>
+                        <form id="newsletter" class="form toReveal" data-parsley-validate>
+                            <input type="text" placeholder="Votre adresse email" data-parsley-required data-parsley-type="email" />
+                            <input type="submit" class="inline" value="ok" />
+                        </form>
+                    </div>
+
+                    <div class="large-3 columns">
+                        <h3><a href="#engagements" class="reveal">Nos engagements</a></h3>
+                        <ul id="engagements" class="toReveal">
+                            <li><a href="#">Qualité</a></li>
+                            <li><a href="#">Sécurité</a></li>
+                            <li><a href="#">Livraison</a></li>
+                            <li><a href="#">Cadeau</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="large-2 columns">
+                        <h3><a href="#compte" class="reveal">Mon Compte</a></h3>
+                        <ul id="compte" class="toReveal">
+                            <li><a href="#">Connexion</a></li>
+                            <li><a href="#">Mes commandes</a></li>
+                            <li><a href="#">Mes données</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="large-3 columns">
+                        <h3><a href="#apropos" class="reveal">A propos de nous</a></h3>
+                        <ul id="apropos" class="toReveal">
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Où trouver nos produits</a></li>
+                            <li><a href="#">Presse</a></li>
+                            <li><a href="#">Professionnels</a></li>
+                        </ul>
+                        <p id="facebookFans"><a href="#">7659</a></p>
+                    </div>
+                </div>
+
+                <div class="row pad40" id="cautions">
+                    <div class="left">
+                        <ul>
+                            <li><h4>Propulsé par</h4></li>
+                            <li><a href="#"><%= image_tag 'eNymphea.png' %></a></li>
+                            <li class="mobileOff"><a href="#"><%= image_tag 'logoSmall.png' %></a></li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li class="mobileOff"><h4>Tous nos paiements sont sécurisés</h4></li>
+                            <li class="card"><a href="#"><%= image_tag 'visa.png' %></a></li>
+                            <li class="card"><a href="#"><%= image_tag 'mastercard.png' %></a></li>
+                            <li class="card"><a href="#"><%= image_tag 'paypal.png' %></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row" id="credits">
+                    <div class="left">
+                        <p>Copyright © 2014 SPA-Collection. - Tous droits réservés -</p>
+                    </div>
+                    <div class="right mobileOff">
+                        <ul>
+                            <li><a href="#">Politique en matière de cookies</a></li>
+                            <li><a href="#">Mentions légales</a></li>
+                            <li><a href="#">Politique de confidentialité</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+        <article class="popIn mfp-hide" id="passRetrival">
+            <header>
+                <h4>Mot de passe oublié</h4>
+                <%= image_tag 'popIns/lock.png' %>
+            </header>
+
+            <% form_tag '/index.html', :id => 'passwordFom', :class => 'form', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
+                <label>Saisissez l'email renseigné lors de la création de compte. Votre mot de passe vous sera renvoyé à cette addresse.</label>
+                <div class="row pad0">
+                    <div class="large-9 columns pad0">
+                        <input type="text" data-parsley-required data-parsley-type="email" name="passEmail" placeholder="Votre adresse email" />
+                    </div>
+                    <div class="large-3 columns pad0 padL">
+                        <p class="feedback"></p>
+                        <input type="submit" class="block" value="valider" />
+                    </div>
+                </div>
+            <% end %>
+        </article>
+
+        <article class="popIn mfp-hide" id="create">
+            <header>
+                <h4>Créer un compte</h4>
+                <%= image_tag 'popIns/lock.png' %>
+            </header>
+
+            <% form_tag '/user.html', :id => 'accountForm', :class => 'form', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
+                <p class="intro">Gagnez en sérénité... Retrouvez toutes vos informations et suivez vos réservations dans cet espace sécurisé.</p>
+
+                <h3 class="centered">Vos informations</h3>
+                <hr class="smallLine centered">
+
+                <div class="inline">
+                    <fieldset>
+                        <label class="lineLabel">Civilité</label>
+                        <input type="radio" data-parsley-required name="gender" value="Mme" id="Mme" /> <label for="Mme">Mme</label>
+                        <input type="radio" data-parsley-required name="gender" value="Mr" id="Mr"/> <label for="Mr">Mr</label>
+                    </fieldset>
+                </div>
+
+                <div class="row pad0">
+                    <div class="large-6 columns pad0">
+                        <label>Nom*</label>
+                        <input type="text" data-parsley-required name="surname" placeholder="Votre nom" />
+                    </div>
+                    <div class="large-6 columns pad0 padL">
+                        <label>Prénom*</label>
+                        <input type="text" data-parsley-required name="name" placeholder="Votre prénom"/>
+                    </div>
+                </div>
+
+
+                <label>Email*</label>
+                <input type="text" data-parsley-type="email" data-parsley-required name="userMail" placeholder="Votre addresse email"/>
+
+                <div class="row pad0">
+                    <div class="large-6 columns pad0">
+                        <label>Tel. fixe</label>
+                        <input type="text" data-parsley-type="digits" name="phone" placeholder="Votre numéro de téléphone fixe"/>
+                    </div>
+                    <div class="large-6 columns pad0 padL">
+                        <label>Tel. portable*</label>
+                        <input type="text" data-parsley-required data-parsley-type="digits" name="mobilePhone" placeholder="Votre numéro de téléphone portable"/>
+                    </div>
+                </div>
+
+
+                <h3 class="centered">Votre mot de passe</h3>
+                <hr class="smallLine centered">
+
+                <div class="row pad0">
+                    <div class="large-6 columns pad0">
+                        <label>Mot de passe*</label>
+                        <input type="password" data-parsley-required name="pass" id="createPassword" placeholder="Veillez choisir un mot de passe"/>
+                    </div>
+                    <div class="large-6 columns pad0 padL">
+                        <label>Confirmez le mot de passe*</label>
+                        <input type="password" data-parsley-required name="passConfirmation" data-parsley-equalto="#createPassword" placeholder="Veuillez confirmer ce mot de passe" />
+                    </div>
+                </div>
+
+                <input type="submit" value="valider">
+
+            <% end %>
+        </article>
+
+        <div class="popIn mfp-hide" id="addCart">
+            <header>
+                <h4>Soin ajouté au panier</h4>
+                <%= image_tag 'popIns/cart.png' %>
+            </header>
+            <article class="product recap">
+                <section class="image">
+                    <%= image_tag "products/rituel-bresilienS.jpg" %>
+                </section>
+                <section class="description">
+                    <h3>Rituel Brésilien</h3>
+                    <p>Selon un rituel brésilien, ce soin raffermissant et sculptant associe les propriétés « brûle graisse » de la Caféine...</p>
+                    <p class="price">100€</p>
+
+                    <ul class="infoList cf">
+                        <li class="date">31/12/2014 <span>à 10h</span></li>
+                    </ul>
+                </section>
+            </article>
+            <article class="wysiwyg article">
+                <h3>Votre soin "NOM DU SOIN" a bien été ajouté à votre panier</h3>
+                <p>Nous vous attendons le 10/10/2014 à 10h pour votre soin.</p>
+                <aside class="messageNav">
+                    <%= link_to 'Retour aux soins', '/book.html', :class => "button book left" %>
+                    <%= link_to 'Valider mon panier', '/login.html', :class => "button account" %>
+                </aside>
+            </article>
+        </div>
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+        
+        <%= javascript_include_tag 'navigate.js' %>
+        <%= javascript_include_tag 'TweenMax.min.js' %>
+        <%= javascript_include_tag 'jquery.uniform.min.js' %>
+        <%= javascript_include_tag 'bootstrap-datepicker.js' %>
+        <%= javascript_include_tag 'locales/bootstrap-datepicker.fr.js' %>
+        <%= javascript_include_tag 'parsley.min.js' %>
+        <%= javascript_include_tag 'locales/parsley-fr.js' %>
+        <%= javascript_include_tag 'jquery.flexslider-min.js' %>
+        <%= javascript_include_tag 'jquery.magnific-popup.min.js' %>
+        <%= javascript_include_tag 'tabs.js' %>
+        <%= javascript_include_tag 'plugins.js' %>
+
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXXXX'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,121 @@
+---
+title: E-Nymphea - Categorie de soin
+description: Catégorie de soinv plateforme E-Nymphea
+---
+
+<!-- Slider -->
+	<section id="largePicture">
+		<div id="mainSlider" class="flexslider large noCaptions">
+			<ul class="slides">
+				<li>
+					<%= image_tag 'slides/thinSlide2.jpg' %>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+<!-- Contents -->
+
+	<div class="rowFluid mar40">
+		<nav id="breadcrumbs" class="row">
+			<ul>
+				<li><%= link_to 'Accueil /', '/index.html' %></li>
+				<li>Nos rituels de soin / Minceur et fermeté</li>
+			</ul>
+		</nav>
+
+		<div class="row">
+			<h1>Découvrez nos rituels de beauté</h1>
+			<nav id="recallRituals">
+				<ul class="cf" id="categories">
+				    <li><%= link_to "Soins du visage", "/category.html" %></li>
+				    <li><%= link_to "Minceur et fermeté", "/category.html", :class => 'active' %></li>
+				    <li><%= link_to "Massages du corps", "/category.html" %></li>
+				    <li><%= link_to "Soin d'exception espace privé Paris", "/category.html" %></li>
+				    <li><%= link_to "Rituels du bain & soins corps", "/category.html" %></li>
+				    <li><%= link_to "Abonnements", "/category.html" %></li>
+				    <li><%= link_to "Rituels de soin", "/category.html" %></li>
+				</ul>
+				<button id="toggle" href="#categories">Voir toutes les catégories</button>
+			</nav>
+
+			<p class="chapo">Nathalie Bouchon Poiroux - Créatrice des soins Cinq Mondes et Directrice Formation & Qualité – associée à des partenaires scientifiques de renom, crée les soins Cinq Mondes en s’inspirant des « Rituels de Beauté du monde® » et de la Dermapuncture®, véritable « acupuncture sans aiguille »</p>
+		</div>
+
+		<div class="row">
+			<div class="large-4 columns">
+				<article class="product teaser">
+					<% link_to "/soin.html" do %>
+						<%= image_tag 'push/push7.jpg' %>
+					<% end %>
+					<section class="contents">
+						<p class="price">80€</p>
+						<h3><%= link_to 'Rituel Brésilien "crème de café" minceur et raffermissant' , "/soin.html" %></h3>
+						<p>Selon un rituel brésilien, ce soin raffermissant et sculptant associe les propriétés « brûle graisse » de la Caféine à une technique de massage et de palper-rouler unique pour lutter contre la cellulite adipeuse sur les jambes, le ventre, les hanches et les bras. Ce soin est suivi d’un enveloppement frais, raffermissant et purifiant.</p>
+						<ul class="infoList cf">
+							<li class="time">3 x 50min</li>
+							<li class="book"><%= link_to 'Réserver', '/book-soin.html#results' %></li>
+							<li class="offer"><%= link_to 'Offrir', '/gift.html' %></li>
+						</ul>
+						<%= link_to 'En savoir plus', '/soin.html', :class => 'more' %>
+					</section>
+				</article>
+			</div>
+
+			<div class="large-4 columns">
+				<article class="product teaser">
+					<% link_to "/soin.html" do %>
+						<%= image_tag 'push/push4.jpg' %>
+					<% end %>
+					<section class="contents">
+						<p class="price">110€</p>
+						<h3><%= link_to 'Rituel INDIEN « Crème Minceur Udvartana® » Minceur et Drainant' , "/soin.html" %></h3>
+						<p>Un soin minceur millénaire indien à l’action drainante pour lutter contre la cellulite aqueuse sur les jambes, les hanches et les bras. Ce soin est précédé d’un enveloppement corporel chauffant pour détoxifier la peau et optimiser l’action des actifs tels que le gingembre et le Lipocare® (actif amincissant breveté). </p>
+						<ul class="infoList cf">
+							<li class="time">3 x 50min</li>
+							<li class="book"><%= link_to 'Réserver', '/book-soin.html#results' %></li>
+							<li class="offer"><%= link_to 'Offrir', '/gift.html' %></li>
+						</ul>
+						<%= link_to 'En savoir plus', '/soin.html', :class => 'more' %>
+					</section>
+				</article>
+			</div>
+
+			<div class="large-4 columns">
+				<article class="product teaser">
+					<% link_to "/soin.html" do %>
+						<%= image_tag 'push/push5.jpg' %>
+					<% end %>
+					<section class="contents">
+						<h3><%= link_to 'Abonnement detox' , "/soin.html" %></h3>
+						<p>Bilan initial personnalisé. 5 soins Detox, Minceur et Fermeté de 50 min définis après le bilan initial personnalisé.</p>
+						<ul class="infoList cf">
+							<li class="time">3 x 50min</li>
+							<li class="book"><%= link_to 'Réserver', '/book-soin.html#results' %></li>
+							<li class="offer"><%= link_to 'Offrir', '/gift.html' %></li>
+						</ul>
+						<%= link_to 'En savoir plus', '/soin.html', :class => 'more' %>
+					</section>
+				</article>
+			</div>
+
+			<div class="large-4 columns">
+				<article class="product teaser">
+					<% link_to "/soin.html" do %>
+						<%= image_tag 'push/push6.jpg' %>
+					<% end %>
+					<section class="contents">
+						<h3><%= link_to 'Abonnement detox minceur et fermeté' , "/soin.html" %></h3>
+						<p>1 bilan initial personnalisé. 10 soins Detox, Minceur et Fermeté de 50 min définis après le bilan initial personnalisé et 1 bilan de fin d’abonnement</p>
+						<ul class="infoList cf">
+							<li class="time">3 x 50min</li>
+							<li class="book"><%= link_to 'Réserver', '/book-soin.html#results' %></li>
+							<li class="offer"><%= link_to 'Offrir', '/gift.html' %></li>
+						</ul>
+						<%= link_to 'En savoir plus', '/soin.html', :class => 'more' %>
+					</section>
+				</article>
+			</div>
+
+		</div>
+	</div>

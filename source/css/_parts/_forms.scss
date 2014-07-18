@@ -6,6 +6,12 @@
 	&.formPanel{
 		padding-top:0px;
 	}
+	&.pad10{
+		padding:10px 30px;;
+	}
+	&.pad0{
+		padding:0px !important;
+	}
 	h2, h3{
 		@include futura(18px, #363636);
 	}
@@ -15,6 +21,12 @@
 			@include futura(14px, $black);
 			display:block;
 			margin-bottom:15px;
+			a{
+				color:$violet;
+				&:hover{
+					color:$black;
+				}
+			}
 			&.inline{
 				display: inline;
 			}
@@ -23,6 +35,16 @@
 			margin:5px 0px 20px 0px;
 			@include futuraBold(14px, $black);
 			text-transform: uppercase;
+		}
+		p.small{
+			margin:5px 0px;
+			@include futura(12px, $black);
+			font-style:italic;
+		}
+		p.success{
+			margin:25px 0px 15px 0px;
+			@include futura(14px, #0e8d5f);
+			text-align: center;
 		}
 
 	// Inputs (text, password, date, validate)
@@ -54,6 +76,7 @@
 				&.euros{
 					background:$white url('../img/uniform/euro.jpg') center right no-repeat;
 					padding-right:35px;
+					text-align:right;
 				}
 			}
 
@@ -80,6 +103,9 @@
 					background:$gold;
 					color:$black;
 					border:0px;
+				}
+				&:active, &:focus{
+					outline:0;
 				}
 				&.block{
 					display:block;
@@ -123,6 +149,17 @@
 				margin-bottom:0px;
 				height:40px;
 				cursor: pointer;
+				option{
+					@include futura(13px, $black);
+					padding:0 10px;
+					text-transform: none;
+				}
+				optgroup{
+					@include futuraBold(10px, $black);
+					text-transform: uppercase;
+					font-style:none;
+					padding:0px 5px;
+				}
 			}
 			span{
 				position: relative;
@@ -143,6 +180,10 @@
 			label, input, select, .selector{
 				display:inline;
 				margin-bottom: 0px;
+				&[type='radio'], &[type='checkbox']{
+					@include inline-block();
+					cursor: pointer;
+				}
 			}
 			.radio, .checker{
 				margin-bottom:0px;
@@ -151,6 +192,11 @@
 				margin-right:15px;
 				&.lineLabel{
 					margin-right: 30px;
+					@media only screen and (max-width:$tablet){
+						display:block;
+						width:100%;
+						margin-bottom:15px;
+					}
 				}
 			}
 			input{
@@ -163,6 +209,21 @@
 				position:relative;
 				top:5px;
 			}
+
+			#feedback{
+				clear:both;
+				float:none;
+				display:block;
+			}
+
+			@media only screen and (max-width: $tablet){
+				label{
+					margin-right:5px;
+					&.lineLabel{
+						margin-right:20px;
+					}
+				}
+			}
 		}
 
 	// Rules when the form has a white background
@@ -170,6 +231,11 @@
 			input{
 				&[type='text'], &[type='password']{
 					background-color:$pale;
+					border:1px solid #c0c0c0;
+				}
+				&:active, &:focus{
+					outline:0px;
+					border:1px solid $gold;
 				}
 			}
 			select, .selector{
@@ -212,6 +278,9 @@
 		border-left:1px solid #d5d5d5;
 		position:relative;
 		z-index:4;
+		&.noBorder{
+			border-left:0px;
+		}
 		#giftForm{
 			.form{
 				padding:0px;
@@ -221,4 +290,97 @@
 			border:0px;
 			margin-bottom:15px;
 		}
+	}
+
+// Form structure tools
+	.formHolder{
+		@include clearfix();
+		hgroup{
+			@include clearfix();
+			padding:30px 30px 0px 30px;
+			h2, a{
+				float:left;
+			}
+			h2{
+				margin-right:10px;
+			}
+			a{
+				@include inline-block();
+				@include border-radius(3px);
+				@include futuraBold(9px, $white);
+				@include transition(all 300ms);
+				line-height:2.3;
+				text-decoration: none;
+				background:$gold;
+				text-transform: uppercase;
+				padding:0px 10px;
+				&:hover{
+					background:$violet;
+				}
+			}
+		}
+		
+		h2{
+			margin-bottom:10px;
+			@include futura(20px, $violet);
+		}
+		> p{
+			@include futura(11px, $black);
+			text-transform: uppercase;
+			margin-bottom:20px;
+			&.right{
+				float: none;
+				clear:both;
+				text-align: right;
+			}
+		}
+
+		.form{
+			padding:10px 30px 20px 30px;
+			input[type="submit"]{
+				margin-top:10px;
+			}
+		}
+		.inline.footer{
+			text-align:right;
+			p{
+				@include inline-block();
+				margin-right:15px;
+				&#total{
+					@include futura(17px, #5b5959);
+					text-transform: uppercase;
+					margin:0 0 10px 0;
+					span{
+						@include futuraBold(17px, $violet);
+					}
+				}
+			}
+		}
+
+		@media only screen and (max-width:$tablet){
+			.inline.footer{
+				text-align:left;
+				p{
+					display:block;
+					margin-right:0px;
+				}
+				input{
+					display:block;
+					width:100%;
+				}
+			}
+		}
+	}
+	.or{
+		text-align:center;
+		@include futuraBold(13px, $gold);
+		text-transform: uppercase;
+	}
+
+
+// feedback
+	.feedback{
+		@include futura(15px, $violet);
+		line-height:2;
+		font-style: italic;
 	}

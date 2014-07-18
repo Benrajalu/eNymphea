@@ -102,19 +102,23 @@
 						text-decoration: underline;
 					}
 				}
-				&#facebookFans{
-					a{
-						@include futura(30px, #3c58aa);
-						text-decoration: none;
-						background:url("../img/fbIcon.png") center left no-repeat;
-						padding-left:35px;
-					}
-				}
+				
 			}
 			@media all and (max-width: $tablet){
 				&.show{
 					margin-bottom: 30px;
 				}
+			}
+		}
+		#facebookFans{
+			a{
+				@include futura(30px, #3c58aa);
+				text-decoration: none;
+				background:url("../img/fbIcon.png") center left no-repeat;
+				padding-left:35px;
+			}
+			@media all and (max-width: $tablet){
+				margin-bottom:30px;
 			}
 		}
 
@@ -123,7 +127,7 @@
 			position:relative;
 			input[type="submit"]{
 				position:absolute;
-				bottom:0px;
+				top:-19px;
 				right:60px;
 				height:40px;
 				width:40px;
@@ -135,6 +139,11 @@
 					background:transparent url('../img/uniform/formArrowHover.png') center center no-repeat;
 				}
 			}
+			p.feedback{
+				font-size:12px;
+				line-height:1.2;
+				color:white;
+			}
 			@media all and (max-width: $tablet){
 				padding:0px;
 				&.show{
@@ -142,7 +151,7 @@
 				}
 				input[type="submit"]{
 					margin-top:0px;
-					bottom:14px;
+					top:0px;
 					right: 0px;
 				}
 			}

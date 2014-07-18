@@ -69,6 +69,14 @@ html, body{
 				float:none;
 			}
 		}
+		@media all and (max-width:$tablet){
+			&.noPadMobile{
+				padding:0px;
+				.columns{
+					padding:0px;
+				}
+			}
+		}
 	}
 
 	.rowFluid{
@@ -78,8 +86,14 @@ html, body{
 		&.pad40{
 			padding:20px 0px 40px 0px;
 		}
+		&.pad30{
+			padding:30px 0px;
+		}
 		&.mar60{
 			margin-bottom:60px;
+		}
+		&.mar40{
+			margin-bottom: 40px;
 		}
 	}
 

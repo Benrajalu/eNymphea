@@ -1,0 +1,85 @@
+---
+title: E-Nymphea - News Detail
+description: Detail d'une actualité - plateforme E-Nymphea
+---
+
+<!-- Slider -->
+	<section id="largePicture">
+		<div id="mainSlider" class="flexslider large noCaptions">
+			<ul class="slides">
+				<li>
+					<%= image_tag 'slides/thinSlide2.jpg' %>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<div class="rowFluid">
+		<nav id="breadcrumbs" class="row">
+			<ul>
+				<li><%= link_to 'Accueil /', '/index.html' %></li>
+				<li><%= link_to 'Actualités /', '/news.html' %></li>
+				<li>Titre de l'actualité</li>
+			</ul>
+		</nav>
+
+		<div class="row">
+			<div class="large-8 columns">
+				<article class="wysiwyg article news">
+					<h1>Titre de l'actualité</h1>
+					<%= image_tag "news/newsDetail.jpg", :class=>"hero" %>
+					<ul class="infoList cf">
+						<li class="date">12/12/2014</li>
+						<li class="networks">
+							<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53c292c756996f07"></script>
+							<div class="addthis_sharing_toolbox"></div>
+						</li>
+					</ul>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quibusdam expedita asperiores fuga eaque iusto blanditiis id dolores velit quasi. Aspernatur atque eos enim, nihil maiores voluptas accusamus est. Ipsa.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis commodi dicta exercitationem facere, aliquam necessitatibus omnis magni, et unde ipsa mollitia cupiditate eum, pariatur ut dolor. Quisquam ea, maiores quibusdam?</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quibusdam expedita asperiores fuga eaque iusto blanditiis id dolores velit quasi. Aspernatur atque eos enim, nihil maiores voluptas accusamus est. Ipsa.</p>
+					<%= image_tag 'news/newsS.jpg', :class=>"alignRight" %>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis commodi dicta exercitationem facere, aliquam necessitatibus omnis magni, et unde ipsa mollitia cupiditate eum, pariatur ut dolor. Quisquam ea, maiores quibusdam?</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quibusdam expedita asperiores fuga eaque iusto blanditiis id dolores velit quasi. Aspernatur atque eos enim, nihil maiores voluptas accusamus est. Ipsa.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis commodi dicta exercitationem facere, aliquam necessitatibus omnis magni, et unde ipsa mollitia cupiditate eum, pariatur ut dolor. Quisquam ea, maiores quibusdam?</p>
+				</article>
+			</div>
+
+			<aside class="large-4 columns aside bgWhite">
+				<h3 class="centered">À lire également</h3>
+				<hr class='smallLine centered' />
+				<article class="article wysiwyg news teaser">
+					<% link_to '/newsDetail.html' do %><%= image_tag "news/newsS.jpg" %><% end %>
+					<section class="contents">
+						<h3><% link_to '/newsDetail.html' do %>Ancienne actualité<% end %></h3>
+						<div class="heightLimit">
+							<p><span class="date">12/12/2014 - </span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quibusdam expedita asperiores fuga eaque iusto blanditiis id dolores velit quasi. Aspernatur atque eos enim, nihil maiores voluptas accusamus est. Ipsa.</p>
+						</div>
+						<%= link_to "Lire la suite", "/newsDetail.html", :class => "readMore" %>
+					</section>
+				</article>
+
+				<article class="article wysiwyg news teaser">
+					<% link_to '/newsDetail.html' do %><%= image_tag "news/newsS2.jpg" %><% end %>
+					<section class="contents">
+						<h3><% link_to '/newsDetail.html' do %>Ancienne actualité<% end %></h3>
+						<div class="heightLimit">
+							<p><span class="date">12/12/2014 - </span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quibusdam expedita asperiores fuga eaque iusto blanditiis id dolores velit quasi. Aspernatur atque eos enim, nihil maiores voluptas accusamus est. Ipsa.</p>
+						</div>
+						<%= link_to "Lire la suite", "/newsDetail.html", :class => "readMore" %>
+					</section>
+				</article>
+
+				<article class="article wysiwyg news teaser">
+					<% link_to '/newsDetail.html' do %><%= image_tag "news/newsS3.jpg" %><% end %>
+					<section class="contents">
+						<h3><% link_to '/newsDetail.html' do %>Ancienne actualité<% end %></h3>
+						<div class="heightLimit">
+							<p><span class="date">12/12/2014 - </span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quibusdam expedita asperiores fuga eaque iusto blanditiis id dolores velit quasi. Aspernatur atque eos enim, nihil maiores voluptas accusamus est. Ipsa.</p>
+						</div>
+						<%= link_to "Lire la suite", "/newsDetail.html", :class => "readMore" %>
+					</section>
+				</article>
+			</aside>
+		</div>
+	</div>

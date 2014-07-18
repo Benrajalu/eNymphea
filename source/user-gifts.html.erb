@@ -1,0 +1,236 @@
+---
+layout: connected
+title: E-Nymphea - Mon compte
+description: Mon compte, plateforme E-Nymphea
+---
+
+<!-- Slider -->
+	<section id="largePicture">
+		<div id="mainSlider" class="flexslider large noCaptions">
+			<ul class="slides">
+				<li>
+					<%= image_tag 'slides/thinSlide2.jpg' %>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<div class="rowFluid">
+		<nav id="breadcrumbs" class="row">
+			<ul>
+				<li><%= link_to 'Accueil /', '/index.html' %></li>
+				<li>Mon Espace lient</li>
+			</ul>
+		</nav>
+
+		<div class="row">
+			<h1>Mon espace client</h1>
+			<aside class="large-3 columns">
+				<nav id="userMenu">
+					<ul>
+						<li class="accueil"><%= magic_link_to "Accueil", "/user.html" %></li>
+						<li class="infos"><%= magic_link_to "Mes infos", "/user-infos.html" %></li>
+						<li class="RDV"><%= magic_link_to "Mes RDV", "/user-history.html" %></li>
+						<li class="gift"><%= magic_link_to "Mes bons cadeaux", "/user-gifts.html" %></li>
+					</ul>
+				</nav>
+			</aside>
+
+			<div class="large-6 columns">
+				<hgroup class="headerGroup">
+					<h2>Mes bons en cours</h2>
+					<%= link_to "Enregistrer un bon", "#certificate", :class=> 'more pop' %>
+				</hgroup>
+
+				<div id="current">
+					<article class="certificate">
+						<section class="validity">
+							<%= image_tag 'agendaXL.png' %>
+							<h3>Validité</h3>
+							<p>31/12/2014</p>
+						</section>
+						<section class="description">
+							<dl>
+								<dt class="first">Valeur : </dt>
+								<dd class="first">30€</dd>
+								<dd class="separate"></dd>
+								<dt>Bon enregistré le : </dt>
+								<dd>10/10/2014</dd>
+								<dd class="separate"></dd>
+								<dt class="last">Établissements : </dt>
+								<dd class="last">Nom de l'établissement,<br>
+									Nom de l'établissement</dd>
+							</dl>
+						</section>
+					</article>
+
+					<article class="certificate">
+						<section class="validity">
+							<%= image_tag 'agendaXL.png' %>
+							<h3>Validité</h3>
+							<p>31/12/2014</p>
+						</section>
+						<section class="description">
+							<dl>
+								<dt class="first">Valeur : </dt>
+								<dd class="first">30€</dd>
+								<dd class="separate"></dd>
+								<dt>Bon enregistré le : </dt>
+								<dd>10/10/2014</dd>
+							</dl>
+						</section>
+					</article>
+
+					<article class="certificate">
+						<section class="validity">
+							<%= image_tag 'agendaXL.png' %>
+							<h3>Validité</h3>
+							<p>31/12/2014</p>
+						</section>
+						<section class="description">
+							<dl>
+								<dt class="first">Valeur : </dt>
+								<dd class="first">Rituel Relaxant (x4)</dd>
+								<dd class="separate"></dd>
+								<dt>Bon enregistré le : </dt>
+								<dd>10/10/2014</dd>
+								<dd class="separate"></dd>
+								<dt class="last">Établissements : </dt>
+								<dd class="last">Nom de l'établissement</dd>
+							</dl>
+						</section>
+					</article>
+				</div>
+
+				<hgroup class="headerGroup">
+					<h2>Mes bons consommés</h2>
+				</hgroup>
+				
+				<div id="history">
+					<article class="certificate">
+						<section class="validity">
+							<%= image_tag 'agendaXL.png' %>
+							<h3>Consommé</h3>
+							<p>31/12/2014</p>
+						</section>
+						<section class="description">
+							<dl>
+								<dt class="first">Soin : </dt>
+								<dd class="first">Rituel Bréslien</dd>
+							</dl>
+						</section>
+					</article>
+
+					<article class="certificate">
+						<section class="validity">
+							<%= image_tag 'agendaXL.png' %>
+							<h3>Consommé</h3>
+							<p>31/12/2014</p>
+						</section>
+						<section class="description">
+							<dl>
+								<dt class="first">Soin : </dt>
+								<dd class="first">Massage détente</dd>
+								<dd class="separate"></dd>
+								<dt class="last">Établissement : </dt>
+								<dd class="last">Nom d'établissement</dd>
+							</dl>
+						</section>
+					</article>
+
+					<article class="certificate">
+						<section class="validity">
+							<%= image_tag 'agendaXL.png' %>
+							<h3>Consommé</h3>
+							<p>31/12/2014</p>
+						</section>
+						<section class="description">
+							<dl>
+								<dt class="first">Soin : </dt>
+								<dd class="first">Rituel Bréslien</dd>
+							</dl>
+						</section>
+					</article>
+
+					<article class="certificate">
+						<section class="validity">
+							<%= image_tag 'agendaXL.png' %>
+							<h3>Consommé</h3>
+							<p>31/12/2014</p>
+						</section>
+						<section class="description">
+							<dl>
+								<dt class="first">Soin : </dt>
+								<dd class="first">Massage détente</dd>
+								<dd class="separate"></dd>
+								<dt class="last">Établissement : </dt>
+								<dd class="last">Nom d'établissement</dd>
+							</dl>
+						</section>
+					</article>
+
+					<article class="certificate">
+						<section class="validity">
+							<%= image_tag 'agendaXL.png' %>
+							<h3>Consommé</h3>
+							<p>31/12/2014</p>
+						</section>
+						<section class="description">
+							<dl>
+								<dt class="first">Soin : </dt>
+								<dd class="first">Rituel Bréslien</dd>
+							</dl>
+						</section>
+					</article>
+
+					<article class="certificate">
+						<section class="validity">
+							<%= image_tag 'agendaXL.png' %>
+							<h3>Consommé</h3>
+							<p>31/12/2014</p>
+						</section>
+						<section class="description">
+							<dl>
+								<dt class="first">Soin : </dt>
+								<dd class="first">Massage détente</dd>
+								<dd class="separate"></dd>
+								<dt class="last">Établissement : </dt>
+								<dd class="last">Nom d'établissement</dd>
+							</dl>
+						</section>
+					</article>
+				</div>
+			</div>
+
+			<div class="large-3 columns">
+				<hgroup class="headerGroup">
+					<h2>Historique</h2>
+				</hgroup>
+				<p class="counter"><span class="bubble">0</span> <span class="copy">Bons<br> offerts</span></p>
+				<p class="counter"><span class="bubble">128</span> <span class="copy">Bons<br> reçus</span></p>
+			</div>
+		</div>
+
+	</div>
+
+	<article class="popIn mfp-hide" id="certificate">
+	    <header>
+	        <h4>Enregistrez un bon</h4>
+	        <%= image_tag 'popIns/gift.png' %>
+	    </header>
+
+	    <% form_tag '/user-gifts.html', :id => 'certificateForm', :class => 'form bgPattern', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
+	        <label>Numéro du bon</label>
+	        <div class="row pad0">
+	            <div class="large-9 columns pad0">
+	                <input type="text" data-parsley-required data-parsley-type="number" name="certificateNumbr" placeholder="Numéro du bon cadeau" />
+	            </div>
+	            <div class="large-3 columns pad0 padL">
+	                <input type="submit" class="block" value="valider" />
+	            </div>
+	        </div>
+	    <% end %>
+	    <section class="wysiwyg message pad30">
+	    	<p><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, voluptatum. Laboriosam cum beatae corporis ex nam laudantium vel voluptatum ea, veritatis, reiciendis saepe esse, delectus eveniet recusandae incidunt aspernatur velit.</em></p>
+	    </section>
+	</article>

@@ -36,6 +36,9 @@
 			if($(this).attr("id")=="user"){
 				var mx = "700px";
 			}
+			else if($(this).attr("id")=="basket" && $("#cart").hasClass("full")){
+				var mx = "999px"
+			}
 			else{
 				var mx = "200px";
 			}
@@ -93,9 +96,17 @@
 			$("#mainNav").removeClass("expended");
 			expand.removeClass("active");
 		})
-		expand.each(function(){
+
+		/*expand.each(function(){
 			if($(this).hasClass("active")){
 				$('#mainNav').addClass("expended");
 				$("#contents").addClass("push");
 			}
+		})*/
+
+	// Rituals on category page
+		$("#toggle").click(function(event){
+			event.preventDefault();
+			$(this).toggleClass("reverse");
+			$("#categories").toggleClass("open");
 		})

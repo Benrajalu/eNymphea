@@ -41,23 +41,21 @@
                                 <ul id="log" class="layer">
                                     <li>
                                         <h3>Me connecter</h3>
-                                        <form id="logIn" name="logIn" data-parsley-validate class="form" data-parsley-trigger='change focusout' action='/logged.html'>
+                                        <% form_tag '/connected.html', :id => 'logIn', :class => "form", :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => '' do %>
                                             <label for="mail">Email</label>
-                                            <input name="mail" id="mail" data-parsley-required="required" placeholder="Votre adresse email" type="text" />
+                                            <input name="mail" id="mail" data-parsley-required="required" data-parsley-type="email" placeholder="Votre adresse email" type="text" />
                                             <label for="pass">Mot de passe</label>
                                             <input name="pass" id="pass" placeholder="Votre mot de passe" data-parsley-required="required" type="password" />
                                             <p><a href="#passRetrival" class="pop">Mot de passe oublié ?</a></p>
                                             <input type="submit" value="Connexion" class="button submit small" />
-                                        </form>
+                                        <% end %>
                                     </li>
                                     <li>
                                         <h3>Créer un compte</h3>
-                                        <form id="signUp" name="signUp" class="form" data-parsley-validate data-parsley-trigger='change focusout'>
+                                        <div class="form">
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus odio minus, numquam libero deserunt dicta.</p>
-                                            <label for="email">Email</label>
-                                            <input name="email" id="email" data-parsley-required="required" data-parsley-type="email" placeholder="Votre adresse email" type="text" />
-                                            <input type="submit" value="Créer un compte" href="#create" class="button submit small pop" />
-                                        </form>
+                                            <a href="#create" class="submit small pop">Créer un compte</a>
+                                        </div>
                                     </li>
                                 </ul>
                             </li>
@@ -89,11 +87,10 @@
 
                         <ul>
                             <li><%= magic_link_to "L'espace bien-être", '/espace.html' %></li>
-                            <li><a href="#rituals" class="flyout">Nos rituels</a></li>
+                            <li><a href="#rituals" class="flyout">Nos rituels de soin</a></li>
                             <li><%= magic_link_to 'Réserver', '/book.html' %></li>
                             <li><%= magic_link_to 'offrir', '/gift.html' %></li>
                             <li><%= magic_link_to 'Actualités', '/news.html' %></li>
-                            <li><%= magic_link_to 'Informations pratiques', '/infos.html' %></li>
                         </ul>
 
                         <aside id="rituals">
@@ -101,13 +98,13 @@
                             <h3 class="menuTitle mobileOn">Nos rituels de soin</h3>
                             <h3>Découvrez nos rituels de beauté</h3>
                             <ul class="cf">
-                                <li><a href="#">Soins du visage</a></li>
-                                <li><a href="#">Minceur et fermeté</a></li>
-                                <li><a href="#">Massages du corps</a></li>
-                                <li><a href="#">Soin d'exception espace privé Paris</a></li>
-                                <li><a href="#">Rituels du bain & soins corps</a></li>
-                                <li><a href="#">Abonnements</a></li>
-                                <li><a href="#">Rituels de soin</a></li>
+                                <li><%= magic_link_to "Soins du visage", "/category.html" %></li>
+                                <li><%= magic_link_to "Minceur et fermeté", "/category.html" %></li>
+                                <li><%= magic_link_to "Massages du corps", "/category.html" %></li>
+                                <li><%= magic_link_to "Soin d'exception espace privé Paris", "/category.html" %></li>
+                                <li><%= magic_link_to "Rituels du bain & soins corps", "/category.html" %></li>
+                                <li><%= magic_link_to "Abonnements", "/category.html" %></li>
+                                <li><%= magic_link_to "Rituels de soin", "/category.html" %></li>
                             </ul>
                         </aside>
                     </section>
@@ -128,13 +125,13 @@
             <nav id="footerNav" class="bgPale">
                 <div class="row">
                     <ul class="cf">
-                        <li><a href="#">Soins du visage</a></li>
-                        <li><a href="#">Minceur et fermeté</a></li>
-                        <li><a href="#">Massages du corps</a></li>
-                        <li><a href="#">Soin d'exception espace privé Paris</a></li>
-                        <li><a href="#">Rituels du bain & soins corps</a></li>
-                        <li><a href="#">Abonnements</a></li>
-                        <li><a href="#">Rituels de soin</a></li>
+                        <li><%= link_to "Soins du visage", "/category.html" %></li>
+                        <li><%= link_to "Minceur et fermeté", "/category.html" %></li>
+                        <li><%= link_to "Massages du corps", "/category.html" %></li>
+                        <li><%= link_to "Soin d'exception espace privé Paris", "/category.html" %></li>
+                        <li><%= link_to "Rituels du bain & soins corps", "/category.html" %></li>
+                        <li><%= link_to "Abonnements", "/category.html" %></li>
+                        <li><%= link_to "Rituels de soin", "/category.html" %></li>
                     </ul>
                 </div>
             </nav>
@@ -146,6 +143,7 @@
                         <form id="newsletter" class="form toReveal" data-parsley-validate>
                             <input type="text" placeholder="Votre adresse email" data-parsley-required data-parsley-type="email" />
                             <input type="submit" class="inline" value="ok" />
+                            <p class="feedback"></p>
                         </form>
                     </div>
 
@@ -175,8 +173,8 @@
                             <li><a href="#">Où trouver nos produits</a></li>
                             <li><a href="#">Presse</a></li>
                             <li><a href="#">Professionnels</a></li>
-                            <li id="facebookFans"><a href="#">7659</a></li>
                         </ul>
+                        <p id="facebookFans"><a href="#">7659</a></p>
                     </div>
                 </div>
 
@@ -229,6 +227,7 @@
                     <div class="large-3 columns pad0 padL">
                         <input type="submit" class="block" value="valider" />
                     </div>
+                    <p class="feedback"></p>
                 </div>
             <% end %>
         </article>
@@ -256,26 +255,26 @@
                 <div class="row pad0">
                     <div class="large-6 columns pad0">
                         <label>Nom*</label>
-                        <input type="text" data-parsley-required name="surname" />
+                        <input type="text" data-parsley-required name="surname" placeholder="Votre nom" />
                     </div>
                     <div class="large-6 columns pad0 padL">
                         <label>Prénom*</label>
-                        <input type="text" data-parsley-required name="name" />
+                        <input type="text" data-parsley-required name="name" placeholder="Votre prénom"/>
                     </div>
                 </div>
 
 
                 <label>Email*</label>
-                <input type="text" data-parsley-type="email" data-parsley-required name="userMail" />
+                <input type="text" data-parsley-type="email" data-parsley-required name="userMail" placeholder="Votre addresse email"/>
 
                 <div class="row pad0">
                     <div class="large-6 columns pad0">
                         <label>Tel. fixe</label>
-                        <input type="text" data-parsley-type="number" name="phone" />
+                        <input type="text" data-parsley-type="digits" name="phone" placeholder="Votre numéro de téléphone fixe"/>
                     </div>
                     <div class="large-6 columns pad0 padL">
                         <label>Tel. portable*</label>
-                        <input type="text" data-parsley-required data-parsley-type="number" name="mobilePhone" />
+                        <input type="text" data-parsley-required data-parsley-type="digits" name="mobilePhone" placeholder="Votre numéro de téléphone portable"/>
                     </div>
                 </div>
 
@@ -286,11 +285,11 @@
                 <div class="row pad0">
                     <div class="large-6 columns pad0">
                         <label>Mot de passe*</label>
-                        <input type="password" data-parsley-required name="pass" id="createPassword"/>
+                        <input type="password" data-parsley-required name="pass" id="createPassword" placeholder="Veillez choisir un mot de passe"/>
                     </div>
                     <div class="large-6 columns pad0 padL">
                         <label>Confirmez le mot de passe*</label>
-                        <input type="password" data-parsley-required name="passConfirmation" data-parsley-equalto="#createPassword" />
+                        <input type="password" data-parsley-required name="passConfirmation" data-parsley-equalto="#createPassword" placeholder="Veuillez confirmer ce mot de passe" />
                     </div>
                 </div>
 
@@ -298,6 +297,35 @@
 
             <% end %>
         </article>
+
+        <div class="popIn mfp-hide" id="addCart">
+            <header>
+                <h4>Soin ajouté au panier</h4>
+                <%= image_tag 'popIns/cart.png' %>
+            </header>
+            <article class="product recap">
+                <section class="image">
+                    <%= image_tag "products/rituel-bresilienS.jpg" %>
+                </section>
+                <section class="description">
+                    <h3>Rituel Brésilien</h3>
+                    <p>Selon un rituel brésilien, ce soin raffermissant et sculptant associe les propriétés « brûle graisse » de la Caféine...</p>
+                    <p class="price">100€</p>
+
+                    <ul class="infoList cf">
+                        <li class="date">31/12/2014 <span>à 10h</span></li>
+                    </ul>
+                </section>
+            </article>
+            <article class="wysiwyg article">
+                <h3>Votre soin "NOM DU SOIN" a bien été ajouté à votre panier</h3>
+                <p>Nous vous attendons le 10/10/2014 à 10h pour votre soin.</p>
+                <aside class="messageNav">
+                    <%= link_to 'Retour aux soins', '#', :class => "button book left closePop" %>
+                    <%= link_to 'Valider mon panier', '/login.html', :class => "button account" %>
+                </aside>
+            </article>
+        </div>
 
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
@@ -312,6 +340,7 @@
         <%= javascript_include_tag 'locales/parsley-fr.js' %>
         <%= javascript_include_tag 'jquery.flexslider-min.js' %>
         <%= javascript_include_tag 'jquery.magnific-popup.min.js' %>
+        <%= javascript_include_tag 'tabs.js' %>
         <%= javascript_include_tag 'plugins.js' %>
 
         <script>

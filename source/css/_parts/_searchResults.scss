@@ -1,0 +1,585 @@
+#resultHead{
+	text-align:center;
+	position:relative;
+	margin-bottom:40px;
+	> img{
+		margin-bottom: 10px;
+	}
+	p{
+		@include futura(13px, $black);
+		text-transform: uppercase;
+		line-height: 1.3;
+	}
+	&:after{
+		@include PE();
+		width:20px;
+		height:1px;
+		background:$black;
+		left:50%;
+		top:auto;
+		bottom:-10px;
+		margin-left:-10px;
+	}
+}
+
+#table{
+	margin:30px 0px;
+	&.lessPad{
+		margin:0px 0px 0px 0px;
+	}
+	#resultNavigation{
+		@include clearfix();
+		@include border-radius(2px);
+		background:$violet;
+		display:table;
+		width:100%;
+		li{
+			display:table-cell;
+			height:70px;
+			vertical-align: middle;
+			a{
+				display:block;
+				height:70px;
+				line-height:70px;
+				padding:0px 15px;
+				text-align:center;
+				@include futura(14px, #360013);
+				text-decoration: none;
+				&.active, &:hover{
+					background:#c88ca1;
+				}
+				.verticalAlign{
+					@include inline-block();
+					vertical-align: middle;
+					line-height:1;
+					> span{
+						display:block;
+						@include futuraBold(14px, $white);
+						text-transform: uppercase;
+						margin-bottom:5px;
+					}
+				}
+			}
+
+			&.prev, &.next{
+				width:40px;
+				a{
+					overflow: hidden;
+					text-indent:-9999px;
+					width:20px;
+					height:20px;
+					background-image:url("../img/spriteSlider.png");
+					margin:0 auto;
+					padding:0px;
+					&:hover{
+						background-color:transparent;
+					}
+				}
+			}
+			&.prev{
+				a{
+					background-position:0 0;
+					&:hover{
+						background-position:0px -20px;
+					}
+				}
+			}
+			&.next{
+				a{
+					background-position:-20px 0px;
+					&:hover{
+						background-position:-20px -20px;
+					}
+				}
+			}
+		}
+
+		@media only screen and (max-width:$tablet){
+			display:block;
+			li{
+				width:26.66%;
+				display:block;
+				float:left;
+				a{
+					padding:0 5px;
+					font-size:12px;
+					.verticalAlign > span{
+						font-size:11px;
+					}
+				}
+			}
+			li.prev, li.next{
+				width:10%;
+				line-height: 70px;
+				text-align: center;
+				a{
+					@include inline-block();
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+
+	#resultContents{
+		margin-bottom:40px;
+		.line{
+			display:block;
+			width:100%;
+			position:relative;
+			&:nth-child(odd){
+				@extend .bgPattern;
+			}
+
+			.categories{
+				display:table;
+				height:70px;
+			}
+
+			.categories{
+				table-layout:fixed;
+				.unit{
+					display:table-cell;
+					vertical-align: middle;
+					padding:0px;
+					@include futuraBold(15px, $black);
+					text-decoration:none;
+					text-align: center;
+					width:10%;
+					background:transparent;
+					border:0px;
+					&:active, &:focus{
+						outline:0;
+					}
+				}
+				.entries{
+					> li{
+						display:table-cell;
+						vertical-align: middle;
+						height:70px;
+						line-height:70px;
+						&:hover, &.active{
+							background:#e3e3e3;
+						}
+						a{
+							@include inline-block();
+							vertical-align: middle;
+							line-height: 1;
+							text-decoration: none;
+							text-align: center;
+							@include futura(11px, #626262);
+							text-transform: uppercase;
+							padding:0px 10px;
+							span{
+								@include futuraBold(11px, $violet);
+							}
+							strong{
+								display:block;
+								margin-bottom:5px;
+								@include futuraBold(12px, #626262);
+							}
+						}
+					}
+				}
+			}
+
+			.product{
+				display:block;
+				height:70px;
+				line-height:70px;
+				.unit, >ul{
+					float:left;
+					display:block;height:70px;
+					line-height:70px;
+				}
+				.unit{
+					@include futuraBold(15px, $black);
+					text-decoration:none;
+					text-align: center;
+					width:20%;
+					background:transparent;
+					border:0px;
+					&:active, &:focus{
+						outline:0;
+					}
+				}
+				>ul{
+					width:80%;
+					display:block;
+					height:70px;
+					line-height: 70px;
+					>li{
+						@include inline-block();
+						line-height: 1;
+						vertical-align: middle;
+						padding-right:10px;
+						border-left:3px solid $violet;
+						padding:0px 10px 0px 10px;
+						margin-left:20px;
+						position:relative;
+						> a{
+							@include futura(12px, #5b5959);
+							text-transform: uppercase;
+							text-decoration: none;
+							&:hover{
+								color:$violet;
+							}
+						}
+						.noResults{
+							@include futura(12px, #5b5959);
+							padding:10px 0px;
+						}
+						.infos{
+							float:none;
+							text-align:right;
+							li{
+								float:left;
+								width:auto;
+								position:relative;
+								line-height:25px;
+								margin-right:3px;
+								&.time{
+									@include futura(11px, #7a7878);
+									padding-left:23px;
+									&:before{
+										@include PE();
+										width:16px;
+										height:16px;
+										left:0px;
+										margin-top:-9px;
+										background:url("../img/clock.png") left center no-repeat;
+									}
+								}
+								&.price{
+									@include futura(11px, $violet);
+								}
+								&.cart{
+									a{
+										@include futura(11px, $violet);
+										text-transform: uppercase;
+										text-decoration: none;
+										padding-left:20px;
+										@include transition(all 300ms);
+										&:before{
+											@include PE();
+											width:16px;
+											height:16px;
+											left:0px;
+											margin-top:-10px;
+											background:url("../img/cartS.png") left center no-repeat;
+										}
+										&:hover{
+											color:$black;
+											text-decoration: underline;
+											&:before{
+												background:url("../img/cartShover.png") left center no-repeat;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}	
+
+
+			.products{
+				width:100%;
+				display:none;
+				height: auto;
+				position:relative;
+				background:#dbd7d7 url("../img/patternBack.png") center center;
+				> button.close{
+					border:0px;
+					display:block;
+					width:30px;
+					height:30px;
+					position:absolute;
+					top:10px;
+					right:10px;
+					background:transparent url('../img/smallClose.png') center center no-repeat;
+					text-indent:-999px;
+					overflow: hidden;
+					cursor:pointer;
+					@include transition(all 300ms);
+					&:hover{
+						@include border-radius(99px);
+						background-color:$pale;
+					}
+					&:active, &:focus{
+						outline:0;
+					}
+				}
+				.offer{
+					@include clearfix();
+					padding:20px 40px;
+					> li{
+						display:block;
+						height:42px;
+						width:40%;
+						float:left;
+						padding-right:10px;
+						border-left:3px solid $violet;
+						padding:0px 10px 0px 10px;
+						margin-bottom:10px;
+						margin-left:20px;
+						position:relative;
+						> a{
+							@include futura(12px, #5b5959);
+							text-transform: uppercase;
+							text-decoration: none;
+							&:hover{
+								color:$violet;
+							}
+						}
+						.noResults{
+							@include futura(12px, #5b5959);
+							padding:10px 0px;
+						}
+						.infos{
+							float:none;
+							text-align:right;
+							li{
+								float:left;
+								width:auto;
+								position:relative;
+								line-height:25px;
+								margin-right:3px;
+								&.time{
+									@include futura(11px, #7a7878);
+									padding-left:23px;
+									&:before{
+										@include PE();
+										width:16px;
+										height:16px;
+										left:0px;
+										margin-top:-9px;
+										background:url("../img/clock.png") left center no-repeat;
+									}
+								}
+								&.price{
+									@include futura(11px, $violet);
+								}
+								&.cart{
+									a{
+										@include futura(11px, $violet);
+										text-transform: uppercase;
+										text-decoration: none;
+										padding-left:20px;
+										@include transition(all 300ms);
+										&:before{
+											@include PE();
+											width:16px;
+											height:16px;
+											left:0px;
+											margin-top:-10px;
+											background:url("../img/cartS.png") left center no-repeat;
+										}
+										&:hover{
+											color:$black;
+											text-decoration: underline;
+											&:before{
+												background:url("../img/cartShover.png") left center no-repeat;
+											}
+										}
+									}
+								}
+							}
+						}
+
+						.promo{
+							position:absolute;
+							left:-20px;
+							top:0px;
+							height:100%;
+							width:30px;
+							&.open{
+								width:100%;
+								.description{
+									width:100%;	
+									opacity:1;
+								}
+							}
+							.badge{
+								cursor: pointer;
+								position:absolute;
+								top:50%;
+								left:-15px;
+								width:30px;
+								height:30px;
+								display:block;
+								border:0px;
+								@include border-radius(99px);
+								background:$gold url("../img/promo.png") center center no-repeat;
+								margin-top:-15px;
+								text-indent: -999px;
+								overflow: hidden;
+								&:active, &:focus{
+									outline:0px;
+								}
+							}
+							.description{
+								@include transition(all 300ms);
+								opacity:0;
+								display:block;
+								height:42px;
+								line-height:42px;
+								display: block;
+								background: #fff;
+								border: 1px solid $gold;
+								width: 0%;
+								margin:0 0 0 20px;
+								padding: 0px 10px;
+								overflow:hidden;
+								position:relative;
+								p{
+									@include inline-block();
+									vertical-align: middle;
+									@include futura(11px, #5b5959);
+									text-transform: uppercase;
+									line-height:1.2;
+									padding-right:25px;
+								}
+
+								button.close{
+									border:0px;
+									display:block;
+									width:30px;
+									height:30px;
+									position:absolute;
+									top:50%;
+									right:5px;
+									margin-top:-15px;
+									background:transparent url('../img/smallClose.png') center center no-repeat;
+									text-indent:-999px;
+									overflow: hidden;
+									cursor:pointer;
+									@include transition(all 300ms);
+									&:hover{
+										@include border-radius(99px);
+										background-color:$pale;
+									}
+									&:active, &:focus{
+										outline:0;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		@media only screen and (max-width:$tablet){
+			.line{
+				display:block;
+				position:relative;
+				.categories{
+					display:block;
+					height:auto;
+					.unit{
+						display: block;
+						width:100%;
+						padding:20px 0px;
+					}
+					.entries{
+						@include transition(all 300ms);
+						max-height:0px;
+						overflow: hidden;
+						padding:0px;
+						display:block;
+						width:100%;
+						&.open{
+							min-height: 260px;
+							max-height:700px;
+							padding:0px 20px 20px 20px;
+							overflow: auto;
+						}
+						li{
+							display:block;
+							height:auto;
+							line-height:3;
+							a{
+								text-align: left;
+							}
+						}
+					}
+				}
+				.product{
+					display:block;
+					height:auto;
+					.unit{
+						display: block;
+						clear:both;
+						float:none;
+						width:100%;
+						padding:0px 0px;
+						height: 40px;
+						line-height: 40px;
+					}
+					.entries{
+						clear:both;
+						float:none;
+						@include transition(all 300ms);
+						max-height:0px;
+						overflow: hidden;
+						padding:0px;
+						display:block;
+						width:100%;
+						&.open{
+							min-height: 80px;
+							max-height:70px;
+							padding:0px 20px 20px 20px;
+							overflow: auto;
+						}
+						li{
+							text-align:left;
+							margin-left:0px;
+							p{
+								text-align: left;
+							}
+						}
+					}
+				}
+				.products{
+					position:absolute;
+					z-index:20;
+					top:55px;
+					left:0px;
+					width:100%;
+					overflow: auto;
+					>button.close{
+						z-index:30;
+					}
+					.offer{
+						padding:20px 15px;
+						overflow: auto;
+						> li{
+							width:100%;
+							margin:0 0 20px 0px;
+							float:none;
+							.promo{
+								display:none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#results{
+	h1{
+		font-size:18px;
+		line-height:1.7;
+		text-align:center;
+	}
+	.message{
+		p{
+
+			@include futura(14px, $black);
+			line-height:1.3;
+		}
+	}
+}

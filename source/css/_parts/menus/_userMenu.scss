@@ -1,0 +1,94 @@
+#userMenu{
+	display:block;
+	margin-bottom:30px;
+	ul{
+		padding-right:20px;
+		li{
+			display:block;
+			border-bottom:1px solid #f4f4f4;
+			a{
+				@include futura(12px, $violet);
+				@include transition(all 300ms);
+				text-transform: uppercase;
+				background:transparent;
+				text-decoration:none;
+				line-height:30px;
+				display:block;
+				height:30px;
+				padding-left:40px;
+				position: relative;
+				&:after{
+					@include transition(all 300ms);
+					@include PE();
+					top:0px;
+					right:-0px;
+					opacity:0;
+					background:url('../img/userActive.png') center center no-repeat;
+					width:14px;
+					height:30px;
+				}
+				&:hover, &.active{
+					background-color:$pale;
+					&:after{
+						right:-14px;
+						opacity:1;
+					}
+				}
+			}
+
+			&.accueil{
+				a:before{
+					@include PE();
+					width:12px;
+					height:15px;
+					left:15px;
+					margin-top: -7.5px;
+					background:url('../img/user.png');
+				}
+			}
+			&.infos{
+				a:before{
+					@include PE();
+					width:12px;
+					height:15px;
+					left:15px;
+					margin-top: -7.5px;
+					background:url('../img/infos.png');
+				}
+			}
+			&.RDV{
+				a:before{
+					@include PE();
+					width:15px;
+					height:13px;
+					left:15px;
+					margin-top: -7px;
+					background:url('../img/bookSmall.png');
+				}
+			}
+			&.gift{
+				a:before{
+					@include PE();
+					width:14px;
+					height:15px;
+					left:15px;
+					margin-top: -9.5px;
+					background:url('../img/giftSmall.png');
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width:$tablet){
+		ul{
+			padding:0px;
+			li{
+				a{
+					&:after{
+						display:none;
+					}
+				}
+			}
+		}
+	}
+}

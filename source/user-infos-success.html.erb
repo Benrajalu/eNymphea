@@ -1,0 +1,133 @@
+---
+layout: connected
+title: E-Nymphea - Mon compte
+description: Mon compte, plateforme E-Nymphea
+---
+
+<!-- Slider -->
+	<section id="largePicture">
+		<div id="mainSlider" class="flexslider large noCaptions">
+			<ul class="slides">
+				<li>
+					<%= image_tag 'slides/thinSlide2.jpg' %>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<div class="rowFluid">
+		<nav id="breadcrumbs" class="row">
+			<ul>
+				<li><%= link_to 'Accueil /', '/index.html' %></li>
+				<li>Mon Espace client</li>
+			</ul>
+		</nav>
+
+		<div class="row">
+			<h1>Mon espace client</h1>
+			<aside class="large-3 columns">
+				<nav id="userMenu">
+					<ul>
+						<li class="accueil"><%= magic_link_to "Accueil", "/user.html" %></li>
+						<li class="infos"><%= magic_link_to "Mes infos", "/user-infos.html" %></li>
+						<li class="RDV"><%= magic_link_to "Mes RDV", "/user-history.html" %></li>
+						<li class="gift"><%= magic_link_to "Mes bons cadeaux", "/user-gifts.html" %></li>
+					</ul>
+				</nav>
+			</aside>
+
+			<div class="large-6 columns">
+				<hgroup class="headerGroup">
+					<h2>Mes infos personnelles</h2>
+					<p class="more">(* champs obligatoires)</p>
+				</hgroup>
+				
+				<% form_tag '/user-infos.html', :id => 'userFrom', :class => 'form bgPattern user', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
+					<div class="inline">
+					    <fieldset>
+					        <label class="lineLabel">Civilité</label>
+					        <input type="radio" data-parsley-required name="gender" value="Mme" id="Mme" checked="checked"/> <label for="Mme">Mme</label>
+					        <input type="radio" data-parsley-required name="gender" value="Mr" id="Mr"/> <label for="Mr">Mr</label>
+					    </fieldset>
+					</div>
+
+			        <label>Nom*</label>
+			        <input type="text" data-parsley-required name="surname" value="Guerton-Mathias"/>
+			        <label>Prénom*</label>
+			        <input type="text" data-parsley-required name="name" value="Céline"/>
+
+
+					<label>Email*</label>
+					<input type="text" data-parsley-type="email" data-parsley-required name="userMail" value="cgm@spa-connexion.com"/>
+
+			        <label>Tel. fixe</label>
+			        <input type="text" data-parsley-type="number" name="phone" value="0110101010"/>
+			        <label>Tel. portable*</label>
+			        <input type="text" data-parsley-required data-parsley-type="number" name="mobilePhone" value="0610101010"/>
+			        <p class="small">Veuillez renseigner un numéro de téléphone minimum.</p>
+
+			        <p class="success">Vos informations ont été mises à jour !</p>
+
+			        <input type="submit" value="valider">
+				<% end %>
+
+				<hgroup class="headerGroup">
+					<h2>Mon adresse</h2>
+				</hgroup>
+				
+				<% form_tag '/user-infos.html', :id => 'adressFrom', :class => 'form bgPattern user', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
+
+			        <label>Adresse*</label>
+			        <input type="text" data-parsley-required name="adressline1" value="10 rue Rio de Jainero"/>
+			        <input type="text" name="adressline2" value="Appartement C"/>
+
+
+					<label>Code postal*</label>
+					<input type="text" data-parsley-type="number" data-parsley-required name="zipCode" value="75000" class="inline"/>
+
+			        <label>Ville*</label>
+			        <input type="text" name="city" value="Paris"/>
+
+			        <input type="submit" value="valider">
+				<% end %>
+			</div>
+
+			<div class="large-3 columns">
+				<hgroup class="headerGroup">
+					<h2>Mot de passe</h2>
+				</hgroup>
+				
+				<% form_tag '/user-infos.html', :id => 'mdpForm', :class => 'form bgPattern user', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
+
+			        <label>Mot de passe actuel*</label>
+			        <input type="password" data-parsley-required name="passCurrent" placeholder="Entrez votre mot de passe"/>
+
+					<label>Nouveau mot de passe*</label>
+					<input type="password" data-parsley-required name="passNew" id="passNew"/>
+
+					<label>Confirmation*</label>
+					<input type="password" data-parsley-required data-parsley-equalto="passNew" name="passConf" placeholder="Retapez le mot de passe"/>
+
+			        <input type="submit" value="valider">
+				<% end %>
+
+					<hgroup class="headerGroup">
+						<h2>Préférences</h2>
+					</hgroup>
+					
+					<% form_tag '/user-infos.html', :id => 'placeForm', :class => 'form bgPattern user', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
+
+				        <label>Établissement favori</label>
+				        <select name="placeSelect" data-parsley-required>
+				        	<option value="">Choisissez...</option>
+			        		<option value="test">Nom de l'établissement</option>
+			        		<option value="test">Nom de l'établissement</option>
+			        		<option value="test">Nom de l'établissement</option>
+				        </select>
+
+				        <input type="submit" value="valider">
+					<% end %>
+			</div>
+		</div>
+
+	</div>

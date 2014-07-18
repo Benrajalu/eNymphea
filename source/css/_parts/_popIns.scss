@@ -1,5 +1,8 @@
 .popIn{
-	padding:70px 50px;
+	padding:70px 50px 40px 50px;
+	&.pad0{
+		padding:70px 5px;
+	}
 	header{
 		position:absolute;
 		top:0px;
@@ -22,6 +25,15 @@
 			height:40px;
 			background:#d8d8d8;
 		}
+
+		@media only screen and (max-width:$tablet){
+			h4{
+				font-size:12px;
+			}
+			img{
+				display:none;
+			}
+		}
 	}
 
 	p{
@@ -33,5 +45,135 @@
 		h3{
 			margin-top:15px;
 		}
+		input{
+			&[type='text'], &[type='password']{
+				border:1px solid #c0c0c0;
+			}
+			&:active, &:focus{
+				outline:0px;
+				border:1px solid $gold;
+			}
+		}
+		.radio span{
+			@include border-radius(999px);
+			@include box-shadow(0px 0px 3px #c0c0c0);
+		}
+	}
+
+	.flexslider{
+		margin-bottom:0px;
+		&.galleryNav{
+			margin-top:30px;
+		}
+	}
+
+	@media only screen and (max-width: $tablet){
+		padding:70px 0px;
+		&.pad0{
+			padding:70px 0px;
+		}
 	}
 }
+
+// Gallery triggers
+
+	.gallery{
+		position:relative;
+		overflow: hidden;
+		margin-bottom:30px;
+		> a > img{
+			width:100%;
+			display:block;
+		}
+		.legend{
+			display:block;
+			background:$pale;
+			height:40px;
+			line-height:40px;
+			width:100%;
+			border:0px;
+			margin:0px;
+			position:relative;
+			a{
+				@include futura(17px, $black);
+				padding:0px 20px;
+				text-transform: uppercase;
+				text-decoration: none;
+				&:hover{
+					color:$violet;
+				}
+			}
+			.icon{
+				position:absolute;
+				right:20px;
+				top:50%;
+				margin-top:-11.5px;
+			}
+		}
+		.overlay{
+			@include PE();
+			@include transition(all 300ms);
+			opacity:0;
+			width:75px;
+			height:75px;
+			background:url('../img/play.png') center center no-repeat;
+			top:20%;
+			left:50%;
+			margin-top:-57.5px;
+			margin-left:-37.5px;
+			text-indent: -999px;
+			overflow: hidden;
+		}
+
+		&:hover{
+			.overlay{
+				top:50%;
+				opacity: 1;
+			}
+		}
+
+		@media only screen and (max-width: $mobile){
+			padding:0 15px;
+			.overlay{
+				opacity:1;
+				top:50%;
+			}
+		}
+
+	}
+
+
+// Animation
+	/* overlay at start */
+	.mfp-fade.mfp-bg {
+	  opacity: 0;
+
+	  -webkit-transition: all 0.15s ease-out;
+	  -moz-transition: all 0.15s ease-out;
+	  transition: all 0.15s ease-out;
+	}
+	/* overlay animate in */
+	.mfp-fade.mfp-bg.mfp-ready {
+	  opacity: 0.8;
+	}
+	/* overlay animate out */
+	.mfp-fade.mfp-bg.mfp-removing {
+	  opacity: 0;
+	}
+
+	/* content at start */
+	.mfp-fade.mfp-wrap .mfp-content {
+	  opacity: 0;
+
+	  -webkit-transition: all 0.15s ease-out;
+	  -moz-transition: all 0.15s ease-out;
+	  transition: all 0.15s ease-out;
+	}
+	/* content animate it */
+	.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+	  opacity: 1;
+	}
+	/* content animate out */
+	.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+	  opacity: 0;
+	}

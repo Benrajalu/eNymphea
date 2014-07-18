@@ -1,0 +1,169 @@
+---
+title: E-Nymphea - Confirmation
+description: Confirmation achat - plateforme E-Nymphea
+---
+
+<!-- Slider -->
+	<section id="largePicture">
+		<div id="mainSlider" class="flexslider large noCaptions">
+			<ul class="slides">
+				<li>
+					<%= image_tag 'slides/thinSlide3.jpg' %>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+<!-- Contents -->
+
+	<div class="rowFluid bgPattern mar40">
+		<nav id="breadcrumbs" class="row">
+			<ul>
+				<li><%= link_to 'Accueil /', '/index.html' %></li>
+				<li>Offrir un soin</li>
+			</ul>
+		</nav>
+
+		<div class="row">
+			<div class="large-8 columns">
+				<h1>Offrir un soin</h1>
+				<article class="wysiwyg message bgWhite">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi id illum reiciendis, aliquam praesentium eaque fugit dignissimos obcaecati officia. Eaque facere aperiam dolorem doloribus magni vitae neque, ut cupiditate dicta!</p>
+				</article>
+
+				<% form_tag 'cart.html', :id => 'giftAmount', :class => 'form pad10', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
+					<label>Précisez un montant</label>
+					<div class="row pad0">
+						<div class="large-9 columns pad0">
+							<input type="text" data-parsley-required name="giftPrice" data-parsley-type="number" class="euros"/>
+						</div>
+						<div class="large-3 columns pad0 padL">
+							<input type="submit" value="valider" class="block"/>
+						</div>
+					</div>
+				<% end %>
+
+				<p class="or">- Ou -</p>
+				
+				<% form_tag 'cart.html', :id => 'giftItem', :class => 'form pad10', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
+					<label>Sélectionnez un soin</label>
+					<div class="row pad0">
+						<div class="large-9 columns pad0">
+							<select name="soin" data-parsley-required data-parsley-pattern="\w+">
+								<option value="">Choisir un type de soin</option>
+								<optgroup label="Soin du visage">
+									<option value="nomdusoin">Nom du soin</option>
+									<option value="nomdusoin">Nom du soin</option>
+									<option value="nomdusoin">Nom du soin</option>
+								</optgroup>
+								<optgroup label="Minceur & fermeté">
+									<option value="nomdusoin">Nom du soin</option>
+									<option value="nomdusoin">Nom du soin</option>
+									<option value="nomdusoin">Nom du soin</option>
+								</optgroup>
+								<optgroup label="Massages corps">
+									<option value="nomdusoin">Nom du soin</option>
+									<option value="nomdusoin">Nom du soin</option>
+									<option value="nomdusoin">Nom du soin</option>
+								</optgroup>
+								<optgroup label="Soins d'exception espace privé Paris">
+									<option value="nomdusoin">Nom du soin</option>
+									<option value="nomdusoin">Nom du soin</option>
+									<option value="nomdusoin">Nom du soin</option>
+								</optgroup>
+								<optgroup label="Rituels du bain & soins corps">
+									<option value="nomdusoin">Nom du soin</option>
+									<option value="nomdusoin">Nom du soin</option>
+									<option value="nomdusoin">Nom du soin</option>
+								</optgroup>
+								<optgroup label="Rituels de soin">
+									<option value="nomdusoin">Nom du soin</option>
+									<option value="nomdusoin">Nom du soin</option>
+									<option value="nomdusoin">Nom du soin</option>
+								</optgroup>
+							</select>
+						</div>
+						<div class="large-3 columns pad0 padL">
+							<input type="submit" value="valider" class="block"/>
+						</div>
+					</div>
+				<% end %>
+			</div>
+
+			<div class="large-4 columns">
+				<article class="advice">
+					<%= image_tag 'advice.png' %>
+					<section class="copy">
+						<p class="bubble">15 <span>min</span></p>
+						<%= image_tag 'hanger.png', :class=>'picto' %>
+						<p>POUR UNE MEILLEURE APPRÉCIATION DE VOTRE SOIN, PRÉVOYEZ D’ARRIVER 15 MINUTES AVANT le début de la prestation.</p>
+					</section>
+				</article>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Pushes -->
+	<div class="rowFluid bgPattern mar40 pad30">
+		<h3 class="centered">Les offres du moment</h3>
+
+		<div class="row">
+			<div class="large-4 columns">
+				<article class="push">
+					<% link_to "/soin.html" do %>
+						<%= image_tag 'push/push1.jpg' %>
+					<% end %>
+					<section class="contents">
+						<h3><%= link_to "Rituel Brésilien", "/soin.html" %></h3>
+						<p class="price">80€</p>
+						<p>Hammam Arômes et Couleurs® ou Bain Japonais d’Arômes et de Fleurs®, Gommage aromatique Energisant aux Epices rares et précieuses et Soin-Massage du Visage...</p>
+						<ul class="infoList cf">
+							<li class="time">3 x 50min</li>
+							<li class="book"><%= link_to 'Réserver', '/book.html' %></li>
+							<li class="offer"><%= link_to 'Offrir', '/gift.html' %></li>
+						</ul>
+						<%= link_to 'En savoir plus', '/soin.html', :class => 'more' %>
+					</section>
+				</article>
+			</div>
+
+			<div class="large-4 columns">
+				<article class="push">
+					<% link_to "/soin.html" do %>
+						<%= image_tag 'push/push2.jpg' %>
+					<% end %>
+					<section class="contents">
+						<h3><%= link_to "Rituel Tropical", "/soin.html" %></h3>
+						<p class="price">80€</p>
+						<p>Hammam Arômes et Couleurs® ou Bain Japonais d’Arômes et de Fleurs®, Gommage aromatique Energisant...</p>
+						<ul class="infoList cf">
+							<li class="time">3 x 50min</li>
+							<li class="book"><%= link_to 'Réserver', '/book.html' %></li>
+							<li class="offer"><%= link_to 'Offrir', '/gift.html' %></li>
+						</ul>
+						<%= link_to 'En savoir plus', '/soin.html', :class => 'more' %>
+					</section>
+				</article>
+			</div>
+
+			<div class="large-4 columns">
+				<article class="push">
+					<% link_to "/soin.html" do %>
+						<%= image_tag 'push/push3.jpg' %>
+					<% end %>
+					<section class="contents noPrice">
+						<h3><%= link_to "Abonnement spa Céleste", "/soin.html" %></h3>
+						<p>Hammam Arômes et Couleurs® ou Bain Japonais d’Arômes et de Fleurs®, Gommage aromatique Energisant aux Epices rares et précieuses et Soin-Massage du Visage... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam animi voluptate tenetur velit doloremque corporis, tempore ducimus, reprehenderit a cupiditate! Quasi repudiandae consectetur vero officia, autem ea rem impedit beatae.</p>
+						<ul class="infoList cf">
+							<li class="time">3 x 50min</li>
+							<li class="book"><%= link_to 'Réserver', '/book.html' %></li>
+							<li class="offer"><%= link_to 'Offrir', '/gift.html' %></li>
+						</ul>
+						<%= link_to 'En savoir plus', '/soin.html', :class => 'more' %>
+					</section>
+				</article>
+			</div>
+		</div>
+
+	</div>

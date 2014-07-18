@@ -1,0 +1,282 @@
+---
+title: E-Nymphea - Fiche de soin
+description: Fiche de soin plateforme E-Nymphea
+---
+
+<!-- Slider -->
+	<section id="largePicture">
+		<div id="mainSlider" class="flexslider large noCaptions">
+			<ul class="slides">
+				<li>
+					<%= image_tag 'slides/thinSlide3.jpg' %>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+<!-- Contents -->
+
+	<div class="rowFluid mar40">
+		<nav id="breadcrumbs" class="row">
+			<ul>
+				<li><%= link_to 'Accueil /', '/index.html' %></li>
+				<li><%= link_to 'Nos rituels de soin / Minceur et fermeté /', '/category.html' %></li>
+				<li>Rituel brésilien</li>
+			</ul>
+			<%= link_to "Retour", "/category.html", :id => "return" %>
+		</nav>
+
+		<div class="row">
+			<div class="large-6 large-push-6 columns">
+				<article class="wysiwyg">
+					<h1>RITUEL BRÉSILIEN « CRÈME DE CAFÉ® » Minceur ET raffermissement</h1>
+					<p>Selon un rituel brésilien, ce soin raffermissant et sculptant associe les propriétés « brûle graisse » de la Caféine à une technique de massage et de palper-rouler unique pour lutter contre la cellulite adipeuse sur les jambes, le ventre, les hanches et les bras. Ce soin est suivi d’un enveloppement frais, raffermissant et purifiant.</p>
+
+					<ul class="infoList cf">
+						<li class="book"><%= link_to 'Réserver', '#bookForm', :class => "formSwitch external" %></li>
+						<li class="offer"><%= link_to 'Offrir', '#giftForm', :class => "formSwitch external" %></li>
+					</ul>
+				</article>
+				<ul class="bigInfos cf">
+					<li class="price"><span>Prix</span> 80€</li>
+					<li class="time"><span></span>50min</li>
+					<li class="infos">
+						<%= image_tag 'info.png', :class => "picto" %>
+						<p>L’équipe EST formée à ORIENTer et conseiller nos clients selon leurs envies et leurs besoins.</p>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="large-6 large-pull-6 columns">
+				<%= image_tag "products/rituel-bresilien.jpg", :class => "coverImage" %>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Search -->
+	<div class="rowFluid bgPattern">
+		<div class="row pad30">
+			<div class="large-8 columns">
+
+				<article id="mainForm" class="noBorder">
+					<form id="selectForm" class="form formSwitcher">
+						<h2 class="centered">Réserver en ligne</h2>
+						<hr class="smallLine centered" />
+
+						<div class="inline cf">
+							<fieldset>
+								<label class="lineLabel">Je souhaite</label>
+								<input type="radio" name="choice" value="bookForm" id="book" checked='checked'  class="formSwitch"/> <label for="book">réserver</label>
+								<input type="radio" name="choice" value="giftForm" id="gift" class="formSwitch"/> <label for="gift">offrir</label>
+							</fieldset>
+						</div>
+					</form>
+					
+					<% form_tag '/book-soin.html#results', :id => 'bookForm', :class => 'form formPanel', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'none' do %>
+						<label>Sélectionnez un établissement</label>
+						<select name="etablissement" data-parsley-required>
+							<option value="">Choisir un établissement</option>
+							<option value="nomdeletablissement">Etablissement 1</option>
+							<option value="nomdeletablissement">Etablissement 2</option>
+							<option value="nomdeletablissement">Etablissement 3</option>
+						</select>
+
+						<label>Sélectionnez une date pour un rendez-vous</label>
+						<div class="row pad0">
+							<div class="large-5 columns pad0">
+								<input type="text" class="datepicker" placeholder="JJ/MM/AAAA" name="date" />
+							</div>
+							<div class="large-7 columns pad0 padL mpad0">
+								<select name="moment" data-parsley-pattern="\w+" id="moment">
+									<option value="">À tout moment de la journée</option>
+									<option value="horaire">Choisir une heure précise</option>
+									<option value="matin">Matin (9h - 12h)</option>
+									<option value="déjeuner">Pause déjeuner (12h - 14h)</option>
+									<option value="apresmidi">Après midi (14h - 17h)</option>
+									<option value="finjournee">Fin de journée (17h - fermeture)</option>
+								</select>
+							</div>
+						</div>
+
+						<div id="timescale" style='display:none;'>
+							<label>Choisir un horaire</label>
+							<select name="horaire" id="hour">
+								<option value="">Choisissez une heure</option>
+								<option value="9h">9h</option>
+								<option value="10h">10h</option>
+								<option value="11h">11h</option>
+								<option value="12h">12h</option>
+								<option value="13h">13h</option>
+								<option value="14h">14h</option>
+								<option value="15h">15h</option>
+								<option value="16h">16h</option>
+								<option value="17h">17h</option>
+								<option value="18h">18h</option>
+								<option value="19h">19h</option>
+							</select>
+						</div>
+
+						<label>Sélectionnez un type de soin</label>
+						<select name="soin" data-parsley-required data-parsley-pattern="\w+">
+							<option value="">Choisir un type de soin</option>
+							<optgroup label="Soin du visage">
+								<option value="nomdusoin">Nom du soin</option>
+								<option value="nomdusoin">Nom du soin</option>
+								<option value="nomdusoin">Nom du soin</option>
+							</optgroup>
+							<optgroup label="Minceur & fermeté">
+								<option value="nomdusoin">Nom du soin</option>
+								<option value="nomdusoin" selected="selected">Rituel Brésilien</option>
+								<option value="nomdusoin">Nom du soin</option>
+							</optgroup>
+							<optgroup label="Massages corps">
+								<option value="nomdusoin">Nom du soin</option>
+								<option value="nomdusoin">Nom du soin</option>
+								<option value="nomdusoin">Nom du soin</option>
+							</optgroup>
+							<optgroup label="Soins d'exception espace privé Paris">
+								<option value="nomdusoin">Nom du soin</option>
+								<option value="nomdusoin">Nom du soin</option>
+								<option value="nomdusoin">Nom du soin</option>
+							</optgroup>
+							<optgroup label="Rituels du bain & soins corps">
+								<option value="nomdusoin">Nom du soin</option>
+								<option value="nomdusoin">Nom du soin</option>
+								<option value="nomdusoin">Nom du soin</option>
+							</optgroup>
+							<optgroup label="Rituels de soin">
+								<option value="nomdusoin">Nom du soin</option>
+								<option value="nomdusoin">Nom du soin</option>
+								<option value="nomdusoin">Nom du soin</option>
+							</optgroup>
+						</select>
+
+						<input type="submit" value="valider" />
+					<% end %>
+
+					<section id="giftForm" class="form formPanel" style="display:none;">
+						
+						<% form_tag 'login.html', :id => 'giftItem', :class => 'form', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
+							<label>Sélectionnez un soin</label>
+							<div class="row pad0">
+								<div class="large-9 columns pad0">
+									<select name="soin" data-parsley-required data-parsley-pattern="\w+">
+										<option value="">Choisir un type de soin</option>
+										<optgroup label="Soin du visage">
+											<option value="nomdusoin">Nom du soin</option>
+											<option value="nomdusoin">Nom du soin</option>
+											<option value="nomdusoin">Nom du soin</option>
+										</optgroup>
+										<optgroup label="Minceur & fermeté">
+											<option value="nomdusoin">Nom du soin</option>
+											<option value="nomdusoin" selected="selected">Rituel Brésilien</option>
+											<option value="nomdusoin">Nom du soin</option>
+										</optgroup>
+										<optgroup label="Massages corps">
+											<option value="nomdusoin">Nom du soin</option>
+											<option value="nomdusoin">Nom du soin</option>
+											<option value="nomdusoin">Nom du soin</option>
+										</optgroup>
+										<optgroup label="Soins d'exception espace privé Paris">
+											<option value="nomdusoin">Nom du soin</option>
+											<option value="nomdusoin">Nom du soin</option>
+											<option value="nomdusoin">Nom du soin</option>
+										</optgroup>
+										<optgroup label="Rituels du bain & soins corps">
+											<option value="nomdusoin">Nom du soin</option>
+											<option value="nomdusoin">Nom du soin</option>
+											<option value="nomdusoin">Nom du soin</option>
+										</optgroup>
+										<optgroup label="Rituels de soin">
+											<option value="nomdusoin">Nom du soin</option>
+											<option value="nomdusoin">Nom du soin</option>
+											<option value="nomdusoin">Nom du soin</option>
+										</optgroup>
+									</select>
+								</div>
+								<div class="large-3 columns pad0 padL">
+									<input type="submit" value="valider" class="block"/>
+								</div>
+							</div>
+						<% end %>
+					</section>
+				</article>
+			</div>
+
+			<div class="large-4 columns">
+				<article class="advice">
+					<%= image_tag 'advice.png' %>
+					<section class="copy">
+						<p class="bubble">15 <span>min</span></p>
+						<%= image_tag 'hanger.png', :class=>'picto' %>
+						<p>POUR UNE MEILLEURE APPRÉCIATION DE VOTRE SOIN, PRÉVOYEZ D’ARRIVER 15 MINUTES AVANT le début de la prestation.</p>
+					</section>
+				</article>
+			</div>
+		</div>
+	</div>
+
+	<!-- Pushes -->
+	<div class="rowFluid pad30">
+		<h3 class="centered">Nous vous recommandons</h3>
+
+		<div class="row bgWhite">
+			<div class="large-4 columns">
+				<article class="push">
+					<% link_to "/soin.html" do %>
+						<%= image_tag 'push/push1.jpg' %>
+					<% end %>
+					<section class="contents">
+						<h3><%= link_to "Rituel Brésilien", "/soin.html" %></h3>
+						<p class="price">80€</p>
+						<p>Hammam Arômes et Couleurs® ou Bain Japonais d’Arômes et de Fleurs®, Gommage aromatique Energisant aux Epices rares et précieuses et Soin-Massage du Visage...</p>
+						<ul class="infoList cf">
+							<li class="time">3 x 50min</li>
+							<li class="book"><%= link_to 'Réserver', '/book-soin.html' %></li>
+							<li class="offer"><%= link_to 'Offrir', '/gift.html' %></li>
+						</ul>
+						<%= link_to 'En savoir plus', '/soin.html', :class => 'more' %>
+					</section>
+				</article>
+			</div>
+
+			<div class="large-4 columns">
+				<article class="push">
+					<% link_to "/soin.html" do %>
+						<%= image_tag 'push/push2.jpg' %>
+					<% end %>
+					<section class="contents">
+						<h3><%= link_to "Rituel Tropical", "/soin.html" %></h3>
+						<p class="price">80€</p>
+						<p>Hammam Arômes et Couleurs® ou Bain Japonais d’Arômes et de Fleurs®, Gommage aromatique Energisant...</p>
+						<ul class="infoList cf">
+							<li class="time">3 x 50min</li>
+							<li class="book"><%= link_to 'Réserver', '/book-soin.html' %></li>
+							<li class="offer"><%= link_to 'Offrir', '/gift.html' %></li>
+						</ul>
+						<%= link_to 'En savoir plus', '/soin.html', :class => 'more' %>
+					</section>
+				</article>
+			</div>
+
+			<div class="large-4 columns">
+				<article class="push">
+					<% link_to "/soin.html" do %>
+						<%= image_tag 'push/push3.jpg' %>
+					<% end %>
+					<section class="contents noPrice">
+						<h3><%= link_to "Abonnement spa Céleste", "/soin.html" %></h3>
+						<p>Hammam Arômes et Couleurs® ou Bain Japonais d’Arômes et de Fleurs®, Gommage aromatique Energisant aux Epices rares et précieuses et Soin-Massage du Visage... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam animi voluptate tenetur velit doloremque corporis, tempore ducimus, reprehenderit a cupiditate! Quasi repudiandae consectetur vero officia, autem ea rem impedit beatae.</p>
+						<ul class="infoList cf">
+							<li class="time">3 x 50min</li>
+							<li class="book"><%= link_to 'Réserver', '/book-soin.html' %></li>
+							<li class="offer"><%= link_to 'Offrir', '/gift.html' %></li>
+						</ul>
+						<%= link_to 'En savoir plus', '/soin.html', :class => 'more' %>
+					</section>
+				</article>
+			</div>
+		</div>
+
+	</div>

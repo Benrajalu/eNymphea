@@ -1,0 +1,230 @@
+---
+title: E-Nymphea - Espace bien-être
+description: Espace bien-être plateforme E-Nymphea
+---
+
+<!-- Slider -->
+	<section id="largePicture">
+		<div id="mainSlider" class="flexslider large noCaptions">
+			<ul class="slides">
+				<li>
+					<%= image_tag 'slides/thinSlide3.jpg' %>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+<!-- Contents -->
+
+	<div class="rowFluid mar40">
+		<nav id="breadcrumbs" class="row">
+			<ul>
+				<li><%= link_to 'Accueil /', '/index.html' %></li>
+				<li>L'espace bien-être</li>
+			</ul>
+		</nav>
+		<div class="row">
+			<h1>L'espace bien-être</h1>
+		</div>
+		<div class="row noPadMobile">
+			<div class="large-8 columns">
+				<dl class="tabs">
+					<dt><a href="#tab1" class="active mobileActive"><span>Le concept</span></a></dt>
+					<dd id="tab1" class="active mobileActive">
+						<article class="wysiwyg article">
+							<h2>Titre niveau h2</h2>
+							<%= image_tag "news/newsS2.jpg", :class=>"alignRight" %>
+							<p>Nathalie Bouchon Poiroux - <a href="#">Créatrice des soins Cinq Mondes</a> et <strong>Directrice Formation</strong> & Qualité – <em>associée à des partenaires</em> scientifiques de renom, crée les soins Cinq Mondes en s’inspirant des « Rituels de Beauté du monde® » et de la Dermapuncture®, véritable « acupuncture sans aiguille ».</p>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo rerum natus aut molestiae sed voluptas quibusdam culpa consequuntur, ipsum eaque, optio quod impedit veniam accusamus reprehenderit deserunt illo incidunt cumque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ullam nesciunt, laborum porro nemo explicabo aliquid, et molestias consequatur libero incidunt tempora minus necessitatibus consequuntur dolorem quos cupiditate doloremque ratione.</p>
+
+							<h3>Sous titre, niveau H3</h3>
+
+							<%= image_tag "push/push4.jpg", :class=>"alignLeft" %><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas perferendis minus deserunt molestiae vel ducimus inventore similique natus dolore repellat! Neque quas, fugit consequatur. Dolore possimus libero tenetur veritatis amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate reprehenderit cum distinctio quisquam, totam quasi quaerat minima laboriosam, recusandae. Voluptas repellat necessitatibus repellendus numquam, neque labore fugiat iste doloribus magnam.</p>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto dolores illo cupiditate eaque voluptatibus. Omnis blanditiis aperiam dolores at ipsum, beatae fuga, quis atque molestias similique architecto delectus voluptatibus nulla?</p>
+
+							<h4>Sous titre niveau h4, 5 ou 6</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quas soluta mollitia, quam quod sequi nisi harum repellendus, deleniti similique quasi, possimus voluptates explicabo ex enim non ullam. Velit, fuga.</p>
+						</article>
+					</dd>
+					<dt><a href="#tab2"><span>L'équipe</span></a></dt>
+					<dd id="tab2">
+						<ul class="team">
+							<li>
+								<div class="picture">
+									<%= image_tag "mugshot1.jpg" %>
+								</div>
+								<div class="content">
+									<h3>Jane doe</h3>
+									<h4>Intitulé de poste</h4>
+									<p>Jane, créatrice des soins Cinq Mondes et Directrice Formation & Qualité – associée à des partenaires scientifiques de renom, crée les soins Cinq Mondes en s’inspirant des « Rituels de Beauté du monde® ».</p>
+								</div>
+							</li>
+							<li>
+								<div class="picture">
+									<%= image_tag "mugshot2.jpg" %>
+								</div>
+								<div class="content">
+									<h3>Jane doe</h3>
+									<h4>Intitulé de poste</h4>
+									<p>Jane, créatrice des soins Cinq Mondes et Directrice Formation & Qualité – associée à des partenaires scientifiques de renom, crée les soins Cinq Mondes en s’inspirant des « Rituels de Beauté du monde® ».</p>
+								</div>
+							</li>
+							<li>
+								<div class="picture">
+									<%= image_tag "mugshot1.jpg" %>
+								</div>
+								<div class="content">
+									<h3>Jane doe</h3>
+									<h4>Intitulé de poste</h4>
+									<p>Jane, créatrice des soins Cinq Mondes et Directrice Formation & Qualité – associée à des partenaires scientifiques de renom, crée les soins Cinq Mondes en s’inspirant des « Rituels de Beauté du monde® ».</p>
+								</div>
+							</li>
+							<li>
+								<div class="picture">
+									<%= image_tag "mugshot2.jpg" %>
+								</div>
+								<div class="content">
+									<h3>Jane doe</h3>
+									<h4>Intitulé de poste</h4>
+									<p>Jane, créatrice des soins Cinq Mondes et Directrice Formation & Qualité – associée à des partenaires scientifiques de renom, crée les soins Cinq Mondes en s’inspirant des « Rituels de Beauté du monde® ».</p>
+								</div>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+
+			</div>
+			<aside class="large-4 columns aside">
+				<div href="#pictureGallery" class="pop gallery">
+					<a href="#pictureGallery" class="pop overlay">Play</a>
+					<a href="#pictureGallery" class="pop"><%= image_tag "photoGallery.jpg" %></a>
+					<section class="legend">
+						<a href="#pictureGallery" class="pop">Galerie Photo</a>
+						<%= image_tag "iconPhoto.png", :class => "icon" %>
+					</section>
+				</div>
+
+				<div href="#videoGallery" class="pop gallery">
+					<a href="#pictureGallery" class="pop overlay">Play</a>
+					<a href="#videoGallery" class="pop"><%= image_tag "videoGallery.jpg" %></a>
+					<section class="legend">
+						<a href="#videoGallery" class="pop">Galerie Vidéo</a>
+						<%= image_tag "videoIcon.png", :class => "icon" %>
+					</section>
+				</div>
+			</aside>
+		</div>
+	</div>
+
+
+	<article class="popIn mfp-hide pad0" id="pictureGallery">
+	    <header>
+	        <h4>Galerie Photo</h4>
+	        <%= image_tag 'popIns/iconPhoto.png' %>
+	    </header>
+
+	    <div id="photoSlider" class="flexslider gallerySlider">
+			<ul class="slides">
+				<li> 
+					<%= image_tag "gallery/img1.jpg" %>
+				</li>
+				<li> 
+					<%= image_tag "gallery/img2.jpg" %>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dicta sint animi.</p>
+				</li>
+				<li> 
+					<%= image_tag "gallery/img1.jpg" %>
+				</li>
+				<li> 
+					<%= image_tag "gallery/img2.jpg" %>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dicta sint animi.</p>
+				</li>
+				<li> 
+					<%= image_tag "gallery/img1.jpg" %>
+				</li>
+				<li> 
+					<%= image_tag "gallery/img2.jpg" %>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dicta sint animi.</p>
+				</li>
+				<li> 
+					<%= image_tag "gallery/img1.jpg" %>
+				</li>
+				<li> 
+					<%= image_tag "gallery/img2.jpg" %>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dicta sint animi.</p>
+				</li>
+				<li> 
+					<%= image_tag "gallery/img1.jpg" %>
+				</li>
+				<li> 
+					<%= image_tag "gallery/img2.jpg" %>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dicta sint animi.</p>
+				</li>
+			</ul>
+			<p class="count"><span class="current"></span> / <span class="total"></span></p>
+	    </div>
+		<nav class="synchSlider">
+	        <div id="photoNav" class="flexslider galleryNav">
+	    		<ul class="slides">
+	    			<li> 
+	    				<%= image_tag "gallery/img2square.jpg" %>
+	    			</li>
+	    			<li> 
+	    				<%= image_tag "gallery/img1square.jpg" %>
+	    			</li>
+	    			<li> 
+	    				<%= image_tag "gallery/img2square.jpg" %>
+	    			</li>
+	    			<li> 
+	    				<%= image_tag "gallery/img1square.jpg" %>
+	    			</li>
+	    			<li> 
+	    				<%= image_tag "gallery/img2square.jpg" %>
+	    			</li>
+	    			<li> 
+	    				<%= image_tag "gallery/img1square.jpg" %>
+	    			</li>
+	    			<li> 
+	    				<%= image_tag "gallery/img2square.jpg" %>
+	    			</li>
+	    			<li> 
+	    				<%= image_tag "gallery/img1square.jpg" %>
+	    			</li>
+	    			<li> 
+	    				<%= image_tag "gallery/img2square.jpg" %>
+	    			</li>
+	    			<li> 
+	    				<%= image_tag "gallery/img1square.jpg" %>
+	    			</li>
+	    		</ul>
+	        </div>
+	    </nav>
+	</article>
+
+	<article class="popIn mfp-hide pad0" id="videoGallery">
+	    <header>
+	        <h4>Galerie Vidéo</h4>
+	        <%= image_tag 'popIns/videoIcon.png' %>
+	    </header>
+
+	    <div id="videoSlider" class="flexslider gallerySlider">
+			<ul class="slides">
+				<li> 
+					<div class='embed-container'><iframe src='http://www.youtube.com/embed/BheJJZDHy98' frameborder='0' allowfullscreen></iframe></div>
+				</li>
+				<li> 
+					<div class='embed-container'><iframe src='http://www.youtube.com/embed/BheJJZDHy98' frameborder='0' allowfullscreen></iframe></div>
+				</li>
+				<li> 
+					<div class='embed-container'><iframe src='http://www.youtube.com/embed/BheJJZDHy98' frameborder='0' allowfullscreen></iframe></div>
+				</li>
+				<li> 
+					<div class='embed-container'><iframe src='http://www.youtube.com/embed/BheJJZDHy98' frameborder='0' allowfullscreen></iframe></div>
+				</li>
+			</ul>
+			<p class="count"><span class="current"></span> / <span class="total"></span></p>
+	    </div>
+	</article>
+

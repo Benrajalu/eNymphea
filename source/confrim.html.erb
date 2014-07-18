@@ -1,0 +1,171 @@
+---
+title: E-Nymphea - Confirmation
+description: Confirmation achat - plateforme E-Nymphea
+---
+
+<!-- Slider -->
+	<section id="largePicture">
+		<div id="mainSlider" class="flexslider large noCaptions">
+			<ul class="slides">
+				<li>
+					<%= image_tag 'slides/thinSlide2.jpg' %>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+<!-- Contents -->
+
+	<div class="rowFluid bgPattern mar40">
+		<nav id="breadcrumbs" class="row">
+			<ul>
+				<li><%= link_to 'Accueil /', '/index.html' %></li>
+				<li>Réserver</li>
+			</ul>
+		</nav>
+
+		<div class="row">
+			<div class="large-8 columns">
+				<h1>Réserver</h1>
+				<nav id="tunnel">
+					<ul>
+						<li class="t1"><%= link_to '1', '/book.html' %></li>
+						<li class="t2"><%= link_to '2', '/login.html' %></li>
+						<li class="t3"><%= link_to '3', '/cart.html', :class=> 'active' %></li>
+						<li class="t4"><span>4</span></li>
+					</ul>
+				</nav>
+
+				<div class="formHolder">
+					<h2>Récapitulatif</h2> 
+					<p class="right">Votre panier est valable 15 minutes</p>
+
+					<div id="items">
+						<article class="product recap">
+							<section class="image">
+								<%= image_tag "products/rituel-bresilienS.jpg" %>
+							</section>
+							<section class="description">
+								<h3>Rituel Brésilien</h3>
+								<p>Selon un rituel brésilien, ce soin raffermissant et sculptant associe les propriétés « brûle graisse » de la Caféine...</p>
+								<p class="price">100€</p>
+
+								<ul class="infoList cf">
+									<li class="date">31/12/2014 <span>à 10h</span></li>
+								</ul>
+							</section>
+							<section class="tools">
+								<a href="#" class="remove">Retirer du panier</a>
+							</section>
+						</article>
+
+						<article class="product recap">
+							<section class="image">
+								<%= image_tag "products/rituel-tropicalS.jpg" %>
+							</section>
+							<section class="description">
+								<h3>Rituel Tropical</h3>
+								<p>Selon un rituel brésilien, ce soin raffermissant et sculptant associe les propriétés « brûle graisse » de la Caféine...</p>
+								<p class="price">30€</p>
+
+								<ul class="infoList cf">
+									<li class="date">17/06/2014 <span>à 19h</span></li>
+								</ul>
+							</section>
+							<section class="tools">
+								<a href="#" class="remove">Retirer du panier</a>
+							</section>
+						</article>
+					</div>
+
+					<% form_tag '/confirm.html', :id => 'cartForm', :class => "form pad0", :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => '' do %>
+						<div class="inline footer">
+							<p id="total">Total à payer <span>€</span></p>
+							<div class="inline">
+								<label for="cgv">J'ai lu et j'accèpte les <a href="#CGVcopy" class="pop">conditions générales de vente</a></label> 
+								<input type="checkbox" name="cgv" id="cgv" value="yes" data-parsley-required data-parsley-errors-container="#feedback"/>
+								<p id="feedback"></p>
+							</div>
+						    <input type="submit" value="Paiement sécurisé" class="button submit small" />
+						</div>
+					<% end %>
+				</div>
+			</div>
+
+			<div class="large-4 columns">
+				<article class="advice">
+					<%= image_tag 'advice.png' %>
+					<section class="copy">
+						<p class="bubble">15 <span>min</span></p>
+						<%= image_tag 'hanger.png', :class=>'picto' %>
+						<p>POUR UNE MEILLEURE APPRÉCIATION DE VOTRE SOIN, PRÉVOYEZ D’ARRIVER 15 MINUTES AVANT le début de la prestation.</p>
+					</section>
+				</article>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Pushes -->
+	<div class="rowFluid bgPattern mar40 pad30">
+		<h3 class="centered">Les offres du moment</h3>
+
+		<div class="row">
+			<div class="large-4 columns">
+				<article class="push">
+					<% link_to "/soin.html" do %>
+						<%= image_tag 'push/push1.jpg' %>
+					<% end %>
+					<section class="contents">
+						<h3><%= link_to "Rituel Brésilien", "/soin.html" %></h3>
+						<p class="price">80€</p>
+						<p>Hammam Arômes et Couleurs® ou Bain Japonais d’Arômes et de Fleurs®, Gommage aromatique Energisant aux Epices rares et précieuses et Soin-Massage du Visage...</p>
+						<ul class="infoList cf">
+							<li class="time">3 x 50min</li>
+							<li class="book"><%= link_to 'Réserver', '/book.html' %></li>
+							<li class="offer"><%= link_to 'Offrir', '/gift.html' %></li>
+						</ul>
+						<%= link_to 'En savoir plus', '/soin.html', :class => 'more' %>
+					</section>
+				</article>
+			</div>
+
+			<div class="large-4 columns">
+				<article class="push">
+					<% link_to "/soin.html" do %>
+						<%= image_tag 'push/push2.jpg' %>
+					<% end %>
+					<section class="contents">
+						<h3><%= link_to "Rituel Tropical", "/soin.html" %></h3>
+						<p class="price">80€</p>
+						<p>Hammam Arômes et Couleurs® ou Bain Japonais d’Arômes et de Fleurs®, Gommage aromatique Energisant...</p>
+						<ul class="infoList cf">
+							<li class="time">3 x 50min</li>
+							<li class="book"><%= link_to 'Réserver', '/book.html' %></li>
+							<li class="offer"><%= link_to 'Offrir', '/gift.html' %></li>
+						</ul>
+						<%= link_to 'En savoir plus', '/soin.html', :class => 'more' %>
+					</section>
+				</article>
+			</div>
+
+			<div class="large-4 columns">
+				<article class="push">
+					<% link_to "/soin.html" do %>
+						<%= image_tag 'push/push3.jpg' %>
+					<% end %>
+					<section class="contents noPrice">
+						<h3><%= link_to "Abonnement spa Céleste", "/soin.html" %></h3>
+						<p>Hammam Arômes et Couleurs® ou Bain Japonais d’Arômes et de Fleurs®, Gommage aromatique Energisant aux Epices rares et précieuses et Soin-Massage du Visage... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam animi voluptate tenetur velit doloremque corporis, tempore ducimus, reprehenderit a cupiditate! Quasi repudiandae consectetur vero officia, autem ea rem impedit beatae.</p>
+						<ul class="infoList cf">
+							<li class="time">3 x 50min</li>
+							<li class="book"><%= link_to 'Réserver', '/book.html' %></li>
+							<li class="offer"><%= link_to 'Offrir', '/gift.html' %></li>
+						</ul>
+						<%= link_to 'En savoir plus', '/soin.html', :class => 'more' %>
+					</section>
+				</article>
+			</div>
+		</div>
+
+	</div>
