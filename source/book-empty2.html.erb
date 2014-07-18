@@ -42,7 +42,7 @@ description: Réserver un soin sur la plateforme E-Nymphea
 						<label>Sélectionnez un établissement</label>
 						<select name="etablissement" data-parsley-required>
 							<option value="">Choisir un établissement</option>
-							<option value="nomdeletablissement" selected="selected">Etablissement 1</option>
+							<option value="nomdeletablissement">Etablissement 1</option>
 							<option value="nomdeletablissement">Etablissement 2</option>
 							<option value="nomdeletablissement">Etablissement 3</option>
 						</select>
@@ -50,7 +50,7 @@ description: Réserver un soin sur la plateforme E-Nymphea
 						<label>Sélectionnez une date pour un rendez-vous</label>
 						<div class="row pad0">
 							<div class="large-5 columns pad0">
-								<input type="text" class="datepicker" placeholder="JJ/MM/AAAA" name="date" value="16/01/2015"/>
+								<input type="text" class="datepicker" placeholder="JJ/MM/AAAA" name="date" />
 							</div>
 							<div class="large-7 columns pad0 padL mpad0">
 								<select name="moment" data-parsley-pattern="\w+" id="moment">
@@ -138,20 +138,28 @@ description: Réserver un soin sur la plateforme E-Nymphea
 
 	<!-- Results -->
 	<div class="row">
+		<article id="resultHead">
+			<%= image_tag 'reload.png' %>
+			<p>Aucun soin disponible</p>
+			<p>Pour le 16 Janvier 2015 à 10h</p>
+		</article>
+
+
 		<div id="results">
-			<article id="resultHead">
-				<p>Vos résultats</p>
-				<p>Pour le 16 Janvier 2015</p>
+
+			<article class="message">
+				<p>D'autres soins sont disponibles sur des crénaux proches.</p>
+				<p>Nous vous invitons à consulter le planning des soins disponibles.</p>
 			</article>
 
 			<div id="table">
 				<header id="resultNavigation">
 					<ul>
-						<li class="prev"><% link_to "/book-date2.html#results", :title=>"Dates précédentes" do %>Dates précédentes<% end %></li>
-						<li><% link_to "/book-date2.html#results", :class => "active" do %><span class="verticalAlign"><span>Jeudi</span> 16 Janvier</span><% end %></li>
-						<li><% link_to "/book-date2.html#results" do %><span class="verticalAlign"><span>Vendredi</span> 17 Janvier</span><% end %></li>
-						<li><% link_to "/book-date2.html#results" do %><span class="verticalAlign"><span>Samedi</span> 18 Janvier</span><% end %></li>
-						<li class="next"><% link_to "/book-date2.html#results", :title=>"Dates Suivantes" do %>Dates Suivantes<% end %></li>
+						<li class="prev"><% link_to "/book-empty.html#results", :title=>"Dates précédentes" do %>Dates précédentes<% end %></li>
+						<li><% link_to "/book-empty.html#results", :class => "active" do %><span class="verticalAlign"><span>Jeudi</span> 16 Janvier</span><% end %></li>
+						<li><% link_to "/book-empty.html#results" do %><span class="verticalAlign"><span>Vendredi</span> 17 Janvier</span><% end %></li>
+						<li><% link_to "/book-empty.html#results" do %><span class="verticalAlign"><span>Samedi</span> 18 Janvier</span><% end %></li>
+						<li class="next"><% link_to "/book-empty.html#results", :title=>"Dates Suivantes" do %>Dates Suivantes<% end %></li>
 					</ul>
 				</header>
 

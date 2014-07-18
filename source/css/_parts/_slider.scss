@@ -1,4 +1,20 @@
 .flexslider{
+	min-height:300px;
+	background:$pale url('../img/loader.gif') center center no-repeat;
+	@include transition(all 300ms);
+	.slides{
+		display:none;
+	}
+
+	&.loaded{
+		background:$white;
+		min-height:0px;
+		.slides{
+			display:block;
+		}
+	}
+
+
 	*{
 		vertical-align: top;
 	}
@@ -94,6 +110,9 @@
 						a{
 							color:$violet;
 							text-decoration: none;
+							&:hover{
+								color:$black;
+							}
 						}
 						@media only screen and (max-width:$tablet){
 							padding:0px 15px;
@@ -391,6 +410,13 @@
 					display:none;
 				}
 			}
+
+	@media only screen and (max-width: $tablet){
+		min-height:100px;
+		&.loaded{
+			min-height: 0px;
+		}
+	}
 }
 
 // External navigation

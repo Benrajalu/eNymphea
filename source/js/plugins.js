@@ -68,20 +68,44 @@ if (!(window.console && console.log)) {
 	// Switch between forms
 		$(".formSwitch").on("click", function(event){
 			if($(this).attr("value")){
-				tar = $(this).attr("value");	
+				tar = $(this).attr("value");
+				$(".formPanel").each(function(){
+					if($(this).attr("id")!=tar){
+						$(this).hide();
+					}
+					else{
+						$(this).show();
+					}
+				})	
 			}
 			else{
-				event.preventDefault();
 				tar = $(this).attr("href");	
+				event.preventDefault();	
+				$("#selectForm").find(".formSwitch").each(function(){
+					$(this).removeAttr("checked").parent("span").removeClass("checked");
+					if($(this).is("#book") && tar == "#bookForm"){
+						$(this).attr("checked", "checked").parent("span").addClass("checked");
+					}
+					if($(this).is("#gift") && tar == "#giftForm"){
+						$(this).attr("checked", "checked").parent("span").addClass("checked");
+					}
+
+					function scrollToAnchor(){
+					    var aTag = $("#mainForm");
+					    $('html,body').animate({scrollTop: aTag.offset().top}, 300);
+					}
+
+					scrollToAnchor();
+				})
+				$(".formPanel").each(function(){
+					if($(this).is(tar)){
+						$(this).show();
+					}
+					else{
+						$(this).hide();
+					}
+				})
 			}
-			$(".formPanel").each(function(){
-				if($(this).attr("id")!=tar){
-					$(this).hide();
-				}
-				else{
-					$(this).show();
-				}
-			})
 		})
 
 	// Display hours if asked to
@@ -217,8 +241,7 @@ if (!(window.console && console.log)) {
 		})
 
 $(window).load(function () {
-	// Parsley
-
+	// Parsley (Form validation)
 		$.listen('parsley:form:validated', function() {
 			$(".form").each(function(){
 				tar = $(this).find('select.parsley-error');
@@ -237,6 +260,7 @@ $(window).load(function () {
 
 	// Place any jQuery/helper plugins in here.
 		// Flexslider
+			$(".flexslider").addClass("loaded");
 			$('#mainSlider').flexslider({
 				slideshowSpeed : 5000,
 				pauseOnHover: true,
@@ -401,7 +425,7 @@ $(window).load(function () {
 				})
 			}
 
-			if($("#bookForm").length && $("#bookForm").hasClass("satellite")){
+			if($("#bookForm").length){
 				$('#bookForm').parsley().subscribe('parsley:form:validate', function(formInstance){
 					if(formInstance.isValid()){
 						var shell = $("#bookForm"), 
@@ -411,62 +435,53 @@ $(window).load(function () {
 							hour = $(shell).find("select[name='horaire']");
 
 						event.preventDefault();
+
 						if(date.val()){
-							if(moment.val() != ""){
+							if(moment.val()){
 								if(hour.val()){
 									if(soin.val()){
-										window.location.href = "book-soin-precise.html#results";
+										window.location = "book-soin-precise.html#results"
 									}
 									else{
-										window.location.href = "book-precise.html#results";
+										window.location = "book-precise.html#results";	
 									}
 								}
-								else{
-									window.location.href = "book-period.html#results";
+								else if(soin.val()){
+									window.location = "book-soin-precise.html#results"
 								}
+								else{
+									window.location = "book-period.html#results"
+								}
+
+							}
+							else if(soin.val()){
+								window.location = "book-soin-date.html#results"
 							}
 							else{
-								window.location.href = "book-date.html#results";
+								window.location = "book-date.html#results"
 							}
 						}
-						else if(moment.val() != ""){
-							if(date.val() != ""){
-								if(hour.val()){
-									if(soin.val()){
-										window.location.href = "book-soin-precise.html#results";
-									}
-									else{
-										window.location.href = "book-precise.html#results";
-									}
+						else if(moment.val()){
+							if(hour.val()){
+								if(soin.val()){
+									window.location = "book-soin-precise.html#results"
 								}
 								else{
-									window.location.href = "book-period.html#results";
+									window.location = "book-precise.html#results";	
 								}
 							}
+							else if(soin.val()){
+								window.location = "book-soin-precise.html#results"
+							}
 							else{
-								window.location.href = "book-period.html#results";
+								window.location = "book-period.html#results"
 							}
 						}
 						else if(soin.val()){
-							if(moment.val() != ""){
-								if(hour.val()){
-									if(soin.val()){
-										window.location.href = "book-soin-precise.html#results";
-									}
-									else{
-										window.location.href = "book-precise.html#results";
-									}
-								}
-								else{
-									window.location.href = "book-period.html#results";
-								}
-							}
-							else{
-								window.location.href = "book-date.html#results";
-							}
+							window.location = "book-soin.html#results"
 						}
 						else{
-							window.location = "book-empty.html#results";
+							window.location = "book-date.html#results"
 						}
 						
 					}

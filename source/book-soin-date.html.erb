@@ -42,7 +42,7 @@ description: Réserver un soin sur la plateforme E-Nymphea
 						<label>Sélectionnez un établissement</label>
 						<select name="etablissement" data-parsley-required>
 							<option value="">Choisir un établissement</option>
-							<option value="nomdeletablissement">Etablissement 1</option>
+							<option value="nomdeletablissement"  selected="selected">Etablissement 1</option>
 							<option value="nomdeletablissement">Etablissement 2</option>
 							<option value="nomdeletablissement">Etablissement 3</option>
 						</select>
@@ -50,11 +50,11 @@ description: Réserver un soin sur la plateforme E-Nymphea
 						<label>Sélectionnez une date pour un rendez-vous</label>
 						<div class="row pad0">
 							<div class="large-5 columns pad0">
-								<input type="text" class="datepicker" placeholder="JJ/MM/AAAA" data-parsley-required name="date" />
+								<input type="text" class="datepicker" placeholder="JJ/MM/AAAA" name="date" value="16/01/2015"/>
 							</div>
 							<div class="large-7 columns pad0 padL mpad0">
-								<select name="moment" data-parsley-required data-parsley-pattern="\w+" id="moment">
-									<option value="À tout moment de la journée">À tout moment de la journée</option>
+								<select name="moment" data-parsley-pattern="\w+" id="moment">
+									<option value="">À tout moment de la journée</option>
 									<option value="horaire">Choisir une heure précise</option>
 									<option value="matin">Matin (9h - 12h)</option>
 									<option value="déjeuner">Pause déjeuner (12h - 14h)</option>
@@ -67,6 +67,7 @@ description: Réserver un soin sur la plateforme E-Nymphea
 						<div id="timescale" style='display:none;'>
 							<label>Choisir un horaire</label>
 							<select name="horaire" id="hour">
+								<option value="">Choisissez une heure</option>
 								<option value="9h">9h</option>
 								<option value="10h">10h</option>
 								<option value="11h">11h</option>
@@ -82,11 +83,11 @@ description: Réserver un soin sur la plateforme E-Nymphea
 						</div>
 
 						<label>Sélectionnez un type de soin</label>
-						<select name="soin" data-parsley-required data-parsley-pattern="\w+">
+						<select name="soin" data-parsley-pattern="\w+">
 							<option value="">Choisir un type de soin</option>
 							<optgroup label="Soin du visage">
 								<option value="nomdusoin">Nom du soin</option>
-								<option value="nomdusoin">Nom du soin</option>
+								<option value="nomdusoin" selected="selected">Nom du soin</option>
 								<option value="nomdusoin">Nom du soin</option>
 							</optgroup>
 							<optgroup label="Minceur & fermeté">
@@ -160,11 +161,11 @@ description: Réserver un soin sur la plateforme E-Nymphea
 					<div id="table" class="lessPad">
 						<header id="resultNavigation">
 							<ul>
-								<li class="prev"><a href="#" title="Dates précédentes">Dates précédentes</a></li>
-								<li><a href="#" class="active"><span class="verticalAlign"><span>Jeudi</span> 16 Janvier</span></a></li>
-								<li><a href="#"><span class="verticalAlign"><span>Vendredi</span> 17 Janvier</span></a></li>
-								<li><a href="#"><span class="verticalAlign"><span>Samedi</span> 18 Janvier</span></a></li>
-								<li class="next"><a href="#" title="Dates Suivantes">Dates Suivantes</a></li>
+								<li class="prev"><% link_to "/book-soin-date2.html#results", :title=>"Dates précédentes" do %>Dates précédentes<% end %></li>
+								<li><% link_to "/book-soin-date2.html#results", :class => "active" do %><span class="verticalAlign"><span>Jeudi</span> 16 Janvier</span><% end %></li>
+								<li><% link_to "/book-soin-date2.html#results" do %><span class="verticalAlign"><span>Vendredi</span> 17 Janvier</span><% end %></li>
+								<li><% link_to "/book-soin-date2.html#results" do %><span class="verticalAlign"><span>Samedi</span> 18 Janvier</span><% end %></li>
+								<li class="next"><% link_to "/book-soin-date2.html#results", :title=>"Dates Suivantes" do %>Dates Suivantes<% end %></li>
 							</ul>
 						</header>
 

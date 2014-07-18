@@ -69,7 +69,7 @@ configure :build do
   # Use relative URLs
   activate :relative_assets
 
-  activate :directory_indexes
+  #activate :directory_indexes
 
   #activate :favicon_maker do |f|
     #f.template_dir  = File.join(root, 'source')

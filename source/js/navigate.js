@@ -36,6 +36,9 @@
 			if($(this).attr("id")=="user"){
 				var mx = "700px";
 			}
+			else if($(this).attr("id")=="basket" && $("#cart").hasClass("full")){
+				var mx = "999px"
+			}
 			else{
 				var mx = "200px";
 			}

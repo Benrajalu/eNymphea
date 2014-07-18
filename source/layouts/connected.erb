@@ -39,9 +39,38 @@
                         <ul class="cf">
                             <li><%= magic_link_to '<span class="mobileOff">Bonjour, Céline</span>', '/user.html', :id => "user" %>
                             </li>
-                            <li><%= magic_link_to '<span class="total">0</span> <span class="mobileOff">Mon panier</span>', '/order.html', :id => 'basket', :class => "trigger" %>
-                                <ul id="cart" class="layer">
-                                    <p class="info">Votre panier est vide!</p>
+                            <li><%= magic_link_to '<span class="total">2</span> <span class="mobileOff">Mon panier</span>', '/order.html', :id => 'basket', :class => "trigger" %>
+                                <ul id="cart" class="layer full">
+                                    <h3>Votre panier</h3>
+                                    <article class="product recap">
+                                        <section class="image">
+                                            <% link_to "/soin.html" do %><%= image_tag "products/rituel-bresilienS.jpg" %><% end %>
+                                        </section>
+                                        <section class="description">
+                                            <h3><%= link_to "Rituel Brésilien", "/soin.html" %></h3>
+                                            <p class="price">100€</p>
+                                            <ul class="infoList cf">
+                                                <li class="date">31/12/2014 <span>à 10h</span></li>
+                                            </ul>
+                                        </section>
+                                    </article>
+
+                                    <article class="product recap">
+                                        <section class="image">
+                                            <% link_to "/soin.html" do %><%= image_tag "products/rituel-tropicalS.jpg" %><% end %>
+                                        </section>
+                                        <section class="description">
+                                            <h3><%= link_to "Rituel Tropical", "/soin.html" %></h3>
+                                            <p class="price">30€</p>
+                                            <ul class="infoList cf">
+                                                <li class="date">17/06/2014 <span>à 19h</span></li>
+                                            </ul>
+                                        </section>
+                                    </article>
+                                    
+                                    <p class="total">Total à payer <span>130€</span></p>
+
+                                    <%= link_to "Consulter mon panier", "/cart.html", :class=>"validate"%>
                                 </ul>
                             </li>
                             <li><a href="#" id="currentLanguage" class="trigger">FR</a>
@@ -67,7 +96,7 @@
 
                         <ul>
                             <li><%= magic_link_to "L'espace bien-être", '/espace.html' %></li>
-                            <li><a href="#rituals" class="flyout">Nos rituels</a></li>
+                            <li><a href="#rituals" class="flyout">Nos rituels de soin</a></li>
                             <li><%= magic_link_to 'Réserver', '/book.html' %></li>
                             <li><%= magic_link_to 'offrir', '/gift.html' %></li>
                             <li><%= magic_link_to 'Actualités', '/news.html' %></li>
@@ -235,26 +264,26 @@
                 <div class="row pad0">
                     <div class="large-6 columns pad0">
                         <label>Nom*</label>
-                        <input type="text" data-parsley-required name="surname" />
+                        <input type="text" data-parsley-required name="surname" placeholder="Votre nom" />
                     </div>
                     <div class="large-6 columns pad0 padL">
                         <label>Prénom*</label>
-                        <input type="text" data-parsley-required name="name" />
+                        <input type="text" data-parsley-required name="name" placeholder="Votre prénom"/>
                     </div>
                 </div>
 
 
                 <label>Email*</label>
-                <input type="text" data-parsley-type="email" data-parsley-required name="userMail" />
+                <input type="text" data-parsley-type="email" data-parsley-required name="userMail" placeholder="Votre addresse email"/>
 
                 <div class="row pad0">
                     <div class="large-6 columns pad0">
                         <label>Tel. fixe</label>
-                        <input type="text" data-parsley-type="number" name="phone" />
+                        <input type="text" data-parsley-type="digits" name="phone" placeholder="Votre numéro de téléphone fixe"/>
                     </div>
                     <div class="large-6 columns pad0 padL">
                         <label>Tel. portable*</label>
-                        <input type="text" data-parsley-required data-parsley-type="number" name="mobilePhone" />
+                        <input type="text" data-parsley-required data-parsley-type="digits" name="mobilePhone" placeholder="Votre numéro de téléphone portable"/>
                     </div>
                 </div>
 
@@ -265,11 +294,11 @@
                 <div class="row pad0">
                     <div class="large-6 columns pad0">
                         <label>Mot de passe*</label>
-                        <input type="password" data-parsley-required name="pass" id="createPassword"/>
+                        <input type="password" data-parsley-required name="pass" id="createPassword" placeholder="Veillez choisir un mot de passe"/>
                     </div>
                     <div class="large-6 columns pad0 padL">
                         <label>Confirmez le mot de passe*</label>
-                        <input type="password" data-parsley-required name="passConfirmation" data-parsley-equalto="#createPassword" />
+                        <input type="password" data-parsley-required name="passConfirmation" data-parsley-equalto="#createPassword" placeholder="Veuillez confirmer ce mot de passe" />
                     </div>
                 </div>
 

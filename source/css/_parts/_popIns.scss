@@ -45,6 +45,19 @@
 		h3{
 			margin-top:15px;
 		}
+		input{
+			&[type='text'], &[type='password']{
+				border:1px solid #c0c0c0;
+			}
+			&:active, &:focus{
+				outline:0px;
+				border:1px solid $gold;
+			}
+		}
+		.radio span{
+			@include border-radius(999px);
+			@include box-shadow(0px 0px 3px #c0c0c0);
+		}
 	}
 
 	.flexslider{

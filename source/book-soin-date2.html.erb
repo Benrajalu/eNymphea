@@ -50,12 +50,12 @@ description: Réserver un soin sur la plateforme E-Nymphea
 						<label>Sélectionnez une date pour un rendez-vous</label>
 						<div class="row pad0">
 							<div class="large-5 columns pad0">
-								<input type="text" class="datepicker" placeholder="JJ/MM/AAAA" value="16/01/2015" name="date" />
+								<input type="text" class="datepicker" placeholder="JJ/MM/AAAA" name="date" value="16/01/2015"/>
 							</div>
 							<div class="large-7 columns pad0 padL mpad0">
 								<select name="moment" data-parsley-pattern="\w+" id="moment">
 									<option value="">À tout moment de la journée</option>
-									<option value="horaire"  selected="selected">Choisir une heure précise</option>
+									<option value="horaire">Choisir une heure précise</option>
 									<option value="matin">Matin (9h - 12h)</option>
 									<option value="déjeuner">Pause déjeuner (12h - 14h)</option>
 									<option value="apresmidi">Après midi (14h - 17h)</option>
@@ -64,7 +64,7 @@ description: Réserver un soin sur la plateforme E-Nymphea
 							</div>
 						</div>
 
-						<div id="timescale" style='display:block;'>
+						<div id="timescale" style='display:none;'>
 							<label>Choisir un horaire</label>
 							<select name="horaire" id="hour">
 								<option value="">Choisissez une heure</option>
@@ -72,7 +72,7 @@ description: Réserver un soin sur la plateforme E-Nymphea
 								<option value="10h">10h</option>
 								<option value="11h">11h</option>
 								<option value="12h">12h</option>
-								<option value="13h"  selected="selected">13h</option>
+								<option value="13h">13h</option>
 								<option value="14h">14h</option>
 								<option value="15h">15h</option>
 								<option value="16h">16h</option>
@@ -83,11 +83,11 @@ description: Réserver un soin sur la plateforme E-Nymphea
 						</div>
 
 						<label>Sélectionnez un type de soin</label>
-						<select name="soin" data-parsley-required data-parsley-pattern="\w+">
+						<select name="soin" data-parsley-pattern="\w+">
 							<option value="">Choisir un type de soin</option>
 							<optgroup label="Soin du visage">
 								<option value="nomdusoin">Nom du soin</option>
-								<option value="nomdusoin"  selected="selected">Nom du soin</option>
+								<option value="nomdusoin" selected="selected">Nom du soin</option>
 								<option value="nomdusoin">Nom du soin</option>
 							</optgroup>
 							<optgroup label="Minceur & fermeté">
@@ -137,12 +137,10 @@ description: Réserver un soin sur la plateforme E-Nymphea
 	</div>
 
 	<!-- Results -->
-	<div class="row">
-
-		<div id="results">
+		<div id="results" class="row">
 			<article id="resultHead">
 				<p>Vos résultats</p>
-				<p>Pour le soin "Rituel Brésilien", le 16 Janvier 2015 à 12h</p>
+				<p>Pour le soin "Rituel Brésilien", le 16 Janvier 2015</p>
 			</article>
 
 			<div class="row">
@@ -163,15 +161,66 @@ description: Réserver un soin sur la plateforme E-Nymphea
 					<div id="table" class="lessPad">
 						<header id="resultNavigation">
 							<ul>
-								<li class="prev"><% link_to "/book-soin-precise2.html#results", :title=>"Dates précédentes" do %>Dates précédentes<% end %></li>
-								<li><% link_to "/book-soin-precise2.html#results", :class => "active" do %><span class="verticalAlign"><span>Jeudi</span> 16 Janvier</span><% end %></li>
-								<li><% link_to "/book-soin-precise2.html#results" do %><span class="verticalAlign"><span>Vendredi</span> 17 Janvier</span><% end %></li>
-								<li><% link_to "/book-soin-precise2.html#results" do %><span class="verticalAlign"><span>Samedi</span> 18 Janvier</span><% end %></li>
-								<li class="next"><% link_to "/book-soin-precise2.html#results", :title=>"Dates Suivantes" do %>Dates Suivantes<% end %></li>
+								<li class="prev"><% link_to "/book-soin-date.html#results", :title=>"Dates précédentes" do %>Dates précédentes<% end %></li>
+								<li><% link_to "/book-soin-date.html#results", :class => "active" do %><span class="verticalAlign"><span>Jeudi</span> 16 Janvier</span><% end %></li>
+								<li><% link_to "/book-soin-date.html#results" do %><span class="verticalAlign"><span>Vendredi</span> 17 Janvier</span><% end %></li>
+								<li><% link_to "/book-soin-date.html#results" do %><span class="verticalAlign"><span>Samedi</span> 18 Janvier</span><% end %></li>
+								<li class="next"><% link_to "/book-soin-date.html#results", :title=>"Dates Suivantes" do %>Dates Suivantes<% end %></li>
 							</ul>
 						</header>
 
 						<div id="resultContents">
+							<div class="line">
+								<div class="product">
+									<a href="#h9" class="unit">09:00</a>
+									<ul id="h9" class="entries">
+										<li>
+											<%= link_to "Rituel Brésilien", "/soin.html", :target => "_blank"%> 
+											<span class="infos">
+												<ul>
+													<li class="time">40 min -</li> 
+													<li class="price">80€ -</li> 
+													<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+												</ul>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="line">
+								<div class="product">
+									<a href="#h10" class="unit">10:00</a>
+									<ul id="h10" class="entries">
+										<li>
+											<%= link_to "Rituel Brésilien", "/soin.html", :target => "_blank"%> 
+											<span class="infos">
+												<ul>
+													<li class="time">40 min -</li> 
+													<li class="price">80€ -</li> 
+													<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+												</ul>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="line">
+								<div class="product">
+									<a href="#h11" class="unit">11:00</a>
+									<ul id="h11" class="entries">
+										<li>
+											<%= link_to "Rituel Brésilien", "/soin.html", :target => "_blank"%> 
+											<span class="infos">
+												<ul>
+													<li class="time">40 min -</li> 
+													<li class="price">80€ -</li> 
+													<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
+												</ul>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
 							<div class="line">
 								<div class="product">
 									<a href="#h12" class="unit">12:00</a>
@@ -289,13 +338,12 @@ description: Réserver un soin sur la plateforme E-Nymphea
 									</ul>
 								</div>
 							</div>
+
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-
 	<!-- Pushes -->
 	<div class="rowFluid bgPattern mar40 pad30">
 		<h3 class="centered">Les offres du moment</h3>
@@ -358,4 +406,33 @@ description: Réserver un soin sur la plateforme E-Nymphea
 			</div>
 		</div>
 
+	</div>
+
+	<div class="popIn mfp-hide" id="addCart">
+		<header>
+		    <h4>Soin ajouté au panier</h4>
+		    <%= image_tag 'popIns/cart.png' %>
+		</header>
+		<article class="product recap">
+			<section class="image">
+				<%= image_tag "products/rituel-bresilienS.jpg" %>
+			</section>
+			<section class="description">
+				<h3>Rituel Brésilien</h3>
+				<p>Selon un rituel brésilien, ce soin raffermissant et sculptant associe les propriétés « brûle graisse » de la Caféine...</p>
+				<p class="price">100€</p>
+
+				<ul class="infoList cf">
+					<li class="date">31/12/2014 <span>à 10h</span></li>
+				</ul>
+			</section>
+		</article>
+	    <article class="wysiwyg article">
+			<h3>Votre soin "NOM DU SOIN" a bien été ajouté à votre panier</h3>
+			<p>Nous vous attendons le 10/10/2014 à 10h pour votre soin.</p>
+			<aside class="messageNav">
+				<%= link_to 'Retour aux soins', '/book.html', :class => "button book left" %>
+				<%= link_to 'Valider mon panier', '/login.html', :class => "button account" %>
+			</aside>
+	    </article>
 	</div>

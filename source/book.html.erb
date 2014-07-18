@@ -54,7 +54,7 @@ description: Réserver un soin sur la plateforme E-Nymphea
 							</div>
 							<div class="large-7 columns pad0 padL mpad0">
 								<select name="moment" data-parsley-pattern="\w+" id="moment">
-									<option value="À tout moment de la journée">À tout moment de la journée</option>
+									<option value="">À tout moment de la journée</option>
 									<option value="horaire">Choisir une heure précise</option>
 									<option value="matin">Matin (9h - 12h)</option>
 									<option value="déjeuner">Pause déjeuner (12h - 14h)</option>
@@ -67,6 +67,7 @@ description: Réserver un soin sur la plateforme E-Nymphea
 						<div id="timescale" style='display:none;'>
 							<label>Choisir un horaire</label>
 							<select name="horaire" id="hour">
+								<option value="">Choisissez une heure</option>
 								<option value="9h">9h</option>
 								<option value="10h">10h</option>
 								<option value="11h">11h</option>
