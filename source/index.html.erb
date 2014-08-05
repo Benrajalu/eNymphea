@@ -5,11 +5,11 @@ description: Home pour E-Nymphea
 
 
 <!-- Slider -->
-	<section id="largePicture">
+	<div id="largePicture">
 		<div id="mainSlider" class="flexslider large">
 			<ul class="slides">
 				<li>
-					<%= image_tag 'slides/slide1.jpg' %>
+					<%= image_tag 'slides/slide1.jpg', :alt=>"Slide" %>
 					<article class="caption">
 							<h3>Nos rituels de soins</h3>
 							<p>Une palette de soins et de traditions ancestrales, empreints de Qualité, d'Authenticité et de Cérémonial.</p>
@@ -17,7 +17,7 @@ description: Home pour E-Nymphea
 					</article>
 				</li>
 				<li>
-					<%= image_tag 'slides/slide2.jpg' %>
+					<%= image_tag 'slides/slide2.jpg', :alt=>"Slide" %>
 					<article class="caption">
 							<h3>Espace détente</h3>
 							<p>Profitez d'un cadre moderne, soigneusement décoré dans le respect des codes Zen pour votre prochain soin</p>
@@ -25,7 +25,7 @@ description: Home pour E-Nymphea
 					</article>
 				</li>
 				<li>
-					<%= image_tag 'slides/slide1.jpg' %>
+					<%= image_tag 'slides/slide1.jpg', :alt=>"Slide" %>
 					<article class="caption">
 							<h3>Texte slide 3</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quis, mollitia eaque amet vel repellat.</p>
@@ -33,7 +33,7 @@ description: Home pour E-Nymphea
 					</article>
 				</li>
 				<li>
-					<%= image_tag 'slides/slide2.jpg' %>
+					<%= image_tag 'slides/slide2.jpg', :alt=>"Slide" %>
 					<article class="caption">
 							<h3>Texte slide 4</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quis, mollitia eaque amet vel repellat.</p>
@@ -41,7 +41,7 @@ description: Home pour E-Nymphea
 					</article>
 				</li>
 				<li>
-					<%= image_tag 'slides/slide1.jpg' %>
+					<%= image_tag 'slides/slide1.jpg', :alt=>"Slide" %>
 					<article class="caption">
 							<h3>Texte slide 5</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quis, mollitia eaque amet vel repellat.</p>
@@ -50,13 +50,13 @@ description: Home pour E-Nymphea
 				</li>
 			</ul>
 		</div>
-	</section>
+	</div>
 
 <!-- Contents -->
 	<div class="row">
 		<div class="large-7 large-push-5 columns pad0">
 			
-			<article id="mainForm" class="bgPattern">
+			<article  class="bgPattern" id="mainForm">
 				<form id="selectForm" class="form formSwitcher">
 					<h2 class="centered">Réserver en ligne</h2>
 					<hr class="smallLine centered" />
@@ -152,7 +152,7 @@ description: Home pour E-Nymphea
 					<input type="submit" value="valider" />
 				<% end %>
 
-				<section id="giftForm" class="form formPanel" style="display:none;">
+				<div id="giftForm" class="form formPanel" style="display:none;">
 					<% form_tag 'cart.html', :id => 'giftAmount', :class => 'form', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
 						<label>Précisez un montant</label>
 						<div class="row pad0">
@@ -210,7 +210,7 @@ description: Home pour E-Nymphea
 							</div>
 						</div>
 					<% end %>
-				</section>
+				</div>
 			</article>
 
 		</div>
@@ -220,7 +220,7 @@ description: Home pour E-Nymphea
 			<div class="flexslider" id="soinSlider">
 				<ul class="slides">
 					<li>
-						<%= image_tag 'slides/smallSlide1.jpg' %>
+						<%= image_tag 'slides/smallSlide1.jpg', :alt=>"Small slide" %>
 						<article class="content">
 							<p class="price">80€</p>
 							<h3><a href="#">Expérience du spa - Abo</a></h3>
@@ -234,7 +234,7 @@ description: Home pour E-Nymphea
 						</article>
 					</li>
 					<li>
-						<%= image_tag 'slides/smallSlide1.jpg' %>
+						<%= image_tag 'slides/smallSlide1.jpg', :alt=>"Small slide" %>
 						<article class="content">
 							<p class="price">30€</p>
 							<h3><a href="#">Seconde slide</a></h3>

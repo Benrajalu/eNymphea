@@ -216,6 +216,7 @@
 			}
 			h3{
 				@include border-radius(99px);
+				
 				width:60px;
 				height:60px;
 				background:$gold;
@@ -230,6 +231,7 @@
 				&:after{
 					@include PE();
 					@include border-radius(99px);
+					
 					width:64px;
 					height:64px;
 					background:transparent;

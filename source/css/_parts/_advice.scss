@@ -20,6 +20,7 @@
 		}
 		.bubble{
 			@include border-radius(99px);
+			
 			@include futura(63px, $white);
 			background:$gold;
 			display:block;
@@ -36,6 +37,8 @@
 			&:after{
 				@include PE();
 				@include border-radius(99px);
+				* display:block;
+				
 				width:104px;
 				height:104px;
 				background:transparent;

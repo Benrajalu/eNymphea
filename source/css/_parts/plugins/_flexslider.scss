@@ -66,7 +66,7 @@ html[xmlns] .slides {display: block;}
 /* Control Nav */
 .flex-control-nav {width: 100%; position: absolute; bottom: -35px; text-align: center;}
 .flex-control-nav li {margin: 0 6px; @include inline-block(); vertical-align:middle;}
-.flex-control-paging li a {width: 9px; height: 9px; display: block; background: #666; background: $white; border:1px solid $violet; cursor: pointer; text-indent: -9999px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; }
+.flex-control-paging li a {width: 9px; height: 9px; display: block; background: $white; border:1px solid $violet; cursor: pointer; text-indent: -9999px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px;  }
 .flex-control-paging li a:hover { background: $pale; }
 .flex-control-paging li a.flex-active { background: $violet; cursor: default; }
 

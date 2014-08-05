@@ -4,15 +4,15 @@ description: Réserver un soin sur la plateforme E-Nymphea
 ---
 
 <!-- Slider -->
-	<section id="largePicture">
+	<div id="largePicture">
 		<div id="mainSlider" class="flexslider large noCaptions">
 			<ul class="slides">
 				<li>
-					<%= image_tag 'slides/thinSlide2.jpg' %>
+					<%= image_tag 'slides/thinSlide2.jpg', :alt=>"Slide" %>
 				</li>
 			</ul>
 		</div>
-	</section>
+	</div>
 
 <!-- Contents -->
 
@@ -124,10 +124,10 @@ description: Réserver un soin sur la plateforme E-Nymphea
 
 			<div class="large-4 columns">
 				<article class="advice">
-					<%= image_tag 'advice.png' %>
+					<%= image_tag 'advice.png', :alt=>"Advice" %>
 					<section class="copy">
 						<p class="bubble">15 <span>min</span></p>
-						<%= image_tag 'hanger.png', :class=>'picto' %>
+						<%= image_tag 'hanger.png', :class=>'picto', :alt=>"Picto" %>
 						<p>POUR UNE MEILLEURE APPRÉCIATION DE VOTRE SOIN, PRÉVOYEZ D’ARRIVER 15 MINUTES AVANT le début de la prestation.</p>
 					</section>
 				</article>
@@ -147,7 +147,7 @@ description: Réserver un soin sur la plateforme E-Nymphea
 				<div class="large-4 columns">
 					<article class="product teaser">
 						<% link_to "/soin.html" do %>
-							<%= image_tag 'push/push7.jpg' %>
+							<%= image_tag 'push/push7.jpg', :alt=>"product" %>
 						<% end %>
 						<section class="contents">
 							<p class="price">80€</p>
@@ -295,11 +295,11 @@ description: Réserver un soin sur la plateforme E-Nymphea
 									<ul id="h16" class="entries">
 										<li>
 											<%= link_to "Rituel Brésilien", "/soin.html", :target => "_blank"%> 
-											<span class="infos">
+											<div class="infos">
 												<ul>
-													<p class="noResults">Ce créneau n'est malheureusement pas disponible.</p>
+													<li class="noResults">Ce créneau n'est malheureusement pas disponible.</li>
 												</ul>
-											</span>
+											</div>
 										</li>
 									</ul>
 								</div>
@@ -344,6 +344,7 @@ description: Réserver un soin sur la plateforme E-Nymphea
 				</div>
 			</div>
 		</div>
+
 	<!-- Pushes -->
 	<div class="rowFluid bgPattern mar40 pad30">
 		<h3 class="centered">Les offres du moment</h3>
@@ -352,7 +353,7 @@ description: Réserver un soin sur la plateforme E-Nymphea
 			<div class="large-4 columns">
 				<article class="push">
 					<% link_to "/soin.html" do %>
-						<%= image_tag 'push/push1.jpg' %>
+						<%= image_tag 'push/push1.jpg', :alt=>"Product" %>
 					<% end %>
 					<section class="contents">
 						<h3><%= link_to "Rituel Brésilien", "/soin.html" %></h3>
@@ -371,7 +372,7 @@ description: Réserver un soin sur la plateforme E-Nymphea
 			<div class="large-4 columns">
 				<article class="push">
 					<% link_to "/soin.html" do %>
-						<%= image_tag 'push/push2.jpg' %>
+						<%= image_tag 'push/push2.jpg', :alt=>"Product" %>
 					<% end %>
 					<section class="contents">
 						<h3><%= link_to "Rituel Tropical", "/soin.html" %></h3>
@@ -390,7 +391,7 @@ description: Réserver un soin sur la plateforme E-Nymphea
 			<div class="large-4 columns">
 				<article class="push">
 					<% link_to "/soin.html" do %>
-						<%= image_tag 'push/push3.jpg' %>
+						<%= image_tag 'push/push3.jpg', :alt=>"Product" %>
 					<% end %>
 					<section class="contents noPrice">
 						<h3><%= link_to "Abonnement spa Céleste", "/soin.html" %></h3>
@@ -406,33 +407,4 @@ description: Réserver un soin sur la plateforme E-Nymphea
 			</div>
 		</div>
 
-	</div>
-
-	<div class="popIn mfp-hide" id="addCart">
-		<header>
-		    <h4>Soin ajouté au panier</h4>
-		    <%= image_tag 'popIns/cart.png' %>
-		</header>
-		<article class="product recap">
-			<section class="image">
-				<%= image_tag "products/rituel-bresilienS.jpg" %>
-			</section>
-			<section class="description">
-				<h3>Rituel Brésilien</h3>
-				<p>Selon un rituel brésilien, ce soin raffermissant et sculptant associe les propriétés « brûle graisse » de la Caféine...</p>
-				<p class="price">100€</p>
-
-				<ul class="infoList cf">
-					<li class="date">31/12/2014 <span>à 10h</span></li>
-				</ul>
-			</section>
-		</article>
-	    <article class="wysiwyg article">
-			<h3>Votre soin "NOM DU SOIN" a bien été ajouté à votre panier</h3>
-			<p>Nous vous attendons le 10/10/2014 à 10h pour votre soin.</p>
-			<aside class="messageNav">
-				<%= link_to 'Retour aux soins', '/book.html', :class => "button book left" %>
-				<%= link_to 'Valider mon panier', '/login.html', :class => "button account" %>
-			</aside>
-	    </article>
 	</div>

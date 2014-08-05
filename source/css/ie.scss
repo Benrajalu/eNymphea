@@ -1,0 +1,68 @@
+@import "compass/css3";
+
+.bgPattern{
+	background:#f6f5f5 url(../img/patternBack.png) 0px 0px;
+}
+
+.advice .copy .bubble{
+	&:after{
+		display:none;
+	}
+}
+
+#mainForm input[type='submit']{
+	width:132px;
+	position:relative;
+	left:50%;
+	margin-left:-76px;
+}
+
+.tabs{
+	padding:0px;
+	margin:0px;
+	dt{
+		box-sizing: border-box;
+		-moz-box-sizing: border-box; 
+		-webkit-box-sizing: border-box; 
+		border:0px;
+		display: block;
+		width:20%;
+		position:relative;
+		top:0px;
+		margin:0px;
+		a{
+			box-sizing: border-box;
+			-moz-box-sizing: border-box; 
+			-webkit-box-sizing: border-box; 
+			border:0px;
+			padding:0px;
+		}
+	}
+}
+
+.article.wysiwyg img{
+	display:block !important;
+	&.alignRight{
+		right:0px;
+	}
+	&.alignLeft{
+		left:0px;
+	}
+} 
+
+.gallery{
+	.overlay{
+		top:50%;
+	}
+}
+
+#table #resultContents .line .products .offer > li .promo{
+	.description{
+		display:none;
+	}
+	&.open{
+		.description{
+			display:block;
+		}
+	}
+}

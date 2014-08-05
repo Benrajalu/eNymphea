@@ -53,6 +53,7 @@
 		}
 		p.price{
 			@include border-radius(99px);
+			
 			@include futuraBold(15px, $white);
 			text-transform: uppercase;
 			height:55px;

@@ -30,6 +30,7 @@
 	#resultNavigation{
 		@include clearfix();
 		@include border-radius(2px);
+		
 		background:$violet;
 		display:table;
 		width:100%;
@@ -227,6 +228,7 @@
 						.noResults{
 							@include futura(12px, #5b5959);
 							padding:10px 0px;
+							line-height: 14px !important;
 						}
 						.infos{
 							float:none;
@@ -304,6 +306,7 @@
 					@include transition(all 300ms);
 					&:hover{
 						@include border-radius(99px);
+						
 						background-color:$pale;
 					}
 					&:active, &:focus{
@@ -332,9 +335,10 @@
 								color:$violet;
 							}
 						}
-						.noResults{
+						.noResults, &.noResults{
 							@include futura(12px, #5b5959);
 							padding:10px 0px;
+							line-height: 14px;
 						}
 						.infos{
 							float:none;
@@ -410,6 +414,7 @@
 								display:block;
 								border:0px;
 								@include border-radius(99px);
+								
 								background:$gold url("../img/promo.png") center center no-repeat;
 								margin-top:-15px;
 								text-indent: -999px;
@@ -441,7 +446,7 @@
 									padding-right:25px;
 								}
 
-								button.close{
+								a.close{
 									border:0px;
 									display:block;
 									width:30px;
@@ -457,6 +462,7 @@
 									@include transition(all 300ms);
 									&:hover{
 										@include border-radius(99px);
+										
 										background-color:$pale;
 									}
 									&:active, &:focus{

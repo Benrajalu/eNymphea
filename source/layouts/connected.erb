@@ -41,36 +41,38 @@
                             </li>
                             <li><%= magic_link_to '<span class="total">2</span> <span class="mobileOff">Mon panier</span>', '/order.html', :id => 'basket', :class => "trigger" %>
                                 <ul id="cart" class="layer full">
-                                    <h3>Votre panier</h3>
-                                    <article class="product recap">
-                                        <section class="image">
-                                            <% link_to "/soin.html" do %><%= image_tag "products/rituel-bresilienS.jpg" %><% end %>
-                                        </section>
-                                        <section class="description">
-                                            <h3><%= link_to "Rituel Brésilien", "/soin.html" %></h3>
-                                            <p class="price">100€</p>
-                                            <ul class="infoList cf">
-                                                <li class="date">31/12/2014 <span>à 10h</span></li>
-                                            </ul>
-                                        </section>
-                                    </article>
+                                    <li>
+                                        <h3>Votre panier</h3>
+                                        <article class="product recap">
+                                            <section class="image">
+                                                <% link_to "/soin.html" do %><%= image_tag "products/rituel-bresilienS.jpg", :alt=>"product" %><% end %>
+                                            </section>
+                                            <section class="description">
+                                                <h3><%= link_to "Rituel Brésilien", "/soin.html" %></h3>
+                                                <p class="price">100€</p>
+                                                <ul class="infoList cf">
+                                                    <li class="date">31/12/2014 <span>à 10h</span></li>
+                                                </ul>
+                                            </section>
+                                        </article>
 
-                                    <article class="product recap">
-                                        <section class="image">
-                                            <% link_to "/soin.html" do %><%= image_tag "products/rituel-tropicalS.jpg" %><% end %>
-                                        </section>
-                                        <section class="description">
-                                            <h3><%= link_to "Rituel Tropical", "/soin.html" %></h3>
-                                            <p class="price">30€</p>
-                                            <ul class="infoList cf">
-                                                <li class="date">17/06/2014 <span>à 19h</span></li>
-                                            </ul>
-                                        </section>
-                                    </article>
-                                    
-                                    <p class="total">Total à payer <span>130€</span></p>
+                                        <article class="product recap">
+                                            <section class="image">
+                                                <% link_to "/soin.html" do %><%= image_tag "products/rituel-tropicalS.jpg", :alt=>"product" %><% end %>
+                                            </section>
+                                            <section class="description">
+                                                <h3><%= link_to "Rituel Tropical", "/soin.html" %></h3>
+                                                <p class="price">30€</p>
+                                                <ul class="infoList cf">
+                                                    <li class="date">17/06/2014 <span>à 19h</span></li>
+                                                </ul>
+                                            </section>
+                                        </article>
+                                        
+                                        <p class="total">Total à payer <span>130€</span></p>
 
-                                    <%= link_to "Consulter mon panier", "/cart.html", :class=>"validate"%>
+                                        <%= link_to "Consulter mon panier", "/cart.html", :class=>"validate"%>
+                                    </li>
                                 </ul>
                             </li>
                             <li><a href="#" id="currentLanguage" class="trigger">FR</a>
@@ -88,10 +90,10 @@
                 <nav id='mainNav' class="cf">
                     <div class="screen"></div>
                     <% link_to '/index.html', :class => 'mainLogo' do %>
-                      <%= image_tag 'logo.png' %>
+                      <%= image_tag 'logo.png', :alt=>"logo" %>
                     <% end %>
 
-                    <section class="navigate cf">
+                    <div class="navigate cf">
                         <button id="mobileOff" class="mobileToggle">Fermer le menu</button>
 
                         <ul>
@@ -100,7 +102,6 @@
                             <li><%= magic_link_to 'Réserver', '/book.html' %></li>
                             <li><%= magic_link_to 'offrir', '/gift.html' %></li>
                             <li><%= magic_link_to 'Actualités', '/news.html' %></li>
-                            <li><%= magic_link_to 'Informations pratiques', '/infos.html' %></li>
                         </ul>
 
                         <aside id="rituals">
@@ -117,7 +118,7 @@
                                 <li><%= magic_link_to "Rituels de soin", "/category.html" %></li>
                             </ul>
                         </aside>
-                    </section>
+                    </div>
 
 
                 </nav>
@@ -191,16 +192,16 @@
                     <div class="left">
                         <ul>
                             <li><h4>Propulsé par</h4></li>
-                            <li><a href="#"><%= image_tag 'eNymphea.png' %></a></li>
-                            <li class="mobileOff"><a href="#"><%= image_tag 'logoSmall.png' %></a></li>
+                            <li><a href="#"><%= image_tag 'eNymphea.png', :alt=>"logo" %></a></li>
+                            <li class="mobileOff"><a href="#"><%= image_tag 'logoSmall.png', :alt=>"logo" %></a></li>
                         </ul>
                     </div>
                     <div class="right">
                         <ul>
                             <li class="mobileOff"><h4>Tous nos paiements sont sécurisés</h4></li>
-                            <li class="card"><a href="#"><%= image_tag 'visa.png' %></a></li>
-                            <li class="card"><a href="#"><%= image_tag 'mastercard.png' %></a></li>
-                            <li class="card"><a href="#"><%= image_tag 'paypal.png' %></a></li>
+                            <li class="card"><a href="#"><%= image_tag 'visa.png', :alt=>"cards" %></a></li>
+                            <li class="card"><a href="#"><%= image_tag 'mastercard.png', :alt=>"cards" %></a></li>
+                            <li class="card"><a href="#"><%= image_tag 'paypal.png', :alt=>"cards" %></a></li>
                         </ul>
                     </div>
                 </div>
@@ -224,7 +225,7 @@
         <article class="popIn mfp-hide" id="passRetrival">
             <header>
                 <h4>Mot de passe oublié</h4>
-                <%= image_tag 'popIns/lock.png' %>
+                <%= image_tag 'popIns/lock.png', :alt=>"picto" %>
             </header>
 
             <% form_tag '/index.html', :id => 'passwordFom', :class => 'form', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
@@ -244,7 +245,7 @@
         <article class="popIn mfp-hide" id="create">
             <header>
                 <h4>Créer un compte</h4>
-                <%= image_tag 'popIns/lock.png' %>
+                <%= image_tag 'popIns/lock.png', :alt=>"picto" %>
             </header>
 
             <% form_tag '/user.html', :id => 'accountForm', :class => 'form', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
@@ -310,11 +311,11 @@
         <div class="popIn mfp-hide" id="addCart">
             <header>
                 <h4>Soin ajouté au panier</h4>
-                <%= image_tag 'popIns/cart.png' %>
+                <%= image_tag 'popIns/cart.png', :alt=>"picto" %>
             </header>
             <article class="product recap">
                 <section class="image">
-                    <%= image_tag "products/rituel-bresilienS.jpg" %>
+                    <%= image_tag "products/rituel-bresilienS.jpg", :alt=>"product" %>
                 </section>
                 <section class="description">
                     <h3>Rituel Brésilien</h3>

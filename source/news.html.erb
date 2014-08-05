@@ -4,15 +4,15 @@ description: Nos actualités - plateforme E-Nymphea
 ---
 
 <!-- Slider -->
-	<section id="largePicture">
+	<div id="largePicture">
 		<div id="mainSlider" class="flexslider large noCaptions">
 			<ul class="slides">
 				<li>
-					<%= image_tag 'slides/thinSlide2.jpg' %>
+					<%= image_tag 'slides/thinSlide2.jpg', :alt=>"Slide" %>
 				</li>
 			</ul>
 		</div>
-	</section>
+	</div>
 
 	<div class="rowFluid">
 		<nav id="breadcrumbs" class="row">
@@ -27,7 +27,7 @@ description: Nos actualités - plateforme E-Nymphea
 
 			<article class="wysiwyg article news hero">
 				<section class="large-6 columns">
-					<% link_to '/newsDetail.html' do %><%= image_tag "news/newsXL.jpg" %><% end %>
+					<% link_to '/newsDetail.html' do %><%= image_tag "news/newsXL.jpg", :alt=>"Image" %><% end %>
 				</section>
 				<section class="large-6 columns">
 					<h2>Nouvelle actualité</h2>
@@ -46,7 +46,7 @@ description: Nos actualités - plateforme E-Nymphea
 			<div class="row">
 				<div class="large-4 columns">
 					<article class="article wysiwyg news teaser">
-						<% link_to '/newsDetail.html' do %><%= image_tag "news/newsS.jpg" %><% end %>
+						<% link_to '/newsDetail.html' do %><%= image_tag "news/newsS.jpg" , :alt=>"Image"%><% end %>
 						<section class="contents">
 							<h3><% link_to '/newsDetail.html' do %>Ancienne actualité<% end %></h3>
 							<div class="heightLimit">
@@ -58,7 +58,7 @@ description: Nos actualités - plateforme E-Nymphea
 				
 				<div class="large-4 columns">
 					<article class="article wysiwyg news teaser">
-						<% link_to '/newsDetail.html' do %><%= image_tag "news/newsS2.jpg" %><% end %>
+						<% link_to '/newsDetail.html' do %><%= image_tag "news/newsS2.jpg", :alt=>"Image" %><% end %>
 						<section class="contents">
 							<h3><% link_to '/newsDetail.html' do %>Ancienne actualité avec un titre un poil trop long<% end %></h3>
 							<div class="heightLimit">
@@ -70,7 +70,7 @@ description: Nos actualités - plateforme E-Nymphea
 
 				<div class="large-4 columns">
 					<article class="article wysiwyg news teaser">
-						<% link_to '/newsDetail.html' do %><%= image_tag "news/newsS3.jpg" %><% end %>
+						<% link_to '/newsDetail.html' do %><%= image_tag "news/newsS3.jpg", :alt=>"Image" %><% end %>
 						<section class="contents">
 							<h3><% link_to '/newsDetail.html' do %>Ancienne actualité<% end %></h3>
 							<div class="heightLimit">

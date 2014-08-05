@@ -5,15 +5,15 @@ description: Mon compte, plateforme E-Nymphea
 ---
 
 <!-- Slider -->
-	<section id="largePicture">
+	<div id="largePicture">
 		<div id="mainSlider" class="flexslider large noCaptions">
 			<ul class="slides">
 				<li>
-					<%= image_tag 'slides/thinSlide2.jpg' %>
+					<%= image_tag 'slides/thinSlide2.jpg', :alt=>"Slide" %>
 				</li>
 			</ul>
 		</div>
-	</section>
+	</div>
 
 	<div class="rowFluid">
 		<nav id="breadcrumbs" class="row">
@@ -37,15 +37,15 @@ description: Mon compte, plateforme E-Nymphea
 			</aside>
 
 			<div class="large-6 columns">
-				<hgroup class="headerGroup">
+				<section class="headerGroup">
 					<h2>Mes prochains rendez-vous</h2>
 					<%= link_to "Historique", "/user-history.html", :class=> 'more' %>
-				</hgroup>
+				</section>
 				
 				<div id="history">
 					<article class="product recap">
 						<section class="image">
-							<% link_to '/soin.html' do %><%= image_tag "products/rituel-tropicalS.jpg" %><% end %>
+							<% link_to '/soin.html' do %><%= image_tag "products/rituel-tropicalS.jpg", :alt=>"Product" %><% end %>
 						</section>
 						<section class="description">
 							<h3>Rituel Tropical</h3>
@@ -59,7 +59,7 @@ description: Mon compte, plateforme E-Nymphea
 
 					<article class="product recap">
 						<section class="image">
-							<% link_to '/soin.html' do %><%= image_tag "products/rituel-bresilienS.jpg" %><% end %>
+							<% link_to '/soin.html' do %><%= image_tag "products/rituel-bresilienS.jpg", :alt=>"Product" %><% end %>
 						</section>
 						<section class="description">
 							<h3>Rituel Brésilien</h3>
@@ -73,7 +73,7 @@ description: Mon compte, plateforme E-Nymphea
 
 					<article class="product recap">
 						<section class="image">
-							<% link_to '/soin.html' do %><%= image_tag "products/rituel-tropicalS.jpg" %><% end %>
+							<% link_to '/soin.html' do %><%= image_tag "products/rituel-tropicalS.jpg", :alt=>"Product" %><% end %>
 						</section>
 						<section class="description">
 							<h3>Rituel Tropical</h3>
@@ -88,10 +88,10 @@ description: Mon compte, plateforme E-Nymphea
 			</div>
 
 			<div class="large-3 columns">
-				<hgroup class="headerGroup">
+				<section class="headerGroup">
 					<h2>Mon compte</h2>
 					<%= link_to "Modifier", "/user-infos.html", :class=> 'more' %>
-				</hgroup>
+				</section>
 				<article class="article vCard bgPattern">
 					<dl>
 						<dt>Céline Guerton-Mathias</dt>

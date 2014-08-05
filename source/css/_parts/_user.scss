@@ -138,6 +138,7 @@
 // Forms
 .form.user{
 	@include border-radius(3px);
+	
 	padding:20px 15px 20px 15px;
 	margin-bottom:30px;
 }
@@ -291,6 +292,7 @@ p.counter{
 	white-space:nowrap;
 	.bubble{
 		@include border-radius(99px);
+		
 		@include inline-block();
 		@include futuraBold(30px, $white);
 		letter-spacing: -1px;
@@ -304,6 +306,7 @@ p.counter{
 		&:after{
 			@include PE();
 			@include border-radius(99px);
+			
 			width:74px;
 			height:74px;
 			background:transparent;

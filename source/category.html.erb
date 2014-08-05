@@ -4,15 +4,15 @@ description: Catégorie de soinv plateforme E-Nymphea
 ---
 
 <!-- Slider -->
-	<section id="largePicture">
+	<div id="largePicture">
 		<div id="mainSlider" class="flexslider large noCaptions">
 			<ul class="slides">
 				<li>
-					<%= image_tag 'slides/thinSlide2.jpg' %>
+					<%= image_tag 'slides/thinSlide2.jpg', :alt=>"Slide" %>
 				</li>
 			</ul>
 		</div>
-	</section>
+	</div>
 
 <!-- Contents -->
 
@@ -36,7 +36,7 @@ description: Catégorie de soinv plateforme E-Nymphea
 				    <li><%= link_to "Abonnements", "/category.html" %></li>
 				    <li><%= link_to "Rituels de soin", "/category.html" %></li>
 				</ul>
-				<button id="toggle" href="#categories">Voir toutes les catégories</button>
+				<a id="toggle" href="#categories">Voir toutes les catégories</a>
 			</nav>
 
 			<p class="chapo">Nathalie Bouchon Poiroux - Créatrice des soins Cinq Mondes et Directrice Formation & Qualité – associée à des partenaires scientifiques de renom, crée les soins Cinq Mondes en s’inspirant des « Rituels de Beauté du monde® » et de la Dermapuncture®, véritable « acupuncture sans aiguille »</p>
@@ -46,7 +46,7 @@ description: Catégorie de soinv plateforme E-Nymphea
 			<div class="large-4 columns">
 				<article class="product teaser">
 					<% link_to "/soin.html" do %>
-						<%= image_tag 'push/push7.jpg' %>
+						<%= image_tag 'push/push7.jpg', :alt=>"Product" %>
 					<% end %>
 					<section class="contents">
 						<p class="price">80€</p>
@@ -65,7 +65,7 @@ description: Catégorie de soinv plateforme E-Nymphea
 			<div class="large-4 columns">
 				<article class="product teaser">
 					<% link_to "/soin.html" do %>
-						<%= image_tag 'push/push4.jpg' %>
+						<%= image_tag 'push/push4.jpg', :alt=>"Product" %>
 					<% end %>
 					<section class="contents">
 						<p class="price">110€</p>
@@ -84,7 +84,7 @@ description: Catégorie de soinv plateforme E-Nymphea
 			<div class="large-4 columns">
 				<article class="product teaser">
 					<% link_to "/soin.html" do %>
-						<%= image_tag 'push/push5.jpg' %>
+						<%= image_tag 'push/push5.jpg', :alt=>"Product" %>
 					<% end %>
 					<section class="contents">
 						<h3><%= link_to 'Abonnement detox' , "/soin.html" %></h3>
@@ -102,7 +102,7 @@ description: Catégorie de soinv plateforme E-Nymphea
 			<div class="large-4 columns">
 				<article class="product teaser">
 					<% link_to "/soin.html" do %>
-						<%= image_tag 'push/push6.jpg' %>
+						<%= image_tag 'push/push6.jpg', :alt=>"Product" %>
 					<% end %>
 					<section class="contents">
 						<h3><%= link_to 'Abonnement detox minceur et fermeté' , "/soin.html" %></h3>

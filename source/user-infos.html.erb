@@ -5,15 +5,15 @@ description: Mon compte, plateforme E-Nymphea
 ---
 
 <!-- Slider -->
-	<section id="largePicture">
+	<div id="largePicture">
 		<div id="mainSlider" class="flexslider large noCaptions">
 			<ul class="slides">
 				<li>
-					<%= image_tag 'slides/thinSlide2.jpg' %>
+					<%= image_tag 'slides/thinSlide2.jpg', :alt=>"Slide" %>
 				</li>
 			</ul>
 		</div>
-	</section>
+	</div>
 
 	<div class="rowFluid">
 		<nav id="breadcrumbs" class="row">
@@ -37,17 +37,17 @@ description: Mon compte, plateforme E-Nymphea
 			</aside>
 
 			<div class="large-6 columns">
-				<hgroup class="headerGroup">
+				<section class="headerGroup">
 					<h2>Mes infos personnelles</h2>
 					<p class="more">(* champs obligatoires)</p>
-				</hgroup>
+				</section>
 				
 				<% form_tag '/user-infos.html', :id => 'userFrom', :class => 'form bgPattern user', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
 					<div class="inline">
 					    <fieldset>
 					        <label class="lineLabel">Civilité</label>
-					        <input type="radio" data-parsley-required name="gender" value="Mme" id="Mme" checked="checked"/> <label for="Mme">Mme</label>
-					        <input type="radio" data-parsley-required name="gender" value="Mr" id="Mr"/> <label for="Mr">Mr</label>
+					        <input type="radio" data-parsley-required name="gender" value="Mme" id="MmeEcho" checked="checked"/> <label for="MmeEcho">Mme</label>
+					        <input type="radio" data-parsley-required name="gender" value="Mr" id="MrEcho"/> <label for="MrEcho">Mr</label>
 					    </fieldset>
 					</div>
 
@@ -69,9 +69,9 @@ description: Mon compte, plateforme E-Nymphea
 			        <input type="submit" value="valider">
 				<% end %>
 
-				<hgroup class="headerGroup">
+				<section class="headerGroup">
 					<h2>Mon adresse</h2>
-				</hgroup>
+				</section>
 				
 				<% form_tag '/user-infos.html', :id => 'adressFrom', :class => 'form bgPattern user', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
 
@@ -91,9 +91,9 @@ description: Mon compte, plateforme E-Nymphea
 			</div>
 
 			<div class="large-3 columns">
-				<hgroup class="headerGroup">
+				<section class="headerGroup">
 					<h2>Mot de passe</h2>
-				</hgroup>
+				</section>
 				
 				<% form_tag '/user-infos.html', :id => 'mdpForm', :class => 'form bgPattern user', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
 
@@ -109,9 +109,9 @@ description: Mon compte, plateforme E-Nymphea
 			        <input type="submit" value="valider">
 				<% end %>
 
-					<hgroup class="headerGroup">
+					<section class="headerGroup">
 						<h2>Préférences</h2>
-					</hgroup>
+					</section>
 					
 					<% form_tag '/user-infos.html', :id => 'placeForm', :class => 'form bgPattern user', :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => 'POST' do %>
 

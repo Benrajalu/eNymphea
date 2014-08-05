@@ -149,6 +149,7 @@
 
 			#mobileOff{
 				@include border-radius(99px);
+				
 				@include transition(all 300ms);
 				display:block;
 				width:40px;

@@ -4,15 +4,15 @@ description: Espace bien-être plateforme E-Nymphea
 ---
 
 <!-- Slider -->
-	<section id="largePicture">
+	<div id="largePicture">
 		<div id="mainSlider" class="flexslider large noCaptions">
 			<ul class="slides">
 				<li>
-					<%= image_tag 'slides/thinSlide3.jpg' %>
+					<%= image_tag 'slides/thinSlide3.jpg', :alt=>"Slide" %>
 				</li>
 			</ul>
 		</div>
-	</section>
+	</div>
 
 <!-- Contents -->
 
@@ -33,14 +33,14 @@ description: Espace bien-être plateforme E-Nymphea
 					<dd id="tab1" class="active mobileActive">
 						<article class="wysiwyg article">
 							<h2>Titre niveau h2</h2>
-							<%= image_tag "news/newsS2.jpg", :class=>"alignRight" %>
+							<%= image_tag "news/newsS2.jpg", :class=>"alignRight", :alt=>"Image" %>
 							<p>Nathalie Bouchon Poiroux - <a href="#">Créatrice des soins Cinq Mondes</a> et <strong>Directrice Formation</strong> & Qualité – <em>associée à des partenaires</em> scientifiques de renom, crée les soins Cinq Mondes en s’inspirant des « Rituels de Beauté du monde® » et de la Dermapuncture®, véritable « acupuncture sans aiguille ».</p>
 
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo rerum natus aut molestiae sed voluptas quibusdam culpa consequuntur, ipsum eaque, optio quod impedit veniam accusamus reprehenderit deserunt illo incidunt cumque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ullam nesciunt, laborum porro nemo explicabo aliquid, et molestias consequatur libero incidunt tempora minus necessitatibus consequuntur dolorem quos cupiditate doloremque ratione.</p>
 
 							<h3>Sous titre, niveau H3</h3>
 
-							<%= image_tag "push/push4.jpg", :class=>"alignLeft" %><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas perferendis minus deserunt molestiae vel ducimus inventore similique natus dolore repellat! Neque quas, fugit consequatur. Dolore possimus libero tenetur veritatis amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate reprehenderit cum distinctio quisquam, totam quasi quaerat minima laboriosam, recusandae. Voluptas repellat necessitatibus repellendus numquam, neque labore fugiat iste doloribus magnam.</p>
+							<%= image_tag "push/push4.jpg", :class=>"alignLeft", :alt=>"Image" %><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas perferendis minus deserunt molestiae vel ducimus inventore similique natus dolore repellat! Neque quas, fugit consequatur. Dolore possimus libero tenetur veritatis amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate reprehenderit cum distinctio quisquam, totam quasi quaerat minima laboriosam, recusandae. Voluptas repellat necessitatibus repellendus numquam, neque labore fugiat iste doloribus magnam.</p>
 
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto dolores illo cupiditate eaque voluptatibus. Omnis blanditiis aperiam dolores at ipsum, beatae fuga, quis atque molestias similique architecto delectus voluptatibus nulla?</p>
 
@@ -53,7 +53,7 @@ description: Espace bien-être plateforme E-Nymphea
 						<ul class="team">
 							<li>
 								<div class="picture">
-									<%= image_tag "mugshot1.jpg" %>
+									<%= image_tag "mugshot1.jpg", :alt=>"Image" %>
 								</div>
 								<div class="content">
 									<h3>Jane doe</h3>
@@ -63,7 +63,7 @@ description: Espace bien-être plateforme E-Nymphea
 							</li>
 							<li>
 								<div class="picture">
-									<%= image_tag "mugshot2.jpg" %>
+									<%= image_tag "mugshot2.jpg", :alt=>"Image" %>
 								</div>
 								<div class="content">
 									<h3>Jane doe</h3>
@@ -73,7 +73,7 @@ description: Espace bien-être plateforme E-Nymphea
 							</li>
 							<li>
 								<div class="picture">
-									<%= image_tag "mugshot1.jpg" %>
+									<%= image_tag "mugshot1.jpg", :alt=>"Image" %>
 								</div>
 								<div class="content">
 									<h3>Jane doe</h3>
@@ -83,7 +83,7 @@ description: Espace bien-être plateforme E-Nymphea
 							</li>
 							<li>
 								<div class="picture">
-									<%= image_tag "mugshot2.jpg" %>
+									<%= image_tag "mugshot2.jpg", :alt=>"Image" %>
 								</div>
 								<div class="content">
 									<h3>Jane doe</h3>
@@ -97,22 +97,22 @@ description: Espace bien-être plateforme E-Nymphea
 
 			</div>
 			<aside class="large-4 columns aside">
-				<div href="#pictureGallery" class="pop gallery">
+				<div class="pop gallery">
 					<a href="#pictureGallery" class="pop overlay">Play</a>
-					<a href="#pictureGallery" class="pop"><%= image_tag "photoGallery.jpg" %></a>
-					<section class="legend">
+					<a href="#pictureGallery" class="pop"><%= image_tag "photoGallery.jpg", :alt=>"Image" %></a>
+					<div class="legend">
 						<a href="#pictureGallery" class="pop">Galerie Photo</a>
-						<%= image_tag "iconPhoto.png", :class => "icon" %>
-					</section>
+						<%= image_tag "iconPhoto.png", :class => "icon", :alt=>"Icon" %>
+					</div>
 				</div>
 
-				<div href="#videoGallery" class="pop gallery">
+				<div class="pop gallery">
 					<a href="#pictureGallery" class="pop overlay">Play</a>
-					<a href="#videoGallery" class="pop"><%= image_tag "videoGallery.jpg" %></a>
-					<section class="legend">
+					<a href="#videoGallery" class="pop"><%= image_tag "videoGallery.jpg", :alt=>"Image" %></a>
+					<div class="legend">
 						<a href="#videoGallery" class="pop">Galerie Vidéo</a>
-						<%= image_tag "videoIcon.png", :class => "icon" %>
-					</section>
+						<%= image_tag "videoIcon.png", :class => "icon", :alt=>"Icon" %>
+					</div>
 				</div>
 			</aside>
 		</div>
@@ -122,44 +122,44 @@ description: Espace bien-être plateforme E-Nymphea
 	<article class="popIn mfp-hide pad0" id="pictureGallery">
 	    <header>
 	        <h4>Galerie Photo</h4>
-	        <%= image_tag 'popIns/iconPhoto.png' %>
+	        <%= image_tag 'popIns/iconPhoto.png', :alt=>"Icon" %>
 	    </header>
 
 	    <div id="photoSlider" class="flexslider gallerySlider">
 			<ul class="slides">
 				<li> 
-					<%= image_tag "gallery/img1.jpg" %>
+					<%= image_tag "gallery/img1.jpg", :alt=>"Image" %>
 				</li>
 				<li> 
-					<%= image_tag "gallery/img2.jpg" %>
+					<%= image_tag "gallery/img2.jpg", :alt=>"Image" %>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dicta sint animi.</p>
 				</li>
 				<li> 
-					<%= image_tag "gallery/img1.jpg" %>
+					<%= image_tag "gallery/img1.jpg", :alt=>"Image" %>
 				</li>
 				<li> 
-					<%= image_tag "gallery/img2.jpg" %>
+					<%= image_tag "gallery/img2.jpg", :alt=>"Image" %>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dicta sint animi.</p>
 				</li>
 				<li> 
-					<%= image_tag "gallery/img1.jpg" %>
+					<%= image_tag "gallery/img1.jpg", :alt=>"Image" %>
 				</li>
 				<li> 
-					<%= image_tag "gallery/img2.jpg" %>
+					<%= image_tag "gallery/img2.jpg", :alt=>"Image" %>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dicta sint animi.</p>
 				</li>
 				<li> 
-					<%= image_tag "gallery/img1.jpg" %>
+					<%= image_tag "gallery/img1.jpg", :alt=>"Image" %>
 				</li>
 				<li> 
-					<%= image_tag "gallery/img2.jpg" %>
+					<%= image_tag "gallery/img2.jpg", :alt=>"Image" %>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dicta sint animi.</p>
 				</li>
 				<li> 
-					<%= image_tag "gallery/img1.jpg" %>
+					<%= image_tag "gallery/img1.jpg", :alt=>"Image" %>
 				</li>
 				<li> 
-					<%= image_tag "gallery/img2.jpg" %>
+					<%= image_tag "gallery/img2.jpg", :alt=>"Image" %>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dicta sint animi.</p>
 				</li>
 			</ul>
@@ -169,34 +169,34 @@ description: Espace bien-être plateforme E-Nymphea
 	        <div id="photoNav" class="flexslider galleryNav">
 	    		<ul class="slides">
 	    			<li> 
-	    				<%= image_tag "gallery/img2square.jpg" %>
+	    				<%= image_tag "gallery/img2square.jpg", :alt=>"Image" %>
 	    			</li>
 	    			<li> 
-	    				<%= image_tag "gallery/img1square.jpg" %>
+	    				<%= image_tag "gallery/img1square.jpg", :alt=>"Image" %>
 	    			</li>
 	    			<li> 
-	    				<%= image_tag "gallery/img2square.jpg" %>
+	    				<%= image_tag "gallery/img2square.jpg", :alt=>"Image" %>
 	    			</li>
 	    			<li> 
-	    				<%= image_tag "gallery/img1square.jpg" %>
+	    				<%= image_tag "gallery/img1square.jpg", :alt=>"Image" %>
 	    			</li>
 	    			<li> 
-	    				<%= image_tag "gallery/img2square.jpg" %>
+	    				<%= image_tag "gallery/img2square.jpg", :alt=>"Image" %>
 	    			</li>
 	    			<li> 
-	    				<%= image_tag "gallery/img1square.jpg" %>
+	    				<%= image_tag "gallery/img1square.jpg", :alt=>"Image" %>
 	    			</li>
 	    			<li> 
-	    				<%= image_tag "gallery/img2square.jpg" %>
+	    				<%= image_tag "gallery/img2square.jpg", :alt=>"Image" %>
 	    			</li>
 	    			<li> 
-	    				<%= image_tag "gallery/img1square.jpg" %>
+	    				<%= image_tag "gallery/img1square.jpg", :alt=>"Image" %>
 	    			</li>
 	    			<li> 
-	    				<%= image_tag "gallery/img2square.jpg" %>
+	    				<%= image_tag "gallery/img2square.jpg", :alt=>"Image" %>
 	    			</li>
 	    			<li> 
-	    				<%= image_tag "gallery/img1square.jpg" %>
+	    				<%= image_tag "gallery/img1square.jpg", :alt=>"Image" %>
 	    			</li>
 	    		</ul>
 	        </div>
@@ -206,22 +206,22 @@ description: Espace bien-être plateforme E-Nymphea
 	<article class="popIn mfp-hide pad0" id="videoGallery">
 	    <header>
 	        <h4>Galerie Vidéo</h4>
-	        <%= image_tag 'popIns/videoIcon.png' %>
+	        <%= image_tag 'popIns/videoIcon.png', :alt=>"Icon" %>
 	    </header>
 
 	    <div id="videoSlider" class="flexslider gallerySlider">
 			<ul class="slides">
 				<li> 
-					<div class='embed-container'><iframe src='http://www.youtube.com/embed/BheJJZDHy98' frameborder='0' allowfullscreen></iframe></div>
+					<div class='embed-container'><iframe src='http://www.youtube.com/embed/BheJJZDHy98' allowfullscreen></iframe></div>
 				</li>
 				<li> 
-					<div class='embed-container'><iframe src='http://www.youtube.com/embed/BheJJZDHy98' frameborder='0' allowfullscreen></iframe></div>
+					<div class='embed-container'><iframe src='http://www.youtube.com/embed/BheJJZDHy98' allowfullscreen></iframe></div>
 				</li>
 				<li> 
-					<div class='embed-container'><iframe src='http://www.youtube.com/embed/BheJJZDHy98' frameborder='0' allowfullscreen></iframe></div>
+					<div class='embed-container'><iframe src='http://www.youtube.com/embed/BheJJZDHy98' allowfullscreen></iframe></div>
 				</li>
 				<li> 
-					<div class='embed-container'><iframe src='http://www.youtube.com/embed/BheJJZDHy98' frameborder='0' allowfullscreen></iframe></div>
+					<div class='embed-container'><iframe src='http://www.youtube.com/embed/BheJJZDHy98' allowfullscreen></iframe></div>
 				</li>
 			</ul>
 			<p class="count"><span class="current"></span> / <span class="total"></span></p>
