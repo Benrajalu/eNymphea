@@ -270,6 +270,9 @@
 				.slides{
 					li{
 						position:relative;
+						img{
+							display:block;
+						}
 						p{
 							background:#d8d8d8;
 							@include futura(14px, $black);
@@ -306,12 +309,12 @@
 					display:block;
 					background:#d8d8d8;
 					width:80px;
-					height:30px;
+					height:29px;
 					line-height:30px;
 					text-align: center;
 					position:absolute;
-					bottom:0px;
-					right:0px;
+					bottom:1px;
+					right:1px;
 					padding:0px 15px;
 					z-index:99;
 					margin:0px;
