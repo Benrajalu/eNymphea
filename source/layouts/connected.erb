@@ -37,7 +37,11 @@
                     <section class="cf">
                         <button id="mobileOn" class="mobileToggle">Ouvrir le menu</button>
                         <ul class="cf">
-                            <li><%= magic_link_to '<span class="mobileOff">Bonjour, Céline</span>', '/user.html', :id => "user" %>
+                            <li><%= magic_link_to '<span class="mobileOff">Bonjour, Céline</span>', '/user.html', :id => "user", :class=>"connected" %>
+                                <%= link_to '<span>Déconnexion</span>', '#', :id => "deco", :class=>"trigger" %>
+                                <ul class="layer" id="logout">
+                                    <li><%= link_to '<span>Déconnexion</span>', '/index.html' %></li>
+                                </ul>
                             </li>
                             <li><%= magic_link_to '<span class="total">2</span> <span class="mobileOff">Mon panier</span>', '/order.html', :id => 'basket', :class => "trigger" %>
                                 <ul id="cart" class="layer full">

@@ -19,7 +19,7 @@
 		// Close panels on body click
 			var bodyClose = function(){
 				$('body').bind('click', function(e) {
-					if($('#log').height() > 50 || $("#languages").height() > 50 || $("#cart").height() > 20){
+					if($('#log').height() > 50 || $("#languages").height() > 50 || $("#cart").height() > 20 || $("#logout").height() > 20){
 						if($(e.target).closest('.layer').length == 0 && $(e.target).closest('.trigger').length == 0 ) {
 						    closePanels();
 						}	
