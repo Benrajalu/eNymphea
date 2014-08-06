@@ -255,6 +255,11 @@
 							@include futuraBold(13px, #cccaca);
 							margin-bottom:10px;
 							line-height: 1.2em;
+							&.active{
+								border-left: 5px solid #8d0e3a;
+								padding-left: 10px;
+								color:#cccaca;
+							}
 						}
 					}
 				}
