@@ -37,7 +37,11 @@
                     <section class="cf">
                         <button id="mobileOn" class="mobileToggle">Ouvrir le menu</button>
                         <ul class="cf">
-                            <li><%= magic_link_to '<span class="mobileOff">Bonjour, Céline</span>', '/user.html', :id => "user" %>
+                            <li><%= magic_link_to '<span class="mobileOff">Bonjour, Céline</span>', '/user.html', :id => "user", :class=>"connected" %>
+                                <%= link_to '<span>Déconnexion</span>', '#', :id => "deco", :class=>"trigger" %>
+                                <ul class="layer" id="logout">
+                                    <li><%= link_to '<span>Déconnexion</span>', '/index.html' %></li>
+                                </ul>
                             </li>
                             <li><%= magic_link_to '<span class="total">2</span> <span class="mobileOff">Mon panier</span>', '/order.html', :id => 'basket', :class => "trigger" %>
                                 <ul id="cart" class="layer full">
@@ -109,13 +113,13 @@
                             <h3 class="menuTitle mobileOn">Nos rituels de soin</h3>
                             <h3>Découvrez nos rituels de beauté</h3>
                             <ul class="cf">
-                                <li><%= magic_link_to "Soins du visage", "/category.html" %></li>
-                                <li><%= magic_link_to "Minceur et fermeté", "/category.html" %></li>
+                                <li><%= link_to "Soins du visage", "/category.html" %></li>
+                                <li><%= link_to "Minceur et fermeté", "/category.html" %></li>
                                 <li><%= magic_link_to "Massages du corps", "/category.html" %></li>
-                                <li><%= magic_link_to "Soin d'exception espace privé Paris", "/category.html" %></li>
-                                <li><%= magic_link_to "Rituels du bain & soins corps", "/category.html" %></li>
-                                <li><%= magic_link_to "Abonnements", "/category.html" %></li>
-                                <li><%= magic_link_to "Rituels de soin", "/category.html" %></li>
+                                <li><%= link_to "Soin d'exception espace privé Paris", "/category.html" %></li>
+                                <li><%= link_to "Rituels du bain & soins corps", "/category.html" %></li>
+                                <li><%= link_to "Abonnements", "/category.html" %></li>
+                                <li><%= link_to "Rituels de soin", "/category.html" %></li>
                             </ul>
                         </aside>
                     </div>
