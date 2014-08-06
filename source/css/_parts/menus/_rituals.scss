@@ -33,55 +33,47 @@
 	@media only screen and (max-width: $tablet){
 		
 		ul{
-			max-height:150px;
+			max-height: 0px;
 			overflow:hidden;
 			padding:0px;
 			margin-bottom:10px;
 			position:relative;
-			&:before, &:after{
-				@include PE();
-				height:69px;
-				width:100%;
-			}
-			&:before{
-				background:url("../img/topGradiant.png") top left repeat-x;
-				top:0px;
-				left:0px;
-			}
-			&:after{
-				background:url("../img/bottomGradiant.png") top left repeat-x;
-				top:auto;
-				bottom:0px;
-				left:0px;
-			}
 			li{
 				width:100%;
 				float:none;
+				text-align: center;
 			}
 			&.open{
-				max-height:300px;
-				&:before, &:after{
-					display:none;
-				}
+				max-height:600px;
 			}
 		}
 
 		#toggle{
 			display:block;
-			background:transparent url("../img/downArrow.png") center center no-repeat;
-			width:40px;
+			width:auto;
+			max-width:270px;
+			padding-right:20px;
 			height:30px;
+			line-height: 32px;
+			background:$violet url("../img/burger.png") center right no-repeat;
 			margin:0 auto 30px auto;
 			overflow: hidden;
-			text-indent: -99999px;
 			border:0px;
 			cursor: pointer;
 			outline:0px;
+			text-align:center;
+			@include futura(13px, $white);
+			@include border-radius(4px);
+			text-decoration: none;
+			text-transform: uppercase;
+			@include transition(all 300ms);
 			&:hover{
-				background:transparent url("../img/downArrowHover.png") center center no-repeat;
+				background:$gold url("../img/smallDown.png") center right no-repeat;
+				color:$black;
 			}
 			&.reverse{
-				background:transparent url("../img/upArrow.png") center center no-repeat;
+				background:$gold url("../img/smallUp.png") center right no-repeat;
+				color:$black;
 			}
 		}
 	}
