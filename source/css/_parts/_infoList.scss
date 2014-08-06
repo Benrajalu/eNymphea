@@ -3,6 +3,17 @@
 	@media only screen and (max-width:$tablet){
 		padding:0px 15px;
 	}
+
+	&.news{
+		li{
+			&.date{
+				padding-left:0px;
+				&:before{
+					display:none;
+				}
+			}
+		}
+	}
 	li{
 		float:left;
 		margin-right:10px;

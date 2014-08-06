@@ -82,7 +82,7 @@
 					}
 				}
 				&.networks{
-					padding-left:23px;
+					padding-left:20px;
 					&:before{
 						@include PE();
 						width:14px;
@@ -110,6 +110,17 @@
 								background-position:bottom left !important;
 							}
 						}
+					}
+
+					p{
+						float:left;
+						@include futura(11px, #7a7878);
+						line-height: 16px;
+						text-transform: uppercase;
+						margin:0px 5px 0px 0px;
+					}
+					.addthis_sharing_toolbox{
+						float:left;
 					}
 				}
 			}
