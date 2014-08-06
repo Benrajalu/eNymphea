@@ -201,7 +201,7 @@
 							label{
 								@include futura(13px, $black);
 							}
-							input[type="text"], input[type="password"]{
+							input[type="text"], input[type="email"], input[type="password"]{
 								@include box-shadow(0px 0px 0px transparent);
 								@include border-radius(5px);
 								
