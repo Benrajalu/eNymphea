@@ -43,7 +43,7 @@
                         <ul class="cf">
                             <li><%= magic_link_to '<span class="mobileOff">Enregistrez-vous</span>', '/user.html', :id => "user", :class => "trigger" %>
                                 <ul id="log" class="layer">
-                                    <li>
+                                    <li id="mainLog" class="logPane">
                                         <h3>Me connecter</h3>
                                         <% form_tag '/connected.html', :id => 'logIn', :class => "form", :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => '' do %>
                                             <label for="mail">Email</label>
@@ -52,6 +52,18 @@
                                             <input name="pass" id="pass" placeholder="Votre mot de passe" data-parsley-required="required" type="password" />
                                             <p><a href="#passRetrival" class="pop">Mot de passe oublié ?</a></p>
                                             <input type="submit" value="Connexion" class="button submit small" />
+                                            <a href="#mainSub" class="switchPane">Utilisez votre carte d'abonné</a>
+                                        <% end %>
+                                    </li>
+                                    <li id="mainSub" class="logPane" style="display:none;">
+                                        <h3>Me connecter</h3>
+                                        <% form_tag '/connected.html', :id => 'subLog', :class => "form", :'data-parsley-validate' =>'',  :'data-parsley-trigger' => 'change focusout', :method => '' do %>
+                                            <label for="mail">Numéro de carte</label>
+                                            <input name="subNumber" id="subnNumber" data-parsley-required="required" type="text" data-parsley-type='digits' placeholder="Votre numéro d'abonné" />
+                                            <label for="pass">Nom</label>
+                                            <input name="subName" id="subName" placeholder="Votre nom" data-parsley-required="required" type="text" />
+                                            <input type="submit" value="Connexion" class="button submit small" />
+                                            <a href="#mainLog" class="switchPane">Utilisez votre email</a>
                                         <% end %>
                                     </li>
                                     <li>

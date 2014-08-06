@@ -185,6 +185,12 @@
 									color:$black;
 									text-decoration: underline;
 								}
+								&.switchPane{
+									text-align: center;
+									padding:7px 5px;
+									display:block;
+									margin-top:10px;
+								}
 							}
 							p{
 								@include futura(13px, $gold);

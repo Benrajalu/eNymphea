@@ -111,6 +111,18 @@ if (!(window.console && console.log)) {
 				});
 			}
 		});
+		$('.switchPane').on('click', function(event){
+			var tarForm = $(this).attr('href');	
+			event.preventDefault();	
+			$('#log').find('.logPane').each(function(){
+				if($(this).is(tarForm)){
+					$(this).show();
+				}
+				else{
+					$(this).hide();
+				}
+			});
+		});
 
 	// Display hours if asked to
 		$('#moment').on('change', function(){
