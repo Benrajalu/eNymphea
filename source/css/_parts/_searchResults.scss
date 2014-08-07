@@ -44,7 +44,7 @@
 				line-height:70px;
 				padding:0px 15px;
 				text-align:center;
-				@include futura(14px, #360013);
+				@include futura(14px, $white);
 				text-decoration: none;
 				&.active, &:hover{
 					background:#c88ca1;
