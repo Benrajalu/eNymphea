@@ -196,7 +196,7 @@ description: Réserver un soin sur la plateforme E-Nymphea
 							<div class="products" id="offer1_9h">
 								<button class="close">Fermer le volet</button>
 								<ul  class="offer">
-									<li><%= link_to "Soin massage éclat du visage", "/soin.html", :target => "_blank"%> 
+									<li><%= link_to "<span class='catch'>NEW ! - </span>Soin massage éclat du visage", "/soin.html", :target => "_blank"%> 
 										<div class="infos">
 											<ul>
 												<li class="time">50 min -</li> 
@@ -204,14 +204,28 @@ description: Réserver un soin sur la plateforme E-Nymphea
 												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
 											</ul>
 										</div>
+										<div class="promo new">
+											<button class="badge">Infos promotion</button>
+											<div class="description">
+												<p>Court texte promotionnel !</p>
+												<a class="close">Fermer</a>
+											</div>
+										</div>
 									</li>
-									<li><%= link_to "Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
+									<li><%= link_to "<span class='catch'>SOLDES - </span>Soin massage du visage sublimateur", "/soin.html", :target => "_blank"%> 
 										<div class="infos">
 											<ul>
 												<li class="time">60 min -</li> 
 												<li class="price">90€ -</li> 
 												<li class="cart"><a href="#addCart" class="pop">Ajouter au panier</a></li>
 											</ul>
+										</div>
+										<div class="promo solde">
+											<button class="badge">Infos promotion</button>
+											<div class="description">
+												<p>Court texte promotionnel !</p>
+												<a class="close">Fermer</a>
+											</div>
 										</div>
 									</li>		
 									<li><%= link_to "Soin massage du visage jeunesse", "/soin.html", :target => "_blank"%> 
@@ -223,7 +237,7 @@ description: Réserver un soin sur la plateforme E-Nymphea
 											</ul>
 										</div>
 									</li>
-									<li><%= link_to "Soin massage jeunesse du visage", "/soin.html", :target => "_blank"%> 
+									<li><%= link_to "<span class='catch'>Promo ! - </span>Soin massage jeunesse du visage mais le texte est bien trop long, oh mon dieu oh mon dieu", "/soin.html", :target => "_blank"%> 
 										<div class="infos">
 											<ul>
 												<li class="time">45 min -</li> 

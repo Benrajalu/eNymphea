@@ -328,9 +328,18 @@
 						margin-left:20px;
 						position:relative;
 						> a{
+							@include inline-block();
 							@include futura(12px, #5b5959);
+							vertical-align: middle;
 							text-transform: uppercase;
 							text-decoration: none;
+							overflow: hidden;
+							white-space: nowrap;
+							text-overflow:ellipsis;
+							width:100%;
+							> span.catch{
+								@include futuraBold(12px, #5b5959);
+							}
 							&:hover{
 								color:$violet;
 							}
@@ -398,7 +407,7 @@
 							height:100%;
 							width:30px;
 							&.open{
-								width:100%;
+								width:95%;
 								.description{
 									width:100%;	
 									opacity:1;
@@ -413,8 +422,7 @@
 								height:30px;
 								display:block;
 								border:0px;
-								@include border-radius(99px);
-								
+								@include border-radius(99px);	
 								background:$gold url("../img/promo.png") center center no-repeat;
 								margin-top:-15px;
 								text-indent: -999px;
@@ -468,6 +476,18 @@
 									&:active, &:focus{
 										outline:0;
 									}
+								}
+							}
+
+							&.solde{
+								.badge{
+									background: url("../img/solde.png") center center no-repeat;
+								}
+							}
+
+							&.new{
+								.badge{
+									background:$gold url("../img/new.png") center center no-repeat;
 								}
 							}
 						}
