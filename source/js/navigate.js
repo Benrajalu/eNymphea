@@ -80,7 +80,7 @@
 	// Main menu
 		$(".mobileToggle").click(function(event){
 			event.preventDefault();
-			$(".navigate").toggleClass("mobileOpen");
+			$("#mainNav").toggleClass("mobileOpen");
 			closePanels();
 		})
 
@@ -89,7 +89,7 @@
 			event.preventDefault();
 			$(this).toggleClass("active");
 			$("#mainNav").toggleClass("expended");
-			$("#contents").toggleClass("push");
+			//$("#contents").toggleClass("push");
 		});
 		$("#back").click(function(event){
 			event.preventDefault();

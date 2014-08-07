@@ -38,7 +38,41 @@
         <div id="wrapper">
             <header>
                 <nav id="topBar">
-                    <section class="cf">
+                    <div class="options left" id="mainNav">
+                        <button id="mobileOff" class="mobileToggle">Fermer le menu</button>
+
+                        <ul>
+                            <li><%= magic_link_to "L'espace bien-être", '/espace.html' %></li>
+                            <li><a href="#rituals" class="flyout">Nos rituels de soin</a></li>
+                            <li><%= magic_link_to 'Réserver', '/book.html' %></li>
+                            <li><%= magic_link_to 'offrir', '/gift.html' %></li>
+                            <li><%= magic_link_to 'Actualités', '/news.html' %></li>
+                        </ul>
+
+                        <aside id="rituals">
+                            <div class="center">
+                                <a href="#" id="back" class="mobileOn">Revenir</a>
+                                <h3 class="menuTitle mobileOn">Nos rituels de soin</h3>
+                                <h3>Découvrez nos rituels de beauté</h3>
+                                <ul class="cf">
+                                    <li><%= link_to "Soins du visage", "/category.html" %></li>
+                                    <li><%= link_to "Minceur et fermeté", "/category.html" %></li>
+                                    <li><%= magic_link_to "Massages du corps", "/category.html" %></li>
+                                    <li><%= link_to "Soin d'exception espace privé Paris", "/category.html" %></li>
+                                    <li><%= link_to "Rituels du bain & soins corps", "/category.html" %></li>
+                                    <li><%= link_to "Abonnements", "/category.html" %></li>
+                                    <li><%= link_to "Rituels de soin", "/category.html" %></li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </div>
+
+
+                    <% link_to '/index.html', :class => 'mainLogo' do %>
+                      <%= image_tag 'logo.png', :alt=>"Logo" %>
+                    <% end %>
+
+                    <div class="options right cf">
                         <button id="mobileOn" class="mobileToggle">Ouvrir le menu</button>
                         <ul class="cf">
                             <li><%= magic_link_to '<span class="mobileOff">Enregistrez-vous</span>', '/user.html', :id => "user", :class => "trigger" %>
@@ -75,7 +109,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li><%= magic_link_to '<span class="total">0</span> <span class="mobileOff">Mon panier</span>', '/order.html', :id => 'basket', :class => "trigger" %>
+                            <li><%= magic_link_to '<span class="total">0</span>', '/order.html', :id => 'basket', :class => "trigger" %>
                                 <ul id="cart" class="layer">
                                     <li class="info">Votre panier est vide!</li>
                                 </ul>
@@ -89,43 +123,7 @@
                                 </ul>
                             </li>
                         </ul>
-                    </section>
-                </nav>
-
-                <nav id='mainNav' class="cf">
-                    <div class="screen"></div>
-                    <% link_to '/index.html', :class => 'mainLogo' do %>
-                      <%= image_tag 'logo.png', :alt=>"Logo" %>
-                    <% end %>
-
-                    <div class="navigate cf">
-                        <button id="mobileOff" class="mobileToggle">Fermer le menu</button>
-
-                        <ul>
-                            <li><%= magic_link_to "L'espace bien-être", '/espace.html' %></li>
-                            <li><a href="#rituals" class="flyout">Nos rituels de soin</a></li>
-                            <li><%= magic_link_to 'Réserver', '/book.html' %></li>
-                            <li><%= magic_link_to 'offrir', '/gift.html' %></li>
-                            <li><%= magic_link_to 'Actualités', '/news.html' %></li>
-                        </ul>
-
-                        <aside id="rituals">
-                            <a href="#" id="back" class="mobileOn">Revenir</a>
-                            <h3 class="menuTitle mobileOn">Nos rituels de soin</h3>
-                            <h3>Découvrez nos rituels de beauté</h3>
-                            <ul class="cf">
-                                <li><%= link_to "Soins du visage", "/category.html" %></li>
-                                <li><%= link_to "Minceur et fermeté", "/category.html" %></li>
-                                <li><%= magic_link_to "Massages du corps", "/category.html" %></li>
-                                <li><%= link_to "Soin d'exception espace privé Paris", "/category.html" %></li>
-                                <li><%= link_to "Rituels du bain & soins corps", "/category.html" %></li>
-                                <li><%= link_to "Abonnements", "/category.html" %></li>
-                                <li><%= link_to "Rituels de soin", "/category.html" %></li>
-                            </ul>
-                        </aside>
                     </div>
-
-
                 </nav>
             </header>
 
