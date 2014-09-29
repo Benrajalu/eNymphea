@@ -91,3 +91,16 @@
 			margin-bottom:15px;
 		}
 	}
+
+
+// Editorial type of pages
+	.row.editorial{
+		max-width:800px;
+		margin:0 auto 80px auto;
+		background:$white;
+		padding:40px 60px;;
+		border:1px solid $gold;
+		@media only screen and (max-width:$tablet){
+			padding:40px 20px;
+		}
+	}

@@ -20,14 +20,14 @@ if (!(window.console && console.log)) {
 // Forms 
 	
 	// Dates
-		$('.datepicker').datepicker({
-		    startDate: 'today',
-		    todayBtn: 'linked',
-		    language: 'fr',
-		    daysOfWeekDisabled: '0',
-		    todayHighlight: true, 
-		    autoclose: true,
-		});
+        $('.datepicker').datepicker({
+            startDate: 'today',
+            todayBtn: 'linked',
+            language: 'fr',
+            daysOfWeekDisabled: '0',
+            todayHighlight: true, 
+            autoclose: true,
+        });
 
 	// Uniform
 		$('select, input[type="checkbox"], input[type="radio"]').uniform();
@@ -502,4 +502,25 @@ $(window).load(function () {
 					}
 				});
 			}
+
+	// Teleport (responsive helper)
+		var teleport = function(){
+			$(".teleport").each(function(){
+				var par = $(this).parent('.scope');
+				if(Modernizr.mq('only all and (max-width: 780px)')){
+					var shell = $(this).clone();
+					$(this).remove();
+					par.prepend(shell);
+				}
+				else{
+					var shell = $(this).clone();
+					$(this).remove();
+					par.append(shell);
+				}
+			});
+		};
+		teleport();
+		$(window).resize(function(){
+			teleport();
+		})
 });

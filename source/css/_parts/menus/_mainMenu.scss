@@ -42,38 +42,6 @@
 						height:2px;
 					}
 				}
-
-				&:hover{
-					&.flyout{
-						padding-right:35px;
-						&:before{
-							width: 20px;
-						}
-					}
-				}
-
-				&.active{
-					&.flyout{
-						padding-right:35px;
-						&:before{
-							width: 20px;
-							background:$white url("../img/smallClose.png") center center no-repeat;
-						}
-					}
-				}
-
-				&.flyout{
-					&:before{
-						@include transition(all 300ms);
-						@include PE();
-						width:0px;
-						height:20px;
-						right:5px;
-						@include border-radius(99px);
-						background:$white url("../img/smallDownArrow.png") center center no-repeat;
-						margin-top:-3.5px;
-					}
-				}
 			}
 		}
 	}
@@ -82,7 +50,7 @@
 		overflow: hidden;
 		display:block;
 		width:100%;
-		top:60px;
+		top:50px;
 		left:0px;
 		max-height:0px;
 		margin:0 auto;

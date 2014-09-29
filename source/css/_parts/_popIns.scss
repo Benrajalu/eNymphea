@@ -82,6 +82,9 @@
 		position:relative;
 		overflow: hidden;
 		margin-bottom:30px;
+		&.columns{
+			padding:0 0px;	
+		}
 		> a > img{
 			width:100%;
 			display:block;
@@ -134,7 +137,9 @@
 		}
 
 		@media only screen and (max-width: $tablet){
-			padding:0 15px;
+			&.columns{
+				padding:0 15px !important;	
+			}
 			.overlay{
 				opacity:1;
 				top:50%;

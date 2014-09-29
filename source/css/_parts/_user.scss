@@ -80,6 +80,23 @@
 		&:last-child{
 			margin-bottom:40px;
 		}
+
+		@media only screen and (max-width:$tablet){
+			.image{
+				width:25%;
+			}
+			.description{
+				width:75%;
+			}
+		}
+		@media only screen and (max-width:$mobile){
+			.image{
+				width:40%;
+			}
+			.description{
+				width:60%;
+			}
+		}
 	}
 }
 

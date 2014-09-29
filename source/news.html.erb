@@ -26,10 +26,7 @@ description: Nos actualités - plateforme E-Nymphea
 			<h1>Actualités</h1>
 
 			<article class="wysiwyg article news hero">
-				<section class="large-6 columns">
-					<% link_to '/newsDetail.html' do %><%= image_tag "news/newsXL.jpg", :alt=>"Image" %><% end %>
-				</section>
-				<section class="large-6 columns">
+				<section class="large-6 large-push-6 medium-4 columns copy">
 					<h2>Nouvelle actualité</h2>
 					<p class="date">12/12/2014</p>
 					<div class="heightLimit">
@@ -37,6 +34,9 @@ description: Nos actualités - plateforme E-Nymphea
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis commodi dicta exercitationem facere, aliquam necessitatibus omnis magni, et unde ipsa mollitia cupiditate eum, pariatur ut dolor. Quisquam ea, maiores quibusdam?</p>
 					</div>
 					<%= link_to "Lire la suite", "/newsDetail.html", :class => "readMore" %>
+				</section>
+				<section class="large-6 large-pull-6 medium-8 columns">
+					<% link_to '/newsDetail.html' do %><%= image_tag "news/newsXL.jpg", :alt=>"Image" %><% end %>
 				</section>
 			</article>
 		</div>

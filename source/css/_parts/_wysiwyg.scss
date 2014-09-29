@@ -1,5 +1,10 @@
 .coverImage{
 	width:100%;
+	@media only screen and (max-width:$tablet){
+		max-width:550px;
+		margin:20px auto;
+		display:block;
+	}
 }
 
 // Content straight from text editor
@@ -148,6 +153,7 @@
 				line-height: 1.4;
 				a{
 					@include helvetica(14px, $violet);
+					text-decoration: underline;
 					&:hover{
 						color:$black;
 					}
@@ -185,7 +191,7 @@
 					margin:0 0 30px 0;
 				}
 
-				@media only screen and (max-width:$tablet){
+				@media only screen and (max-width:$mobile){
 					width:90%;
 					margin:10px 5% 20px 5%;
 					&.alignRight, &.alignLeft{

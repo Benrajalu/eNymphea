@@ -1,6 +1,6 @@
 #topBar{
 	@include clearfix();
-	height:60px;
+	height:50px;
 	background-color:$white;
 	border-bottom:1px solid #acacac;
 	position:absolute;
@@ -33,7 +33,7 @@
 			display:none;
 		}
 		> ul{
-			line-height:73px;
+			line-height:57px;
 			vertical-align: middle;
 			padding:0px;
 			@include inline-block();
@@ -50,7 +50,7 @@
 					@include futura(11px, $black);
 					@include transition(all 300ms);
 					display:block;
-					height:59px;
+					height:49px;
 					padding:0 20px;
 					text-decoration: none;
 					text-transform: uppercase;
@@ -70,7 +70,7 @@
 							position:absolute;
 							top:50%;
 							left:20px;
-							margin-top:-2px;
+							margin-top:-5px;
 						}
 						&:after{
 							@include transition(all 300ms);
@@ -102,7 +102,7 @@
 						height:25px;
 						right:5px;
 						top:50%;
-						margin-top:-7.5px;
+						margin-top:-9.5px;
 						background:$white url("../img/smallDownArrow.png") center center no-repeat;
 						padding:0px;
 						text-indent:-9999px;
@@ -129,7 +129,7 @@
 						&.expended{
 							&:after{
 								opacity:1;
-								bottom:-22px;
+								bottom:-19px;
 							}
 						}
 					}
@@ -144,7 +144,7 @@
 							position:absolute;
 							top:50%;
 							left:20px;
-							margin-top:-3px;
+							margin-top:-5px;
 						}
 						span.total{
 							font-size:14px;
@@ -183,7 +183,7 @@
 							position:absolute;
 							top:50%;
 							right:5px;
-							margin-top:3px;
+							margin-top:1px;
 						}
 						&:before{
 							@include transition(all 300ms);
@@ -216,7 +216,7 @@
 					overflow: hidden;
 					position:absolute;
 					z-index:99;
-					top:69px;
+					top:59px;
 					border:1px solid #acacac;
 					min-width:100%;
 					background:#fff;
@@ -646,7 +646,7 @@
 							display:none;
 						}
 						&#basket{
-							padding:0 20px 0 60px;
+							padding:0 20px 0 50px;
 							&:before{
 								width:28px;
 								height:37px;
@@ -679,7 +679,7 @@
 						max-height:0px;
 						overflow: hidden;
 						position:absolute;
-						top:59px;
+						top:49px;
 						left:5%;
 						z-index:99;
 						border:1px solid #acacac;

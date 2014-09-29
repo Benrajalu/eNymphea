@@ -246,6 +246,49 @@
 						padding:30px 0px;
 					}
 				}
+				@media only screen and (max-width:$tablet){
+					.slides li{
+						@include clearfix();
+						line-height:150px;
+						img, .content{
+							@include inline-block();
+							line-height: 1;
+							vertical-align: middle;
+						}
+						img{
+							width:40%;
+							margin-right:5%;
+						}
+						.content{
+							padding:0px;
+							width: 50%;
+							p.price{
+								left:-25px;
+								top:50%;
+								margin-top:-25px;
+							}
+						}
+					}
+				}
+				@media only screen and (max-width:$mobile){
+					.slides li{
+						@include clearfix();
+						line-height:auto;
+						img, .content{
+							display:block;
+							width:100%;
+							margin:0px;
+						}
+						.content{
+							padding:30px 0px;
+							p.price{
+								left:50%;
+								top:-25px;
+								margin-top:0px;
+							}
+						}
+					}
+				}
 			}
 
 		// Gallery
