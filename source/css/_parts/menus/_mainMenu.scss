@@ -97,7 +97,7 @@
 
 	&.expended{
 		#rituals{
-			max-height: 9999px;
+			max-height: 249px;
 			padding:80px 35px 45px 35px;
 		}
 	}
@@ -159,11 +159,21 @@
 					height:auto;
 					line-height:1.3em;
 					&:after{
-						left:10px;
-						bottom:-3px;
+						background:$gold;
+						height:100%;
+						bottom:auto;
+						top:0px;
+						width:0px;
+						left:0px;
 					}
 					&:hover, &.active{
 						background:transparent;
+						color:$white;
+						padding-left:10px;
+						&:after{
+							height: 100%;
+							width:5px;
+						}
 					}
 					&.flyout{
 						&:before{
@@ -254,8 +264,8 @@
 						@include futuraBold(13px, #cccaca);
 						margin-bottom:15px;
 						line-height: 1.3em;
-						&.active{
-							border-left: 5px solid #8d0e3a;
+						&.active, &:hover{
+							border-left: 5px solid $gold;
 							padding-left: 10px;
 							color:#cccaca;
 						}

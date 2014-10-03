@@ -488,7 +488,7 @@
 				}
 			}
 			> ul{
-				line-height: 63px;
+				line-height: 53px;
 				> li{
 					border-right:1px solid #acacac;
 					&:first-child{
@@ -600,7 +600,7 @@
 				text-indent:-999px;
 				overflow:hidden;
 				position:relative;
-				top:10px;
+				top:5px;
 				&:active, &:focus{
 					background:$pale url('../img/hamburger.png') center center no-repeat;
 					outline:0px;
@@ -679,7 +679,7 @@
 						max-height:0px;
 						overflow: hidden;
 						position:absolute;
-						top:49px;
+						top:59px;
 						left:5%;
 						z-index:99;
 						border:1px solid #acacac;
