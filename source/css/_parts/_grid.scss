@@ -6,6 +6,9 @@ html, body{
 	.bgWhite{
 		background-color:$white;
 	}
+	.bgViolet{
+		background-color:$violet;
+	}
 	.bgPale{
 		background-color:$pale;
 	}
@@ -35,14 +38,14 @@ html, body{
 		}
 		&.table-large{
 			display:table;
-			.columns{
+			>.columns{
 				display:table-cell;
 				vertical-align: middle;
 				float:none;
 			}
 			@media all and (max-width: $tablet){
 				display:block;
-				.columns{
+				>.columns{
 					display:block;
 				}
 			}
@@ -69,10 +72,26 @@ html, body{
 				float:none;
 			}
 		}
+		&.mar40{
+			margin-bottom:40px;
+		}
 		@media all and (max-width:$tablet){
 			&.noPadMobile{
 				padding:0px;
 				.columns{
+					padding:0px;
+				}
+			}
+
+			.columns{	
+				&.mediumPad{
+					padding:0 10px;
+				}
+			}
+		}
+		@media all and (max-width:$mobile){
+			.columns{	
+				&.mediumPad{
 					padding:0px;
 				}
 			}

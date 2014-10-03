@@ -66,3 +66,40 @@
 		}
 	}
 }
+
+#topBar{
+	>.options{
+		>ul{
+			>li > a{
+				&#user{
+					&:after{
+						display:none;
+					}
+				}
+				&#deco{
+					&:after{
+						display:none;
+					}
+				}
+				&#basket{
+					&:after{
+						display:none;
+					}
+				}
+				&#currentLanguage{
+					&:before{
+						display:none;
+					}
+				}
+			}
+		}
+	}
+}
+
+#userMenu{
+	> ul > li > a{
+		&:after{
+			display:none;
+		}
+	}
+}

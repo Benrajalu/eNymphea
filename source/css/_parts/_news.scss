@@ -18,6 +18,8 @@
 
 	&.hero{
 		margin-bottom:0px;
+		@include clearfix();
+		position:relative;
 		.date{
 			@include inline-block();
 			@include futura(13px, $violet);
@@ -75,6 +77,34 @@
 		}
 
 		@media only screen and (max-width:$tablet){
+			display:table;
+			.columns{
+				display:table-cell;
+				vertical-align: middle;
+				float:none;
+				&.copy{
+					padding-right:20px;
+				}
+				.heightLimit{
+					height:100px;
+				}
+			}
+			.columns > a > img{
+				width:100%;
+				margin:0 0 20px 0;
+			}
+		}
+		@media only screen and (max-width:$mobile){
+			display:block;
+			.columns{
+				display:block;
+				&.copy{
+					padding-right:0px;
+				}
+				.heightLimit{
+					max-height:70px;
+				}
+			}
 			.columns > a > img{
 				width:100%;
 				margin:0 0 20px 0;
@@ -148,6 +178,53 @@
 					&:after{
 						background:url('../img/newsGradPale.png') left center repeat-x;
 					}
+				}
+			}
+		}
+
+		@media only screen and (max-width:$tablet){
+			display:table;
+			table-layout:fixed;
+			overflow: hidden;
+			>a, .contents{
+				display:table-cell;
+				table-layout:fixed;
+				vertical-align: middle;
+			}
+			>a{
+				width:40%;
+			}
+			.contents{
+				width:60%;
+				max-width:60%;
+				top:0px;
+				left:-20px;
+				margin:0px;
+				padding-left:20px;
+				h3{
+					max-width:285px;
+				}
+			}
+		}
+		@media only screen and (max-width:$mobile){
+			display:block;
+			max-width:350px;
+			margin:0 auto 20px auto;
+			>a, .contents{
+				display:block;
+			}
+			>a{
+				width:100%;
+			}
+			.contents{
+				width:95%;
+				max-width:9999px;
+				top:-20px;
+				left:0px;
+				margin:0px 2.5%;
+				padding-left:10px;
+				h3{
+					max-width:999px;
 				}
 			}
 		}

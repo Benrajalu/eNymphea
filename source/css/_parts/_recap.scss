@@ -1,5 +1,6 @@
 .product.recap{
 	display:table;
+	table-layout:fixed;
 	background:$white;
 	position:relative;
 	margin:0px 0px 15px 0px;
@@ -81,6 +82,18 @@
 			.remove{
 				opacity:1;
 			}
+		}
+	}
+
+	&.full{
+		.image{
+			width:30%;
+			img{
+				width:100%;
+			}
+		}
+		.description{
+			width:70%;
 		}
 	}
 
