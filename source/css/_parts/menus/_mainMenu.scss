@@ -235,7 +235,7 @@
 			}
 			.menuTitle{
 				font-family: "futuraBold";
-				color:$violet;
+				color:#fff;
 				text-align: center;
 				position:relative;
 				&:after{
@@ -243,7 +243,7 @@
 					display:block;
 					width:15px;
 					height:2px;
-					background:$violet;
+					background:#fff;
 					position:absolute;
 					bottom:-3px;
 					left:50%;
