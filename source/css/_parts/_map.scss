@@ -87,9 +87,10 @@
 			margin-left:-10px;
 		}
 	}
-	p{
+	p, p a{
 		@include futura(15px, $white);
 		line-height:1.5;
 		margin-bottom:20px;
+		text-decoration:none;
 	}
 }
