@@ -43,6 +43,7 @@
                         <button id="mobileOff" class="mobileToggle">Fermer le menu</button>
 
                         <ul>
+                            <li><%= magic_link_to "Accueil", '/index.html', :class=>"homeIcon" %></li>
                             <li><%= magic_link_to "L'espace bien-être", '/espace.html' %></li>
                             <li><a href="#rituals" class="flyout">Nos rituels de soin</a></li>
                             <li><%= magic_link_to 'Réserver', '/book.html' %></li>
@@ -197,9 +198,7 @@
                 <div class="row pad40" id="cautions">
                     <div class="left">
                         <ul>
-                            <li><h4>Propulsé par</h4></li>
-                            <li><a href="#"><%= image_tag 'eNymphea.png', :alt=>"Logo" %></a></li>
-                            <li class="mobileOff"><a href="#"><%= image_tag 'logoSmall.png', :alt=>"Logo" %></a></li>
+                            <li class="madeBy"><h4>Propulsé par <a href="http://www.pro-spa-collexion.fr/marketing&websolutions.html" target="_blank">Spa Collexion</a> et <a href="http://www.adn-informatique.com/fr/nos-solutions/nymphea,r7,thermes,p4.html" target="_blank">SequoiaSoft</a></h4></li>
                         </ul>
                     </div>
                     <div class="right">
@@ -214,7 +213,7 @@
 
                 <div class="row" id="credits">
                     <div class="left">
-                        <p>Copyright © 2014 SPA-Collection. - Tous droits réservés -</p>
+                        <p>Copyright © 2014 Spa Collexion - Tous droits réservés</p>
                     </div>
                     <div class="right mobileOff">
                         <ul>

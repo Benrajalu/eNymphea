@@ -159,14 +159,6 @@
 
 		#cautions{
 			border-bottom:1px solid #555555;
-			.left{
-				ul{
-					li:last-child{
-						border-left:1px solid #555555;
-						padding-left:15px;
-					}
-				}
-			}
 			ul{
 				display:block;
 				vertical-align: top;
@@ -183,6 +175,13 @@
 					}
 					&.card{
 						margin-right:0px;
+					}
+
+					&.madeBy{
+						a{
+							display:inline;
+							font-size:10px;
+						}
 					}
 				}
 			}
